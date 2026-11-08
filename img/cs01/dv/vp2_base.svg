@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 899 1201" width="899" height="1201" font-family="Pretendard,'Apple SD Gothic Neo','Noto Sans KR',sans-serif" text-anchor="middle" fill="#1D1D1F">
+<defs><clipPath id="c"><circle cx="450" cy="665" r="438"/></clipPath></defs>
+<rect width="899" height="1201" fill="#fff"/>
+<text x="450" y="70" font-size="70" font-weight="800" letter-spacing="-2">고객 세그먼트</text>
+<text x="450" y="178" font-size="42" font-weight="600" letter-spacing="-1">기대 효과</text>
+<text x="450" y="1186" font-size="42" font-weight="600" letter-spacing="-1">불편 사항</text>
+<g clip-path="url(#c)">
+<polygon points="0,0 1000,0 1000,115 450,665 0,665" fill="#DDEDFB"/>
+<polygon points="0,665 450,665 1000,1215 0,1215" fill="#FCE8EE"/>
+<polygon points="450,665 1000,115 1000,1215" fill="#F6F6F6"/>
+<g stroke="#1D1D1F" stroke-width="3" fill="none"><line x1="12" y1="665" x2="450" y2="665"/><line x1="450" y1="665" x2="760" y2="355"/><line x1="450" y1="665" x2="760" y2="975"/></g>
+</g>
+<circle cx="450" cy="665" r="438" fill="none" stroke="#1D1D1F" stroke-width="3.5"/>
+<text x="755" y="512" font-size="28" font-weight="700" letter-spacing="-.5">사용자 과업</text>
+<g font-size="25" font-weight="500">
+<rect x="656" y="552" width="212" height="108" rx="14" fill="#fff" stroke="#C9CDD6" stroke-width="2.5"/>
+<text x="762" y="595">필요한</text><text x="762" y="633">상황 설명</text>
+<rect x="656" y="680" width="212" height="108" rx="14" fill="#fff" stroke="#C9CDD6" stroke-width="2.5"/>
+<text x="762" y="723">정보 처리</text><text x="762" y="761">방식 선택</text>
+</g>
+<circle cx="450" cy="665" r="58" fill="#fff" stroke="#1D1D1F" stroke-width="3.5"/>
+<g fill="none" stroke="#1D1D1F" stroke-width="3.2" stroke-linecap="round"><circle cx="450" cy="652" r="14"/><path d="M425 692c4-14 14-21 25-21s21 7 25 21"/></g>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 899 1201" width="899" height="1201" font-family="Pretendard,'Apple SD Gothic Neo','Noto Sans KR',sans-serif" text-anchor="middle" fill="#1D1D1F">
+<defs><clipPath id="c"><rect x="12" y="228" width="875" height="875" rx="40"/></clipPath></defs>
+<rect width="899" height="1201" fill="#fff"/>
+<text x="450" y="70" font-size="70" font-weight="800" letter-spacing="-2">가치제안 캔버스</text>
+<text x="450" y="178" font-size="42" font-weight="600" letter-spacing="-1">기대 효과 제공</text>
+<text x="450" y="1186" font-size="42" font-weight="600" letter-spacing="-1">불편 완화</text>
+<g clip-path="url(#c)">
+<polygon points="0,228 899,228 899,665 450,665" fill="#DDEDFB"/>
+<polygon points="0,1103 899,1103 899,665 450,665" fill="#FCE8EE"/>
+<polygon points="0,228 450,665 0,1103" fill="#F6F6F6"/>
+<g stroke="#1D1D1F" stroke-width="3" fill="none"><line x1="12" y1="228" x2="450" y2="665"/><line x1="12" y1="1103" x2="450" y2="665"/><line x1="450" y1="665" x2="887" y2="665"/></g>
+</g>
+<rect x="12" y="228" width="875" height="875" rx="40" fill="none" stroke="#1D1D1F" stroke-width="3.5"/>
+<text x="112" y="675" font-size="27" font-weight="700" letter-spacing="-.5">제품·서비스</text>
+<circle cx="450" cy="665" r="58" fill="#fff" stroke="#1D1D1F" stroke-width="3.5"/>
+<g fill="none" stroke="#1D1D1F" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"><rect x="426" y="655" width="48" height="34" rx="3"/><rect x="422" y="644" width="56" height="12" rx="3"/><line x1="450" y1="644" x2="450" y2="689"/><path d="M450 644c-6-14-24-14-20-2 2 5 12 3 20 2zM450 644c6-14 24-14 20-2-2 5-12 3-20 2z"/></g>
+</svg>
