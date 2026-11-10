@@ -76,8 +76,8 @@ a{color:inherit;text-decoration:none}
 .w>.t{clip-path:inset(-10% -10% 49.4% -10%);color:#4d4d4d;filter:blur(.4px)}
 .w>.b{clip-path:inset(50% -10% -10% -10%);color:#333;filter:blur(1.3px)}
 .w.on>.h{color:#ededed}
-.hero{position:absolute}.hero .hd,.hero .bd{position:static}.hero .bd{margin-top:1.6vw;width:max(260px,23vw)}
-.bd{position:absolute;margin:0;font:400 max(12px,1.04vw)/1.55 "Pretendard";color:#a6a6a6;word-break:keep-all;letter-spacing:-.01em}
+.hero{position:absolute}.hero .hd,.hero .bd{position:static}.hero .bd{margin-top:1.6vw;width:max(320px,28vw)}
+.bd{position:absolute;margin:0;font:400 max(14px,1.17vw)/1.6 "Pretendard";color:#cfcfcf;word-break:keep-all;letter-spacing:-.01em}
 .fd{opacity:0;transform:translateY(10px);transition:opacity .7s,transform .8s cubic-bezier(.2,.8,.2,1)}
 .fd.on{opacity:1;transform:none}
 .ph{position:absolute;overflow:hidden;background:#222}
@@ -88,7 +88,7 @@ a{color:inherit;text-decoration:none}
 .xp figcaption{margin-top:8px;font:400 10.5px/1.3 var(--mono);color:#8a8a8a}
 .stp{position:absolute;top:82.683%;width:9.766%}
 .stp b{display:block;font:700 11.5px/1.3 var(--mono);color:#ededed}
-.stp span{display:block;margin-top:6px;font-size:max(12px,1vw);line-height:1.55;color:#a6a6a6;word-break:keep-all}
+.stp span{display:block;margin-top:6px;font-size:max(13px,1.08vw);line-height:1.55;color:#cfcfcf;word-break:keep-all}
 .off{margin-top:110px}
 .offr{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:56px}
 .offr figure{margin:0;min-width:0}
@@ -102,7 +102,7 @@ a{color:inherit;text-decoration:none}
 .off .offr figure{filter:blur(10px);opacity:.3;transition:filter 1.2s var(--dl,0s),opacity 1.2s var(--dl,0s)}
 .off.on .offr figure{filter:none;opacity:1}
 /* When I pause — Until-style pinned scene: blurred bg, side index, centre line, one photo at a time */
-.pz{position:relative;height:420vh}
+.pz{position:relative;height:320vh}
 .pz-v{position:sticky;top:0;height:100vh;overflow:hidden}
 .pz-bgs img{position:absolute;inset:-60px;width:calc(100% + 120px);height:calc(100% + 120px);object-fit:cover;filter:blur(48px) brightness(.32) saturate(1.1);opacity:0;transition:opacity 1s}
 .pz-bgs img.on{opacity:1}
@@ -140,6 +140,7 @@ a{color:inherit;text-decoration:none}
 .tlb{margin-top:12px}
 .tlb div{font:400 12px/1.3 var(--mono);color:#6f6f6f;border-top:1px solid #333;padding-top:10px;transition:color .4s,border-color .4s}
 .tlb div.on{color:#ededed;border-color:#ededed}
+.tlb span{display:block;margin-top:6px;font:400 13px/1.4 "Pretendard";color:#a6a6a6;white-space:nowrap;overflow:hidden;opacity:0;transition:opacity .4s}.tlb div.on span{opacity:1}
 .dl{margin:0;padding:0;list-style:none;border-top:1px solid #333}
 .dl li{display:flex;align-items:center;gap:16px;padding:15px 0;border-bottom:1px solid #2a2a2a;font-size:15.5px;color:#ededed}
 .dl li i{width:1px;height:18px;background:#ededed;flex:none}
@@ -153,6 +154,28 @@ a{color:inherit;text-decoration:none}
 .ft a:hover{color:#fff}
 @media (max-width:760px){.stats,.two,.ft{grid-template-columns:1fr}.tim{height:240px}.sc{padding:0 20px}}
 @media (prefers-reduced-motion:reduce){.fd,.fi,.hd .ln,.w>.h{transition:none}}
+
+/* phone: the sideways line scene becomes a simple top-to-bottom story */
+@media (max-width:760px){
+.us{height:auto}.usv{position:static;height:auto;overflow:visible}
+.trk{position:static;width:auto;aspect-ratio:auto;transform:none!important;display:grid;grid-template-columns:repeat(3,1fr);gap:0 10px;padding:110px 20px 40px}
+.trk>*{grid-column:1/-1;position:static!important;width:auto!important;height:auto!important}
+.trk .lsv{display:none}
+.trk .fd{opacity:1;transform:none}
+.tlb span{white-space:normal;font-size:12px}
+.hero{order:1}.hero .bd{width:auto;margin-top:18px}
+#s1b{order:2;margin-top:28px;aspect-ratio:4/3}
+#p2{order:3;margin-top:28px}
+#s1a{order:4;margin-top:16px;aspect-ratio:16/10}
+.trk>h2.s2{order:5;margin-top:90px}
+.trk>p.s2{order:6;margin-top:14px}.trk>p.s2 br{display:none}
+.trk>.ph.s2{order:7;margin-top:24px;aspect-ratio:4/5}
+.trk>.mono.s2{order:8;margin-top:40px;margin-bottom:12px}
+.trk>.xp{order:9;grid-column:auto}
+.trk>h2.s3{order:10;margin-top:90px;margin-bottom:8px}
+.trk>.stp{order:11;margin-top:18px}
+.hd{white-space:normal}
+}
 </style>
 </head>
 <body>
@@ -181,9 +204,9 @@ a{color:inherit;text-decoration:none}
    </h1>
    <p class="bd fd" id="p1">화면을 그리기 전에 먼저 사람들의 이야기를 듣고, 사용자가 어디서 멈추는지 찾는 UI/UX 디자이너예요.</p>
    </div>
-   <p class="bd fd" id="p2" style="left:29.69%;bottom:74.82%;width:15.625%">그렇게 찾은 멈춘 순간을 다시 지나갈 수 있는 화면으로 이어요. 사용자가 끝까지 갈 수 있도록요.</p>
-   <div class="ph fd s1p" style="left:29.69%;top:9.82%;width:12.66%;height:11.52%"><img src="img/about/s1a.webp" alt="사용성 테스트를 기록하는 김이서"></div>
-   <div class="ph fd s1p" style="left:13.28%;top:24.39%;width:7.54%;height:17.68%"><img src="img/about/s1b.webp" alt="인터뷰하는 김이서"></div>
+   <p class="bd fd" id="p2" style="left:29.69%;bottom:74.82%;width:18%">그렇게 찾은 멈춘 순간을 다시 지나갈 수 있는 화면으로 이어요. 사용자가 끝까지 갈 수 있도록요.</p>
+   <div class="ph fd s1p" id="s1a" style="left:29.69%;top:10.6%;width:10.6%;height:9.65%"><img src="img/about/s1a.webp" alt="사용성 테스트를 기록하는 김이서"></div>
+   <div class="ph fd s1p" id="s1b" style="left:13.28%;top:24.39%;width:7.54%;height:17.68%"><img src="img/about/s1b.webp" alt="인터뷰하는 김이서"></div>
 
    <h2 class="hd fd s2" style="left:52.031%;top:12.195%">Who I am</h2>
    <p class="bd fd s2" style="left:52.031%;top:17.683%;width:25%;line-height:1.75">어릴 때 포토샵으로 놀던 아이가, 그대로 디자인 한 길을 걸어왔어요.<br>화면을 그리기 전에 먼저 사람들의 이야기를 들어요.<br>인터뷰를 포스트잇 916장으로 쪼개서, 사용자가 멈추는 곳을 찾아요.<br>친구들 피셜 꼼꼼한 완벽주의, 시안은 여러 개 펼쳐 놓고 골라요.<br>쉴 땐 카페 · 산책 · 여행으로 채워요.</p>
@@ -213,10 +236,10 @@ a{color:inherit;text-decoration:none}
   <div class="tg tim" style="margin-top:0">
    <div class="tb fi on" style="--dl:.1s"><img src="img/about/t1.webp" alt="리서치"></div>
    <div class="tb fi" style="--dl:.2s"><img src="img/about/t2.webp" alt="아이디어 스케치" style="object-position:30% 50%"></div>
-   <div class="tb fi" style="--dl:.3s"><img src="img/about/t3.webp" alt="시안" style="object-position:50% 50%"></div>
+   <div class="tb fi" style="--dl:.3s"><img src="img/about/t3.webp?v=4" alt="시안" style="object-position:50% 50%"></div>
    <div class="tb fi" style="--dl:.4s"><img src="img/about/t4.webp" alt="프로토타입 유저 플로우" style="object-position:30% 50%"></div>
   </div>
-  <div class="tg tlb"><div class="on">01 · 리서치</div><div>02 · 스케치</div><div>03 · 시안</div><div>04 · 프로토타입</div></div>
+  <div class="tg tlb"><div class="on">01 · 리서치<span>인터뷰로 멈춘 곳을 들어요</span></div><div>02 · 스케치<span>멈춘 곳을 지나갈 길을 그려요</span></div><div>03 · 시안<span>여러 개 펼쳐 놓고 골라요</span></div><div>04 · 프로토타입<span>끝까지 가는지 흐름으로 확인해요</span></div></div>
  </div>
 
  <div class="sc io brg" style="margin-top:220px">
@@ -284,7 +307,9 @@ let pr=0,sp=0,s2=false,s3=0;
 const S2=$$(".s2"),S3=$$(".s3"),ST=$$(".st");
 function readPr(){const r=us.getBoundingClientRect(),tot=r.height-innerHeight;pr=tot>0?c(-r.top/tot):0;}
 addEventListener("scroll",readPr,{passive:true});addEventListener("resize",readPr);readPr();sp=pr;
+const PH=matchMedia('(max-width:760px)');
 (function loop(){
+  if(PH.matches){trk.style.transform='';requestAnimationFrame(loop);return;}
   sp+=(pr-sp)*.1;if(Math.abs(pr-sp)<.0005)sp=pr;
   const vw=innerWidth,vh=innerHeight,vpU=vh*XW/2/vw;
   const camX=1280*sm(c((sp-.06)/.5)),camY=Math.max(0,XH-vpU)*sm(c((sp-.56)/.42));
@@ -307,10 +332,16 @@ $$(".io").forEach(e=>io.observe(e));
 
 /* keep the interview photo just right of the paragraph's text, on any screen size */
 (()=>{const ph=document.querySelectorAll('.s1p')[1],p1=document.getElementById('p1'),tr=document.getElementById('trk');if(!ph||!p1)return;
-function place(){const rg=document.createRange();rg.selectNodeContents(p1);const rs=[...rg.getClientRects()];if(!rs.length)return;
- const t=tr.getBoundingClientRect(),right=Math.max(...rs.map(r=>r.right)),top=Math.min(...rs.map(r=>r.top));
- ph.style.left=((right-t.left+80)/t.width*100)+'%';ph.style.top=((top-t.top)/t.height*100)+'%';
- const h=Math.max(160,Math.min(t.height*.1414,innerHeight-(top-t.top)-28));ph.style.height=h+'px';ph.style.width=(h*0.7275)+'px';}
+function place(){if(matchMedia('(max-width:760px)').matches){ph.style.left=ph.style.top=ph.style.width=ph.style.height='';return;}const rg=document.createRange();rg.selectNodeContents(p1);const rs=[...rg.getClientRects()];if(!rs.length)return;
+ const t=tr.getBoundingClientRect(),right=Math.max(...rs.map(r=>r.right));let top=Math.min(...rs.map(r=>r.top));
+ const x0=right+80;let h=Math.max(160,Math.min(t.height*.1414,innerHeight-(top-t.top)-28));
+ /* keep the photo clear of the line: start it below the curve wherever the photo sits */
+ const xl=document.getElementById('xl'),m=xl.getScreenCTM();if(m){const L=xl.getTotalLength();let ly=-1e9;
+  for(let k=0;k<=400;k++){const q=xl.getPointAtLength(L*.2*k/400),sx=m.a*q.x+m.c*q.y+m.e,sy=m.b*q.x+m.d*q.y+m.f;
+   if(sx>=x0-12&&sx<=x0+h*.7275+12)ly=Math.max(ly,sy);}
+  if(ly>top-36){top=ly+36;h=Math.max(160,Math.min(h,innerHeight-(top-t.top)-28));}}
+ ph.style.left=((x0-t.left)/t.width*100)+'%';ph.style.top=((top-t.top)/t.height*100)+'%';
+ ph.style.height=h+'px';ph.style.width=(h*0.7275)+'px';}
 addEventListener('resize',place);document.fonts&&document.fonts.ready.then(place);place();setTimeout(place,600);})();
 
 /* When I pause: scroll picks the photo (no click) */
