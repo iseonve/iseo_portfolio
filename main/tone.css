@@ -391,3 +391,13 @@ html body .binder{border-radius:0!important}
 html body .binder .holes i{width:10px!important;height:10px!important;border-radius:0!important;background:#141214!important}
 html body .binder .meno{font:400 22px/1 "Inter","Pretendard",sans-serif;letter-spacing:-.04em;text-transform:none;color:var(--cink)}
 html body .binder svg.dw.ac{color:#fff;filter:drop-shadow(0 0 .1em rgba(255,255,255,.9)) drop-shadow(0 0 .25em rgba(240,105,159,.8))}
+/* binder, same layout — finished like the site's objects: photo and the changing word sit on black screens */
+html body .binder .bleft{background:#070708!important;padding:10px!important;border-right:1px dotted var(--cl)!important}
+html body .binder .bleft img{position:absolute!important;inset:10px!important;width:calc(100% - 20px)!important;height:calc(100% - 20px)!important;border-radius:3px}
+html body .binder .bleft figcaption{left:10px!important;right:10px!important;bottom:10px!important}
+html body .binder .doesrow{margin:0 18px!important;height:84px!important;background:#070708;border:0!important;border-radius:4px;color:#7c7679;box-shadow:inset 0 2px 8px rgba(0,0,0,.8)}
+html body .binder .doesrow + .bio{border-top:0}
+html body .binder .bright h2{border-bottom:0!important}
+html body .binder .wi{color:#f5a6c3;filter:drop-shadow(0 0 .12em rgba(245,166,195,.85))}
+html body .binder .bright{gap:0;padding-bottom:6px}
+html body .binder .bio{padding-top:22px!important}
