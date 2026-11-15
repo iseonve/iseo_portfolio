@@ -213,6 +213,7 @@ a{color:inherit;text-decoration:none}
 @media (max-width:720px){.hdr{grid-template-columns:1fr auto}.hdr .hnow{display:none}.hdr .hlogo{font-size:22px!important}}
 </style>
 <script>(function(){function on(){var h=document.querySelector('.hdr');if(!h)return;var f=function(){h.classList.toggle('hs',window.scrollY>20)};f();window.addEventListener('scroll',f,{passive:true})}if(document.readyState!=='loading')on();else document.addEventListener('DOMContentLoaded',on)})();</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300..500&display=swap">
 <style id="tone-about">
 /* About matched to the main page (C): the main page's neon pink, the dot font for the English section titles, and
    the main page's LED cells in place of the film grain. */
@@ -228,22 +229,11 @@ html body .tlb div.on{border-color:var(--ac)!important}
 html body .pz-nav li.on i{background:var(--ac)!important;box-shadow:0 0 10px rgba(255,79,160,.7)}
 /* Korean titles stay in the main page's Korean face (Pretendard, as the main tagline), lit in neon colours below. */
 html body :where(.hd .w>.h,.brg-h,#contact .h2){color:var(--lc,#f4f4f4)!important;-webkit-text-fill-color:var(--lc,#f4f4f4)!important}
-/* Colour in the titles: each one is lit like one of the main page's screens (neon LED colours with a glow).
-   Hero: pink, its key words violet. Who I am: green. How I work: violet. The quiet line before When I pause: amber.
-   When I pause: pink. Contact: green, "연락 주세요." pink. */
-html body h1.hd{--lc:#ff4fa0;filter:drop-shadow(0 0 2px rgba(255,79,160,.9)) drop-shadow(0 0 14px rgba(255,79,160,.45))}
-html body h1.hd .w.k{--lc:#c4a0ff}
-html body h1.hd .w.k>.h{filter:drop-shadow(0 0 2px rgba(185,139,255,.9))}
-html body h2.hd.s2{color:#2bff7e!important;text-shadow:0 0 2px rgba(43,255,126,.9),0 0 16px rgba(43,255,126,.45)}
-html body h2.hd.s3{color:#c4a0ff!important;text-shadow:0 0 2px rgba(185,139,255,.9),0 0 16px rgba(154,75,255,.5)}
-html body .pz-t{color:#ff4fa0!important;text-shadow:0 0 2px rgba(255,79,160,.9),0 0 16px rgba(255,79,160,.5)}
-html body .brg-h{--lc:#ffb547;filter:drop-shadow(0 0 2px rgba(255,181,71,.85)) drop-shadow(0 0 14px rgba(255,160,40,.4))}
-html body #contact .h2{--lc:#2bff7e;filter:drop-shadow(0 0 2px rgba(43,255,126,.85)) drop-shadow(0 0 14px rgba(43,255,126,.35))}
-html body #contact .h2 span{--lc:#ff4fa0;color:#ff4fa0!important;-webkit-text-fill-color:#ff4fa0!important;filter:drop-shadow(0 0 2px rgba(255,79,160,.9))}
-
-/* Colour in the backdrop: like the main page's LED panel, a few diodes idle at a low glow and breathe on and off, in
-   the site's pink and the three project colours (drawn by the script below on the same 14px grid as the cells). */
-#ledlife{position:fixed;inset:0;z-index:0;pointer-events:none;-webkit-mask:radial-gradient(ellipse 90% 85% at 50% 45%,#000 35%,transparent 100%);mask:radial-gradient(ellipse 90% 85% at 50% 45%,#000 35%,transparent 100%)}
+/* Titles set like the main page's About ("Hi, I'm Iseo"): one plain ink, no glow — off-white here on the dark page,
+   with only the key words in the site's pink. English titles in Inter Tight at 350, as the main About title. */
+html body h1.hd .w.k,html body #contact .h2 span{--lc:#ff4fa0}
+html body :is(h2.hd.s2,h2.hd.s3,.pz-t){font-family:"Inter Tight","Inter","Pretendard",sans-serif!important;font-weight:350!important;letter-spacing:-.03em!important;word-spacing:0!important;color:#f2f2f2!important;text-shadow:none!important}
+html body h2.hd:is(.s2,.s3){font-size:max(34px,3.6vw)!important}
 
 /* When I pause: the photo behind becomes an LED billboard — the same photo, in full colour, shown through round
    diodes, so the section glows in the colours of the trip instead of a dark blur. */
@@ -463,17 +453,6 @@ document.addEventListener("pointerleave",()=>c.classList.remove("on"));
 addEventListener("pointerdown",()=>c.classList.add("dn"));addEventListener("pointerup",()=>c.classList.remove("dn"));
 (function f(){c.style.transform=`translate(${x}px,${y}px)`;const v=document.querySelector(".vcur.on");c.classList.toggle("vh",!!v);requestAnimationFrame(f);})();
 })();
-</script>
-<script id="ledlife-js">
-(function(){var c=document.createElement('canvas');c.id='ledlife';c.setAttribute('aria-hidden','true');document.body.insertBefore(c,document.body.firstChild);
-var x=c.getContext('2d'),S=14,R=2.4,list=[],W,H,d,red=matchMedia('(prefers-reduced-motion: reduce)').matches;
-var COL=['255,79,160','255,79,160','154,75,255','43,255,126','255,90,77','255,236,226'];
-function size(){d=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;c.width=W*d;c.height=H*d;c.style.width=W+'px';c.style.height=H+'px';x.setTransform(d,0,0,d,0,0);
-list=[];var n=Math.round(W/S*H/S*.03);for(var i=0;i<n;i++)list.push({x:Math.floor(Math.random()*W/S)*S+S/2,y:Math.floor(Math.random()*H/S)*S+S/2,p:Math.random()*6.28,s:.0004+Math.random()*.0011,c:COL[i%COL.length]})}
-function f(t){x.clearRect(0,0,W,H);for(var i=0;i<list.length;i++){var o=list[i],v=red?.6:Math.sin(t*o.s+o.p);if(v<=.15)continue;var a=.55*Math.pow((v-.15)/.85,1.5);
-x.fillStyle='rgba('+o.c+','+a.toFixed(3)+')';x.beginPath();x.arc(o.x,o.y,R,0,6.283);x.fill();if(a>.25){x.fillStyle='rgba('+o.c+','+(a*.18).toFixed(3)+')';x.beginPath();x.arc(o.x,o.y,R*3,0,6.283);x.fill()}}
-if(!red)requestAnimationFrame(f)}
-size();addEventListener('resize',size);requestAnimationFrame(f)})();
 </script>
 </body>
 </html>
