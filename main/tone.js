@@ -17,20 +17,25 @@
   function line(ws) { return '<span class="dl">' + ws.map(function (w) { return dot(w[0], w[1]); }).join('') + '</span>'; }
   var WORDS = ['listens', 'breaks down', 'compares', 'connects'];
   var HTML =
-    '<div class="ab0 abb"><div class="binder">' +
-      '<div class="holes" aria-hidden="true">' + new Array(12).join('<i></i>') + '</div>' +
-      '<div class="bh-l k"><span class="meno">ME.00</span><span>About me</span></div>' +
-      '<div class="bh-r k"><span>Iseo Kim</span><span>UI/UX Designer · Seoul</span></div>' +
-      '<figure class="bleft"><img src="' + IMG + 'me.webp" alt="포스트잇 벽 앞에서 웃는 김이서" loading="lazy"><figcaption><span>Hi, I’m iseo</span><b>916 sticky notes</b></figcaption></figure>' +
-      '<div class="bright"><h2 aria-label="I find where people get stuck.">' + line([['I', ''], ['find', '']]) + line([['where people', 'mu']]) + line([['get', 'mu'], ['stuck.', 'ac']]) + '</h2>' +
-        '<div class="doesrow"><span>Iseo</span><span class="wv" aria-live="polite">' + WORDS.map(function (w, i) { return '<span class="wi' + (i ? '' : ' on') + '" aria-label="' + w + '">' + dot(w) + '</span>'; }).join('') + '</span><span>first</span></div>' +
-        '<div class="bio"><p>어릴 때부터 디자인 한 길을 걸어왔어요. 스타트업에서 기획자와 함께 화면을 그리며, 보기 좋은 화면보다 사용자가 막힘 없이 지나가는 길을 만드는 일에 더 큰 보람을 느꼈고 UX로 방향을 잡았어요.</p><p>롯데이노베이트 운영팀에서는 2년 7개월 동안 롯데월드·서울스카이 등 실제 방문자가 매일 보는 웹사이트를 맡았어요.</p><p>지금은 사용자가 <em>멈춘 순간</em>을 찾아 다시 잇는 UI/UX 디자이너예요. 먼저 듣고, 잘게 나누고, 여러 시안으로 비교한 뒤, 직접 코드로 구현해 개발자와 같은 화면을 보며 이야기해요.</p></div></div>' +
-      '<div class="bf-l k"><span>Cafés · Walks · Travel</span></div>' +
-      '<a class="bf-r k" href="https://iseonve.github.io/iseo_portfolio/about.html" target="_blank" rel="noopener"><span>More about me</span><span>↗</span></a>' +
-    '</div></div>';
-  /* the word slides sideways: current one out to the left, next one in from the right */
+    '<div class="ab0 abg">' +
+      '<p class="g-k">ME.00 — About</p>' +
+      '<div class="g-l"><h2 aria-label="I find where people">' + line([['I', ''], ['find', '']]) + line([['where', 'mu']]) + line([['people', 'mu']]) + '</h2>' +
+        '<p class="g-lab"><i>?</i>Who</p><p class="g-tx">어릴 때부터 디자인 한 길을 걸어왔어요. 스타트업에서 기획자와 화면을 그리며, 사용자가 막힘 없이 지나가는 길을 만드는 일에 보람을 느껴 UX로 방향을 잡았어요. 롯데이노베이트 운영팀에서는 2년 7개월 동안 실제 방문자가 매일 보는 웹사이트를 맡았어요.</p></div>' +
+      '<div class="g-mid"><span class="strap" aria-hidden="true"><b>ISEO KIM · UI/UX · ISEO KIM · UI/UX · ISEO KIM · UI/UX · ISEO KIM · UI/UX ·</b></span>' +
+        '<div class="badge"><span class="clip" aria-hidden="true"></span>' +
+          '<div class="b-top"><span>ME.00</span><span>Access · All areas</span></div>' +
+          '<div class="b-ph"><i style="background-image:url(' + IMG + 'me.webp)"></i></div>' +
+          '<div class="b-nm" aria-label="Iseo Kim">' + line([['iseo', ''], ['kim', '']]) + '</div>' +
+          '<div class="b-row"><span>UI/UX Designer</span><span>Seoul</span></div>' +
+          '<div class="b-scr"><span class="b-pre">Iseo</span><span class="wv">' + WORDS.map(function (w, i) { return '<span class="wi' + (i ? '' : ' on') + '" aria-label="' + w + '">' + dot(w) + '</span>'; }).join('') + '</span></div>' +
+          '<div class="b-bar" aria-hidden="true"></div>' +
+        '</div></div>' +
+      '<div class="g-r"><h2 aria-label="get stuck.">' + line([['get', 'mu']]) + line([['stuck.', 'ac']]) + '</h2>' +
+        '<p class="g-lab"><i>!</i>How</p><p class="g-tx">지금은 사용자가 <em>멈춘 순간</em>을 찾아 다시 잇는 UI/UX 디자이너예요. 먼저 듣고, 잘게 나누고, 여러 시안으로 비교한 뒤 직접 코드로 구현해 개발자와 같은 화면을 보며 이야기해요.</p>' +
+        '<a class="g-go" href="https://iseonve.github.io/iseo_portfolio/about.html" target="_blank" rel="noopener">More about me <span>↗</span></a></div>' +
+    '</div>';
   (function words() {
-    var v = document.querySelector('.binder .wv');
+    var v = document.querySelector('.abg .wv');
     if (!v) { requestAnimationFrame(words); return; }
     var it = v.querySelectorAll('.wi'), i = 0;
     if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -38,8 +43,25 @@
       var a = it[i]; i = (i + 1) % it.length; var b = it[i];
       a.classList.remove('on'); a.classList.add('off');
       b.classList.remove('off'); b.classList.add('in'); void b.offsetWidth; b.classList.remove('in'); b.classList.add('on');
-      setTimeout(function () { a.classList.remove('off'); }, 700);
+      setTimeout(function () { a.classList.remove('off'); }, 800);
     }, 2600);
+  })();
+  /* the badge hangs from its strap: a slow sway, and it tilts toward the pointer */
+  (function sway() {
+    var g = document.querySelector('.abg .badge');
+    if (!g) { requestAnimationFrame(sway); return; }
+    var tx = 0, ty = 0, cx = 0, cy = 0, t0 = performance.now(), still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    addEventListener('pointermove', function (e) {
+      var r = g.getBoundingClientRect(); if (r.bottom < 0 || r.top > innerHeight) return;
+      tx = Math.max(-1, Math.min(1, (e.clientX - (r.left + r.width / 2)) / 500));
+      ty = Math.max(-1, Math.min(1, (e.clientY - (r.top + r.height / 2)) / 500));
+    });
+    (function f(t) {
+      requestAnimationFrame(f); if (still) return;
+      cx += (tx - cx) * .06; cy += (ty - cy) * .06;
+      var sw = Math.sin((t - t0) / 1600) * 1.4;
+      g.style.transform = 'rotateZ(' + (sw - cx * 3).toFixed(2) + 'deg) rotateY(' + (cx * 14).toFixed(2) + 'deg) rotateX(' + (-cy * 8).toFixed(2) + 'deg)';
+    })(t0);
   })();
   (function fonts() { if (document.getElementById('binder-font')) return; var l = document.createElement('link'); l.id = 'binder-font'; l.rel = 'stylesheet'; l.href = 'https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300&family=La+Belle+Aurore&display=swap'; document.head.appendChild(l); })();
   /* every title line is sized to the same width; the photo line a bit smaller, its photos outside the title */
