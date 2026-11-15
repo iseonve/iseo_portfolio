@@ -243,7 +243,7 @@ html:root body .page .foot.foot.foot .live{display:none!important}
 html body .page .cardsec .card h3.clab img.gmark[alt="ChatGPT"]{height:24px}
 html body .page .cardsec .card h3.clab img.gmark[alt="Lotte"]{height:24px}
 html:root body .page .foot.foot.foot{min-height:0!important;grid-template-rows:auto auto auto auto auto auto!important}
-html:root body .page .foot.foot.foot .gather.gather{margin-top:2vh!important;height:250px!important}
+html:root body .page .foot.foot.foot .gather.gather{margin-top:11vh!important;height:250px!important}
 html:root body .page .foot.foot.foot .fbar{margin-top:56px!important}
 html:root body .page .foot.foot.foot{padding-top:0!important}
 html body .page .foot #gather.gwait .glab{opacity:0;transition:opacity .35s}
