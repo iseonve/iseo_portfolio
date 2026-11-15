@@ -297,3 +297,13 @@ html body .ab1 .q5{left:28.2vw!important;top:9vw!important;width:24.6vw!importan
 html body .ab1 .q6{left:auto!important;right:-17.4vw!important;top:14vw!important;width:14.6vw!important;height:19.5vw!important}
 html body .ab1 .tx{text-shadow:none!important}
 html body .ab0.ab1{padding-bottom:4vw!important}html body .ab1 .scat{height:36vw!important}
+/* About lower part = layout 1 (reference): two justified text columns over scattered photos */
+@media (min-width:761px){
+html body .ab0.ab1 .scat.scat{width:52.8vw!important;height:56vw!important;margin-top:4vw!important}
+html body .ab0.ab1 .t1.t1{left:0!important;top:8.33vw!important;width:25vw!important}
+html body .ab0.ab1 .t2.t2{left:27.78vw!important;top:8.33vw!important;width:25vw!important}
+html body .ab0.ab1 .q3.q3{left:-10.42vw!important;top:11.8vw!important;width:18.06vw!important;height:25vw!important;right:auto!important}
+html body .ab0.ab1 .q4.q4{left:38.9vw!important;top:4.17vw!important;width:18.06vw!important;height:24.3vw!important;right:auto!important}
+html body .ab0.ab1 .q5.q5{left:15.28vw!important;top:29.86vw!important;width:14.58vw!important;height:19.44vw!important;right:auto!important}
+html body .ab0.ab1 .q6.q6{left:49.3vw!important;top:34.7vw!important;width:15.97vw!important;height:20.83vw!important;right:auto!important}
+}
