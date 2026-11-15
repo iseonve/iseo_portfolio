@@ -210,3 +210,4 @@ html:root:not([data-stack]) body .page .head.head.head.head.head.head.head.head.
 html:root:not([data-stack]) body .page .head .hstats dd{white-space:pre-line}
 html:root:not([data-stack]) body .page .head.head.head.head.head.head.head.head.head.head.head.head.head:is(.c1,.c2,.c3) .hflow .ar{color:rgba(255,255,255,.4)!important;opacity:1!important}
 html:root:not([data-stack]) body .page .head.head.head.head.head.head.head.head.head.head.head.head.head:is(.c1,.c2,.c3) h2.dm.dm.dm.dm.dm{line-height:1.04!important}
+html:root:not([data-stack]) body .page .head .hcols p:not(.lab){white-space:pre-line}
