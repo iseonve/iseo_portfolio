@@ -352,3 +352,27 @@ html body .binder .bright h2{position:static!important;margin:0!important;width:
 .binder .bio{padding:18px 14px 14px}
 .binder .bio p{margin:0 0 8px;font:400 15px/1.7 "Pretendard",sans-serif;letter-spacing:-.02em;color:var(--cink);word-break:keep-all;max-width:30em}
 @media (max-width:760px){.binder{grid-template-columns:22px minmax(0,1fr);grid-template-rows:30px 30px auto auto 30px 30px}.binder .holes{grid-row:1/7}.binder .bh-l,.binder .bh-r,.binder .bf-l,.binder .bf-r,.binder .bleft,.binder .bright{grid-column:2;border-right:0}.binder .bh-l{grid-row:1}.binder .bh-r{grid-row:2}.binder .bleft{grid-row:3;min-height:260px;border-bottom:1px dotted var(--cl)}.binder .bright{grid-row:4}.binder .bf-l{grid-row:5}.binder .bf-r{grid-row:6;border-top:1px dotted var(--cl)}html body .binder .bright h2{font-size:38px!important}.binder .doesrow{height:64px}.binder .bio p{font-size:14px}}
+/* binder v2: bigger, in the site's own language (dot titles, mono labels, the site pink) */
+html body .binder{--card:#f0699f;--cink:#141214;--cl:rgba(20,18,20,.4);width:min(1200px,88vw)!important;grid-template-columns:40px minmax(0,440px) minmax(0,1fr)!important;grid-template-rows:40px auto 40px!important;border-radius:10px!important;box-shadow:0 0 0 1px rgba(255,255,255,.06),0 50px 120px -30px rgba(240,105,159,.35),0 40px 90px -30px #000!important}
+html body .binder .k{font:400 12px/40px "JetBrains Mono",monospace!important;letter-spacing:.12em!important}
+html body .binder .holes i{width:10px;height:10px;background:#141214}
+html body .binder .bleft{min-height:560px!important}
+html body .binder .bleft figcaption span{font:500 13px/1 "JetBrains Mono",monospace!important;letter-spacing:.1em;text-transform:uppercase}
+html body .binder .bleft figcaption b{font-size:11px!important}
+html body .binder .bright h2{display:grid!important;gap:.32em;padding:28px 24px 30px!important;font:400 clamp(30px,3.1vw,48px)/1 sans-serif!important}
+html body .binder .dl{display:flex;gap:.3em}
+html body .binder svg.dw{display:block;height:.66em;fill:currentColor;overflow:visible}
+html body .binder svg.dw.mu{color:rgba(20,18,20,.38)}
+html body .binder svg.dw.lit{color:#fff;filter:drop-shadow(0 0 .12em rgba(255,255,255,.75))}
+html body .binder .doesrow{height:96px!important;padding:0 24px!important;font:400 12px "JetBrains Mono",monospace!important;letter-spacing:.12em!important}
+html body .binder .wv{position:relative;flex:1;height:100%;margin:0 24px;overflow:hidden;font-size:clamp(26px,2.5vw,38px)}
+html body .binder .wi{position:absolute;left:50%;top:50%;transform:translate(calc(-50% + 120%),-50%);opacity:0;transition:transform .7s cubic-bezier(.6,0,.2,1),opacity .5s}
+html body .binder .wi.on{transform:translate(-50%,-50%);opacity:1}
+html body .binder .wi.off{transform:translate(calc(-50% - 120%),-50%);opacity:0}
+html body .binder .wi.in{transition:none;transform:translate(calc(-50% + 120%),-50%);opacity:0}
+html body .binder .wi svg.dw{height:.66em}
+html body .binder .bio{padding:26px 24px 24px!important}
+html body .binder .bio p{font:500 17px/1.7 "Pretendard",sans-serif!important;max-width:34em}
+html body .binder .bh-l,html body .binder .bh-r,html body .binder .bf-l,html body .binder .bf-r{padding:0 18px!important}
+html body .ab0 .binder h2>span.dl{margin:0!important;padding:0!important;width:auto!important;position:static!important}html body .ab0 .binder h2>span.dl::before{display:none!important;content:none!important}
+html body .ab0 .binder h2 .dl{gap:.42em!important}html body .ab0 .binder .bright h2{font-size:clamp(46px,4.6vw,76px)!important;gap:.26em!important;padding:34px 26px 34px!important}

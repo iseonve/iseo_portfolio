@@ -3,23 +3,43 @@
 (function () {
   var IMG = 'https://iseonve.github.io/iseo_portfolio/img/about/';
   var ph = function (f, c, pos) { return '<i class="ap ' + c + '" style="background-image:url(' + IMG + f + ');background-position:' + (pos || '50% 50%') + '"></i>'; };
+  var DB = {A:[".###.","#...#","#...#","#####","#...#","#...#","#...#"],B:["####.","#...#","#...#","####.","#...#","#...#","####."],C:[".###.","#...#","#....","#....","#....","#...#",".###."],D:["####.","#...#","#...#","#...#","#...#","#...#","####."],E:["#####","#....","#....","####.","#....","#....","#####"],F:["#####","#....","#....","####.","#....","#....","#...."],G:[".###.","#...#","#....","#.###","#...#","#...#",".####"],H:["#...#","#...#","#...#","#####","#...#","#...#","#...#"],I:["#####","..#..","..#..","..#..","..#..","..#..","#####"],J:["..###","...#.","...#.","...#.","...#.","#..#.",".##.."],K:["#...#","#..#.","#.#..","##...","#.#..","#..#.","#...#"],L:["#....","#....","#....","#....","#....","#....","#####"],M:["#...#","##.##","#.#.#","#.#.#","#...#","#...#","#...#"],N:["#...#","##..#","#.#.#","#.#.#","#..##","#...#","#...#"],O:[".###.","#...#","#...#","#...#","#...#","#...#",".###."],P:["####.","#...#","#...#","####.","#....","#....","#...."],Q:[".###.","#...#","#...#","#...#","#.#.#","#..#.",".##.#"],R:["####.","#...#","#...#","####.","#.#..","#..#.","#...#"],S:[".####","#....","#....",".###.","....#","....#","####."],T:["#####","..#..","..#..","..#..","..#..","..#..","..#.."],U:["#...#","#...#","#...#","#...#","#...#","#...#",".###."],V:["#...#","#...#","#...#","#...#","#...#",".#.#.","..#.."],W:["#...#","#...#","#...#","#.#.#","#.#.#","#.#.#",".#.#."],X:["#...#","#...#",".#.#.","..#..",".#.#.","#...#","#...#"],Y:["#...#","#...#",".#.#.","..#..","..#..","..#..","..#.."],Z:["#####","....#","...#.","..#..",".#...","#....","#####"],",":["..","..","..","..",".#",".#","#."],".":[".",".",".",".",".",".","#"],"'":["#","#",".",".",".",".","."],"!":["#","#","#","#","#",".","#"],"?":[".###.","#...#","....#","..##.","..#..",".....","..#.."],"-":["....","....","....","####","....","....","...."]," ":["...","...","...","...","...","...","..."]};
+  function dot(w, c) {
+    var x = 0, r = [];
+    w.toUpperCase().split('').forEach(function (ch) {
+      var g = DB[ch === '’' ? "'" : ch] || DB[' '];
+      g.forEach(function (row, y) { for (var i = 0; i < row.length; i++) if (row[i] === '#') r.push('<rect x="' + (x + i) * 10 + '" y="' + y * 10 + '" width="8.2" height="8.2"/>'); });
+      x += g[0].length + 1;
+    });
+    var W = (x - 1) * 10 - 1.8;
+    return '<svg class="dw ' + (c || '') + '" viewBox="0 0 ' + W + ' 68.2" style="width:' + (W / 68.2 * .66).toFixed(3) + 'em" aria-hidden="true">' + r.join('') + '</svg>';
+  }
+  function line(ws) { return '<span class="dl">' + ws.map(function (w) { return dot(w[0], w[1]); }).join('') + '</span>'; }
+  var WORDS = ['listens', 'breaks down', 'compares', 'connects'];
   var HTML =
     '<div class="ab0 abb"><div class="binder">' +
-      '<div class="holes" aria-hidden="true">' + new Array(10).join('<i></i>') + '</div>' +
+      '<div class="holes" aria-hidden="true">' + new Array(12).join('<i></i>') + '</div>' +
       '<div class="bh-l k"><span>About me</span><span class="sq"></span></div>' +
-      '<div class="bh-r k"><span>Iseo Kim</span><span>UI/UX Designer · Seoul</span></div>' +
-      '<figure class="bleft"><img src="' + IMG + 'me.webp" alt="포스트잇 벽 앞에서 웃는 김이서" loading="lazy"><figcaption><span>hi, I’m Iseo</span><b>916 sticky notes</b></figcaption></figure>' +
-      '<div class="bright"><h2>I find where people get stuck.</h2>' +
-        '<div class="doesrow"><span>Iseo</span><span class="w" id="abw">listens</span><span>first</span></div>' +
+      '<div class="bh-r k"><span>ME.00 — Iseo Kim</span><span>UI/UX Designer · Seoul</span></div>' +
+      '<figure class="bleft"><img src="' + IMG + 'me.webp" alt="포스트잇 벽 앞에서 웃는 김이서" loading="lazy"><figcaption><span>Hi, I’m iseo</span><b>916 sticky notes</b></figcaption></figure>' +
+      '<div class="bright"><h2 aria-label="I find where people get stuck.">' + line([['I', ''], ['find', '']]) + line([['where people', 'mu']]) + line([['get', 'mu'], ['stuck.', 'lit']]) + '</h2>' +
+        '<div class="doesrow"><span>Iseo</span><span class="wv" aria-live="polite">' + WORDS.map(function (w, i) { return '<span class="wi' + (i ? '' : ' on') + '" aria-label="' + w + '">' + dot(w) + '</span>'; }).join('') + '</span><span>first</span></div>' +
         '<div class="bio"><p>멈춘 순간을 다시 잇는 UI/UX 디자이너, 김이서입니다.</p><p>먼저 듣고, 잘게 나누고, 여러 시안으로 비교합니다.</p></div></div>' +
       '<div class="bf-l k"><span>Cafés · Walks · Travel</span></div>' +
       '<a class="bf-r k" href="https://iseonve.github.io/iseo_portfolio/about.html" target="_blank" rel="noopener"><span>More about me</span><span>↗</span></a>' +
     '</div></div>';
+  /* the word slides sideways: current one out to the left, next one in from the right */
   (function words() {
-    var W = ['listens', 'breaks it down', 'compares', 'connects'], i = 0, w = document.getElementById('abw');
-    if (!w) { requestAnimationFrame(words); return; }
+    var v = document.querySelector('.binder .wv');
+    if (!v) { requestAnimationFrame(words); return; }
+    var it = v.querySelectorAll('.wi'), i = 0;
     if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    setInterval(function () { w.classList.add('out'); setTimeout(function () { i = (i + 1) % W.length; w.textContent = W[i]; w.classList.remove('out'); }, 320); }, 2600);
+    setInterval(function () {
+      var a = it[i]; i = (i + 1) % it.length; var b = it[i];
+      a.classList.remove('on'); a.classList.add('off');
+      b.classList.remove('off'); b.classList.add('in'); void b.offsetWidth; b.classList.remove('in'); b.classList.add('on');
+      setTimeout(function () { a.classList.remove('off'); }, 700);
+    }, 2600);
   })();
   (function fonts() { if (document.getElementById('binder-font')) return; var l = document.createElement('link'); l.id = 'binder-font'; l.rel = 'stylesheet'; l.href = 'https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300&family=La+Belle+Aurore&display=swap'; document.head.appendChild(l); })();
   /* every title line is sized to the same width; the photo line a bit smaller, its photos outside the title */
