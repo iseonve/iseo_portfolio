@@ -7,18 +7,28 @@
 <meta name="description" content="사용자의 물음표를 느낌표로 바꾸는 UI/UX 디자이너 김이서의 포트폴리오">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable.min.css">
-<link rel="stylesheet" href="main/app.css?v=1794744975">
-<link rel="stylesheet" href="main/tone.css?v=1794744975">
+<link rel="stylesheet" href="main/app.css?v=1794745362">
+<link rel="stylesheet" href="main/tone.css?v=1794745362">
 <style>html,body{background:#171717}
 /* hold the page back until the intro stage is up, so a reload never flashes the half-styled chapters */
 #root{opacity:0;transition:opacity .35s ease}html.mp-ready #root{opacity:1}</style>
+<script>
+/* SENSE symbol on the earbuds case screen (replaces the word): violet, glowing, on the screen's dark ground */
+(function(){var img=new Image(),ok=false,wait=[];img.onload=function(){ok=true;wait.splice(0).forEach(function(f){try{f()}catch(e){}})};img.src='img/sense-symbol.png';
+window.__senseSym=function(ctx,w,h,col,redo){if(!ok){wait.push(redo);return false}
+ctx.save();ctx.shadowBlur=0;ctx.fillStyle=(col&&col.bg)||'#05030a';ctx.fillRect(0,0,w,h);
+var sh=h*.62,sw=sh*img.width/img.height,x=(w-sw)/2,y=(h-sh)/2;
+var c=document.createElement('canvas');c.width=img.width*8;c.height=img.height*8;var g=c.getContext('2d');g.imageSmoothingQuality='high';g.drawImage(img,0,0,c.width,c.height);g.globalCompositeOperation='source-in';g.fillStyle=(col&&col.ink)||'#b98bff';g.fillRect(0,0,c.width,c.height);
+ctx.shadowColor=(col&&col.glow)||'rgba(154,75,255,.9)';ctx.shadowBlur=26;ctx.drawImage(c,x,y,sw,sh);ctx.shadowBlur=10;ctx.drawImage(c,x,y,sw,sh);
+ctx.shadowBlur=0;ctx.fillStyle='rgba(0,0,0,.16)';for(var k=0;k<h;k+=4)ctx.fillRect(0,k,w,1);ctx.restore();return true}})();
+</script>
 <script>try{history.scrollRestoration='manual'}catch(e){}window.scrollTo(0,0);
 (function r(){var s=document.getElementById('stage');if(s&&s.dataset.phase&&document.querySelector('.page .head')){requestAnimationFrame(function(){document.documentElement.classList.add('mp-ready')});return}requestAnimationFrame(r)})();
 setTimeout(function(){document.documentElement.classList.add('mp-ready')},4000);</script>
 </head>
 <body>
 <div id="root"></div>
-<script type="module" src="main/app.js?v=1794744975"></script>
-<script src="main/tone.js?v=1794744975" defer></script>
+<script type="module" src="main/app.js?v=1794745362"></script>
+<script src="main/tone.js?v=1794745362" defer></script>
 </body>
 </html>

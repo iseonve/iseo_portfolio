@@ -64,4 +64,12 @@
     r.innerHTML = '<span class="lab">Period</span><span class="v">2023.08 \u2013 2026.03<small>2\uB144 7\uAC1C\uC6D4</small></span>';
     m.appendChild(r);
   })();
+  /* PJ.02 card: the SENSE logo in place of the word in the top-right label */
+  (function logo() {
+    var c = document.querySelectorAll('.page .cardsec .card')[1];
+    var h = c && c.querySelector('h3');
+    if (!h) { requestAnimationFrame(logo); return; }
+    if (h.querySelector('img')) return;
+    h.innerHTML = '<img class="slogo" src="img/sense-logo.png" alt="SENSE">';
+  })();
 })();

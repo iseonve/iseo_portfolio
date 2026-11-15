@@ -225,3 +225,4 @@ html:root:not([data-stack]) body .page .head.head.head.head.head.c3 .hper{width:
 html:root:not([data-stack]) body .page .head.head.head.head.head.c3 .hper .lab{color:rgba(255,255,255,.72)!important}
 html:root:not([data-stack]) body .page .head.head.head.head.head.c3 .hper .v{color:var(--px)!important}
 html:root:not([data-stack]) body .page .head.head.head.head.head.c3 .hper .v small{color:rgba(255,255,255,.5)!important}
+html body .page .cardsec .card h3 img.slogo{display:block;height:20px;width:auto;margin-left:auto}
