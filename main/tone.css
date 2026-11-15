@@ -1,0 +1,41 @@
+/* Main page About panel (draft), laid out after the oevra About page (measured at 2576px wide, here in vw):
+   - headline in three lines, staggered: line 1 from 23.5vw, lines 2-3 from 41.5vw, light sans (the main page's
+     Inter Tight, as "THANKS FOR YOUR VISIT!") at about 5.8vw, in the site's pink fading lighter;
+   - a mono label with a rule level with line 1, at 61vw;
+   - a photo tucked under line 1, left of lines 2-3; a photo low on the left; a photo cut off by the right edge —
+     all larger than the reference's, as asked;
+   - the text in one narrow column from 41.5vw (about 26vw wide), three short paragraphs, then a mono link.
+   Dark like the rest of the page, with a low pink light behind, as each project chapter has its own light. */
+html:root body .page .panel.panel.panel{background:#f6f4f5!important;color:#141214!important;padding:0!important;display:block!important;overflow:hidden!important}
+html:root body .page .panel.panel.panel.panel.panel > :not(.ab0):not(.ab0){display:none!important}
+.ab0{position:relative;height:max(56vw,100vh);font-family:"Pretendard",sans-serif}
+.ab0 h2{position:absolute;left:0;top:7vw;margin:0;width:100%;font:900 4.4vw/1.1 "Doto","JetBrains Mono",monospace;letter-spacing:0;word-spacing:-.3em;color:#141214}
+.ab0 h2 .ii{color:#f0699f;text-shadow:0 0 .3em rgba(240,105,159,.45)}
+.ab0 h2 > span{display:block;white-space:nowrap}.ab0 h2 .ii{display:inline}
+.ab0 h2 .l1{margin-left:23.5vw}
+.ab0 h2 .l2,.ab0 h2 .l3{margin-left:41.5vw}
+.ab0 h2 .l2{margin-top:.1em}
+.ab0 .lab{position:absolute;left:66vw;top:9.6vw;display:flex;align-items:center;gap:2.2vw;font:400 max(12px,.9vw)/1 "JetBrains Mono",monospace;letter-spacing:.1em;color:#f0699f;text-transform:uppercase}
+.ab0 .lab::after{content:"";width:5vw;height:1px;background:#f0699f}
+.ab0 .ph{position:absolute;background:#ddd center/cover no-repeat;border-radius:2px}
+.ab0 .p1{left:27vw;top:18vw;width:11.5vw;height:14.5vw}
+.ab0 .p2{left:5vw;top:44vw;width:22vw;height:14.6vw}
+.ab0 .p3{left:80vw;top:28vw;width:24vw;height:16vw}
+.ab0 .txt{position:absolute;left:41.5vw;top:28vw;width:27vw}
+.ab0 .txt p{margin:0 0 2.6vw;font:400 max(15px,1.15vw)/1.65 "Pretendard",sans-serif;letter-spacing:-.01em;color:#3a3638;word-break:keep-all}
+.ab0 .txt p em{font-style:normal;color:#f0699f}
+.ab0 .go{display:inline-flex;align-items:center;gap:1.2em;margin-top:1.2vw;font:400 max(13px,.9vw)/1 "JetBrains Mono",monospace;letter-spacing:.12em;color:#141214;text-decoration:none;text-transform:uppercase}
+.ab0 .go i{font-style:normal;letter-spacing:.05em;color:#f0699f;transition:transform .3s}
+.ab0 .go:hover i{transform:translateX(6px)}
+@media (max-width:760px){
+  .ab0{height:auto;padding:14vh 6vw 10vh}
+  .ab0 h2,.ab0 .lab,.ab0 .ph,.ab0 .txt{position:static;width:auto;margin:0}
+  .ab0 h2{font-size:11vw}.ab0 h2 .l1,.ab0 h2 .l2,.ab0 h2 .l3{margin-left:0}.ab0 h2 .l2,.ab0 h2 .l3{margin-left:12vw}
+  .ab0 .lab{margin:6vh 0 0}.ab0 .ph{width:60vw;height:45vw;margin:5vh 0 0}.ab0 .p3{margin-left:auto;margin-right:-6vw}
+  .ab0 .txt{margin-top:5vh}.ab0 .txt p{margin-bottom:18px}
+}
+
+/* header over the white panel: dark ink so the logo and menu stay readable */
+html.onlight header.hd .logo,html.onlight header.hd .seg,html.onlight header.hd nav a{color:#141214!important}
+html.onlight header.hd .seg::after{background:#141214!important}
+html.onlight .chrome.crop{border-color:#141214!important;color:#141214!important}
