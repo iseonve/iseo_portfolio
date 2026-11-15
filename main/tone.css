@@ -57,3 +57,21 @@ html.onlight .chrome.crop{border-color:#141214!important;color:#141214!important
 @keyframes seam{from{stroke-dashoffset:.05}to{stroke-dashoffset:-1}}
 .ab0 .txt,.ab0 h2,.ab0 .ph,.ab0 .lab{z-index:1}
 @media (max-width:760px){.ab0 .trc{display:none}.ab0 h2 > span{margin-left:0!important}}
+
+/* Project chapters: one type scale, so each level reads at a glance.
+   1 headline (dot matrix, unchanged)  2 the lead sentence of each column (the point: larger, white)
+   3 the numbers (smaller than before, so they back the lead up instead of competing with it)
+   4 the supporting text  5 labels and captions (mono, small, quiet). */
+html:root:not([data-stack]) body .page .head.head.head.head:is(.c1,.c2,.c3) > .pjno.pjno{font:400 12px/1 "JetBrains Mono",monospace!important;letter-spacing:.16em!important;text-transform:uppercase!important;margin:0 0 3vh!important}
+html:root:not([data-stack]) body .page .head.head.head.head:is(.c1,.c2,.c3) .hmore{margin-top:6vh!important}
+html:root:not([data-stack]) body .page .head.head.head.head:is(.c1,.c2,.c3) .hcols{gap:0 3.2vw!important}
+html:root:not([data-stack]) body .page .head.head.head.head:is(.c1,.c2,.c3) .hcols p.lab{gap:6px!important;margin:0 0 14px!important;font:400 11px/1 "JetBrains Mono",monospace!important;letter-spacing:.16em!important;color:rgba(255,255,255,.45)!important}
+html:root:not([data-stack]) body .page .head.head.head.head:is(.c1,.c2,.c3) .hcols p.lab b{color:var(--px)}
+html:root:not([data-stack]) body .page .head.head.head.head:is(.c1,.c2,.c3) .hcols p:not(.lab){font:500 clamp(16px,1.3vw,20px)/1.5 "Pretendard",sans-serif!important;letter-spacing:-.02em!important;color:#f4f4f4!important}
+html:root:not([data-stack]) body .page .head.head.head.head:is(.c1,.c2,.c3) .hcols .hdesc{margin:12px 0 0!important;font:400 14px/1.7 "Pretendard",sans-serif!important;letter-spacing:-.01em;color:rgba(255,255,255,.5)!important}
+html:root:not([data-stack]) body .page .head.head.head.head:is(.c1,.c2,.c3) .hflow{margin:4.5vh 0 0!important;gap:6px!important}
+html:root:not([data-stack]) body .page .head.head.head.head:is(.c1,.c2,.c3) .hflow .st{font:400 12px/1 "JetBrains Mono","Pretendard",monospace!important;padding:6px 10px 6px 9px!important;border-color:rgba(255,255,255,.12)!important;color:rgba(255,255,255,.7)!important}
+html:root:not([data-stack]) body .page .head.head.head.head:is(.c1,.c2,.c3) .hflow .ar{font-size:11px!important;opacity:.5!important}
+html:root:not([data-stack]) body .page .head.head.head.head:is(.c1,.c2,.c3) .hstats{margin:5vh 0 0!important;padding:2.2vh 0 0!important;border-top-color:rgba(255,255,255,.1)!important}
+html:root:not([data-stack]) body .page .head.head.head.head:is(.c1,.c2,.c3) .hstats dt{font:500 clamp(18px,1.5vw,24px)/1 "JetBrains Mono",monospace!important;letter-spacing:-.02em!important}
+html:root:not([data-stack]) body .page .head.head.head.head:is(.c1,.c2,.c3) .hstats dd{margin:8px 0 0!important;font:400 12px/1.45 "Pretendard",sans-serif!important;color:rgba(255,255,255,.45)!important}
