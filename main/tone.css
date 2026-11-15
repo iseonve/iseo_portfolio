@@ -286,3 +286,14 @@ html body .ab1 .t2{left:51.4vw;top:6.2vw;width:32.6vw}
 @media (max-width:760px){html body .ab0.ab1{padding:20vw 0}html body .ab1 .hd{width:70vw}html body .ab1 .pl,html body .ab1 .pr{display:none}
 html body .ab1 .scat{height:auto;width:90vw;display:grid;grid-template-columns:1fr 1fr;gap:4vw}html body .ab1 .scat .ap{position:static;width:auto;height:56vw}html body .ab1 .tx{position:static;grid-column:1/-1;width:auto;font-size:14px}}
 html body .ab1 .tags,html body .ab1 .ah{border:0!important;padding:0!important}
+/* About fix: no separate black box — sits on the page's own dark, full width; tidier lower part */
+html:root body .page .panel.panel.panel.panel.panel{background:transparent!important;margin-left:0!important;margin-right:0!important;border-radius:0!important;box-shadow:none!important}
+html body .ab1 .scat{width:52.8vw!important;height:40vw!important;margin-top:9vw!important}
+html body .ab1 .t1{left:0!important;top:0!important;width:24.6vw!important}
+html body .ab1 .t2{left:28.2vw!important;top:0!important;width:24.6vw!important}
+html body .ab1 .q3{left:-17.4vw!important;top:6vw!important;width:14.6vw!important;height:19.5vw!important}
+html body .ab1 .q4{left:0!important;top:9vw!important;width:24.6vw!important;height:16.4vw!important}
+html body .ab1 .q5{left:28.2vw!important;top:9vw!important;width:24.6vw!important;height:16.4vw!important}
+html body .ab1 .q6{left:auto!important;right:-17.4vw!important;top:14vw!important;width:14.6vw!important;height:19.5vw!important}
+html body .ab1 .tx{text-shadow:none!important}
+html body .ab0.ab1{padding-bottom:4vw!important}html body .ab1 .scat{height:36vw!important}
