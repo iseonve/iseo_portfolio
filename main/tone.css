@@ -315,3 +315,9 @@ html body .ab0.ab1 .q5.q5.q5{top:34vw!important}
 html body .ab0.ab1 .q6.q6.q6{top:39vw!important}
 html body .ab0.ab1 .scat.scat.scat{height:60vw!important}
 }
+/* fewer, different photos below: one wide work shot + one portrait */
+@media (min-width:761px){
+html body .ab0.ab1 .q3.q3.q3.q3{left:-8vw!important;top:16vw!important;width:33vw!important;height:16vw!important}
+html body .ab0.ab1 .q4.q4.q4.q4{left:36.5vw!important;top:19vw!important;width:16.3vw!important;height:21.7vw!important}
+html body .ab0.ab1 .scat.scat.scat.scat{height:42vw!important}
+}
