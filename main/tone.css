@@ -232,3 +232,11 @@ html body img.gmark{height:1.25em;width:auto;opacity:.95}
 
 
 html body .page .cardsec.cardsec.cardsec .card h3.clab.clab{display:flex!important;align-items:center;justify-content:flex-end;gap:7px;height:20px!important;overflow:visible!important;color:#e9e9e9!important;font:500 15px/1 var(--sans)!important;letter-spacing:.01em!important}html body .page .cardsec .card h3.clab img.gmark{display:block;height:20px;width:auto;flex:none}
+/* footer: dot typography like chapter titles */
+html body .page .foot.foot h2.dm.dm{font:400 clamp(44px,7.4vw,128px)/1 var(--sans)!important;letter-spacing:0!important;gap:.18em!important;margin-top:9vh!important}
+html body .page .foot.foot h2.dm.dm:before,html body .page .foot.foot h2.dm.dm:after{content:none!important;display:none!important}
+html body .page .foot.foot h2.dm.dm>span{display:block!important;line-height:.7!important}
+html body .page .foot.foot .dot-ac{color:#f0699f}
+html body .page .foot.foot .talk a:before{content:none!important}
+html body .page .foot.foot .talk{display:none!important}
+html body .page .foot.foot .live{display:none!important}
