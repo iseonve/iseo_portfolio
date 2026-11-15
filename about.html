@@ -213,6 +213,30 @@ a{color:inherit;text-decoration:none}
 @media (max-width:720px){.hdr{grid-template-columns:1fr auto}.hdr .hnow{display:none}.hdr .hlogo{font-size:22px!important}}
 </style>
 <script>(function(){function on(){var h=document.querySelector('.hdr');if(!h)return;var f=function(){h.classList.toggle('hs',window.scrollY>20)};f();window.addEventListener('scroll',f,{passive:true})}if(document.readyState!=='loading')on();else document.addEventListener('DOMContentLoaded',on)})();</script>
+<style id="tone-about">
+/* About matched to the main page (C): the main page's neon pink, the dot font for the English section titles, and
+   the main page's LED cells in place of the film grain. */
+:root{--ac:#ff4fa0!important;--pk:#ff8cc0!important}
+html body .grain{opacity:1!important;z-index:0!important;background:radial-gradient(circle,rgba(255,255,255,.06) 0 2.4px,transparent 3px) 0 0/14px 14px!important;
+  -webkit-mask:radial-gradient(ellipse 90% 85% at 50% 45%,#000 35%,transparent 100%);mask:radial-gradient(ellipse 90% 85% at 50% 45%,#000 35%,transparent 100%)}
+html body main{position:relative;z-index:1}
+html body main>.us,html body main>.lo{background-color:transparent!important}
+html body h2.hd:is(.s2,.s3),html body .pz-t{font-family:"Doto","JetBrains Mono",monospace!important;font-weight:900!important;letter-spacing:0!important;word-spacing:-.25em}
+html body h2.hd:is(.s2,.s3){font-size:max(30px,3.1vw)!important}
+html body .stp b,html body .xp figcaption,html body .tlb div,html body .pz-nav,html body .pz-cap{letter-spacing:.08em!important}
+html body .tlb div.on{border-color:var(--ac)!important}
+html body .pz-nav li.on i{background:var(--ac)!important;box-shadow:0 0 10px rgba(255,79,160,.7)}
+/* Korean titles as an LED sign: the letters are filled with lit diodes on a fine grid (white, or neon pink for the
+   pink words) with a soft glow, so they read like the main page's dot-matrix screens. */
+html body :where(.hd .w>.h,.brg-h,#contact .h2){--led:#f4f4f4;--ledg:255,255,255;
+  background:radial-gradient(circle,var(--led) 0 50%,transparent 58%) 0 0/3.4px 3.4px!important;
+  -webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;-webkit-text-fill-color:transparent!important;
+  filter:drop-shadow(0 0 6px rgba(var(--ledg),.22))}
+html body .hd .w.k>.h,html body #contact .h2 span{--led:#ff4fa0;--ledg:255,79,160}
+html body #contact .h2 span{background:inherit!important;-webkit-background-clip:text!important;background-clip:text!important;-webkit-text-fill-color:transparent!important;text-shadow:none!important}
+html body .hd .w.k>.h{text-shadow:none!important}
+html body :is(h2.hd.s2,h2.hd.s3,.pz-t){text-shadow:0 0 .35em rgba(255,255,255,.28)}
+</style>
 </head>
 <body>
 <nav class="hdr" aria-label="Main"><a class="hlogo" href="index.html" aria-label="iseo Kim, home"><i>i</i>seo Kim</a>
@@ -223,14 +247,14 @@ a{color:inherit;text-decoration:none}
  <div class="usv">
   <div class="trk" id="trk">
    <svg viewBox="0 0 2560 1640" class="lsv" aria-hidden="true">
-    <path id="xl" d="M 400 330 C 560 330, 600 452, 760 452 L 1260 452 Q 1296 452 1296 488 L 1296 1290 Q 1296 1330 1336 1330 L 2440 1330 Q 2480 1330 2480 1370 L 2480 1700" fill="none" stroke="#ededed" stroke-width="0.7" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
-    <path id="seamL" d="M 400 330 C 560 330, 600 452, 760 452 L 1260 452 Q 1296 452 1296 488 L 1296 1290 Q 1296 1330 1336 1330 L 2440 1330 Q 2480 1330 2480 1370 L 2480 1700" fill="none" stroke="#ee7fa0" stroke-width="2.4" stroke-linecap="round" pathLength="1" stroke-dasharray="0 0.104 0.02 1"/>
+    <path id="xl" d="M 400 330 L 520 330 L 642 452 L 760 452 L 1260 452 L 1296 488 L 1296 1290 L 1336 1330 L 2440 1330 L 2480 1370 L 2480 1700" fill="none" stroke="#ededed" stroke-width="0.7" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+    <path id="seamL" d="M 400 330 L 520 330 L 642 452 L 760 452 L 1260 452 L 1296 488 L 1296 1290 L 1336 1330 L 2440 1330 L 2480 1370 L 2480 1700" fill="none" stroke="#ff4fa0" stroke-width="2.4" stroke-linecap="butt" pathLength="1" stroke-dasharray="0 0.104 0.02 1"/>
     <line id="tk0" x1="400" y1="323" x2="400" y2="337" stroke="#ededed" stroke-width="0.7" opacity="0"/>
     <g id="star" opacity="0"><line x1="760" y1="445" x2="760" y2="459" stroke="#ededed" stroke-width="0.7"/><path d="M 760 443 L 762.5 452 L 760 461 L 757.5 452 Z M 751 452 L 760 449.5 L 769 452 L 760 454.5 Z" fill="#ededed"/></g>
-    <g class="st" data-i="0"><line x1="1400" y1="1323" x2="1400" y2="1337" stroke="#ededed" stroke-width="0.7"/><circle cx="1400" cy="1330" r="4" fill="#ededed"/></g>
-    <g class="st" data-i="1"><line x1="1700" y1="1323" x2="1700" y2="1337" stroke="#ededed" stroke-width="0.7"/><circle cx="1700" cy="1330" r="4" fill="#ededed"/></g>
-    <g class="st" data-i="2"><line x1="2000" y1="1323" x2="2000" y2="1337" stroke="#ededed" stroke-width="0.7"/><circle cx="2000" cy="1330" r="4" fill="#ededed"/></g>
-    <g class="st" data-i="3"><line x1="2300" y1="1323" x2="2300" y2="1337" stroke="#ededed" stroke-width="0.7"/><circle cx="2300" cy="1330" r="4" fill="#ee7fa0"/></g>
+    <g class="st" data-i="0"><line x1="1400" y1="1323" x2="1400" y2="1337" stroke="#ededed" stroke-width="0.7"/><rect x="1396" y="1326" width="8" height="8" fill="#ededed"/></g>
+    <g class="st" data-i="1"><line x1="1700" y1="1323" x2="1700" y2="1337" stroke="#ededed" stroke-width="0.7"/><rect x="1696" y="1326" width="8" height="8" fill="#ededed"/></g>
+    <g class="st" data-i="2"><line x1="2000" y1="1323" x2="2000" y2="1337" stroke="#ededed" stroke-width="0.7"/><rect x="1996" y="1326" width="8" height="8" fill="#ededed"/></g>
+    <g class="st" data-i="3"><line x1="2300" y1="1323" x2="2300" y2="1337" stroke="#ededed" stroke-width="0.7"/><rect x="2296" y="1326" width="8" height="8" fill="#ff4fa0"/></g>
    </svg>
 
    <div class="hero" style="left:1.25%;top:15.976%">
@@ -262,7 +286,7 @@ a{color:inherit;text-decoration:none}
 </div>
 
 <div class="lo">
- <svg width="100%" height="170" viewBox="0 0 1280 170" preserveAspectRatio="none" style="display:block" aria-hidden="true"><path d="M 1200 0 L 1200 70 Q 1200 100 1170 100 L 32 100" fill="none" stroke="#ededed" stroke-width="0.8" vector-effect="non-scaling-stroke"/><line x1="32" y1="94" x2="32" y2="106" stroke="#ededed" stroke-width="0.8" vector-effect="non-scaling-stroke"/></svg>
+ <svg width="100%" height="170" viewBox="0 0 1280 170" preserveAspectRatio="none" style="display:block" aria-hidden="true"><path d="M 1200 0 L 1200 70 L 1170 100 L 32 100" fill="none" stroke="#ededed" stroke-width="0.8" vector-effect="non-scaling-stroke"/><line x1="32" y1="94" x2="32" y2="106" stroke="#ededed" stroke-width="0.8" vector-effect="non-scaling-stroke"/></svg>
 
 
 
@@ -280,7 +304,7 @@ a{color:inherit;text-decoration:none}
 
  <div class="sc io brg" style="margin-top:220px">
   <h2 class="fi brg-h">일할 땐 멈춘 곳을 찾고,<br>쉴 땐 멈춰서<br>바라봐요.</h2>
-  <svg class="brg-l" viewBox="0 0 1278 191" preserveAspectRatio="none" aria-hidden="true"><path d="M0.9 190.2 L717.8 190.2 C781.5 190.2 819.1 178.4 844.5 160.6 C870 142.8 883.3 119.1 898.3 95.5 C913.3 71.9 930.1 48.3 962.6 30.7 C995.2 13 1043.6 1.2 1121.8 1.2 L1278 1.2" fill="none" stroke="rgba(237,237,237,.5)" stroke-width="1" vector-effect="non-scaling-stroke"/></svg>
+  <svg class="brg-l" viewBox="0 0 1278 191" preserveAspectRatio="none" aria-hidden="true"><path d="M0.9 190.2 L760 190.2 L949 1.2 L1278 1.2" fill="none" stroke="rgba(237,237,237,.5)" stroke-width="1" vector-effect="non-scaling-stroke"/></svg>
  </div>
 
  <section class="pz" id="pz">
