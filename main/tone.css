@@ -75,3 +75,13 @@ html:root:not([data-stack]) body .page .head.head.head.head:is(.c1,.c2,.c3) .hfl
 html:root:not([data-stack]) body .page .head.head.head.head:is(.c1,.c2,.c3) .hstats{margin:5vh 0 0!important;padding:2.2vh 0 0!important;border-top-color:rgba(255,255,255,.1)!important}
 html:root:not([data-stack]) body .page .head.head.head.head:is(.c1,.c2,.c3) .hstats dt{font:500 clamp(18px,1.5vw,24px)/1 "JetBrains Mono",monospace!important;letter-spacing:-.02em!important}
 html:root:not([data-stack]) body .page .head.head.head.head:is(.c1,.c2,.c3) .hstats dd{margin:8px 0 0!important;font:400 12px/1.45 "Pretendard",sans-serif!important;color:rgba(255,255,255,.45)!important}
+
+/* VIEW PROJECT: always clearly there (no longer waiting for the object to dock before it fades in), larger, in the
+   project's colour with a soft glow that breathes, and the arrow nudging toward the case page. */
+html:root body .page .cardsec[data-pj].cardsec .card .cgo.cgo.cgo{opacity:1!important;min-height:58px!important;margin-top:18px!important;padding:8px 8px 8px 24px!important;font:600 15px/1 "Pretendard","Inter",sans-serif!important;letter-spacing:.06em!important;box-shadow:0 0 0 1px rgba(var(--pg),.35),0 0 22px rgba(var(--pg),.28);animation:viewglow 2.6s ease-in-out infinite}
+html:root body .page .cardsec[data-pj].cardsec .card .cgo.cgo.cgo>span:last-child{width:42px!important;height:42px!important;font-size:18px!important;animation:viewnudge 2.6s ease-in-out infinite}
+html:root body .page .cardsec[data-pj].cardsec a.card:hover .cgo.cgo.cgo{animation:none;box-shadow:0 0 0 1px rgba(var(--pg),.6),0 0 34px rgba(var(--pg),.55)}
+html:root body .page .cardsec[data-pj].cardsec a.card:hover .cgo.cgo.cgo>span:last-child{animation:none}
+@keyframes viewglow{50%{box-shadow:0 0 0 1px rgba(var(--pg),.55),0 0 34px rgba(var(--pg),.45)}}
+@keyframes viewnudge{50%{transform:translate(3px,-3px)}}
+@media (prefers-reduced-motion:reduce){html:root body .page .cardsec[data-pj].cardsec .card .cgo.cgo.cgo,html:root body .page .cardsec[data-pj].cardsec .card .cgo.cgo.cgo>span:last-child{animation:none}}
