@@ -39,7 +39,7 @@
   function light() {
     var p = document.querySelector('.page .panel'); if (!p) return;
     var r = p.getBoundingClientRect();
-    document.documentElement.classList.remove('onlight');
+    document.documentElement.classList.toggle('onlight', r.top < 70 && r.bottom > 40);
   }
   (function tick() { light(); requestAnimationFrame(tick); })();
   /* PJ.03: a "Period" row in place of FLOW and DATA */

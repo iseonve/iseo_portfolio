@@ -261,7 +261,6 @@ html body .ab0 .ph.p3{width:19vw;height:auto;aspect-ratio:3/4;background-positio
 html body .ab0 .lab{display:none!important}
 /* ===== About (ref 5): black, a thin uppercase title at one width, photos beside it, then scattered photos with small
    justified text. Only the i of iseo is pink. ===== */
-html:root body .page .panel.panel.panel.panel{background:#000!important;color:#e9e7e4!important;border-radius:0!important}
 html body .ab0.ab1{position:relative;height:auto!important;padding:9vw 0 10vw;background:none!important;color:#e9e7e4;font-family:"Inter","Pretendard",sans-serif}
 html body .ab1 .hd{position:relative;width:52.8vw;margin:0 auto}
 html body .ab1 .tags{display:flex;justify-content:space-between;font:400 max(11px,.9vw)/1 "Inter","Pretendard",sans-serif;letter-spacing:.01em;text-transform:uppercase;color:#e9e7e4}
@@ -287,7 +286,6 @@ html body .ab1 .t2{left:51.4vw;top:6.2vw;width:32.6vw}
 html body .ab1 .scat{height:auto;width:90vw;display:grid;grid-template-columns:1fr 1fr;gap:4vw}html body .ab1 .scat .ap{position:static;width:auto;height:56vw}html body .ab1 .tx{position:static;grid-column:1/-1;width:auto;font-size:14px}}
 html body .ab1 .tags,html body .ab1 .ah{border:0!important;padding:0!important}
 /* About fix: no separate black box — sits on the page's own dark, full width; tidier lower part */
-html:root body .page .panel.panel.panel.panel.panel{background:transparent!important;margin-left:0!important;margin-right:0!important;border-radius:0!important;box-shadow:none!important}
 html body .ab1 .scat{width:52.8vw!important;height:40vw!important;margin-top:9vw!important}
 html body .ab1 .t1{left:0!important;top:0!important;width:24.6vw!important}
 html body .ab1 .t2{left:28.2vw!important;top:0!important;width:24.6vw!important}
@@ -306,4 +304,14 @@ html body .ab0.ab1 .q3.q3{left:-10.42vw!important;top:11.8vw!important;width:18.
 html body .ab0.ab1 .q4.q4{left:38.9vw!important;top:4.17vw!important;width:18.06vw!important;height:24.3vw!important;right:auto!important}
 html body .ab0.ab1 .q5.q5{left:15.28vw!important;top:29.86vw!important;width:14.58vw!important;height:19.44vw!important;right:auto!important}
 html body .ab0.ab1 .q6.q6{left:49.3vw!important;top:34.7vw!important;width:15.97vw!important;height:20.83vw!important;right:auto!important}
+}
+/* About back on the white rounded panel: dark ink */
+html body .ab0.ab1,html body .ab1 .ah,html body .ab1 .tags,html body .ab1 .tx{color:#141214!important}
+html body .ab1 .tags s{color:rgba(20,18,20,.55)}
+@media (min-width:761px){
+html body .ab0.ab1 .q3.q3.q3{top:15vw!important}
+html body .ab0.ab1 .q4.q4.q4{top:17.5vw!important}
+html body .ab0.ab1 .q5.q5.q5{top:34vw!important}
+html body .ab0.ab1 .q6.q6.q6{top:39vw!important}
+html body .ab0.ab1 .scat.scat.scat{height:60vw!important}
 }
