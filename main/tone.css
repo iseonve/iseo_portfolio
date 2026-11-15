@@ -259,3 +259,6 @@ html body .ab0 .ph.p3{width:19vw;height:auto;aspect-ratio:3/4;background-positio
 @media (min-width:761px){html body .ab0 .txt p{font-size:max(14px,1vw)!important;line-height:1.7!important;margin-bottom:1.4vw!important}html body .ab0 .txt{width:24vw!important}}
 @media (min-width:761px){html body .ab0 .txt p{font-weight:500!important;color:#2a2628!important}html body .ab0 .txt{width:26vw!important}}
 html body .ab0 .lab{display:none!important}
+/* unlit LED cells across the whole About panel */
+html body .ab0 h2 > span::before{display:none!important}
+html body .ab0{background:linear-gradient(#f6f4f5 0 .07vw,transparent 0) 0 0/.44vw .44vw,linear-gradient(90deg,#f6f4f5 0 .07vw,transparent 0) 0 0/.44vw .44vw,rgba(20,18,20,.055)!important}
