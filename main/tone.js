@@ -4,21 +4,24 @@
   var IMG = 'https://iseonve.github.io/iseo_portfolio/img/about/';
   var ph = function (f, c, pos) { return '<i class="ap ' + c + '" style="background-image:url(' + IMG + f + ');background-position:' + (pos || '50% 50%') + '"></i>'; };
   var HTML =
-    '<div class="ab0 ab1">' +
-      '<div class="hd">' +
-        '<div class="tags"><span>UI/UX Designer</span><span>Paused moments</span><s>Stuck</s></div>' +
-        '<h2 class="ah" aria-label="Hi, I’m iseo. Unstuck by design.">' +
-          '<span class="ln"><span class="w">Hi, I’m <b>i</b>seo</span></span>' +
-          '<span class="ln lp"><span class="w">Unstuck</span>' + ph('s1b.webp', 'pl', '50% 30%') + ph('t1.webp', 'pr', '70% 50%') + '</span>' +
-          '<span class="ln"><span class="w">By design</span></span>' +
-        '</h2>' +
-      '</div>' +
-      '<div class="scat">' +
-        ph('t3.webp', 'q3', '50% 50%') + ph('r3.webp', 'q4', '50% 25%') +
-        '<p class="tx t1">어릴 때부터 디자인 한 길을 걸어왔고, 지금은 사용자가 <em>멈춘 순간</em>을 찾아 다시 지나갈 수 있는 화면으로 잇는 UI/UX 디자이너예요.</p>' +
-        '<p class="tx t2">화면을 그리기 전에 사람들의 이야기를 먼저 듣고 어디서 막히는지 찾아요. 시안은 여러 개 펼쳐 놓고 고른 뒤, 직접 코드로 구현해 개발자와 같은 화면을 보며 이야기해요.</p>' +
-      '</div>' +
-    '</div>';
+    '<div class="ab0 abb"><div class="binder">' +
+      '<div class="holes" aria-hidden="true">' + new Array(10).join('<i></i>') + '</div>' +
+      '<div class="bh-l k"><span>About me</span><span class="sq"></span></div>' +
+      '<div class="bh-r k"><span>Iseo Kim</span><span>UI/UX Designer · Seoul</span></div>' +
+      '<figure class="bleft"><img src="' + IMG + 'me.webp" alt="포스트잇 벽 앞에서 웃는 김이서" loading="lazy"><figcaption><span>hi, I’m Iseo</span><b>916 sticky notes</b></figcaption></figure>' +
+      '<div class="bright"><h2>I find where people get stuck.</h2>' +
+        '<div class="doesrow"><span>Iseo</span><span class="w" id="abw">listens</span><span>first</span></div>' +
+        '<div class="bio"><p>멈춘 순간을 다시 잇는 UI/UX 디자이너, 김이서입니다.</p><p>먼저 듣고, 잘게 나누고, 여러 시안으로 비교합니다.</p></div></div>' +
+      '<div class="bf-l k"><span>Cafés · Walks · Travel</span></div>' +
+      '<a class="bf-r k" href="https://iseonve.github.io/iseo_portfolio/about.html" target="_blank" rel="noopener"><span>More about me</span><span>↗</span></a>' +
+    '</div></div>';
+  (function words() {
+    var W = ['listens', 'breaks it down', 'compares', 'connects'], i = 0, w = document.getElementById('abw');
+    if (!w) { requestAnimationFrame(words); return; }
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    setInterval(function () { w.classList.add('out'); setTimeout(function () { i = (i + 1) % W.length; w.textContent = W[i]; w.classList.remove('out'); }, 320); }, 2600);
+  })();
+  (function fonts() { if (document.getElementById('binder-font')) return; var l = document.createElement('link'); l.id = 'binder-font'; l.rel = 'stylesheet'; l.href = 'https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300&family=La+Belle+Aurore&display=swap'; document.head.appendChild(l); })();
   /* every title line is sized to the same width; the photo line a bit smaller, its photos outside the title */
   function fit() {
     var h = document.querySelector('.ab1 .ah'); if (!h) return;
@@ -39,7 +42,7 @@
   function light() {
     var p = document.querySelector('.page .panel'); if (!p) return;
     var r = p.getBoundingClientRect();
-    document.documentElement.classList.toggle('onlight', r.top < 70 && r.bottom > 40);
+    document.documentElement.classList.remove('onlight');
   }
   (function tick() { light(); requestAnimationFrame(tick); })();
   /* PJ.03: a "Period" row in place of FLOW and DATA */

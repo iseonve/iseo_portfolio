@@ -321,3 +321,34 @@ html body .ab0.ab1 .q3.q3.q3.q3{left:-8vw!important;top:16vw!important;width:33v
 html body .ab0.ab1 .q4.q4.q4.q4{left:36.5vw!important;top:19vw!important;width:16.3vw!important;height:21.7vw!important}
 html body .ab0.ab1 .scat.scat.scat.scat{height:42vw!important}
 }
+/* ===== About = pink binder card (Magic Patterns v73) ===== */
+html:root body .page .panel.panel.panel.panel.panel.panel{background:transparent!important;color:inherit!important;padding:16vh 5vw 14vh!important;margin:0!important;border-radius:0!important;box-shadow:none!important;min-height:0!important;height:auto!important;display:grid!important;place-items:center!important;overflow:visible!important}
+html:root body .page .panel.panel.panel.panel.panel.panel::before,html:root body .page .panel.panel.panel.panel.panel.panel::after{display:none!important}
+html body .ab0.abb{height:auto!important;padding:0!important;width:100%;display:grid;place-items:center;background:none!important}
+.binder{--card:#f5a6c3;--cink:#1d1416;--cl:rgba(29,20,22,.45);position:relative;width:min(940px,100%);background:var(--card);color:var(--cink);border-radius:6px;display:grid;grid-template-columns:30px minmax(0,300px) minmax(0,1fr);grid-template-rows:30px auto 30px;box-shadow:0 40px 90px -30px #000;text-align:left}
+.binder>*{min-width:0}
+.binder .k{font:400 10px/30px var(--mono,"JetBrains Mono",monospace);letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
+.binder .sq{display:inline-block;width:6px;height:6px;background:var(--cink)}
+.binder .holes{grid-row:1/4;grid-column:1;border-right:1px dotted var(--cl);display:flex;flex-direction:column;justify-content:space-between;align-items:center;padding:11px 0}
+.binder .holes i{width:8px;height:8px;border-radius:50%;background:#171717}
+.binder .bh-l,.binder .bh-r,.binder .bf-l,.binder .bf-r{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:0 12px;overflow:hidden;color:var(--cink)}
+.binder .bh-l,.binder .bh-r{grid-row:1;border-bottom:1px dotted var(--cl)}
+.binder .bf-l,.binder .bf-r{grid-row:3;border-top:1px dotted var(--cl)}
+.binder .bh-l,.binder .bf-l{grid-column:2;border-right:1px dotted var(--cl)}
+.binder .bh-r,.binder .bf-r{grid-column:3}
+.binder a.bf-r{text-decoration:none;transition:background .3s,color .3s}
+.binder a.bf-r:hover,.binder a.bf-r:focus-visible{background:var(--cink);color:var(--card)}
+.binder .bleft{grid-column:2;grid-row:2;position:relative;margin:0;min-height:380px;border-right:1px dotted var(--cl);overflow:hidden;background:#2a2321}
+.binder .bleft img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:17% 32%;display:block;transform:scale(1.04);transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.binder:hover .bleft img{transform:scale(1.1)}
+.binder .bleft figcaption{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:baseline;padding:30px 12px 10px;background:linear-gradient(transparent,rgba(20,12,14,.55));color:#fff}
+.binder .bleft figcaption span{font:400 24px/1 "La Belle Aurore",cursive;white-space:nowrap}
+.binder .bleft figcaption b{font:400 10px/1 var(--mono,"JetBrains Mono",monospace);text-transform:uppercase;letter-spacing:.06em;opacity:.8}
+.binder .bright{grid-column:3;grid-row:2;display:flex;flex-direction:column}
+html body .binder .bright h2{position:static!important;margin:0!important;width:auto!important;padding:14px 14px 18px;font:300 clamp(40px,4.6vw,66px)/1.02 "Newsreader","Times New Roman",serif!important;letter-spacing:-.015em;word-spacing:normal;color:var(--cink);text-transform:none}
+.binder .doesrow{display:flex;justify-content:space-between;align-items:center;height:84px;padding:0 14px;border-top:1px dotted var(--cl);border-bottom:1px dotted var(--cl);font:400 10px var(--mono,"JetBrains Mono",monospace);text-transform:uppercase;letter-spacing:.04em}
+.binder .doesrow .w{font:400 clamp(28px,3vw,42px)/1 "La Belle Aurore",cursive;text-transform:none;letter-spacing:0;padding-top:8px;clip-path:inset(-30% 0 -30% 0);transition:clip-path .9s cubic-bezier(.5,0,.2,1),opacity .25s}
+.binder .doesrow .w.out{clip-path:inset(-30% 100% -30% 0);opacity:0;transition:clip-path 0s .25s,opacity .25s}
+.binder .bio{padding:18px 14px 14px}
+.binder .bio p{margin:0 0 8px;font:400 15px/1.7 "Pretendard",sans-serif;letter-spacing:-.02em;color:var(--cink);word-break:keep-all;max-width:30em}
+@media (max-width:760px){.binder{grid-template-columns:22px minmax(0,1fr);grid-template-rows:30px 30px auto auto 30px 30px}.binder .holes{grid-row:1/7}.binder .bh-l,.binder .bh-r,.binder .bf-l,.binder .bf-r,.binder .bleft,.binder .bright{grid-column:2;border-right:0}.binder .bh-l{grid-row:1}.binder .bh-r{grid-row:2}.binder .bleft{grid-row:3;min-height:260px;border-bottom:1px dotted var(--cl)}.binder .bright{grid-row:4}.binder .bf-l{grid-row:5}.binder .bf-r{grid-row:6;border-top:1px dotted var(--cl)}html body .binder .bright h2{font-size:38px!important}.binder .doesrow{height:64px}.binder .bio p{font-size:14px}}
