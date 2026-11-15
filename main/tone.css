@@ -376,3 +376,9 @@ html body .binder .bio p{font:500 17px/1.7 "Pretendard",sans-serif!important;max
 html body .binder .bh-l,html body .binder .bh-r,html body .binder .bf-l,html body .binder .bf-r{padding:0 18px!important}
 html body .ab0 .binder h2>span.dl{margin:0!important;padding:0!important;width:auto!important;position:static!important}html body .ab0 .binder h2>span.dl::before{display:none!important;content:none!important}
 html body .ab0 .binder h2 .dl{gap:.42em!important}html body .ab0 .binder .bright h2{font-size:clamp(46px,4.6vw,76px)!important;gap:.26em!important;padding:34px 26px 34px!important}
+/* word turns like a cube spinning sideways (around the vertical axis) */
+html body .binder .wv{perspective:600px}
+html body .binder .wi{transform-origin:50% 50% -.9em;transform:translate(-50%,-50%) rotateY(90deg)!important;opacity:0;transition:transform .8s cubic-bezier(.6,0,.2,1),opacity .4s!important;backface-visibility:hidden}
+html body .binder .wi.on{transform:translate(-50%,-50%) rotateY(0)!important;opacity:1}
+html body .binder .wi.off{transform:translate(-50%,-50%) rotateY(-90deg)!important;opacity:0}
+html body .binder .wi.in{transition:none!important;transform:translate(-50%,-50%) rotateY(90deg)!important;opacity:0}
