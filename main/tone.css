@@ -213,3 +213,6 @@ html:root:not([data-stack]) body .page .head.head.head.head.head.head.head.head.
 html:root:not([data-stack]) body .page .head .hcols p:not(.lab){white-space:pre-line}
 html:root:not([data-stack]) body .page .head.head.head.head.head.head.head.head.head.head.head.head.head.head:is(.c1,.c2,.c3) .hcols p.lab,html:root:not([data-stack]) body .page .head.head.head.head.head.head.head.head.head.head.head.head.head.head:is(.c1,.c2,.c3) .hflow::before,html:root:not([data-stack]) body .page .head.head.head.head.head.head.head.head.head.head.head.head.head.head:is(.c1,.c2,.c3) .hstats::before{font-size:13px!important;color:rgba(255,255,255,.72)!important;letter-spacing:.12em!important}
 html:root:not([data-stack]) body .page .head.head.head.head.head.head.head.head.head.head.head.head.head.head:is(.c1,.c2,.c3) .hcols p.lab b{font-weight:500!important}
+/* PJ.03 headline: same size and line spacing as the other chapters (its two lines are two dot words) */
+html:root:not([data-stack]) body .page .head.head.head.head.head.head.head.head.head.head.head.head.head.head.c3 h2.dm.dm.dm.dm.dm > span > .dot{display:block!important;margin:0 0 .38em!important}
+html:root:not([data-stack]) body .page .head.head.head.head.head.head.head.head.head.head.head.head.head.head.c3 h2.dm.dm.dm.dm.dm > span > .dot:last-child{margin-bottom:0!important}
