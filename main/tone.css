@@ -197,3 +197,15 @@ html:root:not([data-stack]) body .page .head.head.head.head.head.head.head.head.
 html:root:not([data-stack]) body .page .head.head.head.head.head.head.head.head.head.head:is(.c1,.c2,.c3) .hmore{width:680px!important;max-width:680px!important}
 html:root:not([data-stack]) body .page .head.head.head.head.head.head.head.head.head.head.c2{padding-left:calc(var(--side) + 520px)!important}
 @media (max-width:1280px){html:root:not([data-stack]) body .page .head.head.head.head.head.head.head.head.head.head.c2{padding-left:calc(100vw - var(--side) - 680px)!important}}
+html:root:not([data-stack]) body .page .head h2.dm.dm.dm.dm{line-height:1.45!important}
+html:root:not([data-stack]) body .page .head h2.dm.dm.dm.dm > span{display:block}
+html:root:not([data-stack]) body .page .head h2.dm.dm.dm.dm > span + span{margin-top:.3em!important}
+html:root:not([data-stack]) body .page .head.head.head.head.head.head.head.head.head.head.head:is(.c1,.c2,.c3) h2.dm.dm.dm.dm.dm{line-height:1.3!important}
+html:root:not([data-stack]) body .page .head.head.head.head.head.head.head.head.head.head.head.head:is(.c1,.c2,.c3) h2.dm.dm.dm.dm.dm{line-height:1.16!important}
+html:root:not([data-stack]) body .page .head.head.head.head.head.head.head.head.head.head.head.head:is(.c1,.c2,.c3) .hcols .hdesc{margin-top:12px!important}
+/* card header label and the site header, a step larger */
+html:root body .page .cardsec.cardsec.cardsec[data-pj] .card h3{font-size:14px!important;letter-spacing:.02em!important}
+html:root body .page .cardsec.cardsec.cardsec[data-pj] .card .cno{font-size:26px!important}
+html:root body header.hd.hd .logo{font-size:32px!important}
+html:root body header.hd.hd nav .seg{font-size:15px!important}
+html:root:not([data-stack]) body .page .head.head.head.head.head.head.head.head.head.head.head.head:is(.c1,.c2,.c3) .hstats dd{margin-top:14px!important}
