@@ -22,8 +22,8 @@
       '<div class="bh-l k"><span>About me</span><span class="sq"></span></div>' +
       '<div class="bh-r k"><span>ME.00 — Iseo Kim</span><span>UI/UX Designer · Seoul</span></div>' +
       '<figure class="bleft"><img src="' + IMG + 'me.webp" alt="포스트잇 벽 앞에서 웃는 김이서" loading="lazy"><figcaption><span>Hi, I’m iseo</span><b>916 sticky notes</b></figcaption></figure>' +
-      '<div class="bright"><h2 class="serif">I find where people get stuck.</h2>' +
-        '<div class="doesrow"><span>Iseo</span><span class="wv" aria-live="polite">' + WORDS.map(function (w, i) { return '<span class="wi' + (i ? '' : ' on') + '">' + w + '</span>'; }).join('') + '</span><span>first</span></div>' +
+      '<div class="bright"><h2 aria-label="I find where people get stuck.">' + line([['I', ''], ['find', '']]) + line([['where people', 'mu']]) + line([['get', 'mu'], ['stuck.', 'lit']]) + '</h2>' +
+        '<div class="doesrow"><span>Iseo</span><span class="wv" aria-live="polite">' + WORDS.map(function (w, i) { return '<span class="wi' + (i ? '' : ' on') + '" aria-label="' + w + '">' + dot(w) + '</span>'; }).join('') + '</span><span>first</span></div>' +
         '<div class="bio"><p>멈춘 순간을 다시 잇는 UI/UX 디자이너, 김이서입니다.</p><p>먼저 듣고, 잘게 나누고, 여러 시안으로 비교합니다.</p></div></div>' +
       '<div class="bf-l k"><span>Cafés · Walks · Travel</span></div>' +
       '<a class="bf-r k" href="https://iseonve.github.io/iseo_portfolio/about.html" target="_blank" rel="noopener"><span>More about me</span><span>↗</span></a>' +
