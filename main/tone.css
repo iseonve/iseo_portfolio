@@ -229,3 +229,4 @@ html body .page .cardsec .card h3 img.slogo{display:block;height:20px;width:auto
 html body img.hlogo{display:inline-block;height:1.15em;width:auto;vertical-align:-.2em}
 html body .glab{display:inline-flex;align-items:center;gap:.45em;white-space:nowrap}html body img.gmark{height:1.25em;width:auto;opacity:.95}
 html body .page .cardsec .card h3.glab{display:flex!important;align-items:center;justify-content:flex-end;gap:.5em;height:auto!important}
+html body .page .cardsec .card h3.glab.glab{display:block!important;text-align:right!important}html body .page .cardsec .card h3.glab img.gmark{display:inline-block;height:1.3em;vertical-align:-.3em;margin-right:.45em}
