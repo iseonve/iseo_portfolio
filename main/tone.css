@@ -171,3 +171,17 @@ html:root:not([data-stack]) body .page .head.head.head.head.head.head.head.head:
 html:root:not([data-stack]) body .page .head.head.head.head.head.head.head.head:is(.c1,.c2,.c3) .hflow .ar{font-size:14px!important;line-height:20px!important;opacity:.6}
 html:root:not([data-stack]) body .page .head.head.head.head.head.head.head.head:is(.c1,.c2,.c3) .hstats dt{font:500 18px/20px "JetBrains Mono",monospace!important}
 html:root:not([data-stack]) body .page .head.head.head.head.head.head.head.head:is(.c1,.c2,.c3) .hstats dd{margin-top:8px!important;font:400 11px/1.5 "Pretendard",sans-serif!important;color:rgba(255,255,255,.4)!important}
+/* dot headlines: more air between words and lines */
+html:root:not([data-stack]) body .page h2.dm.dm.dm{line-height:1.22!important}
+html:root:not([data-stack]) body .page h2.dm.dm.dm > span{gap:.42em!important;column-gap:.42em!important}
+html:root:not([data-stack]) body .page h2.dm.dm.dm svg.dot{margin-right:.08em}
+html:root:not([data-stack]) body .page h2.dm.dm.dm svg.dot{margin-right:.32em!important}
+html:root:not([data-stack]) body .page .head.head.head.head.head.head.head.head.head:is(.c1,.c2,.c3) .hcols > div{row-gap:0!important}
+html:root:not([data-stack]) body .page .head.head.head.head.head.head.head.head.head:is(.c1,.c2,.c3) .hcols p:not(.lab){margin:0!important}
+html:root:not([data-stack]) body .page .head.head.head.head.head.head.head.head.head:is(.c1,.c2,.c3) .hcols .hdesc{margin-top:6px!important;font-size:15px!important;line-height:1.65!important;color:rgba(255,255,255,.56)!important}
+html:root:not([data-stack]) body .page .head.head.head.head.head.head.head.head.head:is(.c1,.c2,.c3) .hcols p.lab,html:root:not([data-stack]) body .page .head.head.head.head.head.head.head.head.head:is(.c1,.c2,.c3) .hflow::before,html:root:not([data-stack]) body .page .head.head.head.head.head.head.head.head.head:is(.c1,.c2,.c3) .hstats::before{font-size:12px!important;line-height:30px!important;letter-spacing:.14em!important;color:rgba(255,255,255,.45)!important}
+/* FLOW: compact, readable steps */
+html:root:not([data-stack]) body .page .head.head.head.head.head.head.head.head.head:is(.c1,.c2,.c3) .hflow{justify-content:flex-start!important}
+html:root:not([data-stack]) body .page .head.head.head.head.head.head.head.head.head:is(.c1,.c2,.c3) .hflow .st{font:500 16px/30px "Pretendard",sans-serif!important;color:#ececec!important}
+html:root:not([data-stack]) body .page .head.head.head.head.head.head.head.head.head:is(.c1,.c2,.c3) .hflow .st b{font:400 12px/1 "JetBrains Mono",monospace!important;margin-right:7px!important;opacity:1}
+html:root:not([data-stack]) body .page .head.head.head.head.head.head.head.head.head:is(.c1,.c2,.c3) .hflow .ar{flex:0 0 auto!important;margin:0 18px!important;font-size:16px!important;line-height:30px!important;opacity:.85}
