@@ -18,6 +18,7 @@
   var WORDS = ['listens', 'breaks down', 'compares', 'connects'];
   var HTML =
     '<div class="ab0 abb"><div class="binder">' +
+      '<div class="holes" aria-hidden="true">' + new Array(12).join('<i></i>') + '</div>' +
       '<div class="bh-l k"><span class="meno">ME.00</span><span>About me</span></div>' +
       '<div class="bh-r k"><span>Iseo Kim</span><span>UI/UX Designer · Seoul</span></div>' +
       '<figure class="bleft"><img src="' + IMG + 'me.webp" alt="포스트잇 벽 앞에서 웃는 김이서" loading="lazy"><figcaption><span>Hi, I’m iseo</span><b>916 sticky notes</b></figcaption></figure>' +
