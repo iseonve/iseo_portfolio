@@ -1,0 +1,29 @@
+name: Sync main page from Magic Patterns
+# Downloads the built bundle of the Magic Patterns design (C) and commits it as main/app.js + main/app.css,
+# which index.html loads. Run it again with a new bundle URL whenever the design changes.
+on:
+  workflow_dispatch:
+    inputs:
+      bundle:
+        description: "Bundle URL without extension (…/index-<id>)"
+        required: true
+permissions:
+  contents: write
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download bundle
+        run: |
+          set -e
+          curl -fsSL "${{ inputs.bundle }}.js"  -o main/app.js
+          curl -fsSL "${{ inputs.bundle }}.css" -o main/app.css
+          ls -la main
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add main/app.js main/app.css
+          git diff --cached --quiet || git commit -m "Sync main page bundle from Magic Patterns"
+          git push
