@@ -24,7 +24,7 @@
       '<div class="g-mid"><span class="strap" aria-hidden="true"><b>ISEO KIM · UI/UX · ISEO KIM · UI/UX · ISEO KIM · UI/UX · ISEO KIM · UI/UX ·</b></span>' +
         '<div class="badge"><span class="clip" aria-hidden="true"></span>' +
           '<div class="b-top"><span>ME.00</span><span>Access · All areas</span></div>' +
-          '<div class="b-ph"><i style="background-image:url(img/about/badge.webp);background-position:50% 50%"></i></div>' +
+          '<div class="b-ph"><i style="background-image:url(img/about/badge.webp?2);background-position:50% 50%"></i></div>' +
           '<div class="b-nm" aria-label="Iseo Kim">' + line([['iseo', ''], ['kim', '']]) + '</div>' +
           '<div class="b-row"><span>UI/UX Designer</span><span>Seoul</span></div>' +
           '<div class="b-scr"><span class="b-pre">Iseo</span><span class="wv">' + WORDS.map(function (w, i) { return '<span class="wi' + (i ? '' : ' on') + '" aria-label="' + w + '">' + dot(w) + '</span>'; }).join('') + '</span></div>' +
