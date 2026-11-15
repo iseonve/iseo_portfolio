@@ -39,3 +39,21 @@ html:root body .page .panel.panel.panel.panel.panel > :not(.ab0):not(.ab0){displ
 html.onlight header.hd .logo,html.onlight header.hd .seg,html.onlight header.hd nav a{color:#141214!important}
 html.onlight header.hd .seg::after{background:#141214!important}
 html.onlight .chrome.crop{border-color:#141214!important;color:#141214!important}
+
+/* Title like the main page's name: each line sits on a panel of unlit cells (the same .1em grid as "iseo Kim"),
+   fading out toward its ends, so the letters read as lit pixels on a board. */
+.ab0 h2 > span{position:relative;width:max-content;padding:.08em .14em .08em .2em;margin-left:calc(var(--ml) - .2em)!important}
+.ab0 h2 .l1{--ml:23.5vw}.ab0 h2 .l2,.ab0 h2 .l3{--ml:41.5vw}
+.ab0 h2 > span::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(#f6f4f5 0 .016em,transparent 0) 0 0/.1em .1em,linear-gradient(90deg,#f6f4f5 0 .016em,transparent 0) 0 0/.1em .1em,rgba(20,18,20,.07);
+  -webkit-mask:radial-gradient(ellipse 60% 75% at 50% 50%,#000 35%,transparent 100%);mask:radial-gradient(ellipse 60% 75% at 50% 50%,#000 35%,transparent 100%)}
+.ab0 h2{isolation:isolate}
+
+/* Circuit traces like the About page: thin lines with 45-degree turns, square pads at each stop, a sparkle where the
+   trace starts, and a pink light travelling along it. */
+.ab0 .trc{position:absolute;left:0;top:0;width:100%;pointer-events:none;z-index:0;overflow:visible}
+.ab0 .trc path.ln{fill:none;stroke:#141214;stroke-width:.8;vector-effect:non-scaling-stroke}
+.ab0 .trc path.sm{fill:none;stroke:#f0699f;stroke-width:2.4;vector-effect:non-scaling-stroke;stroke-dasharray:.05 1;animation:seam 6s linear infinite}
+@keyframes seam{from{stroke-dashoffset:.05}to{stroke-dashoffset:-1}}
+.ab0 .txt,.ab0 h2,.ab0 .ph,.ab0 .lab{z-index:1}
+@media (max-width:760px){.ab0 .trc{display:none}.ab0 h2 > span{margin-left:0!important}}

@@ -21,6 +21,34 @@
     if (!p || !p.querySelector('.pbig')) { requestAnimationFrame(wait); return; }
     if (!p.querySelector('.ab0')) p.insertAdjacentHTML('beforeend', HTML);
   })();
+  /* height from the lowest part (so nothing is cut), and the traces, in vw so they scale with the page */
+  function layout() {
+    var a = document.querySelector('.ab0'); if (!a || innerWidth <= 760) return;
+    var A = a.getBoundingClientRect(), u = A.width / 100;
+    var low = 0;
+    a.querySelectorAll('h2,.ph,.txt').forEach(function (e) { var r = e.getBoundingClientRect(); low = Math.max(low, r.bottom - A.top); });
+    a.style.height = (low / u + 7) + 'vw';
+    var v = function (e) { var r = e.getBoundingClientRect(); return { l: (r.left - A.left) / u, t: (r.top - A.top) / u, r: (r.right - A.left) / u, b: (r.bottom - A.top) / u }; };
+    var l1 = v(a.querySelector('.l1')), l3 = v(a.querySelector('.l3')), tx = v(a.querySelector('.txt')), p2 = v(a.querySelector('.p2')), go = v(a.querySelector('.go'));
+    var ps = [].map.call(a.querySelectorAll('.txt p'), function (p) { var q = v(p); return q.t + 0.75; });
+    var H = low / u + 7, X = tx.l - 2.2, y1 = (l1.t + l1.b) / 2, yj = l3.b + 1.6, yg = (go.t + go.b) / 2;
+    var pm = (p2.t + p2.b) / 2, y0 = pm - (X - p2.r);
+    var d1 = 'M 3 ' + y1 + ' L ' + (l1.l - 1.4) + ' ' + y1;
+    var d2 = 'M ' + X + ' ' + yj + ' L ' + X + ' ' + yg + ' L ' + (go.l - 1) + ' ' + yg;
+    var d3 = 'M ' + X + ' ' + y0 + ' L ' + p2.r + ' ' + pm;
+    var pad = function (x, y, c) { return '<rect x="' + (x - .28) + '" y="' + (y - .28) + '" width=".56" height=".56" fill="' + (c || '#141214') + '"/>'; };
+    var star = 'M ' + X + ' ' + (yj - .7) + ' L ' + (X + .18) + ' ' + yj + ' L ' + X + ' ' + (yj + .7) + ' L ' + (X - .18) + ' ' + yj + ' Z M ' + (X - .7) + ' ' + yj + ' L ' + X + ' ' + (yj - .18) + ' L ' + (X + .7) + ' ' + yj + ' L ' + X + ' ' + (yj + .18) + ' Z';
+    var g = '<path class="ln" d="' + d1 + '"/><path class="ln" d="' + d2 + '"/><path class="ln" d="' + d3 + '"/>' +
+      '<path class="sm" pathLength="1" d="' + d2 + '"/>' +
+      pad(3, y1) + pad(l1.l - 1.4, y1) + ps.map(function (y) { return pad(X, y); }).join('') + pad(X, yg, '#f0699f') + pad(p2.r, pm) +
+      '<path d="' + star + '" fill="#141214"/>';
+    var s = a.querySelector('.trc');
+    if (!s) { s = document.createElementNS('http://www.w3.org/2000/svg', 'svg'); s.setAttribute('class', 'trc'); s.setAttribute('aria-hidden', 'true'); a.insertBefore(s, a.firstChild); }
+    s.setAttribute('viewBox', '0 0 100 ' + H); s.style.height = H + 'vw'; s.innerHTML = g;
+  }
+  (function first() { if (document.querySelector('.ab0 .go')) { layout(); setTimeout(layout, 600); setTimeout(layout, 2000); } else requestAnimationFrame(first); })();
+  addEventListener('resize', layout);
+  if (document.fonts) document.fonts.ready.then(layout);
   function light() {
     var p = document.querySelector('.page .panel'); if (!p) return;
     var r = p.getBoundingClientRect();
