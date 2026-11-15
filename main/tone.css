@@ -259,3 +259,30 @@ html body .ab0 .ph.p3{width:19vw;height:auto;aspect-ratio:3/4;background-positio
 @media (min-width:761px){html body .ab0 .txt p{font-size:max(14px,1vw)!important;line-height:1.7!important;margin-bottom:1.4vw!important}html body .ab0 .txt{width:24vw!important}}
 @media (min-width:761px){html body .ab0 .txt p{font-weight:500!important;color:#2a2628!important}html body .ab0 .txt{width:26vw!important}}
 html body .ab0 .lab{display:none!important}
+/* ===== About (ref 5): black, a thin uppercase title at one width, photos beside it, then scattered photos with small
+   justified text. Only the i of iseo is pink. ===== */
+html:root body .page .panel.panel.panel.panel{background:#000!important;color:#e9e7e4!important;border-radius:0!important}
+html body .ab0.ab1{position:relative;height:auto!important;padding:9vw 0 10vw;background:none!important;color:#e9e7e4;font-family:"Inter","Pretendard",sans-serif}
+html body .ab1 .hd{position:relative;width:52.8vw;margin:0 auto}
+html body .ab1 .tags{display:flex;justify-content:space-between;font:400 max(11px,.9vw)/1 "Inter","Pretendard",sans-serif;letter-spacing:.01em;text-transform:uppercase;color:#e9e7e4}
+html body .ab1 .tags s{text-decoration-thickness:1px}
+html body .ab1 .ah{position:static!important;margin:3.6vw 0 0!important;width:100%!important;display:block;font:300 10px/1 "Inter","Pretendard",sans-serif!important;letter-spacing:-.045em;text-transform:uppercase;color:#e9e7e4;word-spacing:0}
+html body .ab1 .ln{position:relative;display:flex;justify-content:center;white-space:nowrap;line-height:.8;margin-left:0!important;padding:0!important;width:auto!important}
+html body .ab1 .ln::before{display:none!important}
+html body .ab1 .ln .w{display:inline-block}
+html body .ab1 .ln b{font-weight:inherit;color:#f0699f}
+html body .ab1 .ap{position:absolute;display:block;background-size:cover;background-repeat:no-repeat;border-radius:.65vw}
+html body .ab1 .pl{left:-17.4vw;top:50%;width:14.6vw;height:18.75vw;transform:translateY(-50%)}
+html body .ab1 .pr{right:-17.4vw;top:50%;width:14.6vw;height:18.75vw;transform:translateY(-38%)}
+html body .ab1 .scat{position:relative;width:83.33vw;height:62vw;margin:12vw auto 0}
+html body .ab1 .q3{left:4vw;top:9.8vw;width:20.1vw;height:27.8vw}
+html body .ab1 .q4{left:61vw;top:0;width:20.1vw;height:27.8vw}
+html body .ab1 .q5{left:30.5vw;top:37vw;width:15.3vw;height:20.1vw}
+html body .ab1 .q6{left:66.6vw;top:42.5vw;width:15.3vw;height:20.1vw}
+html body .ab1 .tx{position:absolute;z-index:2;margin:0;font:400 max(12px,.94vw)/1.35 "Pretendard",sans-serif;text-align:justify;word-break:normal;color:#e9e7e4;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+html body .ab1 .tx em{font-style:normal;color:#f0699f}
+html body .ab1 .t1{left:14.6vw;top:6.2vw;width:32.6vw}
+html body .ab1 .t2{left:51.4vw;top:6.2vw;width:32.6vw}
+@media (max-width:760px){html body .ab0.ab1{padding:20vw 0}html body .ab1 .hd{width:70vw}html body .ab1 .pl,html body .ab1 .pr{display:none}
+html body .ab1 .scat{height:auto;width:90vw;display:grid;grid-template-columns:1fr 1fr;gap:4vw}html body .ab1 .scat .ap{position:static;width:auto;height:56vw}html body .ab1 .tx{position:static;grid-column:1/-1;width:auto;font-size:14px}}
+html body .ab1 .tags,html body .ab1 .ah{border:0!important;padding:0!important}

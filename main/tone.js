@@ -1,56 +1,45 @@
 /* Main page About panel (draft): oevra-style layout — staggered headline, a label with a rule, three photos
    (one cut off by the right edge), one narrow column of text and a mono link to the About page. */
 (function () {
-  var SITE = 'https://iseonve.github.io/iseo_portfolio/', IMG = SITE + 'img/about/';
+  var IMG = 'https://iseonve.github.io/iseo_portfolio/img/about/';
+  var ph = function (f, c, pos) { return '<i class="ap ' + c + '" style="background-image:url(' + IMG + f + ');background-position:' + (pos || '50% 50%') + '"></i>'; };
   var HTML =
-    '<div class="ab0">' +
-      '<h2 aria-label="Hi, I’m iseo, reconnecting paused moments"><span class="l1">Hi, I’m <span class="ii">i</span>seo,</span><span class="l2">reconnecting</span><span class="l3">paused moments</span></h2>' +
-      '<p class="lab">About iseo</p>' +
-      '<i class="ph p1" style="background-image:url(' + IMG + 'me.webp);background-position:22% 30%"></i>' +
-      '<i class="ph p2" style="background-image:url(' + IMG + 's1b.webp);background-position:50% 30%"></i>' +
-      '<i class="ph p3" style="background-image:url(' + IMG + 't1.webp);background-position:70% 40%"></i>' +
-      '<div class="txt">' +
-        '<p>어릴 때부터 디자인 한 길을 걸어왔고, 지금은 사용자가 <em>멈춘 순간</em>을 찾아 다시 지나갈 수 있는 화면으로 잇는 UI/UX 디자이너예요.</p>' +
-        '<p>화면을 그리기 전에 사람들의 이야기를 먼저 듣고 어디서 막히는지 찾아요. 시안은 여러 개 펼쳐 놓고 고른 뒤, 직접 코드로 구현해 개발자와 같은 화면을 보며 이야기해요.</p>' +
+    '<div class="ab0 ab1">' +
+      '<div class="hd">' +
+        '<div class="tags"><span>UI/UX Designer</span><span>Paused moments</span><s>Stuck</s></div>' +
+        '<h2 class="ah" aria-label="Hi, I’m iseo. Unstuck by design.">' +
+          '<span class="ln"><span class="w">Hi, I’m <b>i</b>seo</span></span>' +
+          '<span class="ln lp"><span class="w">Unstuck</span>' + ph('s1b.webp', 'pl', '50% 30%') + ph('t1.webp', 'pr', '70% 50%') + '</span>' +
+          '<span class="ln"><span class="w">By design</span></span>' +
+        '</h2>' +
+      '</div>' +
+      '<div class="scat">' +
+        ph('r1.webp', 'q3', '40% 40%') + ph('t1.webp', 'q4', '60% 50%') + ph('s1b.webp', 'q5', '50% 30%') + ph('r2.webp', 'q6', '50% 40%') +
+        '<p class="tx t1">어릴 때부터 디자인 한 길을 걸어왔고, 지금은 사용자가 <em>멈춘 순간</em>을 찾아 다시 지나갈 수 있는 화면으로 잇는 UI/UX 디자이너예요.</p>' +
+        '<p class="tx t2">화면을 그리기 전에 사람들의 이야기를 먼저 듣고 어디서 막히는지 찾아요. 시안은 여러 개 펼쳐 놓고 고른 뒤, 직접 코드로 구현해 개발자와 같은 화면을 보며 이야기해요.</p>' +
       '</div>' +
     '</div>';
+  /* every title line is sized to the same width; the photo line a bit smaller, its photos outside the title */
+  function fit() {
+    var h = document.querySelector('.ab1 .ah'); if (!h) return;
+    var W = h.clientWidth;
+    h.querySelectorAll('.ln').forEach(function (l) {
+      var w = l.querySelector('.w'); w.style.fontSize = '100px';
+      var f = W / (w.offsetWidth / 100) * (l.classList.contains('lp') ? .74 : 1);
+      w.style.fontSize = f + 'px'; l.style.marginTop = l.previousElementSibling ? (f * .2) + 'px' : '0';
+    });
+  }
+  (function firstFit() { if (document.querySelector('.ab1 .ah')) { fit(); if (document.fonts) document.fonts.ready.then(fit); setTimeout(fit, 800); } else requestAnimationFrame(firstFit); })();
+  addEventListener('resize', fit);
   (function wait() {
     var p = document.querySelector('.page .panel');
     if (!p || !p.querySelector('.pbig')) { requestAnimationFrame(wait); return; }
     if (!p.querySelector('.ab0')) p.insertAdjacentHTML('beforeend', HTML);
   })();
-  /* height from the lowest part (so nothing is cut), and the traces, in vw so they scale with the page */
-  function layout() {
-    var a = document.querySelector('.ab0'); if (!a || innerWidth <= 760) return;
-    var A = a.getBoundingClientRect(), u = A.width / 100;
-    var low = 0;
-    a.querySelectorAll('h2,.ph,.txt').forEach(function (e) { var r = e.getBoundingClientRect(); low = Math.max(low, r.bottom - A.top); });
-    a.style.height = (low / u + 7) + 'vw';
-    var v = function (e) { var r = e.getBoundingClientRect(); return { l: (r.left - A.left) / u, t: (r.top - A.top) / u, r: (r.right - A.left) / u, b: (r.bottom - A.top) / u }; };
-    var l1 = v(a.querySelector('.l1')), l3 = v(a.querySelector('.l3')), tx = v(a.querySelector('.txt')), p2 = v(a.querySelector('.p2')), go = v(a.querySelector('.txt p:last-child'));
-    var ps = [].map.call(a.querySelectorAll('.txt p'), function (p) { var q = v(p); return q.t + 0.75; });
-    var H = low / u + 7, X = tx.l - 2.2, y1 = (l1.t + l1.b) / 2, yj = l3.b + 1.6, yg = (go.t + go.b) / 2;
-    var pm = (p2.t + p2.b) / 2, y0 = pm - (X - p2.r);
-    var d1 = 'M 3 ' + y1 + ' L ' + (l1.l - 1.4) + ' ' + y1;
-    var d2 = 'M ' + X + ' ' + yj + ' L ' + X + ' ' + yg + ' L ' + (go.l - 1) + ' ' + yg;
-    var d3 = 'M ' + X + ' ' + y0 + ' L ' + p2.r + ' ' + pm;
-    var pad = function (x, y, c) { return '<rect x="' + (x - .28) + '" y="' + (y - .28) + '" width=".56" height=".56" fill="' + (c || '#141214') + '"/>'; };
-    var star = 'M ' + X + ' ' + (yj - .7) + ' L ' + (X + .18) + ' ' + yj + ' L ' + X + ' ' + (yj + .7) + ' L ' + (X - .18) + ' ' + yj + ' Z M ' + (X - .7) + ' ' + yj + ' L ' + X + ' ' + (yj - .18) + ' L ' + (X + .7) + ' ' + yj + ' L ' + X + ' ' + (yj + .18) + ' Z';
-    var g = '<path class="ln" d="' + d1 + '"/><path class="ln" d="' + d2 + '"/><path class="ln" d="' + d3 + '"/>' +
-      '<path class="sm" pathLength="1" d="' + d2 + '"/>' +
-      pad(3, y1) + pad(l1.l - 1.4, y1) + ps.map(function (y) { return pad(X, y); }).join('') + pad(X, yg, '#f0699f') + pad(p2.r, pm) +
-      '<path d="' + star + '" fill="#141214"/>';
-    var s = a.querySelector('.trc');
-    if (!s) { s = document.createElementNS('http://www.w3.org/2000/svg', 'svg'); s.setAttribute('class', 'trc'); s.setAttribute('aria-hidden', 'true'); a.insertBefore(s, a.firstChild); }
-    s.setAttribute('viewBox', '0 0 100 ' + H); s.style.height = H + 'vw'; s.innerHTML = g;
-  }
-  (function first() { if (document.querySelector('.ab0 .txt p')) { layout(); setTimeout(layout, 600); setTimeout(layout, 2000); } else requestAnimationFrame(first); })();
-  addEventListener('resize', layout);
-  if (document.fonts) document.fonts.ready.then(layout);
   function light() {
     var p = document.querySelector('.page .panel'); if (!p) return;
     var r = p.getBoundingClientRect();
-    document.documentElement.classList.toggle('onlight', r.top < 70 && r.bottom > 40);
+    document.documentElement.classList.remove('onlight');
   }
   (function tick() { light(); requestAnimationFrame(tick); })();
   /* PJ.03: a "Period" row in place of FLOW and DATA */
