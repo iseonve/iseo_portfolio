@@ -216,3 +216,12 @@ html:root:not([data-stack]) body .page .head.head.head.head.head.head.head.head.
 /* PJ.03 headline: same size and line spacing as the other chapters (its two lines are two dot words) */
 html:root:not([data-stack]) body .page .head.head.head.head.head.head.head.head.head.head.head.head.head.head.c3 h2.dm.dm.dm.dm.dm > span > .dot{display:block!important;margin:0 0 .38em!important}
 html:root:not([data-stack]) body .page .head.head.head.head.head.head.head.head.head.head.head.head.head.head.c3 h2.dm.dm.dm.dm.dm > span > .dot:last-child{margin-bottom:0!important}
+html:root:not([data-stack]) body .page .head.head.head.head.head.head.head.head.head.head.head.head.head.head.c3 .hflow,html:root:not([data-stack]) body .page .head.head.head.head.head.head.head.head.head.head.head.head.head.head.c3 .hstats{display:none!important}
+.hper{display:grid;grid-template-columns:8.5vw 1fr;column-gap:2vw;padding:2.8vh 0;border-top:1px solid rgba(255,255,255,.12)}
+.hper .lab{font:400 13px/30px "JetBrains Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+.hper .v{font:500 22px/30px "JetBrains Mono",monospace;color:var(--px);letter-spacing:-.01em}
+.hper .v small{margin-left:14px;font:400 13px/1 "Pretendard",sans-serif;color:rgba(255,255,255,.5);letter-spacing:0}
+html:root:not([data-stack]) body .page .head.head.head.head.head.c3 .hper{width:100%}
+html:root:not([data-stack]) body .page .head.head.head.head.head.c3 .hper .lab{color:rgba(255,255,255,.72)!important}
+html:root:not([data-stack]) body .page .head.head.head.head.head.c3 .hper .v{color:var(--px)!important}
+html:root:not([data-stack]) body .page .head.head.head.head.head.c3 .hper .v small{color:rgba(255,255,255,.5)!important}

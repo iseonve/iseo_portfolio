@@ -55,4 +55,13 @@
     document.documentElement.classList.toggle('onlight', r.top < 70 && r.bottom > 40);
   }
   (function tick() { light(); requestAnimationFrame(tick); })();
+  /* PJ.03: a "Period" row in place of FLOW and DATA */
+  (function period() {
+    var m = document.querySelector('.page .head.c3 .hmore');
+    if (!m) { requestAnimationFrame(period); return; }
+    if (m.querySelector('.hper')) return;
+    var r = document.createElement('div'); r.className = 'hper';
+    r.innerHTML = '<span class="lab">Period</span><span class="v">2023.08 \u2013 2026.03<small>2\uB144 7\uAC1C\uC6D4</small></span>';
+    m.appendChild(r);
+  })();
 })();
