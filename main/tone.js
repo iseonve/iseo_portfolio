@@ -79,7 +79,7 @@
     var t = document.querySelectorAll('.ohit[data-pj="1"] .ot, .lbl[data-for="lock"] .lt');
     if (!h || t.length < 2) { requestAnimationFrame(gpt); return; }
     var mark = '<img class="gmark" src="img/chatgpt-mark.png" alt="">';
-    if (!h.querySelector('img')) h.innerHTML = mark + 'Concept for ChatGPT'; h.classList.add('glab');
+    if (!h.querySelector('img')) h.innerHTML = mark + 'Concept for ChatGPT'; h.classList.add('clab');
   })();
   /* PJ.03: Lotte mark beside the label */
   (function lotte() {
@@ -88,6 +88,6 @@
     var t = document.querySelectorAll('.ohit[data-pj="3"] .ot, .lbl[data-for="folder"] .lt');
     if (!h || t.length < 2) { requestAnimationFrame(lotte); return; }
     var mark = '<img class="gmark" src="img/lotte-mark.png" alt="">';
-    if (!h.querySelector('img')) { h.innerHTML = mark + h.textContent; h.classList.add('glab'); }
+    if (!h.querySelector('img')) { h.innerHTML = mark + h.textContent; h.classList.add('clab'); }
   })();
 })();
