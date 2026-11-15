@@ -24,7 +24,7 @@
       '<figure class="bleft"><img src="' + IMG + 'me.webp" alt="포스트잇 벽 앞에서 웃는 김이서" loading="lazy"><figcaption><span>Hi, I’m iseo</span><b>916 sticky notes</b></figcaption></figure>' +
       '<div class="bright"><h2 aria-label="I find where people get stuck.">' + line([['I', ''], ['find', '']]) + line([['where people', 'mu']]) + line([['get', 'mu'], ['stuck.', 'ac']]) + '</h2>' +
         '<div class="doesrow"><span>Iseo</span><span class="wv" aria-live="polite">' + WORDS.map(function (w, i) { return '<span class="wi' + (i ? '' : ' on') + '" aria-label="' + w + '">' + dot(w) + '</span>'; }).join('') + '</span><span>first</span></div>' +
-        '<div class="bio"><p>멈춘 순간을 다시 잇는 UI/UX 디자이너, 김이서입니다.</p><p>먼저 듣고, 잘게 나누고, 여러 시안으로 비교합니다.</p></div></div>' +
+        '<div class="bio"><p>어릴 때부터 디자인 한 길을 걸어왔어요. 스타트업에서 기획자와 함께 화면을 그리며, 보기 좋은 화면보다 사용자가 막힘 없이 지나가는 길을 만드는 일에 더 큰 보람을 느꼈고 UX로 방향을 잡았어요.</p><p>롯데이노베이트 운영팀에서는 2년 7개월 동안 롯데월드·서울스카이 등 실제 방문자가 매일 보는 웹사이트를 맡았어요.</p><p>지금은 사용자가 <em>멈춘 순간</em>을 찾아 다시 잇는 UI/UX 디자이너예요. 먼저 듣고, 잘게 나누고, 여러 시안으로 비교한 뒤, 직접 코드로 구현해 개발자와 같은 화면을 보며 이야기해요.</p></div></div>' +
       '<div class="bf-l k"><span>Cafés · Walks · Travel</span></div>' +
       '<a class="bf-r k" href="https://iseonve.github.io/iseo_portfolio/about.html" target="_blank" rel="noopener"><span>More about me</span><span>↗</span></a>' +
     '</div></div>';

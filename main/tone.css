@@ -401,3 +401,7 @@ html body .binder .bright h2{border-bottom:0!important}
 html body .binder .wi{color:#f5a6c3;filter:drop-shadow(0 0 .12em rgba(245,166,195,.85))}
 html body .binder .bright{gap:0;padding-bottom:6px}
 html body .binder .bio{padding-top:22px!important}
+/* title all black; longer intro */
+html body .binder .bright h2 svg.dw,html body .binder .bright h2 svg.dw.mu,html body .binder .bright h2 svg.dw.lit,html body .binder .bright h2 svg.dw.ac{color:#141214!important;filter:none!important}
+html body .binder .bio p{font:500 15px/1.75 "Pretendard",sans-serif!important;margin:0 0 12px!important;max-width:40em!important}
+html body .binder .bio p em{font-style:normal;color:#c2185b}
