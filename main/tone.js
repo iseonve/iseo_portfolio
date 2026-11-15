@@ -55,16 +55,4 @@
     document.documentElement.classList.toggle('onlight', r.top < 70 && r.bottom > 40);
   }
   (function tick() { light(); requestAnimationFrame(tick); })();
-  /* chapters: a last "View" row on each project sheet, linking where the card links */
-  (function cta() {
-    var heads = document.querySelectorAll('.page .head'), cards = document.querySelectorAll('.page .cardsec .card');
-    if (heads.length < 3 || cards.length < 3) { requestAnimationFrame(cta); return; }
-    heads.forEach(function (h, i) {
-      var m = h.querySelector('.hmore'); if (!m || m.querySelector('.hgo')) return;
-      var c = cards[i], href = c && c.getAttribute('href');
-      var row = document.createElement('div'); row.className = 'hgo';
-      row.innerHTML = '<span class="lab">Case</span>' + (href ? '<a href="' + href + '" target="_blank" rel="noopener">View project <i>\u2197</i></a>' : '<span class="soon">Coming soon</span>');
-      m.appendChild(row);
-    });
-  })();
 })();

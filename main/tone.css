@@ -116,3 +116,32 @@ html:root:not([data-stack]) body .page .head.head.head.head.head:is(.c1,.c2,.c3)
 .hgo a i{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#0b0b0b;color:var(--px);font-style:normal;transition:rotate .3s}
 .hgo a:hover{filter:brightness(1.1);box-shadow:0 0 34px color-mix(in srgb,var(--px) 55%,transparent)}.hgo a:hover i{rotate:45deg}
 .hgo span.soon{font:400 12px/1 "JetBrains Mono",monospace;letter-spacing:.12em;color:rgba(255,255,255,.45);text-transform:uppercase}
+
+/* Spec sheet type scale (final): every row starts on the same line, four steps only.
+   label 11 mono quiet · lead 18 / 500 white · body 14 / 400 grey · numbers 22 mono in the project colour */
+.hgo{display:none!important}
+html:root:not([data-stack]) body .page .head.head.head.head.head.head:is(.c1,.c2,.c3) .hcols > div,html:root:not([data-stack]) body .page .head.head.head.head.head.head:is(.c1,.c2,.c3) .hflow,html:root:not([data-stack]) body .page .head.head.head.head.head.head:is(.c1,.c2,.c3) .hstats{padding:2.8vh 0!important}
+html:root:not([data-stack]) body .page .head.head.head.head.head.head:is(.c1,.c2,.c3) .hcols p.lab,html:root:not([data-stack]) body .page .head.head.head.head.head.head:is(.c1,.c2,.c3) .hflow::before,html:root:not([data-stack]) body .page .head.head.head.head.head.head:is(.c1,.c2,.c3) .hstats::before{margin:0!important;padding:0!important;align-self:start;font:400 11px/18px "JetBrains Mono",monospace!important;letter-spacing:.16em!important;color:rgba(255,255,255,.42)!important}
+html:root:not([data-stack]) body .page .head.head.head.head.head.head:is(.c1,.c2,.c3) .hcols p:not(.lab){font:500 18px/1.55 "Pretendard",sans-serif!important;letter-spacing:-.02em!important;color:#f4f4f4!important}
+html:root:not([data-stack]) body .page .head.head.head.head.head.head:is(.c1,.c2,.c3) .hcols .hdesc{margin:10px 0 0!important;font:400 14px/1.7 "Pretendard",sans-serif!important;letter-spacing:-.01em!important;color:rgba(255,255,255,.52)!important}
+html:root:not([data-stack]) body .page .head.head.head.head.head.head:is(.c1,.c2,.c3) .hflow{align-items:baseline!important}
+html:root:not([data-stack]) body .page .head.head.head.head.head.head:is(.c1,.c2,.c3) .hflow .st{font:400 15px/18px "Pretendard",sans-serif!important;color:#e9e9e9!important}
+html:root:not([data-stack]) body .page .head.head.head.head.head.head:is(.c1,.c2,.c3) .hflow .st b{font:400 11px/1 "JetBrains Mono",monospace!important;margin-right:6px!important}
+html:root:not([data-stack]) body .page .head.head.head.head.head.head:is(.c1,.c2,.c3) .hflow .ar{font-size:12px!important;opacity:.4!important}
+html:root:not([data-stack]) body .page .head.head.head.head.head.head:is(.c1,.c2,.c3) .hstats dt{font:500 22px/18px "JetBrains Mono",monospace!important;letter-spacing:-.02em!important}
+html:root:not([data-stack]) body .page .head.head.head.head.head.head:is(.c1,.c2,.c3) .hstats dd{margin:10px 0 0!important;font:400 12px/1.5 "Pretendard",sans-serif!important;color:rgba(255,255,255,.45)!important}
+/* DATA: all four numbers on one line */
+html:root:not([data-stack]) body .page .head.head.head.head.head.head:is(.c1,.c2,.c3) .hmore{max-width:min(48vw,760px)!important}
+html:root:not([data-stack]) body .page .head.head.head.head.head.head:is(.c1,.c2,.c3) .hstats{grid-template-columns:8.5vw repeat(4,minmax(0,1fr))!important;column-gap:1.6vw!important;row-gap:0!important}
+html:root:not([data-stack]) body .page .head.head.head.head.head.head:is(.c1,.c2,.c3) .hstats::before{grid-row:auto!important}
+html:root:not([data-stack]) body .page .head.head.head.head.head.head:is(.c1,.c2,.c3) .hstats dd{font-size:12px!important;line-height:1.45!important;word-break:keep-all}
+html:root:not([data-stack]) body .page .head.head.head.head.head.head:is(.c1,.c2,.c3) .hstats{column-gap:2vw!important}
+/* FLOW: the steps spread across the row, joined by drawn arrows that grow toward the next step */
+html:root:not([data-stack]) body .page .head.head.head.head.head.head:is(.c1,.c2,.c3) .hflow{gap:0!important}
+html:root:not([data-stack]) body .page .head.head.head.head.head.head:is(.c1,.c2,.c3) .hflow::before{flex:0 0 calc(8.5vw + 2vw)!important}
+html:root:not([data-stack]) body .page .head.head.head.head.head.head:is(.c1,.c2,.c3) .hflow .st{flex:0 0 auto}
+html:root:not([data-stack]) body .page .head.head.head.head.head.head:is(.c1,.c2,.c3) .hflow .ar{flex:1 1 auto;position:relative;height:1px;margin:0 14px!important;font-size:0!important;opacity:1!important;align-self:center;background:linear-gradient(90deg,color-mix(in srgb,var(--px) 15%,transparent),var(--px))}
+html:root:not([data-stack]) body .page .head.head.head.head.head.head:is(.c1,.c2,.c3) .hflow .ar::after{content:"";position:absolute;right:-1px;top:50%;width:7px;height:7px;border-top:1px solid var(--px);border-right:1px solid var(--px);transform:translateY(-50%) rotate(45deg)}
+html:root:not([data-stack]) body .page .head.head.head.head.head.head:is(.c1,.c2,.c3) .hflow .st:last-child{color:var(--px)!important}
+html:root:not([data-stack]) body .page .head.head.head.head.head.head:is(.c1,.c2,.c3) .hstats{grid-template-columns:8.5vw 1.5fr 1fr 1.15fr .8fr!important;column-gap:1.4vw!important}
+html:root:not([data-stack]) body .page .head.head.head.head.head.head:is(.c1,.c2,.c3) .hstats{grid-template-columns:calc(8.5vw + .6vw) 1.5fr 1fr 1.15fr .8fr!important}
