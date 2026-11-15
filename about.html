@@ -226,22 +226,20 @@ html body h2.hd:is(.s2,.s3){font-size:max(30px,3.1vw)!important}
 html body .stp b,html body .xp figcaption,html body .tlb div,html body .pz-nav,html body .pz-cap{letter-spacing:.08em!important}
 html body .tlb div.on{border-color:var(--ac)!important}
 html body .pz-nav li.on i{background:var(--ac)!important;box-shadow:0 0 10px rgba(255,79,160,.7)}
-/* Korean titles in the same dot matrix as the English ones: a Korean pixel font (Galmuri11 Bold, OFL, self-hosted)
-   drawn at whole multiples of its 12px grid, each pixel cut into a square cell with a gap like Doto's. */
-@font-face{font-family:"Galmuri11";font-weight:700;font-display:swap;src:url("fonts/Galmuri11-Bold.woff2") format("woff2")}
-html body{--px:4px}
-@media (max-width:1100px){html body{--px:3px}}
-@media (min-width:1800px){html body{--px:5px}}
-html body :where(.hd .w>.h,.hd .w>.g,.brg-h,#contact .h2){font-family:"Galmuri11","Pretendard",sans-serif!important;font-weight:700!important;letter-spacing:0!important;
-  font-size:calc(var(--px)*12)!important;line-height:calc(var(--px)*15)!important;-webkit-font-smoothing:none;font-smooth:never}
-html body :where(.hd .w>.h,.brg-h,#contact .h2){color:#f4f4f4!important;
-  -webkit-mask:linear-gradient(90deg,#000 0 72%,transparent 72%) 0 0/var(--px) var(--px),linear-gradient(#000 0 72%,transparent 72%) 0 0/var(--px) var(--px);
-  -webkit-mask-composite:source-in;mask:linear-gradient(90deg,#000 0 72%,transparent 72%) 0 0/var(--px) var(--px),linear-gradient(#000 0 72%,transparent 72%) 0 0/var(--px) var(--px);mask-composite:intersect;
-  text-shadow:none!important}
-html body .hd .w.k>.h,html body #contact .h2 span{color:#ff4fa0!important;-webkit-text-fill-color:#ff4fa0!important}
-html body .hd{filter:drop-shadow(0 0 10px rgba(255,79,160,.18))}
-html body .brg-h,html body #contact .h2{filter:drop-shadow(0 0 10px rgba(255,255,255,.12))}
-html body .hd .ln{line-height:calc(var(--px)*15)}
+/* Korean titles stay in the main page's Korean face (Pretendard, as the main tagline), lit in neon colours below. */
+html body :where(.hd .w>.h,.brg-h,#contact .h2){color:var(--lc,#f4f4f4)!important;-webkit-text-fill-color:var(--lc,#f4f4f4)!important}
+/* Colour in the titles: each one is lit like one of the main page's screens (neon LED colours with a glow).
+   Hero: pink, its key words violet. Who I am: green. How I work: violet. The quiet line before When I pause: amber.
+   When I pause: pink. Contact: green, "연락 주세요." pink. */
+html body h1.hd{--lc:#ff4fa0;filter:drop-shadow(0 0 2px rgba(255,79,160,.9)) drop-shadow(0 0 14px rgba(255,79,160,.45))}
+html body h1.hd .w.k{--lc:#c4a0ff}
+html body h1.hd .w.k>.h{filter:drop-shadow(0 0 2px rgba(185,139,255,.9))}
+html body h2.hd.s2{color:#2bff7e!important;text-shadow:0 0 2px rgba(43,255,126,.9),0 0 16px rgba(43,255,126,.45)}
+html body h2.hd.s3{color:#c4a0ff!important;text-shadow:0 0 2px rgba(185,139,255,.9),0 0 16px rgba(154,75,255,.5)}
+html body .pz-t{color:#ff4fa0!important;text-shadow:0 0 2px rgba(255,79,160,.9),0 0 16px rgba(255,79,160,.5)}
+html body .brg-h{--lc:#ffb547;filter:drop-shadow(0 0 2px rgba(255,181,71,.85)) drop-shadow(0 0 14px rgba(255,160,40,.4))}
+html body #contact .h2{--lc:#2bff7e;filter:drop-shadow(0 0 2px rgba(43,255,126,.85)) drop-shadow(0 0 14px rgba(43,255,126,.35))}
+html body #contact .h2 span{--lc:#ff4fa0;color:#ff4fa0!important;-webkit-text-fill-color:#ff4fa0!important;filter:drop-shadow(0 0 2px rgba(255,79,160,.9))}
 
 /* Colour in the backdrop: like the main page's LED panel, a few diodes idle at a low glow and breathe on and off, in
    the site's pink and the three project colours (drawn by the script below on the same 14px grid as the cells). */
@@ -252,7 +250,6 @@ html body .hd .ln{line-height:calc(var(--px)*15)}
 html body .pz-bgs img{filter:blur(6px) saturate(1.6) brightness(.62)!important;
   -webkit-mask:radial-gradient(circle,#000 0 2.6px,transparent 3.2px) 0 0/8px 8px;mask:radial-gradient(circle,#000 0 2.6px,transparent 3.2px) 0 0/8px 8px}
 html body .pz-bgs::after{background:linear-gradient(#171717,rgba(23,23,23,.35) 16%,rgba(23,23,23,.15) 50%,rgba(23,23,23,.35) 84%,#171717)!important}
-html body :is(h2.hd.s2,h2.hd.s3,.pz-t){text-shadow:0 0 .35em rgba(255,255,255,.28)}
 </style>
 </head>
 <body>
