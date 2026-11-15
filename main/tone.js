@@ -10,9 +10,8 @@
       '<i class="ph p2" style="background-image:url(' + IMG + 's1b.webp);background-position:50% 30%"></i>' +
       '<i class="ph p3" style="background-image:url(' + IMG + 't1.webp);background-position:70% 40%"></i>' +
       '<div class="txt">' +
-        '<p>사용자가 <em>멈춘 순간</em>을 찾아, 다시 지나갈 수 있는 화면으로 잇는 UI/UX 디자이너예요.</p>' +
-        '<p>사람들의 이야기를 먼저 듣고, 시안을 여러 개 펼쳐 고른 뒤 직접 코드로 구현해요.</p>' +
-        '<a class="go" href="' + SITE + 'about.html">More about me <i>- - ▸</i></a>' +
+        '<p>어릴 때부터 디자인 한 길을 걸어왔고, 지금은 사용자가 <em>멈춘 순간</em>을 찾아 다시 지나갈 수 있는 화면으로 잇는 UI/UX 디자이너예요.</p>' +
+        '<p>화면을 그리기 전에 사람들의 이야기를 먼저 듣고 어디서 막히는지 찾아요. 시안은 여러 개 펼쳐 놓고 고른 뒤, 직접 코드로 구현해 개발자와 같은 화면을 보며 이야기해요.</p>' +
       '</div>' +
     '</div>';
   (function wait() {
@@ -28,7 +27,7 @@
     a.querySelectorAll('h2,.ph,.txt').forEach(function (e) { var r = e.getBoundingClientRect(); low = Math.max(low, r.bottom - A.top); });
     a.style.height = (low / u + 7) + 'vw';
     var v = function (e) { var r = e.getBoundingClientRect(); return { l: (r.left - A.left) / u, t: (r.top - A.top) / u, r: (r.right - A.left) / u, b: (r.bottom - A.top) / u }; };
-    var l1 = v(a.querySelector('.l1')), l3 = v(a.querySelector('.l3')), tx = v(a.querySelector('.txt')), p2 = v(a.querySelector('.p2')), go = v(a.querySelector('.go'));
+    var l1 = v(a.querySelector('.l1')), l3 = v(a.querySelector('.l3')), tx = v(a.querySelector('.txt')), p2 = v(a.querySelector('.p2')), go = v(a.querySelector('.txt p:last-child'));
     var ps = [].map.call(a.querySelectorAll('.txt p'), function (p) { var q = v(p); return q.t + 0.75; });
     var H = low / u + 7, X = tx.l - 2.2, y1 = (l1.t + l1.b) / 2, yj = l3.b + 1.6, yg = (go.t + go.b) / 2;
     var pm = (p2.t + p2.b) / 2, y0 = pm - (X - p2.r);
@@ -45,7 +44,7 @@
     if (!s) { s = document.createElementNS('http://www.w3.org/2000/svg', 'svg'); s.setAttribute('class', 'trc'); s.setAttribute('aria-hidden', 'true'); a.insertBefore(s, a.firstChild); }
     s.setAttribute('viewBox', '0 0 100 ' + H); s.style.height = H + 'vw'; s.innerHTML = g;
   }
-  (function first() { if (document.querySelector('.ab0 .go')) { layout(); setTimeout(layout, 600); setTimeout(layout, 2000); } else requestAnimationFrame(first); })();
+  (function first() { if (document.querySelector('.ab0 .txt p')) { layout(); setTimeout(layout, 600); setTimeout(layout, 2000); } else requestAnimationFrame(first); })();
   addEventListener('resize', layout);
   if (document.fonts) document.fonts.ready.then(layout);
   function light() {

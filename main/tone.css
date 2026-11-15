@@ -257,3 +257,5 @@ html body .ab0 .ph.p2{width:20vw;height:auto;aspect-ratio:502/690;background-pos
 html body .ab0 .ph.p3{width:19vw;height:auto;aspect-ratio:3/4;background-position:68% 50%!important}
 }
 @media (min-width:761px){html body .ab0 .txt p{font-size:max(14px,1vw)!important;line-height:1.7!important;margin-bottom:1.4vw!important}html body .ab0 .txt{width:24vw!important}}
+@media (min-width:761px){html body .ab0 .txt p{font-weight:500!important;color:#2a2628!important}html body .ab0 .txt{width:26vw!important}}
+html body .ab0 .lab{display:none!important}
