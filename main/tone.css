@@ -249,3 +249,10 @@ html:root body .page .foot.foot.foot{padding-top:0!important}
 html body .page .foot #gather.gwait .glab{opacity:0;transition:opacity .35s}
 html body .page .foot #gather.gwait.gon .glab{opacity:1}
 html:root body .page .foot.foot.foot .ftop{display:none!important}
+/* About panel: no lines; portrait photos */
+html body .ab0 .trc{display:none!important}
+html body .ab0 .lab::after{display:none!important}
+@media (min-width:761px){
+html body .ab0 .ph.p2{width:20vw;height:auto;aspect-ratio:502/690;background-position:50% 50%!important}
+html body .ab0 .ph.p3{width:19vw;height:auto;aspect-ratio:3/4;background-position:68% 50%!important}
+}
