@@ -365,3 +365,6 @@ html body .abg .b-bar{height:22px;margin-top:16px;background:repeating-linear-gr
 @media (max-width:900px){html body .ab0.abg{grid-template-columns:1fr;row-gap:6vh}html body .abg .g-mid{order:-1}html body .abg .g-r{justify-self:start;padding-top:0}}
 /* more room between the project chapters */
 html body .page .head.c2,html body .page .head.c3{margin-top:26vh!important}
+/* strap: plain, fading in from above so it doesn't start on a hard edge */
+html body .abg .strap b{display:none!important}
+html body .abg .strap{-webkit-mask:linear-gradient(transparent 0,#000 55%);mask:linear-gradient(transparent 0,#000 55%)}
