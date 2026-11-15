@@ -386,3 +386,19 @@ html body .binder .wi.in{transition:none!important;transform:translate(-50%,-50%
 html body .binder .wv{font-size:clamp(28px,2.7vw,42px)!important}
 html body .binder .wi{white-space:nowrap}
 html body .binder svg.dw.lit{color:#fff;filter:drop-shadow(0 0 .1em rgba(255,255,255,.9)) drop-shadow(0 0 .25em rgba(240,105,159,.8))}
+/* binder → project-card language: dark body, pink frame like the PJ cards, no binder holes */
+html body .binder{--card:#141214;--cink:#ececec;--pk:#f5a6c3;--cl:rgba(245,166,195,.32);background:#141214!important;color:#ececec!important;border:1.5px solid var(--pk)!important;border-radius:14px!important;grid-template-columns:minmax(0,440px) minmax(0,1fr)!important;grid-template-rows:56px auto 44px!important;overflow:hidden;box-shadow:0 0 34px -6px rgba(245,166,195,.35),0 40px 90px -30px #000!important}
+html body .binder .holes{display:none!important}
+html body .binder .bh-l,html body .binder .bf-l,html body .binder .bleft{grid-column:1!important}
+html body .binder .bh-r,html body .binder .bf-r,html body .binder .bright{grid-column:2!important}
+html body .binder .bh-l,html body .binder .bh-r,html body .binder .bf-l,html body .binder .bf-r{color:#a7a3a5!important;border-color:var(--cl)!important}
+html body .binder .bh-l,html body .binder .bh-r{line-height:56px!important}
+html body .binder .meno{font:400 26px/1 "Inter","Pretendard",sans-serif;letter-spacing:-.04em;color:var(--pk);text-transform:none}
+html body .binder .bleft{border-right:1px dotted var(--cl)!important;margin:0!important}
+html body .binder .doesrow{border-color:var(--cl)!important;color:#a7a3a5}
+html body .binder .doesrow .wi{color:#ececec}
+html body .binder svg.dw.mu{color:#5d585b!important}
+html body .binder svg.dw.ac{color:var(--pk);filter:drop-shadow(0 0 .12em rgba(245,166,195,.7))}
+html body .binder .bio p{color:#d9d6d7!important}
+html body .binder a.bf-r:hover,html body .binder a.bf-r:focus-visible{background:var(--pk)!important;color:#141214!important}
+html body .binder .bleft figcaption{color:#fff}
