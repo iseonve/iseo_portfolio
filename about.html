@@ -229,13 +229,15 @@ html body .tlb div.on{border-color:var(--ac)!important}
 html body .pz-nav li.on i{background:var(--ac)!important;box-shadow:0 0 10px rgba(255,79,160,.7)}
 /* Korean titles stay in the main page's Korean face (Pretendard, as the main tagline), lit in neon colours below. */
 html body :where(.hd .w>.h,.brg-h,#contact .h2){color:var(--lc,#f4f4f4)!important;-webkit-text-fill-color:var(--lc,#f4f4f4)!important}
-/* Titles set like the main page's About ("Hi, I'm Iseo"): one plain ink, no glow — off-white here on the dark page,
+/* Titles set like the main page's first screen: English in the dot font of "iseo Kim", Korean like the tagline
+   under it (Pretendard 400, pink key words at 500). Earlier note: titles set like the main page's About ("Hi, I'm Iseo"): one plain ink, no glow — off-white here on the dark page,
    with only the key words in the site's pink. English titles in Inter Tight at 350, as the main About title. */
 html body h1.hd .w.k,html body #contact .h2 span{--lc:#ff4fa0}
-html body :is(h2.hd.s2,h2.hd.s3,.pz-t){font-family:"Inter Tight","Inter","Pretendard",sans-serif!important;font-weight:350!important;letter-spacing:-.03em!important;word-spacing:0!important;color:#f2f2f2!important;text-shadow:none!important}
+html body :is(h2.hd.s2,h2.hd.s3,.pz-t){font-family:"Doto","JetBrains Mono",monospace!important;font-weight:900!important;letter-spacing:0!important;word-spacing:-.3em!important;color:#f2f2f2!important;text-shadow:none!important}
 html body h2.hd:is(.s2,.s3){font-size:max(34px,3.6vw)!important}
-/* Korean titles in the same light, tight cut as the English ones: Pretendard (drawn from Inter) at 350. */
-html body :is(h1.hd,h1.hd .w>*,.brg-h,#contact .h2){font-family:"Pretendard","Inter Tight",sans-serif!important;font-weight:350!important;letter-spacing:-.045em!important}
+/* Korean titles as the main tagline. */
+html body :is(h1.hd,h1.hd .w>*,.brg-h,#contact .h2){font-family:"Pretendard","Apple SD Gothic Neo","Noto Sans KR",sans-serif!important;font-weight:400!important;letter-spacing:-.01em!important}
+html body h1.hd .w.k>*,html body #contact .h2 span{font-weight:500!important}
 
 /* When I pause: the photo behind becomes an LED billboard — the same photo, in full colour, shown through round
    diodes, so the section glows in the colours of the trip instead of a dark blur. */
