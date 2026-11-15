@@ -78,4 +78,24 @@
     if (t.length < 2) { requestAnimationFrame(hoverLogo); return; }
     t.forEach(function (e) { if (!e.querySelector('img')) e.innerHTML = '<img class="hlogo" src="img/sense-logo.png" alt="SENSE">'; });
   })();
+  /* PJ.01: ChatGPT mark + "Concept for ChatGPT" (an unofficial concept, not a partnership) */
+  (function gpt() {
+    var c = document.querySelectorAll('.page .cardsec .card')[0];
+    var h = c && c.querySelector('h3');
+    var t = document.querySelectorAll('.ohit[data-pj="1"] .ot, .lbl[data-for="lock"] .lt');
+    if (!h || t.length < 2) { requestAnimationFrame(gpt); return; }
+    var mark = '<img class="gmark" src="img/chatgpt-mark.png" alt="">';
+    if (!h.querySelector('img')) h.innerHTML = mark + 'Concept for ChatGPT'; h.classList.add('glab');
+    t.forEach(function (e) { if (!e.querySelector('img')) e.innerHTML = '<span class="glab">' + mark + 'Concept for ChatGPT</span>'; });
+  })();
+  /* PJ.03: Lotte mark beside the label */
+  (function lotte() {
+    var c = document.querySelectorAll('.page .cardsec .card')[2];
+    var h = c && c.querySelector('h3');
+    var t = document.querySelectorAll('.ohit[data-pj="3"] .ot, .lbl[data-for="folder"] .lt');
+    if (!h || t.length < 2) { requestAnimationFrame(lotte); return; }
+    var mark = '<img class="gmark" src="img/lotte-mark.png" alt="">';
+    if (!h.querySelector('img')) { h.innerHTML = mark + h.textContent; h.classList.add('glab'); }
+    t.forEach(function (e) { if (!e.querySelector('img')) e.innerHTML = '<span class="glab">' + mark + e.textContent + '</span>'; });
+  })();
 })();

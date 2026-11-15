@@ -227,3 +227,5 @@ html:root:not([data-stack]) body .page .head.head.head.head.head.c3 .hper .v{col
 html:root:not([data-stack]) body .page .head.head.head.head.head.c3 .hper .v small{color:rgba(255,255,255,.5)!important}
 html body .page .cardsec .card h3 img.slogo{display:block;height:20px;width:auto;margin-left:auto}
 html body img.hlogo{display:inline-block;height:1.15em;width:auto;vertical-align:-.2em}
+html body .glab{display:inline-flex;align-items:center;gap:.45em;white-space:nowrap}html body img.gmark{height:1.25em;width:auto;opacity:.95}
+html body .page .cardsec .card h3.glab{display:flex!important;align-items:center;justify-content:flex-end;gap:.5em;height:auto!important}
