@@ -240,3 +240,11 @@ html body .page .foot.foot .dot-ac{color:#f0699f}
 html body .page .foot.foot .talk a:before{content:none!important}
 html body .page .foot.foot .talk{display:none!important}
 html body .page .foot.foot .live{display:none!important}
+html body .page .cardsec .card h3.clab img.gmark[alt="ChatGPT"]{height:24px}
+html body .page .cardsec .card h3.clab img.gmark[alt="Lotte"]{height:24px}
+html body .page .foot.foot{min-height:0!important;grid-template-rows:auto auto auto auto auto auto!important}
+html body .page .foot.foot .gather{margin-top:4vh}
+html body .page .foot.foot .fbar{margin-top:6vh!important}
+html body .page .foot #gather.gwait .glab{opacity:0;transition:opacity .35s}
+html body .page .foot #gather.gwait.gon .glab{opacity:1}
+html body .page .foot.foot .ftop{display:none!important}

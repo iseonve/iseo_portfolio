@@ -78,8 +78,8 @@
     var h = c && c.querySelector('h3');
     var t = document.querySelectorAll('.ohit[data-pj="1"] .ot, .lbl[data-for="lock"] .lt');
     if (!h || t.length < 2) { requestAnimationFrame(gpt); return; }
-    var mark = '<img class="gmark" src="img/chatgpt-mark.png" alt="">';
-    if (!h.querySelector('img')) h.innerHTML = mark + 'Concept for ChatGPT'; h.classList.add('clab');
+    var mark = '<img class="gmark" src="img/chatgpt-mark.png" alt="ChatGPT">';
+    if (!h.querySelector('img')) { h.innerHTML = mark; h.setAttribute('aria-label','Concept for ChatGPT'); } h.classList.add('clab');
   })();
   /* PJ.03: Lotte mark beside the label */
   (function lotte() {
@@ -87,7 +87,19 @@
     var h = c && c.querySelector('h3');
     var t = document.querySelectorAll('.ohit[data-pj="3"] .ot, .lbl[data-for="folder"] .lt');
     if (!h || t.length < 2) { requestAnimationFrame(lotte); return; }
-    var mark = '<img class="gmark" src="img/lotte-mark.png" alt="">';
-    if (!h.querySelector('img')) { h.innerHTML = mark + h.textContent; h.classList.add('clab'); }
+    var mark = '<img class="gmark" src="img/lotte-mark.png" alt="Lotte">';
+    if (!h.querySelector('img')) { h.setAttribute('aria-label', h.textContent); h.innerHTML = mark; h.classList.add('clab'); }
+  })();
+
+  /* footer labels: only show once the objects have landed in the footer (not over the About panel) */
+  (function glabs() {
+    var g = document.getElementById('gather');
+    if (!g) { requestAnimationFrame(glabs); return; }
+    g.classList.add('gwait');
+    (function tick() {
+      requestAnimationFrame(tick);
+      var r = g.getBoundingClientRect(), on = r.top < window.innerHeight * 0.62;
+      g.classList.toggle('gon', on);
+    })();
   })();
 })();
