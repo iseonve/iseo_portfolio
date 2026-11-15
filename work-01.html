@@ -46,6 +46,30 @@
 @media (max-width:720px){.hdr{grid-template-columns:1fr auto}.hdr .hnow{display:none}.hdr .hlogo{font-size:22px!important}}
 </style>
 <script>(function(){function on(){var h=document.querySelector('.hdr');if(!h)return;var f=function(){h.classList.toggle('hs',window.scrollY>20)};f();window.addEventListener('scroll',f,{passive:true})}if(document.readyState!=='loading')on();else document.addEventListener('DOMContentLoaded',on)})();</script>
+<style id="tone-main">
+/* Subpage tone matched to the main page (C): the project's own colour instead of pink, mono capitals for tags,
+   labels and numbers, squarer pills, and the main page's LED cells faintly behind the hero. */
+html body .cs.cs.cs,html body .cs.s2.s2{--g:#10A37F;--gd:#0D8A6B;--gl:#E3F4EE;--neon:#2bff7e;--neon-rgb:43,255,126}
+html body .cs-hero .hcard{position:relative;isolation:isolate}
+html body .cs-hero .hcard::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;border-radius:inherit;
+  background:radial-gradient(circle,rgba(255,255,255,.16) 0 2.2px,transparent 2.8px) 0 0/14px 14px;
+  -webkit-mask:radial-gradient(ellipse 80% 85% at 30% 45%,#000 20%,transparent 85%);mask:radial-gradient(ellipse 80% 85% at 30% 45%,#000 20%,transparent 85%);opacity:.55}
+html body .cs-hero .hin{position:relative;z-index:2}
+html body .cs-hero .hh em,html body .cs-hero .hh em *{color:var(--neon)!important;-webkit-text-fill-color:var(--neon)!important;text-shadow:0 0 .5em rgba(var(--neon-rgb),.28)}
+html body .cs-hero .hpill{display:inline-flex!important;align-items:center;gap:10px;background:transparent!important;border:1px solid rgba(255,255,255,.22)!important;border-radius:3px!important;
+  font:400 13px/1 "Pretendard",sans-serif!important;letter-spacing:-.01em!important;color:rgba(255,255,255,.78)!important;padding:8px 12px!important;backdrop-filter:none!important}
+html body .cs-hero .hpill b{font:500 12px/1 "JetBrains Mono",monospace;color:var(--neon);letter-spacing:.12em}
+html body .cs-hero .hstatus{border-radius:4px!important}
+html body .cs-hero .hstatus i{background:var(--neon)!important;box-shadow:0 0 10px rgba(var(--neon-rgb),.7)!important}
+html body .cs .chap{font-family:"JetBrains Mono","Pretendard",monospace!important;letter-spacing:.14em!important;text-transform:uppercase}
+html body .cs .chap b{color:var(--g)!important;font-weight:500!important}
+html body .cs .badge{font-family:"JetBrains Mono",monospace!important;letter-spacing:.12em!important;border-radius:3px!important}
+html body .cs .actor{border-radius:3px!important}
+html body .cs .three li{border-radius:8px!important}
+html body .cs :is(.num,.stat,.kpi) {font-family:"JetBrains Mono",monospace}
+html body .toc a{font-family:"JetBrains Mono",monospace!important;letter-spacing:.12em!important;text-transform:uppercase}
+html body .end small,html body .end a span{font-family:"JetBrains Mono",monospace!important;letter-spacing:.12em!important;text-transform:uppercase}
+</style>
 </head>
 <body>
 <div class="progress" id="prog" aria-hidden="true"></div>
@@ -66,7 +90,7 @@
 <div class="hcard">
 <img class="hbg" src="img/cs01/hero-bg.webp" alt="" decoding="async">
 <div class="hin">
-<span class="hpill">ChatGPT 기능 제안 · UX/UI 콘셉트 프로젝트</span>
+<span class="hpill"><b>PJ.01</b>ChatGPT 기능 제안 · UX/UI 콘셉트</span>
 <h1 class="hh"><span class="ln"><span style="--d:1s">AI 속 내 <em>개인정보,</em></span></span><span class="ln"><span style="--d:1.15s"><em>내가</em> 컨트롤합니다.</span></span></h1>
 <p class="hp">AI에 질문을 쓰다 보면 이름이나 회사 이름 같은 개인정보가 함께 들어갑니다. 보내기 전에 개인정보를 확인하고, 처리 방법을 직접 고를 수 있는 기능을 기획했습니다.</p>
 <span class="hstatus"><i></i>개인정보 보호 ON</span>
