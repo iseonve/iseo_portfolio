@@ -53,6 +53,9 @@
 <nav class="toc" aria-label="Chapters">
 <a href="#overview"><i></i>Overview</a>
 <a href="#research"><i></i>Research</a>
+<a href="#define"><i></i>Define</a>
+<a href="#ideation"><i></i>Ideation</a>
+<a href="#test"><i></i>Test</a>
 </nav>
 <section class="ch cs s2" id="overview" data-step="overview">
 <div class="cs-hero">
@@ -68,7 +71,7 @@
 <dl class="facts">
 <div><dt>키워드</dt><dd>감각 부담 · 개인화 대응</dd></div>
 <div><dt>기기</dt><dd>스마트워치 · 이어폰 · 폰</dd></div>
-<div><dt>리서치</dt><dd>논문 13편 · 인터뷰 2명</dd></div>
+<div><dt>리서치</dt><dd>논문 13편 · 인터뷰 2명 · UT 5명</dd></div>
 <div><dt>과정</dt><dd>Double Diamond</dd></div>
 </dl>
 </div>
@@ -92,9 +95,279 @@
 <blockquote><p>“한 번의 큰 자극보다 이런 과정이 매일 이어진다는 점이 더 피곤해요.”</p><cite>참여자 1 · 셀프 일리시테이션 인터뷰</cite></blockquote>
 <blockquote><p>“도움 요청처럼 다른 사람과 연결되는 건 자동으로 하지 않았으면 좋겠어요. 얼마나 심각한지 제가 먼저 판단하고 싶어요.”</p><cite>참여자 2 · 코디자인 인터뷰</cite></blockquote>
 </div>
-<p class="soon">Define 이후 단계(문제 정의 · 아이디어 · 프로토타입 · 테스트)는 지금 정리하고 있어요.</p>
 </div>
 </section>
+<section class="ch cs s2" id="define" data-step="define">
+<div class="cs-ov ut">
+<p class="chap"><b>03</b>Define</p>
+<h2 class="ovh">156개의 말을 7개 주제로 묶자,<br><em>피할 수 없는 순간</em>이 남았습니다.</h2>
+<div class="funnel">
+<div><b>156</b><span>1차 코드</span><small>셀프 일리시테이션 · 코디자인 · 선행연구</small></div>
+<i aria-hidden="true">→</i>
+<div><b>17</b><span>Affinity Group</span><small>비슷한 경험끼리 묶기</small></div>
+<i aria-hidden="true">→</i>
+<div><b>7</b><span>Theme</span><small>반복되는 패턴만 남기기</small></div>
+</div>
+<div class="sit">
+<p class="lab">대응이 달라지는 세 가지 상황</p>
+<ol>
+<li><b>피할 수 있음</b><p>시간·장소를 바꾸거나 미리 피해요.</p><span>이미 스스로 해결</span></li>
+<li><b>피하기 어렵지만 일부 조절 가능</b><p>이어폰, 노이즈 캔슬링, 마스크로 줄여요.</p><span>기존 기기로 일부 해결</span></li>
+<li class="on"><b>피하기도, 줄이기도 어려움</b><p>버티기, 자리 이동, 도움 요청만 남아요. 혼잡하거나 멀미가 나면 휴대폰 화면 조작도 어렵습니다.</p><span>Main Pain Point</span></li>
+</ol>
+</div>
+<div class="ps">
+<div><p class="lab">Problem Statement</p><p>피하기 어려운 상황에서 감각 부담이 생기면, 필요한 대응을 <em>즉시 실행하기 어렵고</em> 대응 후에도 <em>불편함이 남을 수 있다.</em></p></div>
+<div><p class="lab">How Might We</p><p>어떻게 하면 <em>최소한의 조작</em>으로 필요한 감각 대응을 빠르게 실행하고, 남은 불편에 맞춰 <em>추가 조절</em>까지 이어갈 수 있을까?</p></div>
+</div>
+<div class="themes">
+<p class="lab">7개 Theme에서 디자인 원칙으로</p>
+<table>
+<thead><tr><th>사용자에게서 확인한 것</th><th>그래서 정한 원칙</th></tr></thead>
+<tbody>
+<tr><td>혼잡도에 따라 쓸 수 있는 인터랙션이 달라진다</td><td>화면 대신 이어폰 · 워치 · 음성으로 한 번에 실행</td></tr>
+<tr><td>자동화를 받아들이는 정도는 기능마다 다르다</td><td>자동 실행 · 빠른 승인 · 직접 선택, 기능별로 나눔</td></tr>
+<tr><td>잘못 적용된 설정은 바로 고칠 수 있어야 한다</td><td>모든 대응에 즉시 되돌리기</td></tr>
+<tr><td>반복 알림과 질문은 또 다른 부담이 된다</td><td>필요한 순간에만, 한 번만 제안</td></tr>
+<tr><td>이전에 편했던 설정을 다시 쓰고 싶다</td><td>개인 설정 저장 · 비슷한 상황에서 재사용</td></tr>
+<tr><td>심박·HRV로 감각 부담을 확정할 수 없다</td><td>생체 데이터는 판정이 아니라 참고 정보로만</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<section class="ch cs s2" id="ideation" data-step="ideation">
+<div class="cs-ov ut">
+<p class="chap"><b>04</b>Ideation</p>
+<h2 class="ovh">35개 아이디어 중,<br><em>화면을 보지 않아도 되는 것</em>부터 골랐습니다.</h2>
+<div class="vote">
+<div class="vk"><p class="lab">아이디어 35개 · 카테고리 11개 · 팀 투표</p>
+<ul>
+<li><span>나의 감각 쌍둥이</span><small>개인화 · 경험 재사용</small><i style="--v:3"></i><b>3</b></li>
+<li><span>감각 탈출 제스처 (SOS)</span><small>즉시 대응 · 사용자 통제</small><i style="--v:3"></i><b>3</b></li>
+<li><span>감각 자동항법</span><small>사전 예방 · 준비</small><i style="--v:3"></i><b>3</b></li>
+<li><span>감각 버블</span><small>직접 감각 조절</small><i style="--v:2"></i><b>2</b></li>
+<li><span>감각 날씨</span><small>상태 인지</small><i style="--v:2"></i><b>2</b></li>
+<li><span>회복 경로 기억</span><small>후속 조절</small><i style="--v:2"></i><b>2</b></li>
+<li><span>몸이 컨트롤러</span><small>최소 입력</small><i style="--v:2"></i><b>2</b></li>
+</ul>
+<p class="note">표가 한 기능에 몰리지 않았어요. 사전 준비 · 즉시 대응 · 개인화 · 후속 조절이 고르게 지지돼, 하나의 기능이 아니라 <b>하나의 흐름</b>으로 묶기로 했습니다.</p>
+</div>
+<div class="mx"><p class="lab">2×2 우선순위</p>
+<div class="grid2">
+<span class="ax ay">혼잡한 순간에도 화면 없이 쓸 수 있다 ↑</span><span class="ax ax2">지금 기술로 만들 수 있다 →</span>
+<div class="q hi"><b>MVP</b><p>이어폰 한 번 누르기<br>워치 한 번 탭<br>짧은 음성 명령<br>이전 설정 재사용<br>즉시 되돌리기</p></div>
+<div class="q"><b>검증 후보</b><p>차량 움직임 전 진동<br>청각 알림 → 진동 전환</p></div>
+<div class="q"><b>확장</b><p>마스크 · 필터 후각 대응</p></div>
+<div class="q"><b>이동 전 화면에서</b><p>주변 소음 · 혼잡 정보 참고<br>피로 상태 직접 입력</p></div>
+</div></div>
+</div>
+<div class="concept">
+<p class="lab">SENSE — 감각을 알아차리고 조절하는 이동 지원 서비스</p>
+<ol>
+<li><b>이동 전</b><span>감각 자동항법</span><p>경로와 내 설정으로 미리 준비</p></li>
+<li><b>부담 발생</b><span>SOS 제스처</span><p>화면 없이 바로 시작</p></li>
+<li><b>감각별 대응</b><span>감각 버블 · 멀미 비시각 모드</span><p>청각은 소리 조절, 멀미는 음성 · 진동 안내</p></li>
+<li><b>효과 확인</b><span>후속 조절</span><p>유지 · 추가 조절 · 되돌리기 · 종료</p></li>
+</ol>
+<p class="note">일부러 만들지 않은 것: 감각 과부하 자동 판정, 감정 · 피로 자동 추정, 특정 사람 목소리만 제거. 사용자가 원하지 않았거나 지금 기술로 정확하다고 말할 수 없었어요.</p>
+</div>
+</div>
+</section>
+
+<section class="ch cs s2" id="test" data-step="test">
+<div class="cs-ov ut">
+<p class="chap"><b>05</b>Usability Test</p>
+<h2 class="ovh">쓰기는 쉬웠지만,<br><em>저장하고 다시 쓰는 순간</em>에서 멈췄습니다.</h2>
+<dl class="kpi">
+<div><dt>참여자</dt><dd>5<small>명</small></dd><p>20~30대 · 모두 이어폰 사용<br>이동 중 감각 불편 경험</p></div>
+<div><dt>작업 성공률</dt><dd>80<small>%</small></dd><p>15개 작업 중 12개 성공<br>부분 성공 2 · 실패 1</p></div>
+<div><dt>평균 SEQ</dt><dd>5.6<small>/7</small></dd><p>작업 직후 체감 난이도<br>7에 가까울수록 쉬움</p></div>
+<div><dt>평균 SUS</dt><dd>81.5<small>/100</small></dd><p>최저 75 · 최고 87.5<br>일반적인 기준 평균 68</p></div>
+</dl>
+<p class="meth">Think Aloud 방식, 1인 35~45분. 실제 소음 차단이나 멀미 완화 효과가 아니라, <b>모드와 감각 정보를 이해하고 고를 수 있는지</b>를 봤습니다. 시안 단계라 5명 대상의 파일럿이며, 수치는 경향으로 읽어 주세요.</p>
+
+<div class="chart">
+<div class="ch-h"><p class="lab">작업별 결과</p><span class="lg"><i class="s"></i>성공<i class="p"></i>부분 성공<i class="f"></i>실패<i class="d"></i>참여자별 SEQ</span></div>
+<div class="tk">
+<div class="row"><p><b>01</b>경로 선택</p><div class="tbar"><i class="s" style="--n:5"></i></div><div class="seq"><i style="--x:7"></i><i style="--x:7"></i><i style="--x:7"></i><i style="--x:7"></i><i style="--x:5"></i><b style="--x:6.6">6.6</b></div></div>
+<div class="row"><p><b>02</b>모드 사용</p><div class="tbar"><i class="s" style="--n:5"></i></div><div class="seq"><i style="--x:5"></i><i style="--x:7"></i><i style="--x:7"></i><i style="--x:7"></i><i style="--x:7"></i><b style="--x:6.6">6.6</b></div></div>
+<div class="row hot"><p><b>03</b>감각 저장 · 다음 추천</p><div class="tbar"><i class="s" style="--n:2"></i><i class="p" style="--n:2"></i><i class="f" style="--n:1"></i></div><div class="seq"><i style="--x:2"></i><i style="--x:3"></i><i style="--x:1"></i><i style="--x:5"></i><i style="--x:7"></i><b style="--x:3.6">3.6</b></div></div>
+<div class="row ax"><p></p><div class="tbar sc"><span>0</span><span>5명</span></div><div class="seq sc"><span>1 매우 어려움</span><span>7 매우 쉬움</span></div></div>
+</div>
+<p class="note">앞의 두 작업은 모두 성공했고 SEQ 6.6이었어요. 작업 3만 SEQ가 3.6으로 3점 낮아지고 참여자 간 차이가 1~7점으로 크게 벌어졌습니다. 문제는 한 작업에 몰려 있었어요.</p>
+</div>
+
+<div class="chart two">
+<div>
+<p class="lab">참여자별 SUS</p>
+<div class="sus">
+<div class="ref" style="--y:68"><span>기준 평균 68</span></div>
+<div class="ref av" style="--y:81.5"><span>평균 81.5</span></div>
+<div class="b" style="--y:85"><b>85</b><span>P1</span></div>
+<div class="b" style="--y:77.5"><b>77.5</b><span>P2</span></div>
+<div class="b" style="--y:82.5"><b>82.5</b><span>P3</span></div>
+<div class="b" style="--y:87.5"><b>87.5</b><span>P4</span></div>
+<div class="b" style="--y:75"><b>75</b><span>P5</span></div>
+</div>
+<p class="note">작업 3에서 실패한 P3도 SUS는 82.5였어요. 전체 인상은 좋아도 특정 단계에서 막힐 수 있어서, 점수 하나보다 작업별 기록을 함께 봐야 했습니다.</p>
+</div>
+<div>
+<p class="lab">SUS 문항별 점수 <small>(문항당 0~4, 높을수록 긍정)</small></p>
+<ul class="items">
+<li><span>번거롭지 않다</span><i style="--v:3.8"></i><b>3.8</b></li>
+<li><span>배울 게 많지 않다</span><i style="--v:3.8"></i><b>3.8</b></li>
+<li><span>쉽게 배울 수 있다</span><i style="--v:3.6"></i><b>3.6</b></li>
+<li><span>기술 지원이 필요 없다</span><i style="--v:3.6"></i><b>3.6</b></li>
+<li><span>사용할 때 자신감이 있다</span><i style="--v:3.4"></i><b>3.4</b></li>
+<li><span>복잡하지 않다</span><i style="--v:3.4"></i><b>3.4</b></li>
+<li><span>사용하기 쉽다</span><i style="--v:3.2"></i><b>3.2</b></li>
+<li class="lo"><span>기능이 잘 통합되어 있다</span><i style="--v:2.8"></i><b>2.8</b></li>
+<li class="lo"><span>불일치·혼동이 없다</span><i style="--v:2.8"></i><b>2.8</b></li>
+<li class="lo"><span>자주 사용하고 싶다</span><i style="--v:2.2"></i><b>2.2</b></li>
+</ul>
+<p class="note">‘쉽다’는 문항은 높고, <b>통합 · 일관성 · 재사용 의향</b>이 가장 낮았어요. 저장한 정보가 다음 추천으로 이어지는 흐름이 끊겨 보인다는 작업 3의 결과와 같은 이야기입니다.</p>
+</div>
+</div>
+
+<div class="find">
+<p class="lab">발견한 문제와 다음 수정</p>
+<table>
+<thead><tr><th>심각도</th><th>관찰</th><th>근거</th><th>수정 방향</th></tr></thead>
+<tbody>
+<tr><td><span class="sv h">높음</span></td><td>‘경로 저장’ 버튼을 지나쳐 저장하지 않고 과제를 끝냄</td><td>P3 실패 · “종료했어요.”<br>P2 하단을 다시 확인 후 망설임</td><td>저장 버튼을 하단 고정 · 주요 버튼으로 강조, 저장 완료 상태 표시</td></tr>
+<tr><td><span class="sv h">높음</span></td><td>저장 후 나온 추천이 왜, 무엇을 기준으로 나왔는지 모름</td><td>P1 부분 성공 · 추천 기준을 직접 질문</td><td>추천 카드에 “자주 가는 경로 · 시간대 기준” 근거 한 줄 노출</td></tr>
+<tr><td><span class="sv m">중간</span></td><td>조절 바가 무엇을 조절하는지 한눈에 모름</td><td>P1 “여기 바가 조절하는 건가요?”<br>P4 같은 의견</td><td>바 양끝에 단위 · 라벨(주변 소리 ↔ 음악) 표시</td></tr>
+<tr><td><span class="sv m">중간</span></td><td>모드 이름만으로 기능을 구분하기 어려움</td><td>P2 “안정 모드가 무엇인가요?”<br>P4 · P5 모드 차이가 뚜렷하지 않음</td><td>모드마다 언제 쓰는지 한 줄 설명 · 예시 소리 미리 듣기</td></tr>
+<tr><td><span class="sv l">낮음</span></td><td>모드를 여러 개 고를 수 있는지 헷갈림</td><td>P3 다중 선택 시도 3회</td><td>단일 / 복수 선택을 선택 UI로 구분</td></tr>
+<tr><td><span class="sv l">낮음</span></td><td>일반 지도 · 모빌리티 앱으로 오해</td><td>P5 · 경로 작업은 익숙해서 빠름</td><td>경로 결과에서 소음 · 혼잡 정보를 먼저 보이게</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="quotes">
+<blockquote><p>멀미 모드에서 화면 대신 소리와 워치 진동으로 알려주는 게 좋았어요.</p><cite>P5 · 관찰 메모 정리</cite></blockquote>
+<blockquote><p>감각 설정을 저장해 두면 다음에 추천 모드로 보여주는 게 편리해요.</p><cite>P5 · 관찰 메모 정리</cite></blockquote>
+</div>
+
+<div class="nxt">
+<p class="lab">다음 테스트는 이렇게 바꿨어요</p>
+<div class="nx">
+<div><b>파일럿</b><p>경로 선택 → 모드 사용 → 저장 · 추천<br><small>조작 성공 위주로 기록</small></p></div>
+<i aria-hidden="true">→</i>
+<div class="on"><b>수정한 4개 작업</b><p>모드 이해 · 선택 → 장소 선택 → 경로 확인 · 저장 → 모드 · 추천 이해<br><small>감각 정보가 <em>선택을 바꿨는지</em>를 따로 기록 · 모드 이름만 보고 떠올린 뜻부터 묻기</small></p></div>
+</div>
+<p class="note">파일럿에서 문제가 모드 ‘이해’와 저장 이후 ‘연결’에 있었기 때문에, 다음 테스트는 조작보다 이해와 선택의 이유를 묻도록 다시 설계했습니다. 실제 소음 차단 · 멀미 완화 효과는 이번 범위에서 검증하지 않았습니다.</p>
+</div>
+</div>
+</section>
+<style>
+.ut{max-width:1200px;margin:0 auto;text-align:left}
+.ut .chap,.ut .ovh{text-align:center}
+.ut .lab{margin:0 0 16px;font-size:14px;font-weight:700;color:var(--g);letter-spacing:0}
+.ut .lab small{font-weight:500;color:var(--t2)}
+.ut .note{margin:20px 0 0;font-size:15px;line-height:1.7;color:var(--t2)}
+.ut .note b{color:var(--k)}
+.ut>div:not(.quotes){margin-top:72px}
+.funnel{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:16px}
+.funnel>div{padding:32px;border-radius:24px;background:#F8F8F8;text-align:center}
+.funnel>div:last-child{background:var(--gl)}
+.funnel b{display:block;font-size:56px;line-height:1;font-weight:800;letter-spacing:-.04em;color:var(--k)}
+.funnel>div:last-child b{color:var(--g)}
+.funnel span{display:block;margin-top:12px;font-size:17px;font-weight:700}
+.funnel small{display:block;margin-top:6px;font-size:14px;color:var(--t2)}
+.funnel>i{font-style:normal;color:#A0A0A5;font-size:20px}
+.sit ol{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0;padding:0;list-style:none}
+.sit li{padding:28px;border-radius:24px;background:#F8F8F8}
+.sit li b{font-size:18px}.sit li p{margin:10px 0 18px;font-size:15px;line-height:1.6;color:var(--t2)}
+.sit li span{font-size:13px;font-weight:700;color:#A0A0A5}
+.sit li.on{background:var(--k);color:#fff}.sit li.on p{color:rgba(255,255,255,.7)}.sit li.on span{color:var(--g)}
+.ps{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ps>div{padding:32px;border-radius:24px;border:1px solid var(--line)}
+.ps>div p:last-child{margin:0;font-size:20px;line-height:1.6;font-weight:600}
+.ut table{width:100%;border-collapse:collapse;font-size:15px;line-height:1.55}
+.ut th{padding:12px 16px;text-align:left;font-size:13px;font-weight:700;color:var(--t2);border-bottom:1px solid var(--k)}
+.ut td{padding:16px;border-bottom:1px solid var(--line);vertical-align:top}
+.themes td:last-child{font-weight:700}
+.vote{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:start}
+.vk ul{margin:0;padding:0;list-style:none}
+.vk li{display:grid;grid-template-columns:170px 1fr 120px 24px;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.vk li span{font-weight:700;font-size:15px}.vk li small{font-size:13px;color:var(--t2)}
+.vk li i{height:10px;width:calc(var(--v)/3*100%);border-radius:5px;background:var(--g)}
+.vk li i[style*="2"]{background:#E9A6BA}
+.vk li b{text-align:right}
+.grid2{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0 0 28px 28px}
+.grid2 .q{min-height:150px;padding:20px;border-radius:18px;background:#F8F8F8;font-size:14px}
+.grid2 .q b{font-size:15px}.grid2 .q p{margin:8px 0 0;line-height:1.6;color:var(--t2)}
+.grid2 .q.hi{grid-column:2;grid-row:1;background:var(--g);color:#fff}.grid2 .q.hi p{color:rgba(255,255,255,.88)}
+.grid2 .q:nth-of-type(2){grid-column:1;grid-row:1}
+.grid2 .q.off{opacity:.55;text-decoration:line-through;text-decoration-color:rgba(0,0,0,.3)}
+.grid2 .ax{position:absolute;font-size:12px;color:var(--t2)}
+.grid2 .ay{left:0;top:50%;transform:translate(-50%,-50%) rotate(-90deg) translateY(12px);white-space:nowrap;transform-origin:center}
+.grid2 .ax2{right:0;bottom:0}
+.concept ol{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:0;padding:0;list-style:none;border-radius:24px;overflow:hidden;background:#F8F8F8}
+.concept li{position:relative;padding:28px}
+.concept li+li{border-left:1px solid var(--line)}
+.concept li b{display:block;font-size:13px;color:var(--t2)}
+.concept li span{display:block;margin-top:8px;font-size:18px;font-weight:700;color:var(--g)}
+.concept li p{margin:8px 0 0;font-size:15px;line-height:1.55}
+.kpi{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:72px 0 0!important}
+.kpi>div{padding:28px;border-radius:24px;background:#F8F8F8}
+.kpi>div:nth-child(4){background:var(--gl)}
+.kpi dt{font-size:14px;font-weight:700;color:var(--t2)}
+.kpi dd{margin:12px 0 0!important;font-size:52px;line-height:1;font-weight:800;letter-spacing:-.04em}
+.kpi dd small{margin-left:4px;font-size:18px;font-weight:600;color:var(--t2)}
+.kpi p{margin:14px 0 0;font-size:14px;line-height:1.55;color:var(--t2)}
+.meth{margin:32px 0 0;font-size:15px;line-height:1.7;color:var(--t2)}.meth b{color:var(--k)}
+.chart{padding:40px;border-radius:24px;border:1px solid var(--line)}
+.ch-h{display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap}
+.lg{display:flex;align-items:center;gap:6px 14px;flex-wrap:wrap;font-size:13px;color:var(--t2)}
+.lg i{display:inline-block;width:10px;height:10px;margin-right:-8px;border-radius:2px}
+.lg .s,.tbar .s{background:var(--g)}.lg .p,.tbar .p{background:#F2BFCF}.lg .f,.tbar .f{background:#C9C9CE}.lg .d{border-radius:50%;background:var(--k)}
+.tk .row{display:grid;grid-template-columns:200px 1fr 1.3fr;align-items:center;gap:32px;padding:18px 0;border-bottom:1px solid var(--line)}
+.tk .row p{margin:0;font-weight:700;font-size:15px}.tk .row p b{margin-right:10px;color:var(--t2);font-weight:500}
+.tk .row.hot p{color:var(--g)}
+.tbar{display:flex;height:28px;border-radius:6px;overflow:hidden;background:#F2F2F2}
+.tbar i{width:calc(var(--n)/5*100%);height:100%}
+.seq{position:relative;height:28px;border-radius:14px;background:linear-gradient(90deg,#F2F2F2,#F2F2F2)}
+.seq i{position:absolute;top:50%;left:calc((var(--x) - 1)/6*100%);width:12px;height:12px;margin:-6px;border-radius:50%;background:rgba(29,29,31,.28)}
+.seq b{position:absolute;top:50%;left:calc((var(--x) - 1)/6*100%);transform:translate(-50%,-50%);padding:3px 8px;border-radius:999px;background:var(--k);color:#fff;font-size:12px}
+.hot .seq b{background:var(--g)}
+.row.ax{border:0!important;padding-top:8px!important}
+.sc{display:flex;justify-content:space-between;height:auto!important;background:none!important;font-size:12px;color:var(--t2)}
+.chart.two{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.sus{position:relative;display:flex;align-items:flex-end;gap:16px;height:260px;padding:0 0 28px;border-bottom:1px solid var(--k)}
+.sus .b{position:relative;flex:1;height:calc((var(--y) - 50)/50*100%);border-radius:8px 8px 0 0;background:#E9A6BA}
+.sus .b b{position:absolute;top:-24px;left:0;right:0;text-align:center;font-size:13px}
+.sus .b span{position:absolute;bottom:-26px;left:0;right:0;text-align:center;font-size:13px;color:var(--t2)}
+.sus .ref{position:absolute;left:0;right:0;bottom:calc(28px + (var(--y) - 50)/50*(100% - 28px));border-top:1px dashed #A0A0A5;z-index:1}
+.sus .ref span{position:absolute;right:0;top:-20px;font-size:12px;color:var(--t2);background:#fff;padding:0 4px}
+.sus .ref.av{border-top:2px solid var(--g)}.sus .ref.av span{color:var(--g);font-weight:700;right:0;top:-20px}
+.items{margin:0;padding:0;list-style:none}
+.items li{display:grid;grid-template-columns:150px 1fr 32px;align-items:center;gap:12px;padding:7px 0;font-size:14px}
+.items li i{height:10px;width:calc(var(--v)/4*100%);border-radius:5px;background:#D9D9DE}
+.items li.lo span,.items li.lo b{color:var(--g);font-weight:700}.items li.lo i{background:var(--g)}
+.items li b{text-align:right;font-weight:500}
+.sv{display:inline-block;padding:4px 10px;border-radius:999px;font-size:12px;font-weight:700;white-space:nowrap}
+.sv.h{background:var(--g);color:#fff}.sv.m{background:var(--gl);color:var(--gd)}.sv.l{background:#F2F2F2;color:var(--t2)}
+.find td:nth-child(3){font-size:14px;color:var(--t2)}.find td:last-child{font-weight:600}
+.ut .quotes{margin-top:48px}
+.nx{display:grid;grid-template-columns:1fr auto 1.4fr;align-items:center;gap:16px}
+.nx>div{padding:28px;border-radius:24px;background:#F8F8F8}
+.nx>div.on{background:var(--gl)}
+.nx b{font-size:16px}.nx p{margin:10px 0 0;font-size:15px;line-height:1.6}.nx small{display:block;margin-top:6px;font-size:13px;color:var(--t2)}
+.nx>i{font-style:normal;color:#A0A0A5}
+@media (max-width:900px){
+.funnel,.nx{grid-template-columns:1fr}.funnel>i,.nx>i{transform:rotate(90deg);justify-self:center}
+.sit ol,.ps,.vote,.concept ol,.chart.two{grid-template-columns:1fr}.concept li+li{border-left:0;border-top:1px solid var(--line)}
+.kpi{grid-template-columns:1fr 1fr}.kpi dd{font-size:40px}
+.tk .row{grid-template-columns:1fr;gap:10px}.chart{padding:24px}
+.vk li{grid-template-columns:1fr 80px 20px}.vk li small{display:none}
+.find table,.themes table{font-size:13px}.find th:nth-child(3),.find td:nth-child(3){display:none}
+}
+</style>
+
 </main>
 <footer class="end">
 <small>Next project</small>
