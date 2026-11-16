@@ -466,7 +466,7 @@ addEventListener("pointerdown",()=>c.classList.add("dn"));addEventListener("poin
 /* header morph: on scroll the open header turns into a floating glass capsule; the project label rolls into the current chapter and a thin line shows reading progress */
 .hdr{transition:top .7s cubic-bezier(.22,.7,.2,1),left .7s cubic-bezier(.22,.7,.2,1),right .7s cubic-bezier(.22,.7,.2,1)!important}
 .hdr::before{left:-26px!important;right:-26px!important;top:-13px!important;height:calc(100% + 26px)!important;border-radius:999px;background:rgba(24,24,26,.72)!important;-webkit-backdrop-filter:blur(16px) saturate(1.5);backdrop-filter:blur(16px) saturate(1.5);box-shadow:0 0 0 1px rgba(255,255,255,.08),0 18px 40px -18px rgba(0,0,0,.6);opacity:0;transform:scale(1.04,1.3);transition:opacity .45s,transform .7s cubic-bezier(.22,.7,.2,1),background .4s,box-shadow .4s!important}
-.hdr.hs{top:30px!important;left:max(calc(var(--side) + 26px),calc(50% - 600px))!important;right:max(calc(var(--side) + 26px),calc(50% - 600px))!important}
+.hdr.hs{top:48px!important;left:max(calc(var(--side) + 26px),calc(50% - 600px))!important;right:max(calc(var(--side) + 26px),calc(50% - 600px))!important}
 .hdr.hs::before{opacity:1;transform:none}
 .hdr.hs.lt .hlogo{color:#f2f2f2!important}
 .hdr.hs.lt :is(.hnv,.hmid)>a,.hdr.hs.lt .hdd>a{color:#a3a3a3!important}
