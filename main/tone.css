@@ -368,3 +368,5 @@ html body .page .head.c2,html body .page .head.c3{margin-top:26vh!important}
 /* strap: plain, fading in from above so it doesn't start on a hard edge */
 html body .abg .strap b{display:none!important}
 html body .abg .strap{-webkit-mask:linear-gradient(transparent 0,#000 55%);mask:linear-gradient(transparent 0,#000 55%)}
+/* Korean in the About section: Pretendard, heavier */
+html body .abg .g-tx{font-family:"Pretendard",sans-serif!important;font-weight:500!important;font-size:16px!important;color:#e6e2e4!important;letter-spacing:-.01em}
