@@ -241,40 +241,13 @@
 <text x="60" y="28" class="t">쓸 수 있는 대응 많음</text><text x="1140" y="28" class="t r">부담 큼 · 화면 조작 어려움</text>
 <rect x="900" y="40" width="270" height="34" rx="17" class="tag"/><text x="1035" y="62" class="m w">SENSE가 들어가는 곳</text>
 </svg></div>
-<div class="sit">
-<p class="lab">대응이 달라지는 세 가지 상황</p>
-<ol>
-<li><b>피할 수 있음</b><p>시간·장소를 바꾸거나 미리 피해요.</p><span>이미 스스로 해결</span></li>
-<li><b>피하기 어렵지만 일부 조절 가능</b><p>이어폰, 노이즈 캔슬링, 마스크로 줄여요.</p><span>기존 기기로 일부 해결</span></li>
-<li class="on"><b>피하기도, 줄이기도 어려움</b><p>버티기, 자리 이동, 도움 요청만 남아요. 혼잡하거나 멀미가 나면 휴대폰 화면 조작도 어렵습니다.</p><span>Main Pain Point</span></li>
-</ol>
-</div>
 <div class="ps">
 <div><p class="lab">Problem Statement</p><p>피하기 어려운 상황에서 감각 부담이 생기면, 필요한 대응을 <em>즉시 실행하기 어렵고</em> 대응 후에도 <em>불편함이 남을 수 있다.</em></p></div>
 <div><p class="lab">How Might We</p><p>어떻게 하면 <em>최소한의 조작</em>으로 필요한 감각 대응을 빠르게 실행하고, 남은 불편에 맞춰 <em>추가 조절</em>까지 이어갈 수 있을까?</p></div>
 </div></div>
-<div class="bnd b-g"><div class="themes">
-<p class="lab">7개 Theme에서 디자인 원칙으로</p>
-<table>
-<thead><tr><th>사용자에게서 확인한 것</th><th>그래서 정한 원칙</th></tr></thead>
-<tbody>
-<tr><td>혼잡도에 따라 쓸 수 있는 인터랙션이 달라진다</td><td>화면 대신 이어폰 · 워치 · 음성으로 한 번에 실행</td></tr>
-<tr><td>자동화를 받아들이는 정도는 기능마다 다르다</td><td>자동 실행 · 빠른 승인 · 직접 선택, 기능별로 나눔</td></tr>
-<tr><td>잘못 적용된 설정은 바로 고칠 수 있어야 한다</td><td>모든 대응에 즉시 되돌리기</td></tr>
-<tr><td>반복 알림과 질문은 또 다른 부담이 된다</td><td>필요한 순간에만, 한 번만 제안</td></tr>
-<tr><td>이전에 편했던 설정을 다시 쓰고 싶다</td><td>개인 설정 저장 · 비슷한 상황에서 재사용</td></tr>
-<tr><td>심박·HRV로 감각 부담을 확정할 수 없다</td><td>생체 데이터는 판정이 아니라 참고 정보로만</td></tr>
-</tbody>
-</table>
-</div>
-<div class="blk">
-<p class="eb">Themes</p><h3>7개 Theme</h3>
-<ol class="thv"><li><span class="tn">T1</span><b>현재 상태 · 반복</b><div class="mv1"><i style="height:20%"></i><i style="height:28%"></i><i style="height:24%"></i><i style="height:40%"></i><i style="height:52%"></i><i style="height:48%"></i><i style="height:70%"></i><i style="height:88%"></i></div><p>자극뿐 아니라 그때의 상태와 반복 노출에 따라 달라짐</p></li><li><span class="tn">T2</span><b>피하기 → 버티기</b><div class="mv2"><span>준비</span><span>피하기</span><span>현장 대응</span><span class="k">버티기</span></div><p>준비하거나 피하고, 어려우면 현장 대응이나 버티기로</p></li><li><span class="tn">T3</span><b>남는 부담</b><div class="mv3"><div><em>도움</em><i style="width:70%"></i></div><div class="r"><em>남는 부담</em><i style="width:45%"></i></div></div><p>기존 대응도 쓰는 것 자체가 불편하고 부담이 남음</p></li><li><span class="tn">T4</span><b>채널이 바뀜</b><div class="mv4"><span class="x"><svg class="ico" viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2.5"/><path d="M4 4l16 16"/></svg>화면</span><span><svg class="ico" viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 21h4"/></svg>음성</span><span><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3 2"/></svg>워치</span></div><p>혼잡할수록 화면보다 음성 · 워치</p></li><li><span class="tn">T5</span><b>되돌리기</b><div class="mv5"><span>자동</span><i><b></b></i><span>직접</span><em><svg class="ico" viewBox="0 0 24 24"><path d="M9 7H4V2"/><path d="M4.5 7A8 8 0 1 1 6 17"/></svg></em></div><p>자동화는 기능 · 상황마다 다르게, 취소가 핵심</p></li><li><span class="tn">T6</span><b>새로운 부담</b><div class="mv6"><span style="opacity:1"><svg class="ico" viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 21h4"/></svg></span><span style="opacity:0.75"><svg class="ico" viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 21h4"/></svg></span><span style="opacity:0.5"><svg class="ico" viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 21h4"/></svg></span><span style="opacity:0.3"><svg class="ico" viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 21h4"/></svg></span></div><p>반복 알림 · 질문 · 피드백도 부담이 됨</p></li><li><span class="tn">T7</span><b>나뉜 지원</b><div class="mv7"><span>기록</span><span>사전 확인</span><span>개별 조절</span><span>자기조절</span></div><p>기존 지원은 기능별로 따로 흩어져 있음</p></li><li class="sum"><span class="tn">→ HMW</span><b>피할 수 없는 순간에, 화면 없이 시작하고 이어서 조절하기</b></li></ol>
-</div>
-<div class="blk">
-<p class="eb">User Story</p><h3>“피하기 어려운 순간에도 최소한의 조작으로 대응을 시작하고, 불편이 남으면 이어서 조절하고 싶다.”</h3>
-<p class="note">‘대응 방법을 고르는 과정 자체가 힘들다’는 가설은 핵심 문제로 확정하지 않고, 테스트에서 실제로 반복되는지 확인할 항목으로 남겼습니다.</p>
-</div></div>
+<div class="bnd b-g"><div class="blk"><p class="eb">Design Principles</p><h3>사용자에게서 확인한 것을, 디자인 원칙으로 옮겼습니다</h3><div class="dpr"><div class="dprh"><span>사용자에게서 확인한 것</span><span></span><span>그래서 정한 원칙</span></div><div class="dprr"><p>혼잡도에 따라 쓸 수 있는 인터랙션이 달라진다</p><i>→</i><b>화면 대신 이어폰 · 워치 · 음성으로 한 번에 실행</b></div><div class="dprr"><p>자동화를 받아들이는 정도는 기능마다 다르다</p><i>→</i><b>자동 실행 · 빠른 승인 · 직접 선택, 기능별로 나눔</b></div><div class="dprr"><p>잘못 적용된 설정은 바로 고칠 수 있어야 한다</p><i>→</i><b>모든 대응에 즉시 되돌리기</b></div><div class="dprr"><p>반복 알림과 질문은 또 다른 부담이 된다</p><i>→</i><b>필요한 순간에만, 한 번만 제안</b></div><div class="dprr"><p>이전에 편했던 설정을 다시 쓰고 싶다</p><i>→</i><b>개인 설정 저장 · 비슷한 상황에서 재사용</b></div><div class="dprr"><p>심박·HRV로 감각 부담을 확정할 수 없다</p><i>→</i><b>생체 데이터는 판정이 아니라 참고 정보로만</b></div></div></div>
+
+</div><div class="bnd b-d"><div class="usd"><p class="eb">User Story</p><h3>“피하기 어려운 순간에도 최소한의 조작으로 대응을 시작하고, 불편이 남으면 이어서 조절하고 싶다.”</h3><p>‘대응 방법을 고르는 과정 자체가 힘들다’는 가설은 핵심 문제로 확정하지 않고, 테스트에서 실제로 반복되는지 확인할 항목으로 남겼습니다.</p></div></div>
 <div class="bnd b-w"><div class="blk">
 <p class="eb">Persona</p><h3>리서치와 테스트 참여자를 묶어 만든 한 사람</h3>
 <div class="psn">
@@ -1814,6 +1787,21 @@ document.querySelectorAll(".bnd.b-g,.bnd.b-k,.bnd.b-t,section.sgy .cs-ov").forEa
 #research .pin7>ul b{font-size:17px}
 #research .pin7>ul p{margin:0;font-size:15px;color:var(--t2)}
 @media (max-width:1000px){#research .pq3,#research .pin7{grid-template-columns:1fr;gap:28px}#research .pql{margin:0}#research .pmt{grid-template-columns:1fr 1fr;row-gap:24px}#research .pin7h{position:static}#research .pin7>ul li{grid-template-columns:44px 1fr}#research .pin7>ul p{grid-column:2}}
+</style>
+<style id="def2">
+#define .dpr{border-radius:24px;background:#fff;padding:8px 36px}
+#define .dprh{display:grid;grid-template-columns:1fr 40px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid #DADAE0;font-size:13.5px;font-weight:700;color:#777}
+#define .dprr{display:grid;grid-template-columns:1fr 40px 1fr;gap:20px;align-items:center;padding:22px 0;border-top:1px solid #EFEFF3}
+#define .dprh+.dprr{border-top:0}
+#define .dprr p{margin:0;font-size:16px;color:#4A4A50;line-height:1.55}
+#define .dprr i{font-style:normal;color:var(--g);font-size:20px;text-align:center}
+#define .dprr b{font-size:17px;line-height:1.5}
+.s2 .bnd.b-d::before{background:#2A1F4A}
+#define .usd{max-width:960px}
+#define .usd .eb{color:#C9B2FF!important}
+#define .usd h3{margin:14px 0 0;font-size:40px!important;line-height:1.4;letter-spacing:-.035em;color:#fff}
+#define .usd p:last-child{margin:24px 0 0;font-size:16px;line-height:1.7;color:rgba(255,255,255,.65)}
+@media (max-width:860px){#define .dprr,#define .dprh{grid-template-columns:1fr;gap:6px}#define .dprh span:nth-child(2),#define .dprr i{display:none}#define .usd h3{font-size:24px!important}}
 </style>
 </body>
 </html>
