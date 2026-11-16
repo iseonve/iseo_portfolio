@@ -52,10 +52,12 @@
 <main class="folder">
 <nav class="toc" aria-label="Chapters">
 <a href="#overview"><i></i>Overview</a>
-<a href="#research"><i></i>Research</a>
+<a href="#research"><i></i>Discover</a>
 <a href="#define"><i></i>Define</a>
-<a href="#ideation"><i></i>Ideation</a>
-<a href="#test"><i></i>Test</a>
+<a href="#develop"><i></i>Develop</a>
+<a href="#test"><i></i>Deliver</a>
+<a href="#review"><i></i>Review</a>
+<a href="#script"><i></i>Test Script</a>
 </nav>
 <section class="ch cs s2" id="overview" data-step="overview">
 <div class="cs-hero">
@@ -88,15 +90,103 @@
 </div>
 </section>
 <section class="ch cs s2" id="research" data-step="research">
-<div class="cs-ov" style="padding-top:0">
-<p class="chap"><b>02</b>Research</p>
+<div class="cs-ov ut">
+<p class="chap"><b>02</b>Discover · Research</p>
 <h2 class="ovh">문제는 한 번의 자극보다,<br><em>매일 반복되는 대응</em>이었습니다.</h2>
+
+<div class="blk">
+<p class="eb">Research Question</p><h3>특정 진단이 아니라, 일상 속 감각 부담과 각자의 대응을 봤습니다</h3>
+<p class="lead">소리 · 빛 · 냄새 · 촉감 · 사람 많은 공간처럼 일상에서 불편을 겪는 사람을 처음부터 유형으로 나누지 않았어요. 대신 다섯 가지를 함께 확인했습니다.</p>
+<ol class="qs">
+<li><b>01</b>어떤 자극과 상황에서 부담이 생기는가</li>
+<li><b>02</b>그때 사용자의 상태와 주변 환경은 어땠는가</li>
+<li><b>03</b>사용자는 실제로 어떻게 대응하는가</li>
+<li><b>04</b>대응한 뒤에도 무엇이 남는가</li>
+<li><b>05</b>기존 기술과 서비스는 어디까지 돕는가</li>
+</ol>
+</div>
+
+<div class="blk">
+<p class="eb">Background</p><h3>‘민감한 사람’과 ‘지금 과부하인 순간’은 다릅니다</h3>
+<div class="ps">
+<div><p class="lab">Sensory Processing Sensitivity</p><p>환경 자극에 반응하는 정도의 <em>개인차</em>. 사람마다 다르게 타고난 성향이에요.</p><small class="ref">Greven et al. (2019)</small></div>
+<div><p class="lab">Overstimulation</p><p>지금의 자극 · 상태 · 환경 때문에 <em>특정 순간</em>에 생기는 부담. 피로 · 기분 · 시간대 · 주변 사람에 따라 달라져요.</p><small class="ref">Weyn et al. (2026)</small></div>
+</div>
+<p class="note">그래서 자극만이 아니라 <b>그 순간의 상태와 환경</b>을 함께 보기로 했고, 사용자를 ‘민감한 사람’으로 고정하지 않았습니다.</p>
+</div>
+
+<div class="blk">
+<p class="eb">Process</p><h3>8단계로 넓게 보고, 좁혀 갔습니다</h3>
+<ol class="proc">
+<li><b>Secondary Research</b><span>선행연구 · 기술 · 서비스 · 시장</span></li>
+<li><b>커뮤니티 사례</b><span>실제 상황과 대응 행동</span></li>
+<li><b>Self Elicitation</b><span>한 경험을 깊게 돌아보기</span></li>
+<li><b>Survey</b><span>패턴이 반복되는지 확인</span></li>
+<li><b>Co-design</b><span>자동화 · 입력 · 되돌리기 탐색</span></li>
+<li><b>분석</b><span>코드 156 → 테마 7</span></li>
+<li><b>Define · Ideation</b><span>문제 정의 · 아이디어 35개</span></li>
+<li><b>Product Concept</b><span>SENSE</span></li>
+</ol>
+</div>
+
+<div class="blk">
+<p class="eb">Secondary Research</p><h3>도와주는 기능은 이미 있었습니다. 다만 한 단계씩만 돕습니다</h3>
+<table class="cmp">
+<thead><tr><th>구분</th><th>사례</th><th>하는 일</th><th>남는 빈틈</th></tr></thead>
+<tbody>
+<tr><td>연구 · 웨어러블</td><td>MoodTurner</td><td>PPG · GPS로 상태 변화 기록 → 진동 알림 → 호흡 조절</td><td>개념 프로토타입. 감각 부담을 정확히 감지한다고 입증되지 않음</td></tr>
+<tr><td>OS 기능</td><td>Reduce Motion · Reduce Loud Audio · Focus · Assistive Access</td><td>화면 움직임 · 소리 · 알림 · 정보량을 직접 조절</td><td>감각 과부하 전용이 아님. 설정 메뉴 깊숙이 있어 그 순간 쓰기 어려움</td></tr>
+<tr><td>서비스</td><td>Anchor: Stimulus</td><td>감각 상태 기록, 개인 패턴 확인</td><td>기록은 남지만 그 순간의 대응은 따로</td></tr>
+<tr><td>서비스</td><td>NeuroAdapt ZONE</td><td>상태 Check-in, 대응 전략</td><td>체크인 후 실행은 사용자가 직접</td></tr>
+<tr><td>서비스</td><td>overstimulated</td><td>저자극 UI, 호흡 · 집중</td><td>앱을 열어 화면을 봐야 시작</td></tr>
+<tr><td>서비스</td><td>HushMap</td><td>장소의 감각 환경 확인</td><td>사전 확인만, 현장 대응은 없음</td></tr>
+</tbody>
+</table>
+<p class="note">기록 · 체크인 · 자기조절 · 환경 확인이 각각 따로 있어서, 사용자가 먼저 앱을 열고 움직여야 합니다. 그래서 “감각 부담을 돕는 기능이 없다”가 아니라, <b>기존 대응 뒤에도 무엇이 남는가</b>를 묻기로 했습니다. 감각 부담만 따로 집계한 시장 자료는 부족해 Mental Health App 시장을 인접 자료로만 참고했어요.</p>
+</div>
+
+<div class="blk">
+<p class="eb">Community Cases</p><h3>상황 → 자극 → 상태 → 대응 → 결과 순서로 사례를 읽었습니다</h3>
+<div class="stim">
+<div><b>청각</b><p>대화 · 음악 · 안내방송 · 반복 소음 · 알림</p></div>
+<div><b>후각</b><p>향수 · 담배 · 체취 · 빨래 냄새</p></div>
+<div><b>사람 · 혼잡</b><p>만원 지하철 · 마트 · 백화점</p></div>
+<div><b>시각</b><p>강한 빛 · 조명</p></div>
+<div><b>촉각</b><p>특정 소재, 피부 자극</p></div>
+<div><b>복합</b><p>여러 자극이 한꺼번에</p></div>
+</div>
+<table class="cmp ctl">
+<thead><tr><th>이 상황에서</th><th>사람들이 한 대응</th><th></th></tr></thead>
+<tbody>
+<tr><td>미리 피할 수 있음</td><td>덜 붐비는 시간 · 장소 고르기, 미리 준비</td><td><i style="--w:100%"></i></td></tr>
+<tr><td>피하기 어렵지만 줄일 수 있음</td><td>이어폰 · 노이즈 캔슬링 · 선글라스 · 설정 조절</td><td><i style="--w:70%"></i></td></tr>
+<tr><td>자리를 옮기거나 쉴 수 있음</td><td>자리 이동 · 잠시 쉬기 · 이탈</td><td><i style="--w:45%"></i></td></tr>
+<tr class="on"><td>피하지도, 줄이지도 못함</td><td>버티기 · 불편함 표현 · 도움 요청</td><td><i style="--w:15%"></i></td></tr>
+</tbody>
+</table>
+<p class="note">막대는 쓸 수 있는 대응의 폭을 뜻해요. 자극의 종류보다 <b>그 상황에서 무엇을 바꿀 수 있는가</b>가 대응을 결정했습니다.</p>
+</div>
+
 <div class="quotes">
 <blockquote><p>“한 번의 큰 자극보다 이런 과정이 매일 이어진다는 점이 더 피곤해요.”</p><cite>참여자 1 · 셀프 일리시테이션 인터뷰</cite></blockquote>
 <blockquote><p>“도움 요청처럼 다른 사람과 연결되는 건 자동으로 하지 않았으면 좋겠어요. 얼마나 심각한지 제가 먼저 판단하고 싶어요.”</p><cite>참여자 2 · 코디자인 인터뷰</cite></blockquote>
 </div>
+
+<div class="blk">
+<p class="eb">Primary Research</p><h3>인터뷰와 코디자인에서 구체화된 7가지</h3>
+<ul class="find7">
+<li><b>노이즈 캔슬링</b>도움은 되지만, 강하거나 오래 쓰면 오히려 불편하다</li>
+<li><b>화면 조작</b>혼잡하거나 멀미가 날 때는 휴대폰 화면을 보기 어렵다</li>
+<li><b>자동 실행</b>받아들이는 정도가 기능마다 다르다</li>
+<li><b>되돌리기</b>잘못 적용된 설정은 바로 고치거나 되돌릴 수 있어야 한다</li>
+<li><b>알림 피로</b>반복되는 알림과 질문은 새로운 부담이 된다</li>
+<li><b>재사용</b>예전에 편했던 설정을 다시 쓰고 싶다</li>
+<li><b>생체 데이터</b>심박 · HRV는 판정이 아니라 참고 정보여야 한다</li>
+</ul>
+</div>
 </div>
 </section>
+
 <section class="ch cs s2" id="define" data-step="define">
 <div class="cs-ov ut">
 <p class="chap"><b>03</b>Define</p>
@@ -134,12 +224,28 @@
 </tbody>
 </table>
 </div>
+<div class="blk">
+<p class="eb">Themes</p><h3>7개 Theme</h3>
+<ol class="th7">
+<li>감각 부담은 자극뿐 아니라 <b>현재 상태와 반복 노출</b>에 따라 달라질 수 있다</li>
+<li>먼저 준비하거나 피하고, 피하기 어려우면 <b>현장 대응이나 버티기</b>로 전환한다</li>
+<li>기존 대응은 도움을 주지만, <b>사용 자체의 불편과 남는 부담</b>도 있다</li>
+<li>혼잡 정도에 따라 <b>화면 · 음성 · 워치</b> 등 쓸 수 있는 인터랙션이 달라진다</li>
+<li>자동화 수용 정도는 기능과 상황마다 다르며, <b>취소 · 되돌리기</b>가 중요하다</li>
+<li>반복 알림 · 질문 · 피드백은 <b>새로운 부담</b>이 될 수 있다</li>
+<li>기존 지원은 기록 · 사전 확인 · 개별 조절 · 자기조절로 <b>나뉘어</b> 제공된다</li>
+</ol>
+</div>
+<div class="blk">
+<p class="eb">User Story</p><h3>“피하기 어려운 순간에도 최소한의 조작으로 대응을 시작하고, 불편이 남으면 이어서 조절하고 싶다.”</h3>
+<p class="note">‘대응 방법을 고르는 과정 자체가 힘들다’는 가설은 핵심 문제로 확정하지 않고, 테스트에서 실제로 반복되는지 확인할 항목으로 남겼습니다.</p>
+</div>
 </div>
 </section>
 
-<section class="ch cs s2" id="ideation" data-step="ideation">
+<section class="ch cs s2" id="develop" data-step="develop">
 <div class="cs-ov ut">
-<p class="chap"><b>04</b>Ideation</p>
+<p class="chap"><b>04</b>Develop · Ideation</p>
 <h2 class="ovh">35개 아이디어 중,<br><em>화면을 보지 않아도 되는 것</em>부터 골랐습니다.</h2>
 <div class="vote">
 <div class="vk"><p class="lab">아이디어 35개 · 카테고리 11개 · 팀 투표</p>
@@ -173,12 +279,44 @@
 </ol>
 <p class="note">일부러 만들지 않은 것: 감각 과부하 자동 판정, 감정 · 피로 자동 추정, 특정 사람 목소리만 제거. 사용자가 원하지 않았거나 지금 기술로 정확하다고 말할 수 없었어요.</p>
 </div>
+<div class="blk">
+<p class="eb">Scope</p><h3>모든 감각이 아니라, 근거가 있는 두 감각에 집중했습니다</h3>
+<div class="scope">
+<div class="core"><span class="tg">핵심</span><b>청각</b><p>주변 소음 부담과 노이즈 캔슬링 사용이 확인됨</p><ul><li>노이즈 캔슬링 강도 조절</li><li>필요한 소리 유지 범위 조정</li><li>개인 설정 저장 · 재사용</li><li>실행 상태 확인 · 즉시 되돌리기</li></ul></div>
+<div class="core"><span class="tg">핵심</span><b>멀미</b><p>버스 이동 중 화면 자극, 멀미 시작 후 조작이 어려움</p><ul><li>화면을 오래 보지 않는 실행 · 종료</li><li>차량 움직임을 보여주는 시각 단서</li><li>음성 · 진동 같은 비시각 안내</li></ul></div>
+<div><span class="tg">확장</span><b>후각</b><p>불편은 확인됐지만 냄새를 감지 · 제거하는 기술로 단정할 수 없어 별도 하드웨어 후보로 둠</p></div>
+<div><span class="tg">보조 채널</span><b>시각 · 촉각</b><p>문제 영역이 아니라 정보를 다른 감각으로 옮기는 통로</p><ul><li>청각 알림 → 워치 진동</li><li>화면 안내 → 짧은 음성</li></ul></div>
+</div>
+</div>
+<div class="blk">
+<p class="eb">Devices</p><h3>그 순간 휴대폰을 꺼내기 어렵다는 점에서 출발했어요</h3>
+<table class="cmp dev">
+<thead><tr><th>기기</th><th>역할</th><th>이번 콘셉트</th></tr></thead>
+<tbody>
+<tr class="on"><td>이어폰</td><td>소음 · 음량 조절, 음성 안내, 한 번 누르기</td><td>핵심</td></tr>
+<tr class="on"><td>스마트워치</td><td>한 번 탭 · SOS · 진동 안내</td><td>핵심</td></tr>
+<tr class="on"><td>스마트폰</td><td>경로 · 설정 관리, 상세 정보 확인 (허브)</td><td>핵심</td></tr>
+<tr><td>스마트 링</td><td>신체 정보 · 간단한 입력 참고</td><td>검토</td></tr>
+<tr><td>스마트 글라스</td><td>주변 정보 · 짧은 안내</td><td>검토</td></tr>
+<tr><td>스마트 마스크</td><td>후각 대응 가능성</td><td>확장</td></tr>
+</tbody>
+</table>
+</div>
+<div class="blk">
+<p class="eb">Automation</p><h3>자동화는 한 번에 켜지 않고, 기능마다 세 단계로 나눴습니다</h3>
+<div class="auto">
+<div><b>자동 실행</b><p>사용자가 미리 허용한 개인 기기 기능</p><small>예: 저장해 둔 노이즈 캔슬링 강도 적용</small></div>
+<div><b>빠른 승인</b><p>상황에 따라 한 번 확인이 필요한 기능</p><small>예: “멀미 모드로 바꿀까요?” 한 번 묻기</small></div>
+<div><b>직접 선택</b><p>개인차가 크거나 사회적 판단이 필요한 행동</p><small>예: 도움 요청, 다른 사람과 연결</small></div>
+</div>
+<p class="note">세 단계 모두 <b>잘못 적용되면 바로 되돌릴 수 있어야</b> 하고, 알림과 질문은 필요한 순간에 한 번만 짧게 개입합니다. 코디자인 인터뷰의 “얼마나 심각한지 제가 먼저 판단하고 싶어요”가 이 구조의 근거예요.</p>
+</div>
 </div>
 </section>
 
 <section class="ch cs s2" id="test" data-step="test">
 <div class="cs-ov ut">
-<p class="chap"><b>05</b>Usability Test</p>
+<p class="chap"><b>05</b>Deliver · Usability Test</p>
 <h2 class="ovh">쓰기는 쉬웠지만,<br><em>저장하고 다시 쓰는 순간</em>에서 멈췄습니다.</h2>
 <dl class="kpi">
 <div><dt>참여자</dt><dd>5<small>명</small></dd><p>20~30대 · 모두 이어폰 사용<br>이동 중 감각 불편 경험</p></div>
@@ -188,6 +326,32 @@
 </dl>
 <p class="meth">Think Aloud 방식, 1인 35~45분. 실제 소음 차단이나 멀미 완화 효과가 아니라, <b>모드와 감각 정보를 이해하고 고를 수 있는지</b>를 봤습니다. 시안 단계라 5명 대상의 파일럿이며, 수치는 경향으로 읽어 주세요.</p>
 
+<div class="blk">
+<p class="eb">Participants</p><h3>최근 한 달 안에 이동 중 감각 불편을 겪은 성인 5명</h3>
+<table class="cmp pt">
+<thead><tr><th>참여자</th><th>연령</th><th>이동</th><th>불편한 감각</th><th>기기</th><th>HSP 평균</th></tr></thead>
+<tbody>
+<tr><td>P1</td><td>30대</td><td>출퇴근 · 주 3~5회</td><td>소리</td><td>이어폰</td><td><i style="--h:3.83"></i>3.83</td></tr>
+<tr><td>P2</td><td>20대</td><td>운동 · 공부 · 매일</td><td>소리</td><td>이어폰</td><td><i style="--h:3.72"></i>3.72</td></tr>
+<tr><td>P3</td><td>30대</td><td>이어폰 쓸 때 항상 · 주 3~5회</td><td>혼잡</td><td>이어폰</td><td><i style="--h:4.72"></i>4.72</td></tr>
+<tr><td>P4</td><td>20대</td><td>외출 시 항상 · 주 3~5회</td><td>소리</td><td>이어폰</td><td><i style="--h:4.72"></i>4.72</td></tr>
+<tr><td>P5</td><td>30대</td><td>출퇴근 · 주 3~5회</td><td>소리</td><td>이어폰</td><td><i style="--h:4.44"></i>4.44</td></tr>
+</tbody>
+</table>
+<p class="note">진단명이나 HSP 점수는 참여 기준으로 쓰지 않았어요. HSP는 동의한 사람만, 모든 평가가 끝난 뒤 성향 참고용으로 받았고 사용성 점수와 합산하지 않았습니다.</p>
+</div>
+<div class="blk">
+<p class="eb">Tasks</p><h3>작업마다 성공 기준을 미리 정했어요</h3>
+<table class="cmp">
+<thead><tr><th>작업</th><th>성공 2점</th><th>부분 성공 1점</th><th>실패 0점</th></tr></thead>
+<tbody>
+<tr><td><b>01 경로 선택</b></td><td>도움 없이 경로를 고르고 참고한 정보를 설명</td><td>도움 · 재질문 후 완료</td><td>작동하는 화면에서 완료하지 못함</td></tr>
+<tr><td><b>02 모드 사용</b></td><td>모드를 실행 · 조절하고 의미를 자기 말로 설명</td><td>안내 후 주요 조작 완료</td><td>조작을 마치지 못하거나 의미를 설명하기 어려움</td></tr>
+<tr><td><b>03 감각 저장 · 다음 추천</b></td><td>저장하고 추천 내용을 설명</td><td>도움 후 저장 · 일부만 설명</td><td>저장하지 못하고 종료</td></tr>
+</tbody>
+</table>
+<p class="note">SEQ는 작업 직후 참여자가 직접 1~7점으로, SUS는 모든 작업이 끝난 뒤 10문항으로 받았어요. 미구현 기능이나 참여자가 그만둔 작업은 실패로 세지 않았습니다.</p>
+</div>
 <div class="chart">
 <div class="ch-h"><p class="lab">작업별 결과</p><span class="lg"><i class="s"></i>성공<i class="p"></i>부분 성공<i class="f"></i>실패<i class="d"></i>참여자별 SEQ</span></div>
 <div class="tk">
@@ -231,6 +395,17 @@
 </div>
 </div>
 
+<div class="blk">
+<p class="eb">Raw Observations</p><h3>작업 3에서 각자 어디서 멈췄는지</h3>
+<div class="obs">
+<div class="f"><b>P3 · 실패 · SEQ 1</b><p>경로를 고른 뒤 ‘경로 저장’ 버튼을 보지 못하고 “종료했어요.”라며 과제를 끝냄</p></div>
+<div class="p"><b>P1 · 부분 성공 · SEQ 2</b><p>감각 저장이 무슨 기능인지 화면을 살피며 고민. 저장 뒤 추천 코스가 무엇이고 어떤 기준인지 질문</p></div>
+<div class="p"><b>P2 · 부분 성공 · SEQ 3</b><p>화면 하단을 한 번 더 확인한 뒤에야 버튼을 누름. 위치 · 기능이 바로 보이지 않음</p></div>
+<div class="s"><b>P4 · 성공 · SEQ 5</b><p>완료했지만 출발지 · 도착지와 소요 시간 표시를 바로 이해하지 못한 모습</p></div>
+<div class="s"><b>P5 · 성공 · SEQ 7</b><p>“설정을 저장해 다음에 추천으로 보여주는 게 편리하다”</p></div>
+</div>
+<p class="note">실패와 부분 성공 3명 모두 <b>저장 버튼을 찾는 것</b> 또는 <b>추천의 이유를 이해하는 것</b>에서 막혔어요. 기능을 원하지 않은 게 아니라 연결이 보이지 않았던 거예요.</p>
+</div>
 <div class="find">
 <p class="lab">발견한 문제와 다음 수정</p>
 <table>
@@ -262,6 +437,63 @@
 </div>
 </div>
 </section>
+<section class="ch cs s2" id="review" data-step="review">
+<div class="cs-ov ut">
+<p class="chap"><b>06</b>Review</p>
+<h2 class="ovh">이해시키는 건 통했고,<br><em>다시 쓰게 만드는 건</em> 다음 과제입니다.</h2>
+<div class="ps rv">
+<div><p class="lab">확인한 것</p><ul>
+<li>모빌리티 앱과 비슷한 화면 구조라 경로 · 모드 진입은 <b>5명 모두 성공</b>했어요.</li>
+<li>멀미 모드처럼 <b>화면 대신 소리 · 진동</b>으로 바꾸는 방식에 긍정적인 반응이 있었어요.</li>
+<li>SUS 81.5로, 처음 보는 감각 앱이어도 배우기 어렵지 않다는 응답이 많았어요.</li>
+</ul></div>
+<div><p class="lab">아직 확인하지 못한 것</p><ul>
+<li><b>실제 효과:</b> 소음 차단 · 멀미 완화는 시안에서 검증할 수 없었어요.</li>
+<li><b>실제 맥락:</b> 테스트는 책상 앞에서 이동을 떠올리는 방식이었어요. 흔들리는 버스 안에서는 결과가 다를 수 있어요.</li>
+<li><b>표본:</b> 5명 모두 20~30대 · 이어폰 사용자예요. 워치만 쓰거나 기기가 없는 사람은 없었어요.</li>
+<li><b>재사용 의향:</b> “자주 쓰고 싶다”가 가장 낮았어요. 한 번 쓰고 끝나지 않는 이유를 더 만들어야 해요.</li>
+</ul></div>
+</div>
+<div class="blk">
+<p class="eb">Next</p><h3>다음에 할 일</h3>
+<ol class="three nx3">
+<li><span class="badge">STEP 01</span><b>저장 → 추천 다시 설계</b><p>저장 버튼을 고정하고, 추천 카드에 “왜 이 모드인지” 근거를 붙여 수정한 4개 작업으로 다시 테스트해요.</p></li>
+<li><span class="badge">STEP 02</span><b>이동 중 테스트</b><p>실제 대중교통에서 이어폰 한 번 누르기 · 워치 탭만으로 시작할 수 있는지 확인해요.</p></li>
+<li><span class="badge">STEP 03</span><b>검증 후보 실험</b><p>차량 움직임 전 진동, 청각 알림 → 진동 전환이 실제로 부담을 줄이는지 따로 실험해요.</p></li>
+</ol>
+</div>
+</div>
+</section>
+
+<section class="ch cs s2" id="script" data-step="script">
+<div class="cs-ov ut">
+<p class="chap"><b>07</b>Test Script</p>
+<h2 class="ovh">답을 알려주지 않도록,<br><em>화면마다 할 말을 정해 두었습니다.</em></h2>
+<p class="lead c">진행 원칙: 참여자가 화면을 먼저 보게 하고, 버튼 위치나 정답은 알려주지 않아요. 감각 정보가 선택에 영향을 주지 않았다는 답도 그대로 기록합니다.</p>
+<ol class="scr">
+<li><b>01</b><div><h4>앱 시작</h4><p class="say">“시작하기를 눌러주세요.”</p><p class="rec">처음 어디를 보는지, 무엇을 위한 앱 같다고 말하는지</p></div></li>
+<li><b>02</b><div><h4>감각 모드 선택</h4><p class="say">“주변 소리나 흔들림 때문에 불편했던 경험을 떠올리고, 써 보고 싶은 모드를 하나 골라주세요.”</p><p class="rec">고른 모드와 이유, 세 모드를 어떻게 구분하는지 · 진행자가 먼저 기능을 설명하지 않음</p></div></li>
+<li><b>03</b><div><h4>기기 선택</h4><p class="say">“평소 가지고 다니는 기기가 있나요? 없다면 ‘아니요’를 골라도 괜찮아요.”</p><p class="rec">망설임, 기기 연결이 필수라고 오해하는지</p></div></li>
+<li><b>04</b><div><h4>이동 시작</h4><p class="say">“두 버튼을 누르면 각각 어디로 갈 것 같나요?”</p><p class="rec">누르기 전에 예상 결과를 먼저 묻기</p></div></li>
+<li><b>05</b><div><h4>장소 · 경로 감각 정보</h4><p class="say">“어떤 정보를 보고 골랐어요? 소리나 혼잡 정보가 눈에 들어왔나요?”</p><p class="rec">감각 정보를 알아봤는지 · 이해했는지 · 선택을 바꿨는지 · 먼저 ‘조용한 곳을 고르라’고 말하지 않음</p></div></li>
+<li><b>06</b><div><h4>청각 · 멀미 · 안정 모드 체험</h4><p class="say">모드마다 예시 소리를 들려주고 “어떤 느낌인지 말해주세요.”</p><p class="rec">청각: 잔잔한 음악 + 노이즈 캔슬링 기대 · 멀미: 알림음 + 음성 안내 · 안정: 자연 소리</p></div></li>
+<li><b>07</b><div><h4>조절 바</h4><p class="say">“바가 어떤 기능을 하는 것처럼 보이나요?”</p><p class="rec">시안에서는 작동하지 않으므로 ‘조절되는 것 같은 인상’만 확인</p></div></li>
+<li><b>08</b><div><h4>감각 정보 저장 · 자동 추천</h4><p class="say">“무엇을 저장했다고 생각하세요? 지금 화면은 무엇을 보여주나요?”</p><p class="rec">추천 근거(자주 가는 경로 · 시간대)를 먼저 알려주지 않고 이해를 묻기</p></div></li>
+</ol>
+<div class="blk">
+<p class="eb">Help Rules</p><h3>도와줄 때도 기준을 정했어요</h3>
+<table class="cmp">
+<thead><tr><th>상황</th><th>진행자 행동</th><th>기록</th></tr></thead>
+<tbody>
+<tr><td>10초 정도 말이 없을 때</td><td>“지금 어떤 생각을 하고 있나요?”만 묻고 버튼 위치는 알려주지 않음</td><td>도움 횟수에 넣지 않음</td></tr>
+<tr><td>기능의 의미를 물을 때</td><td>먼저 “어떤 기능일 것 같나요?”라고 되묻기</td><td>사용법을 알려주면 도움 1회 · 이후 성공은 부분 성공</td></tr>
+<tr><td>기능이 작동하지 않거나 중단 요청</td><td>그대로 다음 작업으로</td><td>미구현 · 중단, 성공률 계산에서 제외</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
 <style>
 .ut{max-width:1200px;margin:0 auto;text-align:left}
 .ut .chap,.ut .ovh{text-align:center}
@@ -358,6 +590,54 @@
 .nx>div.on{background:var(--gl)}
 .nx b{font-size:16px}.nx p{margin:10px 0 0;font-size:15px;line-height:1.6}.nx small{display:block;margin-top:6px;font-size:13px;color:var(--t2)}
 .nx>i{font-style:normal;color:#A0A0A5}
+
+.blk .eb{margin:0;font:400 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--g)}
+.blk h3{margin:10px 0 28px;font-size:28px;line-height:1.4;font-weight:700;letter-spacing:-.03em}
+.ut .lead{margin:-12px 0 28px;font-size:17px;line-height:1.7;color:var(--t2)}.ut .lead.c{text-align:center;max-width:760px;margin:24px auto 0}
+.qs{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:0;padding:0;list-style:none}
+.qs li{padding:24px;border-radius:20px;background:#F8F8F8;font-size:15px;line-height:1.55;font-weight:600}.qs b{display:block;margin-bottom:12px;color:var(--g);font:500 13px var(--mono)}
+.ref{display:block;margin-top:14px;font-size:13px;color:var(--t2)}
+.proc{display:grid;grid-template-columns:repeat(8,1fr);gap:0;margin:0;padding:0;list-style:none;counter-reset:p}
+.proc li{position:relative;padding:20px 14px 0 0;border-top:2px solid var(--line);counter-increment:p}
+.proc li::before{content:counter(p,decimal-leading-zero);position:absolute;top:-9px;left:0;padding-right:8px;background:#fff;font:500 12px var(--mono);color:var(--g)}
+.proc li:last-child{border-top-color:var(--g)}
+.proc b{display:block;font-size:15px}.proc span{display:block;margin-top:6px;font-size:13px;line-height:1.5;color:var(--t2)}
+.cmp td:first-child{font-weight:700;white-space:nowrap}.cmp td:last-child{color:var(--t2)}
+.stim{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-bottom:28px}
+.stim div{padding:20px;border-radius:18px;background:#F8F8F8}.stim div:first-child,.stim div:nth-child(3){background:var(--gl)}
+.stim b{font-size:16px}.stim p{margin:8px 0 0;font-size:13px;line-height:1.5;color:var(--t2)}
+.ctl td:nth-child(3){width:28%}.ctl td i{display:block;height:10px;width:var(--w);border-radius:5px;background:#D9D9DE}
+.ctl tr.on td{color:var(--g)!important;font-weight:700}.ctl tr.on i{background:var(--g)}
+.find7{display:grid;grid-template-columns:repeat(2,1fr);gap:0 40px;margin:0;padding:0;list-style:none}
+.find7 li{padding:18px 0;border-bottom:1px solid var(--line);font-size:16px;line-height:1.55}
+.find7 b{display:inline-block;min-width:118px;margin-right:12px;color:var(--g)}
+.th7{margin:0;padding:0;list-style:none;counter-reset:t;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.th7 li{counter-increment:t;position:relative;padding:22px 22px 22px 64px;border-radius:18px;background:#F8F8F8;font-size:16px;line-height:1.55}
+.th7 li::before{content:"T" counter(t);position:absolute;left:22px;top:22px;font:600 14px var(--mono);color:var(--g)}
+.th7 li:last-child{grid-column:1/-1}
+.scope{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px}
+.scope>div{padding:26px;border-radius:20px;background:#F8F8F8}.scope>div.core{background:var(--gl)}
+.scope .tg{font:500 12px var(--mono);color:var(--g)}.scope b{display:block;margin-top:10px;font-size:22px}
+.scope p{margin:10px 0 0;font-size:14px;line-height:1.55;color:var(--t2)}
+.scope ul{margin:14px 0 0;padding-left:18px;font-size:14px;line-height:1.7}
+.dev tr.on td:last-child{color:var(--g);font-weight:700}
+.auto{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-radius:20px;overflow:hidden;border:1px solid var(--line)}
+.auto>div{padding:28px}.auto>div+div{border-left:1px solid var(--line)}
+.auto>div:first-child{background:var(--gl)}
+.auto b{font-size:20px}.auto p{margin:10px 0 0;font-size:15px;line-height:1.55}.auto small{display:block;margin-top:14px;font-size:13px;color:var(--t2)}
+.pt td i{display:inline-block;width:calc((var(--h) - 1)/6*90px);height:8px;margin-right:10px;border-radius:4px;background:#E9A6BA;vertical-align:middle}
+.obs{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.obs>div{padding:22px;border-radius:18px;background:#F8F8F8;border-top:4px solid #C9C9CE}
+.obs>.f{border-top-color:var(--g)}.obs>.p{border-top-color:#F2BFCF}.obs>.s{border-top-color:#D9D9DE}
+.obs b{font-size:14px}.obs p{margin:10px 0 0;font-size:14px;line-height:1.6;color:var(--t2)}
+.rv ul{margin:0;padding-left:18px}.rv li{margin:10px 0;font-size:16px;line-height:1.6}.rv>div:first-child{background:var(--gl);border-color:transparent}
+.ut .nx3{margin:0!important}
+.scr{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:48px 0 0;padding:0;list-style:none}
+.scr li{display:grid;grid-template-columns:44px 1fr;gap:8px;padding:24px;border-radius:20px;background:#F8F8F8}
+.scr li>b{font:500 14px var(--mono);color:var(--g)}
+.scr h4{margin:0;font-size:18px}.scr .say{margin:10px 0 0;font-size:15px;line-height:1.6;font-weight:600}
+.scr .rec{margin:10px 0 0;font-size:13px;line-height:1.6;color:var(--t2)}
+@media (max-width:900px){.qs,.stim{grid-template-columns:1fr 1fr}.proc{grid-template-columns:1fr 1fr;gap:24px 0}.find7,.th7,.scope,.auto,.obs,.scr{grid-template-columns:1fr}.auto>div+div{border-left:0;border-top:1px solid var(--line)}.blk h3{font-size:22px}}
 @media (max-width:900px){
 .funnel,.nx{grid-template-columns:1fr}.funnel>i,.nx>i{transform:rotate(90deg);justify-self:center}
 .sit ol,.ps,.vote,.concept ol,.chart.two{grid-template-columns:1fr}.concept li+li{border-left:0;border-top:1px solid var(--line)}
