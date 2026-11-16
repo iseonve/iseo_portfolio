@@ -741,8 +741,8 @@ svg .t{font-size:12px;fill:#6E6E73}svg .t.r,svg text.r{text-anchor:end}svg .m{te
 @media (max-width:900px){.fr{grid-template-columns:1fr}.pcs{grid-template-columns:1fr}.dh,.dr{grid-template-columns:90px repeat(7,1fr) 56px;gap:2px}.dh span{font-size:10px}}
 
 .c8{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.c8 img{width:100%;border-radius:16px;border:1px solid var(--line);display:block}
-.skg{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.skg a{display:block;border-radius:16px;overflow:hidden;border:1px solid var(--line);transition:transform .3s}.skg a:hover{transform:translateY(-4px)}.skg img{width:100%;display:block}
-.skg a:first-child{grid-column:1/-1}
+.skg{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.skg a{display:block;border-radius:16px;overflow:hidden;border:1px solid var(--line);transition:transform .3s}.skg a:hover{transform:translateY(-4px)}.skg img{width:100%;display:block}
+.skg a:first-child,.skg a:nth-child(2){grid-column:span 2}
 .grid2 .q-tl{grid-column:1!important;grid-row:1!important}.grid2 .q-tr{grid-column:2!important;grid-row:1!important}.grid2 .q-bl{grid-column:1!important;grid-row:2!important;text-decoration:none!important}.grid2 .q-br{grid-column:2!important;grid-row:2!important}
 
 .ia{padding:32px;border-radius:24px;background:#F7F5FB}
@@ -756,7 +756,7 @@ svg .t{font-size:12px;fill:#6E6E73}svg .t.r,svg text.r{text-anchor:end}svg .m{te
 .ia-c li ul{margin:6px 0 2px;padding-left:12px}.ia-c li li{font-weight:500;color:var(--t2);background:#FBFAFD}
 .ia-c.on li{box-shadow:inset 0 0 0 1.5px var(--g);color:var(--gd)}
 .shots{display:grid;grid-template-columns:260px 260px 1fr;gap:28px;align-items:center}
-.shots figure{margin:0}.shots img{width:100%;border-radius:32px;box-shadow:0 0 0 8px #111,0 30px 60px -20px rgba(60,30,120,.45);display:block}
+.shots figure{margin:0}.shots img{width:100%;aspect-ratio:393/852;object-fit:cover;border-radius:32px;box-shadow:0 0 0 8px #111,0 30px 60px -20px rgba(60,30,120,.45);display:block}
 .shots figcaption{margin-top:20px;text-align:center;font:500 12px var(--mono);color:var(--t2)}
 .sdesc p{font-size:16px;line-height:1.75}
 @media (max-width:900px){.ia-cols{grid-template-columns:1fr 1fr}.shots{grid-template-columns:1fr 1fr}.sdesc{grid-column:1/-1}}
