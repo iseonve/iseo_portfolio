@@ -1268,7 +1268,11 @@ const o=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){go();o.
 </script>
 <style id="hdr-solid">
 /* once scrolled, a solid black header bar sits behind the menu (light text stays light) */
-.hdr::before{top:-60px!important;height:calc(100% + 60px + clamp(18px,2.4vw,30px))!important;background:#171717!important;transition:opacity .3s!important}
+.hdr{transition:top .35s ease!important}
+.hdr.hs{top:14px!important}
+.hdr .hlogo{transition:font-size .35s ease,color .3s!important}
+.hdr.hs .hlogo{font-size:22px!important}
+.hdr::before{top:-60px!important;height:calc(100% + 60px + 14px)!important;background:#171717!important;transition:opacity .3s!important}
 .hdr.hs.lt .hlogo{color:#f2f2f2!important}
 .hdr.hs.lt :is(.hnv,.hmid)>a,.hdr.hs.lt .hdd>a{color:#a3a3a3!important}
 .hdr.hs.lt :is(.hnv,.hmid)>a:hover,.hdr.hs.lt :is(.hnv,.hmid)>a.on,.hdr.hs.lt .hdd>a.on,.hdr.hs.lt .hdd:hover>a{color:#f2f2f2!important}

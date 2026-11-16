@@ -372,5 +372,7 @@ html body .abg .strap{-webkit-mask:linear-gradient(transparent 0,#000 55%);mask:
 html body .abg .g-tx{font-family:"Pretendard",sans-serif!important;font-weight:500!important;font-size:16px!important;color:#e6e2e4!important;letter-spacing:-.01em}
 
 /* once scrolled, a solid black header bar sits behind the menu */
-html:root body header.chrome.hd.hdc::before{top:-60px!important;height:calc(100% + 60px + clamp(18px,2.4vw,30px))!important;background:#171717!important}
+html:root body header.chrome.hd.hdc{transition:top .35s ease,opacity .9s ease .3s!important}
+html:root body header.chrome.hd.hdc.scrolled{top:14px!important}
+html:root body header.chrome.hd.hdc::before{top:-60px!important;height:calc(100% + 60px + 14px)!important;background:#171717!important}
 html:root body header.chrome.hd.hdc.scrolled::before{opacity:1!important}
