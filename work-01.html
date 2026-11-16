@@ -1024,5 +1024,26 @@ if(acc>40)h.classList.add("hid");else if(acc<-12)h.classList.remove("hid");},{pa
 const go=()=>{p.querySelectorAll(".still").forEach(e=>e.classList.remove("still"));p.classList.add("pre");void p.offsetWidth;
 const o=new IntersectionObserver(es=>{if(es.some(e=>e.isIntersecting)){o.disconnect();requestAnimationFrame(()=>p.classList.remove("pre"));}},{rootMargin:"0px 0px -30% 0px"});o.observe(p);};
 if(document.readyState==="complete")setTimeout(go,50);else addEventListener("load",()=>setTimeout(go,50));})();</script>
+<style id="dbar-anim">
+@media (prefers-reduced-motion:no-preference){
+.dcard .dbar b::after{transition:transform 1.8s cubic-bezier(.65,0,.25,1) var(--bd,.2s)!important}
+.dcard.bpre .dbar b::after{transform:scaleX(0)!important}
+}
+</style>
+<script>/* PJ.01 secondary research: bars fill and numbers count up when each card comes into view */
+(()=>{if(matchMedia("(prefers-reduced-motion:reduce)").matches||!("IntersectionObserver" in window))return;
+const ease=t=>1-Math.pow(1-t,3);
+const count=(el,to,dur,delay)=>{el.textContent="0";setTimeout(()=>{const t0=performance.now();const f=n=>{const k=Math.min(1,(n-t0)/dur);el.textContent=Math.round(to*ease(k));if(k<1)requestAnimationFrame(f);};requestAnimationFrame(f);},delay);};
+const init=()=>{
+document.querySelectorAll(".dcard").forEach(card=>{const bars=[...card.querySelectorAll(".dbar")];if(!bars.length)return;
+card.querySelectorAll(".still").forEach(e=>e.classList.remove("still"));card.classList.remove("still");
+bars.forEach((b,i)=>{b.style.setProperty("--bd",(.2+i*.35)+"s");const n=b.querySelector("em i");if(n){n.dataset.to=n.dataset.n||n.textContent;n.textContent="0";}});
+card.classList.add("bpre");void card.offsetWidth;
+const o=new IntersectionObserver(es=>{if(es.some(e=>e.isIntersecting)){o.disconnect();card.classList.remove("bpre");
+bars.forEach((b,i)=>{const n=b.querySelector("em i");if(n)count(n,+n.dataset.to,1800,200+i*350);});}},{rootMargin:"0px 0px -25% 0px"});o.observe(card);});
+const ds=document.querySelector(".dstats");if(ds){const ns=[...ds.querySelectorAll("dd span")];ns.forEach(n=>{n.dataset.to=n.dataset.n||n.textContent;n.textContent="0";});
+const o=new IntersectionObserver(es=>{if(es.some(e=>e.isIntersecting)){o.disconnect();ns.forEach((n,i)=>count(n,+n.dataset.to,1600,i*200));}},{rootMargin:"0px 0px -20% 0px"});o.observe(ds);}
+};
+if(document.readyState==="complete")setTimeout(init,60);else addEventListener("load",()=>setTimeout(init,60));})();</script>
 </body>
 </html>
