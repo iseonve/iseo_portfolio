@@ -370,3 +370,14 @@ html body .abg .strap b{display:none!important}
 html body .abg .strap{-webkit-mask:linear-gradient(transparent 0,#000 55%);mask:linear-gradient(transparent 0,#000 55%)}
 /* Korean in the About section: Pretendard, heavier */
 html body .abg .g-tx{font-family:"Pretendard",sans-serif!important;font-weight:500!important;font-size:16px!important;color:#e6e2e4!important;letter-spacing:-.01em}
+
+/* header morph (same as the case-study pages): once scrolled, the header drops into a dark inset bar with a reading-progress line */
+html:root body header.chrome.hd.hdc{transition:top .7s cubic-bezier(.22,.7,.2,1),opacity .9s ease .3s!important}
+html:root body header.chrome.hd.hdc::before{left:calc(var(--side)*-1 + 20px)!important;right:calc(var(--side)*-1 + 20px)!important;top:-34px!important;height:calc(100% + 68px)!important;border-radius:2px;background:radial-gradient(120% 160% at 70% 100%,#323035 0%,#252427 55%,#1f1e21 100%)!important;box-shadow:0 0 0 1px rgba(255,255,255,.07),0 24px 50px -20px rgba(0,0,0,.85);opacity:0;transform:translateY(-14px);transition:opacity .45s,transform .7s cubic-bezier(.22,.7,.2,1)!important}
+html:root body header.chrome.hd.hdc.scrolled{top:50px!important}
+html:root body header.chrome.hd.hdc.scrolled::before{opacity:1!important;transform:none!important}
+html:root body header.chrome.hd.hdc::after{content:"";position:absolute;pointer-events:none;left:calc(var(--side)*-1 + 20px);right:calc(var(--side)*-1 + 20px);bottom:-34px;height:2px;background:#f0699f;transform-origin:left;transform:scaleX(var(--hp,0));opacity:0;transition:opacity .4s}
+html:root body header.chrome.hd.hdc.scrolled::after{opacity:1!important}
+html.onlight body header.chrome.hd.hdc.scrolled .logo,html.onlight body header.chrome.hd.hdc.scrolled .seg,html.onlight body header.chrome.hd.hdc.scrolled nav a{color:#f2f2f2!important}
+@media (max-width:720px){html:root body header.chrome.hd.hdc.scrolled{top:34px!important}html:root body header.chrome.hd.hdc::before{left:calc(var(--side)*-1 + 10px)!important;right:calc(var(--side)*-1 + 10px)!important;top:-22px!important;height:calc(100% + 44px)!important}html:root body header.chrome.hd.hdc::after{left:calc(var(--side)*-1 + 10px);right:calc(var(--side)*-1 + 10px);bottom:-22px}}
+@media (prefers-reduced-motion:reduce){html:root body header.chrome.hd.hdc,html:root body header.chrome.hd.hdc::before{transition:none!important}}
