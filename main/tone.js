@@ -135,3 +135,6 @@
     })();
   })();
 })();
+
+/* header: capsule once the window scrolls + reading progress */
+(()=>{const R=document.documentElement;const u=()=>{const H=R.scrollHeight-innerHeight;R.style.setProperty("--hp",H>0?Math.min(1,scrollY/H).toFixed(4):0);R.classList.toggle("hscr",scrollY>20);};addEventListener("scroll",u,{passive:true});addEventListener("resize",u);u();})();
