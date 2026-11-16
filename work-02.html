@@ -43,7 +43,21 @@
 .hdr.lt .hnow{color:#6b6b6b}.hdr.lt .hnow b{color:#111}
 @media (max-width:900px){.hdr :is(.hnv,.hmid)>a,.hdr .hdd>a{font-size:12px!important}.hdr .hnv,.hdr .hnv .hmid{gap:22px!important}}
 @media (max-width:720px){.hdr{grid-template-columns:1fr auto}.hdr .hnow{display:none}.hdr .hlogo{font-size:22px!important}}
-.cs-hero .hcard.hcard{border-radius:0 0 28px 28px!important;overflow:hidden;isolation:isolate}@media (max-width:860px){.cs-hero .hcard.hcard{border-radius:0 0 20px 20px!important}}.hcard .hshade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,12,.85) 0%,rgba(10,10,12,.6) 38%,rgba(10,10,12,0) 68%),linear-gradient(180deg,rgba(10,10,12,.55) 0%,rgba(10,10,12,0) 22%)}.cs-hero .hbg{object-position:70% 40%}@media (max-width:860px){.hcard .hshade{background:linear-gradient(180deg,rgba(10,10,12,.55),rgba(10,10,12,.75))}.cs-hero .hbg{object-position:78% 50%}}</style>
+.cs-hero .hcard.hcard{border-radius:0 0 28px 28px!important;overflow:hidden;isolation:isolate}@media (max-width:860px){.cs-hero .hcard.hcard{border-radius:0 0 20px 20px!important}}
+/* hero: same spacing + motion as PJ.01 */
+.hpill{margin-bottom:22px!important}
+.cs-hero .hh .ln{display:block;overflow:hidden}
+.cs-hero .hh .ln>span{display:inline-block;transform:translateY(105%);transition:transform 1.2s cubic-bezier(.22,.7,.2,1);transition-delay:var(--d,0s)}
+.cs-hero .hcard.in .hh .ln>span{transform:none}
+.cs-hero .hbg{transform:scale(1.06);transition:transform 2.6s cubic-bezier(.22,.7,.2,1)}
+.cs-hero .hcard.in .hbg{transform:none}
+.hstatus i{position:relative;width:10px!important;height:10px!important;border-radius:50%;background:#B98BFF!important;box-shadow:0 0 10px 2px rgba(185,139,255,.65)}
+@media (prefers-reduced-motion:no-preference){.hstatus i{animation:sblink 1.2s ease-in-out infinite}.hstatus i::after{content:"";position:absolute;inset:0;border-radius:50%;background:#B98BFF;animation:sping 1.2s cubic-bezier(0,0,.2,1) infinite}}
+@keyframes sblink{0%,100%{opacity:1;box-shadow:0 0 12px 3px rgba(185,139,255,.75)}50%{opacity:.25;box-shadow:0 0 0 0 rgba(185,139,255,0)}}
+@keyframes sping{0%{transform:scale(1);opacity:.9}80%,100%{transform:scale(3.6);opacity:0}}
+@media (max-width:760px){.hpill{margin-bottom:16px!important}}
+@media (prefers-reduced-motion:reduce){.cs-hero .hh .ln>span{transform:none;transition:none}.cs-hero .hbg{transform:none;transition:none}}
+.hcard .hshade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,12,.85) 0%,rgba(10,10,12,.6) 38%,rgba(10,10,12,0) 68%),linear-gradient(180deg,rgba(10,10,12,.55) 0%,rgba(10,10,12,0) 22%)}.cs-hero .hbg{object-position:70% 40%}@media (max-width:860px){.hcard .hshade{background:linear-gradient(180deg,rgba(10,10,12,.55),rgba(10,10,12,.75))}.cs-hero .hbg{object-position:78% 50%}}</style>
 <script>(function(){function on(){var h=document.querySelector('.hdr');if(!h)return;var f=function(){h.classList.toggle('hs',window.scrollY>20)};f();window.addEventListener('scroll',f,{passive:true})}if(document.readyState!=='loading')on();else document.addEventListener('DOMContentLoaded',on)})();</script>
 </head>
 <body>
@@ -65,9 +79,9 @@
 <img class="hbg" src="img/sense/hero-subway-v3.webp" alt="" decoding="async"><span class="hshade" aria-hidden="true"></span>
 <div class="hin">
 <span class="hpill">웨어러블 AI 에이전트 · UX 리서치 프로젝트</span>
-<h1 class="hh">피할 수 없는 순간에도,<br><em class="p">할 수 있는 대응</em>을 찾습니다.</h1>
+<h1 class="hh"><span class="ln"><span style="--d:1s">피할 수 없는 순간에도,</span></span><span class="ln"><span style="--d:1.15s"><em class="p">할 수 있는 대응</em>을 찾습니다.</span></span></h1>
 <p class="hp">만원 버스, 업무 중인 자리, 옆집 소음처럼 바로 벗어나거나 바꾸기 어려운 곳에서 감각 부담이 생기면 할 수 있는 일이 금방 줄어듭니다. 지금 가능한 대응을 먼저 제안하고, 무언가를 바꾸기 전에는 꼭 묻는 워치·이어폰 에이전트를 기획했습니다.</p>
-<span class="hstatus"><i style="background:#B98BFF"></i>지금 조금 힘드신가요?</span>
+<span class="hstatus"><i></i>지금 조금 힘드신가요?</span>
 </div>
 </div>
 <dl class="facts">
@@ -1311,5 +1325,6 @@ addEventListener("scroll",upd,{passive:true});addEventListener("resize",upd);upd
 addEventListener("scroll",()=>{const y=scrollY,d=y-y0;y0=y;if(y<120){h.classList.remove("hid");acc=0;return;}
 if(h.matches(":hover,:focus-within"))return;acc=(Math.sign(d)===Math.sign(acc))?acc+d:d;
 if(acc>40)h.classList.add("hid");else if(acc<-12)h.classList.remove("hid");},{passive:true});})();</script>
+<script>requestAnimationFrame(()=>requestAnimationFrame(()=>setTimeout(()=>{const h=document.querySelector(".hcard");h&&h.classList.add("in");},80)));</script>
 </body>
 </html>
