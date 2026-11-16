@@ -1305,5 +1305,11 @@ if(a&&scrollY>innerHeight*.5){const b=a.querySelector("b"),s=a.querySelector("sp
 if(t!==last){last=t;ch.innerHTML=`<b>${b?b.textContent:""}</b>${s?s.textContent:a.textContent}`;}h.classList.add("chap");}else h.classList.remove("chap");}
 addEventListener("scroll",upd,{passive:true});addEventListener("resize",upd);upd();})();
 </script>
+<style id="hdr-room">.hdr{transition:top .7s cubic-bezier(.22,.7,.2,1),left .7s cubic-bezier(.22,.7,.2,1),right .7s cubic-bezier(.22,.7,.2,1),translate .45s cubic-bezier(.22,.7,.2,1),opacity .3s!important}.hdr.hid{translate:0 -170px;opacity:0;pointer-events:none}@media (prefers-reduced-motion:reduce){.hdr.hid{translate:none}}</style>
+<script>/* case pages: hide the header while reading down, bring it back on any scroll up */
+(()=>{const h=document.querySelector(".hdr");if(!h)return;let y0=scrollY,acc=0;
+addEventListener("scroll",()=>{const y=scrollY,d=y-y0;y0=y;if(y<120){h.classList.remove("hid");acc=0;return;}
+if(h.matches(":hover,:focus-within"))return;acc=(Math.sign(d)===Math.sign(acc))?acc+d:d;
+if(acc>40)h.classList.add("hid");else if(acc<-12)h.classList.remove("hid");},{passive:true});})();</script>
 </body>
 </html>
