@@ -1269,23 +1269,25 @@ const o=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){go();o.
 <style id="hdr-morph">
 /* header morph: on scroll the open header turns into a floating glass capsule; the project label rolls into the current chapter and a thin line shows reading progress */
 .hdr{transition:top .7s cubic-bezier(.22,.7,.2,1),left .7s cubic-bezier(.22,.7,.2,1),right .7s cubic-bezier(.22,.7,.2,1)!important}
-.hdr::before{left:-26px!important;right:-26px!important;top:-13px!important;height:calc(100% + 26px)!important;border-radius:999px;background:rgba(24,24,26,.72)!important;-webkit-backdrop-filter:blur(16px) saturate(1.5);backdrop-filter:blur(16px) saturate(1.5);box-shadow:0 0 0 1px rgba(255,255,255,.08),0 18px 40px -18px rgba(0,0,0,.6);opacity:0;transform:scale(1.04,1.3);transition:opacity .45s,transform .7s cubic-bezier(.22,.7,.2,1),background .4s,box-shadow .4s!important}
-.hdr.hs{top:16px!important;left:max(calc(var(--side) + 26px),calc(50% - 600px))!important;right:max(calc(var(--side) + 26px),calc(50% - 600px))!important}
+.hdr::before{left:calc(var(--side)*-1 + 20px)!important;right:calc(var(--side)*-1 + 20px)!important;top:-34px!important;height:calc(100% + 68px)!important;border-radius:2px;background:radial-gradient(120% 140% at 70% 100%,#29282b 0%,#1a1a1c 55%,#151516 100%)!important;box-shadow:0 20px 40px -24px rgba(0,0,0,.55);opacity:0;transform:translateY(-14px);transition:opacity .45s,transform .7s cubic-bezier(.22,.7,.2,1)!important}
+.hdr.hs{top:50px!important}
 .hdr.hs::before{opacity:1;transform:none}
-.hdr.hs.lt::before{background:rgba(255,255,255,.78)!important;box-shadow:0 0 0 1px rgba(0,0,0,.07),0 16px 36px -18px rgba(30,20,60,.35)}
+.hdr.hs.lt .hlogo{color:#f2f2f2!important}
+.hdr.hs.lt :is(.hnv,.hmid)>a,.hdr.hs.lt .hdd>a{color:#a3a3a3!important}
+.hdr.hs.lt :is(.hnv,.hmid)>a:hover,.hdr.hs.lt :is(.hnv,.hmid)>a.on,.hdr.hs.lt .hdd>a.on,.hdr.hs.lt .hdd:hover>a{color:#f2f2f2!important}
+.hdr.hs.lt .hnow{color:#a3a3a3}.hdr.hs.lt .hnow b{color:#f2f2f2}
 .hdr .hlogo{transition:font-size .6s cubic-bezier(.22,.7,.2,1),color .3s!important}
-.hdr.hs .hlogo{font-size:22px!important}
 .hdr .hnr{display:block;height:16px;overflow:hidden}
 .hdr .hnri{display:flex;flex-direction:column;transition:transform .6s cubic-bezier(.65,0,.25,1)}
 .hdr .hnri>span{display:block;height:16px;line-height:16px;white-space:nowrap}
 .hdr .hch b{color:var(--hc,#f0699f)!important;margin-right:8px}
 .hdr.hs.chap .hnri{transform:translateY(-16px)}
-.hdr .hpg{position:absolute;left:-2px;right:-2px;bottom:-13px;height:2px;border-radius:2px;overflow:hidden;opacity:0;transition:opacity .4s;pointer-events:none}
+.hdr .hpg{position:absolute;left:calc(var(--side)*-1 + 20px);right:calc(var(--side)*-1 + 20px);bottom:-34px;height:2px;border-radius:2px;overflow:hidden;opacity:0;transition:opacity .4s;pointer-events:none}
 .hdr .hpg i{display:block;height:100%;background:var(--hpc,#f0699f);transform-origin:left;transform:scaleX(var(--p,0))}
 .hdr.hs .hpg{opacity:1}
 .hdr.hs .hnow i{animation:hdrp 2s ease-in-out infinite}
 @keyframes hdrp{50%{box-shadow:0 0 0 4px transparent,0 0 10px var(--hc,#f0699f);transform:scale(1.25)}}
-@media (max-width:720px){.hdr.hs{left:24px!important;right:24px!important;top:12px!important}.hdr::before{left:-14px!important;right:-14px!important}.hdr .hpg{left:6px;right:6px}}
+@media (max-width:720px){.hdr.hs{top:34px!important}.hdr::before{left:calc(var(--side)*-1 + 10px)!important;right:calc(var(--side)*-1 + 10px)!important;top:-22px!important;height:calc(100% + 44px)!important}}
 @media (prefers-reduced-motion:reduce){.hdr,.hdr::before,.hdr .hnri,.hdr .hlogo{transition:none!important}.hdr.hs .hnow i{animation:none}}
 </style>
 <script>
