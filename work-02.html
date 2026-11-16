@@ -1417,23 +1417,8 @@ three&&three.addEventListener("mouseleave",()=>start());})();</script>
 .sproc .dd .sep{stroke:#EDEDED}
 @media (max-width:1100px){.sproc .pin{flex-direction:column;padding:96px 24px}.sproc .plist{width:100%;max-width:600px}}
 @media (max-width:860px){.sproc .pin{padding:64px 16px}.sproc .plist h3{font-size:28px}}
-/* motion: steps appear one by one while the line draws, then the diamonds fill left to right */
-@media (prefers-reduced-motion:no-preference){
-.sproc.pre .plist ol::before{transform:scaleY(0)}
-.sproc .plist ol::before{transition:transform 1.6s cubic-bezier(.65,0,.35,1) .2s}
-.sproc.pre .plist li{opacity:0;transform:translateY(16px)}
-.sproc .plist li{transition:opacity .6s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
-.sproc .plist li:nth-child(1){transition-delay:.2s}.sproc .plist li:nth-child(2){transition-delay:.55s}.sproc .plist li:nth-child(3){transition-delay:.9s}.sproc .plist li:nth-child(4){transition-delay:1.25s}
-.sproc.pre .dd .d1,.sproc.pre .dd .d2{opacity:0;transform:scale(.6)}
-.sproc .dd .d1,.sproc .dd .d2{transform-box:fill-box;transform-origin:center;transition:opacity .7s ease,transform .9s cubic-bezier(.2,.8,.2,1)}
-.sproc .dd path.d1:nth-of-type(1){transition-delay:.3s}.sproc .dd path.d2:nth-of-type(2){transition-delay:.65s}.sproc .dd path.d1:nth-of-type(3){transition-delay:1s}.sproc .dd path.d2:nth-of-type(4){transition-delay:1.35s}
-.sproc.pre .dd .lab,.sproc.pre .dd .cap,.sproc.pre .dd .ms,.sproc.pre .dd .dot,.sproc.pre .dd .pillr,.sproc.pre .dd .pillt{opacity:0}
-.sproc .dd .lab,.sproc .dd .cap{transition:opacity .6s ease 1.5s}
-.sproc .dd .ms,.sproc .dd .dot,.sproc .dd .pillr,.sproc .dd .pillt{transition:opacity .5s ease 1.9s}
-}
 </style>
-<script>(()=>{const p=document.querySelector(".sproc");if(!p||!("IntersectionObserver" in window)||matchMedia("(prefers-reduced-motion:reduce)").matches)return;p.classList.add("pre");void p.offsetWidth;
-const o=new IntersectionObserver(es=>{if(es.some(e=>e.isIntersecting)){o.disconnect();requestAnimationFrame(()=>p.classList.remove("pre"));}},{rootMargin:"0px 0px -30% 0px"});o.observe(p);})();</script>
+
 <style id="sec-css">
 .sds{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:72px 0 56px!important;padding:0 32px}
 .sds dt{font-size:14px;font-weight:600}
