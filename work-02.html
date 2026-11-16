@@ -66,10 +66,12 @@
 .sst.run .side li.on{opacity:1}
 .sst.run .side li.on i{background:var(--g);box-shadow:0 10px 26px rgba(139,77,255,.35)}
 .sst.run .side li.on i svg{stroke:#fff}
-.sph{width:270px!important;aspect-ratio:393/852;padding:9px;border-radius:46px;background:#111;box-shadow:0 0 0 1.5px #2a2a2e inset,0 30px 60px -24px rgba(40,20,90,.45)}
-.sph img{position:absolute;inset:9px;width:calc(100% - 18px)!important;height:calc(100% - 18px)!important;border-radius:38px;object-fit:cover;opacity:0;transform:scale(1.02);transition:opacity .9s ease,transform 1.2s cubic-bezier(.22,.7,.2,1)}
-.sph img.on{opacity:1;transform:none}
-.sph .isl{position:absolute;z-index:2;left:50%;top:19px;width:84px;height:24px;margin-left:-42px;border-radius:14px;background:#000}
+.sph{width:258px!important;align-self:center;height:auto!important;padding:8px;border-radius:44px;background:#141416;box-shadow:inset 0 0 0 1.5px #2c2c30,0 30px 60px -26px rgba(40,20,90,.45)}
+.sph .sscr{position:relative;aspect-ratio:393/852;border-radius:36px;overflow:hidden;background:#0f1330}
+.sph .sscr img{position:absolute;inset:0;width:100%!important;height:100%!important;object-fit:cover;object-position:top center;opacity:0;transition:opacity .8s ease}
+.sph .sscr img.on{opacity:1}
+.sph .isl{position:absolute;z-index:2;left:50%;top:9px;width:72px;height:21px;margin-left:-36px;border-radius:14px;background:#000}
+@media (min-width:861px){.sst{align-items:stretch!important}.sst .side{justify-content:center!important;padding-top:0!important;gap:110px!important}}
 .three li{transition:box-shadow .5s,background .5s}
 .three.run li.on{background:#fff;box-shadow:0 0 0 2px var(--g),0 16px 34px -18px rgba(139,77,255,.45)}
 .hcard .hshade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,12,.85) 0%,rgba(10,10,12,.6) 38%,rgba(10,10,12,0) 68%),linear-gradient(180deg,rgba(10,10,12,.55) 0%,rgba(10,10,12,0) 22%)}.cs-hero .hbg{object-position:70% 40%}@media (max-width:860px){.hcard .hshade{background:linear-gradient(180deg,rgba(10,10,12,.55),rgba(10,10,12,.75))}.cs-hero .hbg{object-position:78% 50%}}</style>
@@ -116,11 +118,7 @@
 <li data-k="0"><div><b>구간별 소음</b><span>소음이 높은 정류장을 <br>막대 길이와 색으로 보여줘요</span></div><i><svg viewBox="0 0 24 24"><path d="M3 12h2M7 8v8M11 5v14M15 9v6M19 11v2"/></svg></i></li>
 <li data-k="1"><div><b>노이즈 캔슬링</b><span>0~5단계로 줄이고, <br>이어폰·워치로도 조절해요</span></div><i><svg viewBox="0 0 24 24"><path d="M4 15v-3a8 8 0 0 1 16 0v3"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/></svg></i></li>
 </ul>
-<div class="phone sph"><span class="isl"></span>
-<img class="on" src="img/sense/p11-sense.webp" alt="경로의 구간별 감각 수준 화면" decoding="async">
-<img src="img/sense/p12-hear.webp" alt="청각 모드 실행 화면" decoding="async">
-<img src="img/sense/p15-reco.webp" alt="다음 이동 추천 화면" decoding="async">
-</div>
+<div class="phone sph"><div class="sscr"><span class="isl"></span><img class="on" src="img/sense/p11-sense.webp" alt="경로의 구간별 감각 수준 화면" decoding="async"><img src="img/sense/p12-hear.webp" alt="청각 모드 실행 화면" decoding="async"><img src="img/sense/p15-reco.webp" alt="다음 이동 추천 화면" decoding="async"></div></div>
 <ul class="side r">
 <li data-k="1"><i><svg viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2.5"/><path d="M10 17.5h4"/><circle cx="12" cy="10" r="2.5"/></svg></i><div><b>화면 · 안내</b><span>화면은 차분하게, <br>안내는 음성·진동으로 바꿔요</span></div></li>
 <li data-k="2"><i><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5.3L20 9"/><path d="M20 4v5h-5"/><path d="M20 12a8 8 0 0 1-14 5.3L4 15"/><path d="M4 20v-5h5"/></svg></i><div><b>다음 추천</b><span>나아진 설정을 저장해 <br>같은 길에서 먼저 제안해요</span></div></li>
