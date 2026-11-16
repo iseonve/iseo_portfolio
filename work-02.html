@@ -1326,5 +1326,6 @@ addEventListener("scroll",()=>{const y=scrollY,d=y-y0;y0=y;if(y<120){h.classList
 if(h.matches(":hover,:focus-within"))return;acc=(Math.sign(d)===Math.sign(acc))?acc+d:d;
 if(acc>40)h.classList.add("hid");else if(acc<-12)h.classList.remove("hid");},{passive:true});})();</script>
 <script>requestAnimationFrame(()=>requestAnimationFrame(()=>setTimeout(()=>{const h=document.querySelector(".hcard");h&&h.classList.add("in");},80)));</script>
+<style>@media (min-width:861px){.cs-hero .hcard .hin.hin{padding-bottom:160px!important}}</style>
 </body>
 </html>

@@ -1004,5 +1004,6 @@ addEventListener("scroll",upd,{passive:true});addEventListener("resize",upd);upd
 addEventListener("scroll",()=>{const y=scrollY,d=y-y0;y0=y;if(y<120){h.classList.remove("hid");acc=0;return;}
 if(h.matches(":hover,:focus-within"))return;acc=(Math.sign(d)===Math.sign(acc))?acc+d:d;
 if(acc>40)h.classList.add("hid");else if(acc<-12)h.classList.remove("hid");},{passive:true});})();</script>
+<style>@media (min-width:861px){.cs-hero .hcard .hin.hin{padding-bottom:160px!important}}</style>
 </body>
 </html>
