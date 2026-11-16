@@ -125,6 +125,46 @@
 <li><span class="badge">STEP 03</span><span class="actor">사용자 확인</span><b>다음에 반영하기</b><p>나아졌는지 확인하고 <br>다음 추천에 반영합니다.</p></li>
 </ol>
 </div>
+<div class="cs-proc sproc">
+<div class="pin">
+<div class="plist">
+<p class="kick">Process · Double Diamond</p>
+<h3>진행 과정</h3>
+<ol>
+<li><b>Discover</b><span>관련 연구와 사례를 살펴보고 참여자들을 인터뷰했습니다.</span></li>
+<li><b>Define</b><span>156개의 말을 7개 주제로 묶어 해결할 문제를 정의했습니다.</span></li>
+<li><b>Develop</b><span>35개 아이디어를 그려보고 주요 기능을 골랐습니다.</span></li>
+<li><b>Deliver</b><span>프로토타입을 만들고 사용성 테스트를 진행했습니다.</span></li>
+</ol>
+</div>
+<figure class="dd">
+<svg class="ddsv" viewBox="16 0 736 462" role="img" aria-label="Double Diamond: Discover, Define, Develop, Deliver">
+<text x="208" y="38" class="sp" text-anchor="middle">Problem Space</text>
+<text x="528" y="38" class="sp" text-anchor="middle">Solution Space</text>
+<path d="M48 220 L208 100 L208 340 Z" class="d1"/>
+<path d="M208 100 L368 220 L208 340 Z" class="d2"/>
+<path d="M368 220 L528 100 L528 340 Z" class="d1"/><path d="M528 100 L688 220 L528 340 Z" class="d2"/>
+<line x1="368" y1="78" x2="368" y2="214" class="ms"/><line x1="688" y1="78" x2="688" y2="214" class="ms"/>
+<circle cx="368" cy="220" r="6" class="dot"/><circle cx="688" cy="220" r="6" class="dot"/>
+<rect x="329" y="56" width="78" height="28" rx="14" class="pillr"/><text x="368" y="75" class="pillt" text-anchor="middle">HMW 정의</text>
+<rect x="644" y="56" width="76" height="28" rx="14" class="pillr"/><text x="682" y="75" class="pillt" text-anchor="middle">프로토타입</text>
+<g class="lab" text-anchor="middle">
+<text x="148" y="212"><tspan class="n">01</tspan><tspan x="148" dy="20">Discover</tspan></text>
+<text x="268" y="212"><tspan class="n">02</tspan><tspan x="268" dy="20">Define</tspan></text>
+<text x="468" y="212"><tspan class="n">03</tspan><tspan x="468" dy="20">Develop</tspan></text>
+<text x="588" y="212"><tspan class="n">04</tspan><tspan x="588" dy="20">Deliver</tspan></text>
+</g>
+<g class="cap" text-anchor="middle">
+<text x="128" y="416">논문 13편 · 인터뷰 2명</text><text x="128" y="438" class="s">← 넓게 조사 →</text>
+<text x="288" y="416">156개 → 테마 7개</text><text x="288" y="438" class="s">→ 좁혀 정의 ←</text>
+<text x="448" y="416">아이디어 35개 → 핵심 3개</text><text x="448" y="438" class="s">← 넓게 발상 →</text>
+<text x="608" y="416">5명 사용성 테스트</text><text x="608" y="438" class="s">→ 좁혀 검증 ←</text>
+</g>
+<path d="M208 400v36M368 400v36M528 400v36" class="sep"/>
+</svg>
+</figure>
+</div>
+</div>
 </section>
 <section class="ch cs s2" id="research" data-step="research">
 <div class="cs-ov ut">
@@ -1365,5 +1405,46 @@ three&&three.addEventListener("mouseleave",()=>start());})();</script>
 #overview .sst .side span{white-space:nowrap}
 @media (max-width:1100px){#overview .sst .side span{white-space:normal}}
 </style>
+<style id="sproc-css">
+/* process (same as PJ.01, purple) */
+.sproc .pin{display:flex;gap:64px;align-items:center;justify-content:center;padding:144px 32px;border-radius:0;background:linear-gradient(180deg,#F3EDFF 0%,#FAF7FF 100%)}
+.sproc .plist{width:400px;flex:none;text-align:left}
+.sproc .kick{font-size:15px;font-weight:600;color:var(--g);letter-spacing:0}
+.sproc .plist h3{margin-top:12px;font-size:36px;font-weight:700;letter-spacing:-.03em}
+.sproc .plist ol{position:relative;margin-top:48px!important}
+.sproc .plist ol::before{content:"";position:absolute;left:15.5px;top:32px;bottom:40px;width:2px;background:var(--g);transform-origin:top}
+.sproc .plist li{position:relative;z-index:1;padding:16px 0 16px 48px}
+.sproc .plist li::before{content:"";position:absolute;left:0;top:16px;width:32px;height:32px;border-radius:50%;background:var(--gl);box-shadow:inset 0 0 0 10px var(--gl),inset 0 0 0 16px var(--g)}
+.sproc .plist b{display:block;font-size:20px;line-height:32px;font-weight:700;letter-spacing:-.01em}
+.sproc .plist span{display:block;margin-top:8px;font-size:16px;line-height:1.56;color:var(--t2)}
+.sproc .dd{width:736px;max-width:100%;padding:64px 0 60px!important;border-radius:28px;background:#fff;margin:0}
+.sproc .dd svg{display:block;width:100%;height:auto;font-family:"PretendardCS",sans-serif}
+.sproc .dd .d1{fill:#8B4DFF;fill-opacity:.14}.sproc .dd .d2{fill:#8B4DFF;fill-opacity:.26}
+.sproc .dd .sp{font-size:18px;font-weight:700;fill:var(--gd)}
+.sproc .dd .ms{stroke:var(--g);stroke-width:1;stroke-dasharray:3 3;fill:none}
+.sproc .dd .dot,.sproc .dd .pillr{fill:var(--g)}
+.sproc .dd .pillt{font-size:12px;font-weight:600;fill:#fff}
+.sproc .dd .lab text{font-size:15px;font-weight:700;fill:var(--k)}.sproc .dd .lab .n{font-size:12px;font-weight:600;fill:var(--gd)}
+.sproc .dd .cap text{font-size:13px;font-weight:600;fill:var(--k)}.sproc .dd .cap .s{font-size:12px;font-weight:400;fill:var(--t2)}
+.sproc .dd .sep{stroke:#EDEDED}
+@media (max-width:1100px){.sproc .pin{flex-direction:column;padding:96px 24px}.sproc .plist{width:100%;max-width:600px}}
+@media (max-width:860px){.sproc .pin{padding:64px 16px}.sproc .plist h3{font-size:28px}}
+/* motion: steps appear one by one while the line draws, then the diamonds fill left to right */
+@media (prefers-reduced-motion:no-preference){
+.sproc.pre .plist ol::before{transform:scaleY(0)}
+.sproc .plist ol::before{transition:transform 1.6s cubic-bezier(.65,0,.35,1) .2s}
+.sproc.pre .plist li{opacity:0;transform:translateY(16px)}
+.sproc .plist li{transition:opacity .6s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+.sproc .plist li:nth-child(1){transition-delay:.2s}.sproc .plist li:nth-child(2){transition-delay:.55s}.sproc .plist li:nth-child(3){transition-delay:.9s}.sproc .plist li:nth-child(4){transition-delay:1.25s}
+.sproc.pre .dd .d1,.sproc.pre .dd .d2{opacity:0;transform:scale(.6)}
+.sproc .dd .d1,.sproc .dd .d2{transform-box:fill-box;transform-origin:center;transition:opacity .7s ease,transform .9s cubic-bezier(.2,.8,.2,1)}
+.sproc .dd path.d1:nth-of-type(1){transition-delay:.3s}.sproc .dd path.d2:nth-of-type(2){transition-delay:.65s}.sproc .dd path.d1:nth-of-type(3){transition-delay:1s}.sproc .dd path.d2:nth-of-type(4){transition-delay:1.35s}
+.sproc.pre .dd .lab,.sproc.pre .dd .cap,.sproc.pre .dd .ms,.sproc.pre .dd .dot,.sproc.pre .dd .pillr,.sproc.pre .dd .pillt{opacity:0}
+.sproc .dd .lab,.sproc .dd .cap{transition:opacity .6s ease 1.5s}
+.sproc .dd .ms,.sproc .dd .dot,.sproc .dd .pillr,.sproc .dd .pillt{transition:opacity .5s ease 1.9s}
+}
+</style>
+<script>(()=>{const p=document.querySelector(".sproc");if(!p||!("IntersectionObserver" in window)||matchMedia("(prefers-reduced-motion:reduce)").matches)return;p.classList.add("pre");void p.offsetWidth;
+const o=new IntersectionObserver(es=>{if(es.some(e=>e.isIntersecting)){o.disconnect();requestAnimationFrame(()=>p.classList.remove("pre"));}},{rootMargin:"0px 0px -30% 0px"});o.observe(p);})();</script>
 </body>
 </html>
