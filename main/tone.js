@@ -135,6 +135,3 @@
     })();
   })();
 })();
-
-/* header morph: reading progress for the scrolled header bar */
-(()=>{const u=()=>{const H=document.documentElement.scrollHeight-innerHeight;document.documentElement.style.setProperty("--hp",H>0?Math.min(1,scrollY/H).toFixed(4):0);};addEventListener("scroll",u,{passive:true});addEventListener("resize",u);u();})();
