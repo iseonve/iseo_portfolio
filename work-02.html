@@ -60,12 +60,8 @@
 
 /* overview stage: SENSE screens from the prototype cycle through the three steps */
 .sst::before{background:radial-gradient(circle,#EFE6FF 0%,rgba(239,230,255,.6) 45%,rgba(255,255,255,0) 70%)!important}
-.sst .side i{box-shadow:0 8px 24px rgba(139,77,255,.14),0 0 0 1px rgba(139,77,255,.14)}
+.sst .side i{box-shadow:0 8px 24px rgba(139,77,255,.12),0 0 0 1px rgba(139,77,255,.12)}.sst .side li:hover i{transform:scale(1.1);box-shadow:0 10px 28px rgba(139,77,255,.22),0 0 0 1px rgba(139,77,255,.25)}
 .sst .side li{transition:opacity .6s,transform .6s cubic-bezier(.22,.7,.2,1)}
-.sst.run .side li{opacity:.32}
-.sst.run .side li.on{opacity:1}
-.sst.run .side li.on i{background:var(--g);box-shadow:0 10px 26px rgba(139,77,255,.35)}
-.sst.run .side li.on i svg{stroke:#fff}
 .sph{width:258px!important;align-self:center;height:auto!important;padding:8px;border-radius:44px;background:#141416;box-shadow:inset 0 0 0 1.5px #2c2c30,0 30px 60px -26px rgba(40,20,90,.45)}
 .sph .sscr{position:relative;aspect-ratio:393/852;border-radius:36px;overflow:hidden;background:#0f1330}
 .sph .sscr img{position:absolute;inset:0;width:100%!important;height:100%!important;object-fit:cover;object-position:top center;opacity:0;transition:opacity .8s ease}
@@ -73,7 +69,6 @@
 .sph .isl{position:absolute;z-index:2;left:50%;top:9px;width:72px;height:21px;margin-left:-36px;border-radius:14px;background:#000}
 @media (min-width:861px){.sst{align-items:stretch!important}.sst .side{justify-content:center!important;padding-top:0!important;gap:110px!important}}
 .three li{transition:box-shadow .5s,background .5s}
-.three.run li.on{background:#fff;box-shadow:0 0 0 2px var(--g),0 16px 34px -18px rgba(139,77,255,.45)}
 .hcard .hshade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,12,.85) 0%,rgba(10,10,12,.6) 38%,rgba(10,10,12,0) 68%),linear-gradient(180deg,rgba(10,10,12,.55) 0%,rgba(10,10,12,0) 22%)}.cs-hero .hbg{object-position:70% 40%}@media (max-width:860px){.hcard .hshade{background:linear-gradient(180deg,rgba(10,10,12,.55),rgba(10,10,12,.75))}.cs-hero .hbg{object-position:78% 50%}}</style>
 <script>(function(){function on(){var h=document.querySelector('.hdr');if(!h)return;var f=function(){h.classList.toggle('hs',window.scrollY>20)};f();window.addEventListener('scroll',f,{passive:true})}if(document.readyState!=='loading')on();else document.addEventListener('DOMContentLoaded',on)})();</script>
 </head>
@@ -125,9 +120,9 @@
 </ul>
 </div>
 <ol class="three">
-<li><span class="badge">STEP 01</span><span class="actor ai">AI 상황 해석</span><b>알아차리기</b><p>지금의 상태와 주변 자극을 함께 살펴봅니다.</p></li>
-<li><span class="badge">STEP 02</span><span class="actor">사용자 선택</span><b>대응 고르기</b><p>노이즈 캔슬링처럼 지금 가능한 방법을 제안하고, <br>적용은 사용자가 정합니다.</p></li>
-<li><span class="badge">STEP 03</span><span class="actor">사용자 확인</span><b>다음에 반영하기</b><p>대응 후 나아졌는지 확인하고 다음 판단에 씁니다.</p></li>
+<li><span class="badge">STEP 01</span><span class="actor ai">AI 상황 해석</span><b>알아차리기</b><p>지금 상태와 주변 자극을 함께 살펴봅니다.</p></li>
+<li><span class="badge">STEP 02</span><span class="actor">사용자 선택</span><b>대응 고르기</b><p>지금 가능한 방법을 제안하고, <br>적용은 사용자가 정합니다.</p></li>
+<li><span class="badge">STEP 03</span><span class="actor">사용자 확인</span><b>다음에 반영하기</b><p>나아졌는지 확인하고 <br>다음 추천에 반영합니다.</p></li>
 </ol>
 </div>
 </section>
@@ -1363,5 +1358,12 @@ const start=()=>{if(t)return;st.classList.add("run");three&&three.classList.add(
 new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting?start():stop()),{threshold:.35}).observe(st);
 cards.forEach((c,j)=>c.addEventListener("mouseenter",()=>{stop();st.classList.add("run");three.classList.add("run");show(j);}));
 three&&three.addEventListener("mouseleave",()=>start());})();</script>
+<style id="ov-match">
+#overview .three li+li::before{content:"";display:block;position:absolute;z-index:1;left:-24px;top:50%;width:44px;height:44px;translate:-50% -50%;transform:none;border-radius:0;box-shadow:none;color:transparent;background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238B4DFF' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E") center/22px no-repeat}
+@media (max-width:860px){#overview .three li+li::before{left:50%;top:-10px;translate:-50% -50%;rotate:90deg;width:28px;height:28px;background-size:18px}}
+#overview .sst .side i{transition:transform .5s cubic-bezier(.2,1.4,.3,1),box-shadow .3s}
+#overview .sst .side span{white-space:nowrap}
+@media (max-width:1100px){#overview .sst .side span{white-space:normal}}
+</style>
 </body>
 </html>
