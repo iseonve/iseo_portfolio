@@ -249,6 +249,24 @@
 <p class="eb">User Story</p><h3>“피하기 어려운 순간에도 최소한의 조작으로 대응을 시작하고, 불편이 남으면 이어서 조절하고 싶다.”</h3>
 <p class="note">‘대응 방법을 고르는 과정 자체가 힘들다’는 가설은 핵심 문제로 확정하지 않고, 테스트에서 실제로 반복되는지 확인할 항목으로 남겼습니다.</p>
 </div>
+<div class="blk">
+<p class="eb">Persona</p><h3>리서치와 테스트 참여자를 묶어 만든 한 사람</h3>
+<div class="psn">
+<div class="pid"><div class="pav" aria-hidden="true">지</div><b>정지윤 <small>31 · 직장인</small></b><p>버스 + 지하철 출퇴근 · 주 5회<br>이어폰은 늘, 워치는 가끔</p>
+<p class="pq">“한 번의 큰 자극보다 이런 과정이 매일 이어진다는 게 더 피곤해요.”</p>
+<div class="pbar"><p class="lab">불편한 감각</p>
+<div><span>소리</span><i style="--w:90%"></i></div><div><span>혼잡</span><i style="--w:65%"></i></div><div><span>멀미</span><i style="--w:45%"></i></div></div></div>
+<div class="pin">
+<div><p class="lab">하루의 장면</p><p>아침 만원 버스. 안내방송과 대화 소리가 겹치고, 흔들리는 차 안에서 휴대폰을 꺼내 설정을 찾기 어렵다. 노이즈 캔슬링을 최대로 켜 두면 30분쯤 지나 머리가 먹먹해진다.</p></div>
+<div class="g2">
+<div><p class="lab">목표</p><ul><li>도착할 때까지 덜 지친 상태로 가기</li><li>불편할 때 바로, 손이 덜 가게 대응하기</li></ul></div>
+<div><p class="lab">지금 하는 대응</p><ul><li>덜 붐비는 시간 고르기</li><li>이어폰 꽂고 버티기</li><li>심하면 한 정거장 먼저 내리기</li></ul></div>
+<div><p class="lab">불편한 점</p><ul><li>혼잡 · 멀미 중엔 화면 조작이 어렵다</li><li>노이즈 캔슬링이 세거나 오래 쓰면 답답</li><li>매번 처음부터 다시 맞춘다</li></ul></div>
+<div><p class="lab">바라는 점</p><ul><li>예전에 편했던 설정을 그대로</li><li>바꾸기 전에는 먼저 물어봐 주기</li><li>얼마나 심각한지는 내가 판단</li></ul></div>
+</div></div>
+</div>
+<p class="note">인터뷰 · 커뮤니티 사례와 UT 참여자(20~30대 · 출퇴근 · 소리 불편 · 이어폰 사용) 공통점을 묶은 가상의 인물이에요.</p>
+</div>
 </div>
 </section>
 
@@ -895,6 +913,20 @@ svg .t{font-size:12px;fill:#6E6E73}svg .t.r,svg text.r{text-anchor:end}svg .m{te
 .vmapl p{margin-top:18px!important;font-size:16px!important;color:#666!important}
 .vmapl b{display:block;margin-top:10px;font-size:21px!important;color:var(--k)!important}
 .vmapl em{font-style:normal;margin-right:8px}.vmapl .c1 em{color:#8B4DFF}.vmapl .c2 em{color:#4F7CF0}.vmapl .c3 em{color:#EE8A2E}
+
+.psn{display:grid;grid-template-columns:340px 1fr;gap:16px}
+.pid{padding:32px;border-radius:24px;background:var(--k);color:#fff}
+.pav{display:grid;place-items:center;width:84px;height:84px;border-radius:50%;background:linear-gradient(135deg,#B98BFF,#5B8CFF);font-size:32px;font-weight:800}
+.pid>b{display:block;margin-top:20px;font-size:24px}.pid>b small{font-size:15px;font-weight:500;color:rgba(255,255,255,.6);margin-left:6px}
+.pid>p{margin:8px 0 0;font-size:14px;line-height:1.6;color:rgba(255,255,255,.7)}
+.pid .pq{margin-top:22px!important;padding-top:18px;border-top:1px solid rgba(255,255,255,.15);font-size:16px!important;line-height:1.6!important;font-weight:600;color:#fff!important}
+.pbar{margin-top:22px}.pbar .lab{color:#B98BFF!important;margin-bottom:10px!important}
+.pbar div{display:grid;grid-template-columns:40px 1fr;align-items:center;gap:10px;margin-top:8px;font-size:13px}
+.pbar i{height:8px;width:var(--w);border-radius:4px;background:#B98BFF}
+.pin{display:grid;gap:16px}.pin>div:first-child{padding:28px;border-radius:24px;background:var(--gl)}.pin>div:first-child p:last-child{margin:0;font-size:17px;line-height:1.75;font-weight:500}
+.pin .g2{display:grid;grid-template-columns:1fr 1fr;gap:16px}.pin .g2>div{padding:24px;border-radius:20px;background:#F8F8F8}
+.pin ul{margin:0;padding-left:18px}.pin li{margin:6px 0;font-size:15px;line-height:1.55}
+@media (max-width:900px){.psn,.pin .g2{grid-template-columns:1fr}}
 @media (max-width:900px){.qs,.stim{grid-template-columns:1fr 1fr}.proc{grid-template-columns:1fr 1fr;gap:24px 0}.find7,.th7,.scope,.auto,.obs,.scr{grid-template-columns:1fr}.auto>div+div{border-left:0;border-top:1px solid var(--line)}.blk h3{font-size:22px}}
 @media (max-width:900px){
 .funnel,.nx{grid-template-columns:1fr}.funnel>i,.nx>i{transform:rotate(90deg);justify-self:center}
