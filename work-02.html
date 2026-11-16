@@ -58,6 +58,7 @@
 <a href="#test"><i></i>Deliver</a>
 <a href="#review"><i></i>Review</a>
 <a href="#script"><i></i>Test Script</a>
+<a href="#spec"><i></i>Tech Spec</a>
 </nav>
 <section class="ch cs s2" id="overview" data-step="overview">
 <div class="cs-hero">
@@ -568,6 +569,26 @@
 </table>
 </div>
 
+<div class="blk">
+<p class="eb">Before &amp; After</p><h3>UT에서 막힌 곳을 이렇게 고쳤어요</h3>
+<div class="bas">
+<div class="ba"><div class="bah"><span class="sv h">높음</span><b>저장 버튼을 지나침</b><p>P3 실패 · P2 망설임. 작은 버튼이 다른 정보와 섞여 다음 단계가 보이지 않았어요.</p></div>
+<div class="bap"><figure><span class="tg0">Before</span><div class="scw"><img src="img/sense/p11-sense.webp" alt="수정 전 감각 수준 화면" loading="lazy"><i class="pin1" style="left:50%;top:93%">1</i></div></figure>
+<figure><span class="tg1">After</span><div class="scw"><img src="img/sense/p11-sense.webp" alt="" loading="lazy"><div class="ov sav"><small>저장하면 다음 이동 때 이 설정을 추천해요</small><b>✓ 이 경로의 감각 정보 저장</b></div></div></figure></div>
+<ul class="bal"><li>하단에 고정된 큰 주요 버튼으로 바꾸고, 문구를 ‘감각 저장’ → <b>‘이 경로의 감각 정보 저장’</b>으로 구체화</li><li>버튼 위에 저장 결과를 한 줄로 미리 알려줌</li></ul></div>
+
+<div class="ba"><div class="bah"><span class="sv h">높음</span><b>추천 이유를 모름</b><p>P1 부분 성공. “이건 왜 나온 거예요?” 추천 기준을 직접 물었어요.</p></div>
+<div class="bap"><figure><span class="tg0">Before</span><div class="scw"><img src="img/sense/p15-reco.webp" alt="수정 전 추천 화면" loading="lazy"><i class="pin1" style="left:50%;top:64%">2</i></div></figure>
+<figure><span class="tg1">After</span><div class="scw"><img src="img/sense/p15-reco.webp" alt="" loading="lazy"><div class="ov why"><b>왜 안정 모드인가요?</b><small>지난 3번, 평일 오후 2시 학교 → 도서관 이동에서 안정 모드를 썼어요</small></div></div></figure></div>
+<ul class="bal"><li>추천 카드 안에 <b>근거 한 줄</b>(경로 · 시간대 · 사용 횟수)을 노출</li><li>근거가 틀리면 바로 ‘다른 모드’로 바꿀 수 있게</li></ul></div>
+
+<div class="ba"><div class="bah"><span class="sv m">중간</span><b>바가 무엇을 조절하는지 모름</b><p>P1 “여기 바가 조절하는 건가요?” · P4 같은 의견.</p></div>
+<div class="bap"><figure><span class="tg0">Before</span><div class="scw"><img src="img/sense/p12-hear.webp" alt="수정 전 청각 모드 화면" loading="lazy"><i class="pin1" style="left:50%;top:89%">3</i></div></figure>
+<figure><span class="tg1">After</span><div class="scw"><img src="img/sense/p12-hear.webp" alt="" loading="lazy"><div class="ov lab3"><span>주변 소리</span><b>노이즈 캔슬링 3 / 5</b><span>음악</span></div></div></figure></div>
+<ul class="bal"><li>바 양끝에 무엇과 무엇 사이를 조절하는지 라벨</li><li>현재 단계를 숫자로 표시 · 워치 진동 패턴과 같은 5단계</li></ul></div>
+</div>
+<p class="note">After 화면은 UT 결과를 반영한 수정안이에요. 수정한 4개 작업으로 다음 테스트에서 다시 확인합니다.</p>
+</div>
 <div class="quotes">
 <blockquote><p>멀미 모드에서 화면 대신 소리와 워치 진동으로 알려주는 게 좋았어요.</p><cite>P5 · 관찰 메모 정리</cite></blockquote>
 <blockquote><p>감각 설정을 저장해 두면 다음에 추천 모드로 보여주는 게 편리해요.</p><cite>P5 · 관찰 메모 정리</cite></blockquote>
@@ -640,6 +661,85 @@
 </div>
 </div>
 </section>
+<section class="ch cs s2" id="spec" data-step="spec">
+<div class="cs-ov ut">
+<p class="chap"><b>08</b>Handoff · Tech Spec</p>
+<h2 class="ovh">개발자와 같은 그림을 보도록,<br><em>기술 명세서</em>로 정리했습니다.</h2>
+
+<div class="blk"><p class="eb">System</p><h3>폰은 허브, 워치 · 이어폰은 손이 닿는 곳</h3>
+<svg class="sys" viewBox="0 0 1100 300" role="img" aria-label="시스템 구성도">
+<g class="nd"><rect x="20" y="110" width="220" height="90" rx="16"/><text x="130" y="148" class="t">이어폰</text><text x="130" y="172" class="s">노이즈 캔슬링 · 음량 · 음성 안내</text></g>
+<g class="nd hub"><rect x="440" y="80" width="220" height="150" rx="20"/><text x="550" y="128" class="t w">스마트폰 앱 (허브)</text><text x="550" y="154" class="s w">모드 엔진 · 프리셋 저장</text><text x="550" y="176" class="s w">추천 규칙 · 경로 감각 정보</text><text x="550" y="198" class="s w">권한 · 자동화 단계</text></g>
+<g class="nd"><rect x="860" y="40" width="220" height="90" rx="16"/><text x="970" y="78" class="t">스마트워치</text><text x="970" y="102" class="s">탭 · 크라운 · 진동 패턴</text></g>
+<g class="nd"><rect x="860" y="180" width="220" height="90" rx="16"/><text x="970" y="218" class="t">경로 · 장소 데이터</text><text x="970" y="242" class="s">지도 API · 소음 · 혼잡 정보</text></g>
+<g class="ln"><path d="M240 155H440"/><path d="M660 130L860 85"/><path d="M660 180L860 225"/></g>
+<text x="340" y="145" class="s m">Bluetooth · 제어 명령</text><text x="760" y="90" class="s m">WatchConnectivity</text><text x="760" y="232" class="s m">API</text>
+</svg></div>
+
+<div class="blk"><p class="eb">Input &amp; Feedback</p><h3>화면 없이 쓰는 입력과 확인</h3>
+<table class="cmp sp"><thead><tr><th>동작</th><th>이어폰</th><th>워치</th><th>음성</th><th>확인 피드백</th></tr></thead><tbody>
+<tr><td>모드 실행</td><td>길게 누르기 1.5초</td><td>한 번 탭</td><td>“센스, 조용하게”</td><td>짧은 진동 1회 · 효과음</td></tr>
+<tr><td>강도 변경</td><td>짧게 2번 · 3번</td><td>크라운 돌리기</td><td>“조금 더 / 조금 덜”</td><td>진동 2회 · 단계 음성 안내</td></tr>
+<tr><td>일시정지</td><td>짧게 1번</td><td>화면 가운데 탭</td><td>“잠깐 멈춰”</td><td>진동 1회</td></tr>
+<tr><td>되돌리기</td><td>—</td><td>손목 뒤집기 · 길게 탭</td><td>“원래대로”</td><td>긴 진동 1회 · 이전 설정 복귀</td></tr>
+<tr><td>SOS</td><td>—</td><td>측면 버튼 2번</td><td>—</td><td>강한 진동 · 사용자 확인 후에만 연락</td></tr>
+</tbody></table></div>
+
+<div class="blk"><p class="eb">Mode Parameters</p><h3>모드별 기본값과 조절 범위</h3>
+<div class="mpar">
+<div><b>청각 모드</b><dl><dt>노이즈 캔슬링</dt><dd>0~5단계 · 기본 3</dd><dt>주변 소리 유지</dt><dd>안내방송 · 이름 호출 통과</dd><dt>배경음</dt><dd>잔잔한 음악 · 음량 30%</dd><dt>장시간 보호</dt><dd>30분마다 한 단계 낮출지 1번 제안</dd></dl></div>
+<div><b>멀미 모드</b><dl><dt>화면</dt><dd>밝기 낮춤 · 움직임 줄이기</dd><dt>안내</dt><dd>음성 · 진동으로 정류장 안내</dd><dt>시각 단서</dt><dd>차량 움직임 표시 (검증 후보)</dd><dt>배경음</dt><dd>평소 음악 유지</dd></dl></div>
+<div><b>안정 모드</b><dl><dt>배경음</dt><dd>시냇물 · 바람 등 자연 소리</dd><dt>노이즈 캔슬링</dt><dd>0~5단계 · 기본 2</dd><dt>호흡 안내</dt><dd>요청 시에만 · 진동 리듬</dd><dt>알림</dt><dd>모드 중 알림 묶어서 전달</dd></dl></div>
+</div></div>
+
+<div class="blk"><p class="eb">States</p><h3>모드 상태 흐름</h3>
+<svg class="stm" viewBox="0 0 1100 230" role="img" aria-label="모드 상태 흐름">
+<defs><marker id="sa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#8B4DFF"/></marker></defs>
+<g class="st"><rect x="10" y="80" width="140" height="56" rx="28"/><text x="80" y="113">대기</text></g>
+<g class="st"><rect x="200" y="80" width="140" height="56" rx="28"/><text x="270" y="113">제안</text></g>
+<g class="st on"><rect x="390" y="80" width="140" height="56" rx="28"/><text x="460" y="113">실행 중</text></g>
+<g class="st"><rect x="580" y="80" width="140" height="56" rx="28"/><text x="650" y="113">조절</text></g>
+<g class="st"><rect x="770" y="80" width="140" height="56" rx="28"/><text x="840" y="113">종료</text></g>
+<g class="st"><rect x="950" y="80" width="140" height="56" rx="28"/><text x="1020" y="113">저장</text></g>
+<g class="sl"><path d="M150 108H196" marker-end="url(#sa)"/><path d="M340 108H386" marker-end="url(#sa)"/><path d="M530 100H576" marker-end="url(#sa)"/><path d="M580 120H534" marker-end="url(#sa)"/><path d="M720 108H766" marker-end="url(#sa)"/><path d="M910 108H946" marker-end="url(#sa)"/>
+<path d="M80 136V190H460V140" marker-end="url(#sa)"/><path d="M270 80V30H80V76" marker-end="url(#sa)"/><path d="M650 136V190H840V140" marker-end="url(#sa)"/></g>
+<text x="173" y="98" class="lb">추천 조건</text><text x="363" y="98" class="lb">승인</text><text x="270" y="210" class="lb">워치 · 이어폰으로 바로 실행</text><text x="175" y="22" class="lb">무시 · 30분간 다시 안 묻기</text><text x="745" y="210" class="lb">되돌리기 → 이전 설정</text>
+</svg></div>
+
+<div class="blk"><p class="eb">Data</p><h3>감각 프리셋 데이터</h3>
+<div class="g2c">
+<pre class="code"><span class="c">// SensePreset — 기기 안에만 저장</span>
+{
+  id: "preset_7f2",
+  mode: "calm",            <span class="c">// hearing | motion | calm</span>
+  intensity: 3,            <span class="c">// 0–5</span>
+  passthrough: ["announce"],
+  route: { from: "학교", to: "도서관" },
+  timeBand: "weekday_14",
+  device: ["earbuds", "watch"],
+  uses: 3,
+  lastFeedback: "better"   <span class="c">// better | same | worse</span>
+}</pre>
+<div><p class="lab">추천 규칙</p><ul class="rl"><li>같은 경로 · 같은 시간대에서 <b>2번 이상</b> 쓰고 “나아졌어요”를 받은 프리셋만 추천</li><li>추천 카드에 근거(경로 · 시간대 · 횟수)를 항상 함께 표시</li><li>거절하면 같은 조건에서 7일 동안 다시 추천하지 않음</li><li>추천은 제안까지만, 적용은 사용자 승인 후</li></ul>
+<p class="lab" style="margin-top:24px">개인정보</p><ul class="rl"><li>심박 · HRV는 판정에 쓰지 않고 참고로만 표시</li><li>프리셋 · 기록은 기기 안에 저장, 서버로 보내지 않음</li><li>기록 관리에서 언제든 삭제</li></ul></div>
+</div></div>
+
+<div class="blk"><p class="eb">Automation Rules</p><h3>기능별 자동화 단계</h3>
+<table class="cmp sp"><thead><tr><th>기능</th><th>단계</th><th>이유</th></tr></thead><tbody>
+<tr><td>저장된 노이즈 캔슬링 강도 적용</td><td><span class="sv m">자동 실행</span></td><td>사용자가 미리 허용 · 개인 기기 안의 변화</td></tr>
+<tr><td>소음 증가 시 모드 제안</td><td><span class="sv m">빠른 승인</span></td><td>상황마다 필요가 달라 한 번 확인</td></tr>
+<tr><td>멀미 모드 전환</td><td><span class="sv m">빠른 승인</span></td><td>화면 밝기 · 안내 방식이 바뀜</td></tr>
+<tr><td>SOS · 보호자 연락</td><td><span class="sv h">직접 선택</span></td><td>“얼마나 심각한지 제가 판단하고 싶어요”</td></tr>
+</tbody></table></div>
+
+<div class="blk"><p class="eb">Open Questions</p><h3>개발과 함께 정할 것</h3>
+<ul class="oq"><li><b>이어폰 제어 범위</b><p>노이즈 캔슬링 단계를 앱에서 직접 바꿀 수 있는 이어폰이 제한적이에요. 지원 기종 범위와 대체 방법(시스템 단축어 등)을 정해야 해요.</p></li>
+<li><b>소음 · 혼잡 데이터</b><p>경로별 소음 · 혼잡 정보를 어디서 가져올지(공공 데이터 · 사용자 기록)와 갱신 주기.</p></li>
+<li><b>차량 움직임 진동</b><p>움직임 전 진동은 지연이 생기면 오히려 불편해서, 허용 지연 시간을 실험으로 정해야 해요.</p></li>
+<li><b>배터리</b><p>워치 · 이어폰 상시 연결 시 배터리 소모 기준.</p></li></ul></div>
+</div>
+</section>
+
 
 <style>
 .ut{max-width:1200px;margin:0 auto;text-align:left}
@@ -927,6 +1027,36 @@ svg .t{font-size:12px;fill:#6E6E73}svg .t.r,svg text.r{text-anchor:end}svg .m{te
 .pinf .g2{display:grid;grid-template-columns:1fr 1fr;gap:16px}.pinf .g2>div{padding:24px;border-radius:20px;background:#F8F8F8}
 .pinf ul{margin:0;padding-left:18px}.pinf li{margin:6px 0;font-size:15px;line-height:1.55}
 @media (max-width:900px){.psn,.pinf .g2{grid-template-columns:1fr}}
+
+.bas{display:grid;gap:48px}
+.ba{display:grid;grid-template-columns:260px 1fr 260px;gap:32px;align-items:center;padding-top:32px;border-top:1px solid var(--line)}
+.bah b{display:block;margin-top:12px;font-size:20px}.bah p{margin:10px 0 0;font-size:14px;line-height:1.6;color:var(--t2)}
+.bap{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.bap figure{margin:0}.tg0,.tg1{display:inline-block;margin-bottom:10px;padding:4px 10px;border-radius:999px;font:600 12px var(--mono)}.tg0{background:#EDEDF0;color:#6E6E73}.tg1{background:var(--g);color:#fff}
+.scw{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 0 0 1px rgba(0,0,0,.06),0 18px 40px -18px rgba(40,30,110,.45)}
+.scw img{display:block;width:100%;aspect-ratio:393/852;object-fit:cover;background:#1d2350}
+.pin1{position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#FF4D6D;color:#fff;font:700 13px var(--mono);font-style:normal;box-shadow:0 0 0 6px rgba(255,77,109,.3)}
+.ov{position:absolute;left:5%;right:5%;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center}
+.ov.sav{bottom:3%;padding:10px 8px 12px;border-radius:16px;background:rgba(255,255,255,.96);box-shadow:0 -10px 30px rgba(0,0,0,.25)}
+.ov.sav small{font-size:10px;color:#6E6E73}.ov.sav b{display:block;width:100%;padding:10px 0;border-radius:999px;background:linear-gradient(90deg,#7C5CFF,#5B8CFF);color:#fff;font-size:12px}
+.ov.why{top:59.5%;padding:8px 10px;border-radius:12px;background:rgba(40,36,110,.88);border:1px solid rgba(255,255,255,.45);backdrop-filter:blur(6px);color:#fff}
+.ov.why b{font-size:11px}.ov.why small{font-size:9.5px;line-height:1.45;opacity:.9}
+.ov.lab3{top:91%;flex-direction:row;justify-content:space-between;color:#fff;font-size:9.5px}.ov.lab3 b{font-size:10px;padding:2px 8px;border-radius:999px;background:rgba(255,255,255,.2)}
+.bal{margin:0;padding-left:18px}.bal li{margin:8px 0;font-size:14px;line-height:1.6}
+.sys,.stm{width:100%;height:auto;display:block}
+.sys .nd rect{fill:#fff;stroke:#D9D9E0;stroke-width:1.4}.sys .hub rect{fill:var(--g);stroke:none}
+.sys text{text-anchor:middle}.sys .t{font-size:17px;font-weight:800;fill:var(--k)}.sys .s{font-size:12px;fill:#6E6E73}.sys .w{fill:#fff}.sys .s.w{fill:rgba(255,255,255,.85)}
+.sys .ln path{stroke:var(--g);stroke-width:2;stroke-dasharray:6 5;fill:none}
+.cmp.sp td:first-child{white-space:normal}.cmp.sp td:last-child{color:var(--k)}
+.mpar{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.mpar>div{padding:26px;border-radius:20px;background:#F8F8F8}.mpar>div:first-child{background:var(--gl)}
+.mpar b{font-size:19px}.mpar dl{margin:14px 0 0;display:grid;grid-template-columns:auto 1fr;gap:8px 14px;font-size:14px}.mpar dt{color:var(--t2)}.mpar dd{margin:0;font-weight:600}
+.stm .st rect{fill:#fff;stroke:#CFCFD6;stroke-width:1.4}.stm .st.on rect{fill:var(--g);stroke:none}.stm .st text{text-anchor:middle;font-size:15px;font-weight:700;fill:var(--k)}.stm .st.on text{fill:#fff}
+.stm .sl path{fill:none;stroke:var(--g);stroke-width:1.8}.stm .lb{font-size:12px;fill:#6E6E73;text-anchor:middle}
+.g2c{display:grid;grid-template-columns:1.1fr 1fr;gap:32px;align-items:start}
+.code{margin:0;padding:28px;border-radius:20px;background:#17151C;color:#EDE7FF;font:13px/1.7 var(--mono);overflow-x:auto}.code .c{color:#8F86A6}
+.rl{margin:0;padding-left:18px}.rl li{margin:8px 0;font-size:15px;line-height:1.6}
+.oq{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0;padding:0;list-style:none}.oq li{padding:24px;border-radius:20px;border:1px solid var(--line)}.oq b{font-size:17px}.oq p{margin:8px 0 0;font-size:14px;line-height:1.65;color:var(--t2)}
+@media (max-width:900px){.ba{grid-template-columns:1fr}.mpar,.g2c,.oq{grid-template-columns:1fr}.sys,.stm{min-width:700px}}
 @media (max-width:900px){.qs,.stim{grid-template-columns:1fr 1fr}.proc{grid-template-columns:1fr 1fr;gap:24px 0}.find7,.th7,.scope,.auto,.obs,.scr{grid-template-columns:1fr}.auto>div+div{border-left:0;border-top:1px solid var(--line)}.blk h3{font-size:22px}}
 @media (max-width:900px){
 .funnel,.nx{grid-template-columns:1fr}.funnel>i,.nx>i{transform:rotate(90deg);justify-self:center}
