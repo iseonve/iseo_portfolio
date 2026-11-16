@@ -1784,5 +1784,11 @@ section.sgy{background:#F8F8F8!important}
 <script>/* cards that share the band's grey become white, like PJ.01 */
 (()=>{const G=["rgb(248, 248, 248)","rgb(246, 246, 246)","rgb(247, 247, 245)","rgb(245, 245, 247)","rgb(246, 243, 252)","rgb(244, 242, 250)"];
 document.querySelectorAll(".bnd.b-g,.bnd.b-k,.bnd.b-t,section.sgy .cs-ov").forEach(band=>band.querySelectorAll("*").forEach(e=>{if(G.includes(getComputedStyle(e).backgroundColor))e.style.backgroundColor="#fff";}));})();</script>
+<style id="fn-on">
+#research .sfn li.on .fb{background:#F3EEFF!important;box-shadow:0 0 0 2px var(--g)!important}
+#research .sfn li.on .fb i{background:#C7AEFF!important}
+#research .sfn li.on .fb b{color:var(--gd)!important}
+#research .sfn li.on span{color:var(--g)!important;font-weight:700!important}
+</style>
 </body>
 </html>
