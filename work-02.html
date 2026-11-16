@@ -2388,6 +2388,21 @@ tr.addEventListener("scroll",()=>{if(on)return;const p=tr.scrollLeft/Math.max(1,
 #define .pcard .psc{display:flex;flex-direction:column}
 #define .pgbe{grid-template-columns:repeat(2,minmax(0,1fr))!important}
 #define .psc.mood p:last-child{line-height:1.7}
+@media (min-width:761px){
+#research .pin7{display:block!important;margin-top:96px!important}
+#research .pin7h{position:static!important;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);column-gap:40px;align-items:end}
+#research .pin7h .pql,#research .pin7h h3{grid-column:1}
+#research .pin7h .pql{grid-row:1}
+#research .pin7h h3{grid-row:2;align-self:start}
+#research .pin7h blockquote{grid-row:1 / span 2;margin:0!important;align-self:end}
+#research .pin7h blockquote+blockquote{margin:0!important}
+#research .pin7>ul{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:40px!important;padding:0!important;background:none!important}
+#research .pin7>ul li{display:flex!important;flex-direction:column;align-items:flex-start;gap:0!important;padding:24px!important;border:0!important;border-radius:20px;background:#fff}
+#research .pin7>ul li>i{margin-bottom:18px}
+#research .pin7>ul li b{font-size:18px}
+#research .pin7>ul li p{margin:6px 0 0!important;font-size:14.5px;line-height:1.55}
+#research .pin7>ul li:last-child{grid-column:span 2}
+}
 </style>
 </body>
 </html>
