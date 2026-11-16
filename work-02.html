@@ -1571,5 +1571,13 @@ const o2=new IntersectionObserver(es=>{if(es.some(e=>e.isIntersecting)){o2.disco
 .hcard .hshade.hshade{background:linear-gradient(90deg,rgba(10,10,12,.62) 0%,rgba(10,10,12,.38) 34%,rgba(10,10,12,0) 60%),linear-gradient(180deg,rgba(10,10,12,.45) 0%,rgba(10,10,12,0) 20%)}
 @media (max-width:860px){.hcard .hshade.hshade{background:linear-gradient(180deg,rgba(10,10,12,.5),rgba(10,10,12,.62))}}
 </style>
+<style id="sst-active">
+#overview .sst .side i{transition:background .5s,box-shadow .5s,transform .5s cubic-bezier(.2,1.4,.3,1)!important}
+#overview .sst .side i svg{transition:stroke .5s}
+#overview .sst.run .side li.on i{background:var(--g);box-shadow:0 10px 26px rgba(139,77,255,.35),0 0 0 1px var(--g)}
+#overview .sst.run .side li.on i svg{stroke:#fff}
+#overview .three li{transition:background .5s,box-shadow .5s}
+#overview .three.run li.on{background:#fff;box-shadow:0 0 0 2px var(--g),0 16px 34px -18px rgba(139,77,255,.4)}
+</style>
 </body>
 </html>
