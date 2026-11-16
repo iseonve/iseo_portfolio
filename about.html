@@ -462,4 +462,40 @@ addEventListener("pointerdown",()=>c.classList.add("dn"));addEventListener("poin
 </body>
 </html>
 
+<style id="hdr-morph">
+/* header morph: on scroll the open header turns into a floating glass capsule; the project label rolls into the current chapter and a thin line shows reading progress */
+.hdr{transition:top .7s cubic-bezier(.22,.7,.2,1),left .7s cubic-bezier(.22,.7,.2,1),right .7s cubic-bezier(.22,.7,.2,1)!important}
+.hdr::before{left:-26px!important;right:-26px!important;top:-13px!important;height:calc(100% + 26px)!important;border-radius:999px;background:rgba(24,24,26,.72)!important;-webkit-backdrop-filter:blur(16px) saturate(1.5);backdrop-filter:blur(16px) saturate(1.5);box-shadow:0 0 0 1px rgba(255,255,255,.08),0 18px 40px -18px rgba(0,0,0,.6);opacity:0;transform:scale(1.04,1.3);transition:opacity .45s,transform .7s cubic-bezier(.22,.7,.2,1),background .4s,box-shadow .4s!important}
+.hdr.hs{top:16px!important;left:max(calc(var(--side) + 26px),calc(50% - 600px))!important;right:max(calc(var(--side) + 26px),calc(50% - 600px))!important}
+.hdr.hs::before{opacity:1;transform:none}
+.hdr.hs.lt::before{background:rgba(255,255,255,.78)!important;box-shadow:0 0 0 1px rgba(0,0,0,.07),0 16px 36px -18px rgba(30,20,60,.35)}
+.hdr .hlogo{transition:font-size .6s cubic-bezier(.22,.7,.2,1),color .3s!important}
+.hdr.hs .hlogo{font-size:22px!important}
+.hdr .hnr{display:block;height:16px;overflow:hidden}
+.hdr .hnri{display:flex;flex-direction:column;transition:transform .6s cubic-bezier(.65,0,.25,1)}
+.hdr .hnri>span{display:block;height:16px;line-height:16px;white-space:nowrap}
+.hdr .hch b{color:var(--hc,#f0699f)!important;margin-right:8px}
+.hdr.hs.chap .hnri{transform:translateY(-16px)}
+.hdr .hpg{position:absolute;left:-2px;right:-2px;bottom:-13px;height:2px;border-radius:2px;overflow:hidden;opacity:0;transition:opacity .4s;pointer-events:none}
+.hdr .hpg i{display:block;height:100%;background:var(--hpc,#f0699f);transform-origin:left;transform:scaleX(var(--p,0))}
+.hdr.hs .hpg{opacity:1}
+.hdr.hs .hnow i{animation:hdrp 2s ease-in-out infinite}
+@keyframes hdrp{50%{box-shadow:0 0 0 4px transparent,0 0 10px var(--hc,#f0699f);transform:scale(1.25)}}
+@media (max-width:720px){.hdr.hs{left:24px!important;right:24px!important;top:12px!important}.hdr::before{left:-14px!important;right:-14px!important}.hdr .hpg{left:6px;right:6px}}
+@media (prefers-reduced-motion:reduce){.hdr,.hdr::before,.hdr .hnri,.hdr .hlogo{transition:none!important}.hdr.hs .hnow i{animation:none}}
+</style>
+<script>
+(()=>{const h=document.querySelector(".hdr");if(!h)return;
+const now=h.querySelector(".hnow"),hc=now?getComputedStyle(now).getPropertyValue("--hc").trim():"";
+if(hc)h.style.setProperty("--hpc",hc);
+const pg=document.createElement("span");pg.className="hpg";pg.innerHTML="<i></i>";h.appendChild(pg);
+let ch=null;
+if(now){const lab=now.querySelector(":scope>span");if(lab){const r=document.createElement("span");r.className="hnr";const ri=document.createElement("span");ri.className="hnri";r.appendChild(ri);lab.replaceWith(r);ri.appendChild(lab);ch=document.createElement("span");ch.className="hch";ri.appendChild(ch);}}
+const links=[...document.querySelectorAll(".toc a")];let last="";
+function upd(){const H=document.documentElement.scrollHeight-innerHeight;h.style.setProperty("--p",H>0?Math.min(1,scrollY/H).toFixed(4):0);
+if(!ch)return;const a=links.find(l=>l.classList.contains("on"));
+if(a&&scrollY>innerHeight*.5){const b=a.querySelector("b"),s=a.querySelector("span");const t=(b?b.textContent:"")+"|"+(s?s.textContent:a.textContent);
+if(t!==last){last=t;ch.innerHTML=`<b>${b?b.textContent:""}</b>${s?s.textContent:a.textContent}`;}h.classList.add("chap");}else h.classList.remove("chap");}
+addEventListener("scroll",upd,{passive:true});addEventListener("resize",upd);upd();})();
+</script>
 </body></html>
