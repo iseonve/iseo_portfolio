@@ -113,7 +113,7 @@
 <li data-k="0"><div><b>구간별 소음</b><span>소음이 높은 정류장을 <br>막대 길이와 색으로 보여줘요</span></div><i><svg viewBox="0 0 24 24"><path d="M3 12h2M7 8v8M11 5v14M15 9v6M19 11v2"/></svg></i></li>
 <li data-k="1"><div><b>노이즈 캔슬링</b><span>0~5단계로 줄이고, <br>이어폰·워치로도 조절해요</span></div><i><svg viewBox="0 0 24 24"><path d="M4 15v-3a8 8 0 0 1 16 0v3"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/></svg></i></li>
 </ul>
-<div class="phone sph"><div class="sscr"><span class="isl"></span><img class="on" src="img/sense/p11-sense.webp" alt="경로의 구간별 감각 수준 화면" decoding="async"><img src="img/sense/p12-hear.webp" alt="청각 모드 실행 화면" decoding="async"><img src="img/sense/p15-reco.webp" alt="다음 이동 추천 화면" decoding="async"></div></div>
+<div class="phone sph"><div class="sscr"><span class="isl"></span><img class="on" src="img/sense/p11-sense.webp" alt="경로의 구간별 감각 수준 화면" decoding="async"><img src="img/sense/p12-hear.webp" alt="청각 모드 실행 화면" decoding="async"><img src="img/sense/p15-reco.webp" alt="다음 이동 추천 화면" decoding="async"></div></div><div class="swch" aria-hidden="true"><img class="on" src="img/sense/w1t.webp" alt=""><img src="img/sense/w2t.webp" alt=""><img src="img/sense/w3t.webp" alt=""></div>
 <ul class="side r">
 <li data-k="1"><i><svg viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2.5"/><path d="M10 17.5h4"/><circle cx="12" cy="10" r="2.5"/></svg></i><div><b>화면 · 안내</b><span>화면은 차분하게, <br>안내는 음성·진동으로 바꿔요</span></div></li>
 <li data-k="2"><i><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5.3L20 9"/><path d="M20 4v5h-5"/><path d="M20 12a8 8 0 0 1-14 5.3L4 15"/><path d="M4 20v-5h5"/></svg></i><div><b>다음 추천</b><span>나아진 설정을 저장해 <br>같은 길에서 먼저 제안해요</span></div></li>
@@ -1364,7 +1364,7 @@ if(acc>40)h.classList.add("hid");else if(acc<-12)h.classList.remove("hid");},{pa
 <style>@media (min-width:861px){.cs-hero .hcard .hin.hin{padding-bottom:160px!important}}.cs-hero .hh.hh{letter-spacing:-.015em}</style>
 <script>/* overview: cycle the three SENSE screens + matching step cards */
 (()=>{const st=document.getElementById("sst");if(!st)return;const ims=[...st.querySelectorAll(".sph img")],sides=[...st.querySelectorAll(".side li")],cards=[...document.querySelectorAll("#overview .three li")],three=document.querySelector("#overview .three");
-let i=0,t=null;const show=k=>{i=k;ims.forEach((m,j)=>m.classList.toggle("on",j===k));sides.forEach(l=>l.classList.toggle("on",+l.dataset.k===k));cards.forEach((c,j)=>c.classList.toggle("on",j===k));};
+let i=0,t=null;const wim=[...st.querySelectorAll(".swch img")];const show=k=>{i=k;ims.forEach((m,j)=>m.classList.toggle("on",j===k));wim.forEach((m,j)=>m.classList.toggle("on",j===k));sides.forEach(l=>l.classList.toggle("on",+l.dataset.k===k));cards.forEach((c,j)=>c.classList.toggle("on",j===k));};
 if(matchMedia("(prefers-reduced-motion:reduce)").matches)return;
 const start=()=>{if(t)return;st.classList.add("run");three&&three.classList.add("run");show(i);t=setInterval(()=>show((i+1)%ims.length),3600);},stop=()=>{clearInterval(t);t=null;};
 new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting?start():stop()),{threshold:.35}).observe(st);
@@ -1699,6 +1699,13 @@ const o2=new IntersectionObserver(es=>{if(es.some(e=>e.isIntersecting)){o2.disco
 #research .covw .cn b{display:flex!important;flex-direction:column;align-items:flex-start;gap:8px!important}
 #research .covw .cn .tp{width:auto;padding:2px 8px!important;text-align:left}
 #research .covw .cn em{padding-left:0}
+</style>
+<style id="swch-css">
+#sst{position:relative}
+#sst .swch{position:absolute;left:50%;top:50%;width:132px;aspect-ratio:251/432;margin-left:44px;margin-top:30px;z-index:3;filter:drop-shadow(0 24px 30px rgba(40,20,90,.35))}
+#sst .swch img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;transition:opacity .8s ease}
+#sst .swch img.on{opacity:1}
+@media (max-width:1100px){#sst .swch{display:none}}
 </style>
 </body>
 </html>
