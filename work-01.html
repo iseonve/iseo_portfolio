@@ -101,7 +101,7 @@
 <li><span class="badge">STEP 03</span><span class="actor">사용자 확인</span><b>확인하기</b><p>보내기 전에 원래 글과 바뀐 글을 비교합니다.</p></li>
 </ol>
 </div>
-<div class="cs-proc">
+<div class="cs-proc sproc">
 <div class="pin">
 <div class="plist">
 <p class="kick">Process · Double Diamond</p>
@@ -1005,5 +1005,24 @@ addEventListener("scroll",()=>{const y=scrollY,d=y-y0;y0=y;if(y<120){h.classList
 if(h.matches(":hover,:focus-within"))return;acc=(Math.sign(d)===Math.sign(acc))?acc+d:d;
 if(acc>40)h.classList.add("hid");else if(acc<-12)h.classList.remove("hid");},{passive:true});})();</script>
 <style>@media (min-width:861px){.cs-hero .hcard .hin.hin{padding-bottom:160px!important}}.cs-hero .hh.hh{letter-spacing:-.015em}</style>
+<style id="sproc-anim">
+@media (prefers-reduced-motion:no-preference){
+.sproc .plist ol::before{transform-origin:top;transition:transform 1.6s cubic-bezier(.65,0,.35,1) .2s!important}
+.sproc.pre .plist ol::before{transform:scaleY(0)}
+.sproc.pre .plist li{opacity:0!important;transform:translateY(16px)!important}
+.sproc .plist li{transition:opacity .6s ease,transform .7s cubic-bezier(.2,.8,.2,1)!important}
+.sproc .plist li:nth-child(1){transition-delay:.2s!important}.sproc .plist li:nth-child(2){transition-delay:.55s!important}.sproc .plist li:nth-child(3){transition-delay:.9s!important}.sproc .plist li:nth-child(4){transition-delay:1.25s!important}
+.sproc .dd .d1,.sproc .dd .d2{transform-box:fill-box;transform-origin:center;transition:opacity .7s ease,transform .9s cubic-bezier(.2,.8,.2,1)!important}
+.sproc.pre .dd .d1,.sproc.pre .dd .d2{opacity:0;transform:scale(.6)}
+.sproc .dd path.d1:nth-of-type(1){transition-delay:.3s!important}.sproc .dd path.d2:nth-of-type(2){transition-delay:.65s!important}.sproc .dd path.d1:nth-of-type(3){transition-delay:1s!important}.sproc .dd path.d2:nth-of-type(4){transition-delay:1.35s!important}
+.sproc .dd .lab,.sproc .dd .cap{transition:opacity .6s ease 1.5s!important}
+.sproc .dd .ms,.sproc .dd .dot,.sproc .dd .pillr,.sproc .dd .pillt{transition:opacity .5s ease 1.9s!important}
+.sproc.pre .dd .lab,.sproc.pre .dd .cap,.sproc.pre .dd .ms,.sproc.pre .dd .dot,.sproc.pre .dd .pillr,.sproc.pre .dd .pillt{opacity:0}
+}
+</style>
+<script>(()=>{const p=document.querySelector(".sproc");if(!p||!("IntersectionObserver" in window)||matchMedia("(prefers-reduced-motion:reduce)").matches)return;
+const go=()=>{p.querySelectorAll(".still").forEach(e=>e.classList.remove("still"));p.classList.add("pre");void p.offsetWidth;
+const o=new IntersectionObserver(es=>{if(es.some(e=>e.isIntersecting)){o.disconnect();requestAnimationFrame(()=>p.classList.remove("pre"));}},{rootMargin:"0px 0px -30% 0px"});o.observe(p);};
+if(document.readyState==="complete")setTimeout(go,50);else addEventListener("load",()=>setTimeout(go,50));})();</script>
 </body>
 </html>
