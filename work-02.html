@@ -298,6 +298,19 @@
 <p class="note">일부러 만들지 않은 것: 감각 과부하 자동 판정, 감정 · 피로 자동 추정, 특정 사람 목소리만 제거. 사용자가 원하지 않았거나 지금 기술로 정확하다고 말할 수 없었어요.</p>
 </div>
 <div class="blk">
+<p class="eb">Information Architecture</p><h3>6개 메뉴, 감각 대응은 가운데 SENSE 탭 하나로</h3>
+<div class="ia"><div class="ia-root"><img src="img/sense-symbol.png" alt="">SENSE</div><div class="ia-cols"><div class="ia-c"><b>온보딩</b><ul><li>서비스 소개</li><li>불편 상황 선택</li><li>감각 패턴 확인</li><li>기기 연결</li><li>권한 설정</li><li>온보딩 완료</li></ul></div><div class="ia-c"><b>홈</b><ul><li>맞춤 케어 준비<ul><li>준비 설정 보기</li><li>이동 경로 직접 설정</li></ul></li><li>감각 패턴 요약</li></ul></div><div class="ia-c"><b>기록</b><ul><li>나의 감각 요약</li><li>최근 기록</li><li>감각 패턴<ul><li>시간대별 민감도</li><li>상황별 감각 부담</li><li>효과 있었던 대응</li></ul></li></ul></div><div class="ia-c on"><b>SENSE</b><ul><li>청각 모드</li><li>멀미 모드</li><li>안정 모드</li><li>SOS 실행하기</li></ul></div><div class="ia-c"><b>내 케어</b><ul><li>저장된 케어<ul><li>출근 케어</li><li>버스 이동 케어</li><li>혼잡 공간 케어</li></ul></li><li>내 케어 만들기</li></ul></div><div class="ia-c"><b>마이</b><ul><li>프로필</li><li>내 정보<ul><li>프로필 편집</li><li>알림 설정</li></ul></li><li>데이터 및 개인정보<ul><li>기록 관리</li><li>데이터 사용 설정</li><li>개인정보 보호</li></ul></li><li>서비스<ul><li>도움말</li><li>의견 보내기</li><li>앱 정보</li></ul></li></ul></div></div></div>
+<p class="note">불편한 순간에 바로 쓰는 기능(청각 · 멀미 · 안정 모드, SOS)은 <b>SENSE 탭 한 곳</b>에 모으고, 기록 · 내 케어처럼 평소에 보는 기능과 나눴어요. 홈의 ‘맞춤 케어 준비’가 이동 전 준비(감각 자동항법)의 입구입니다.</p>
+</div>
+<div class="blk">
+<p class="eb">Visual Direction</p><h3>“Find your calm, wherever the journey takes you.”</h3>
+<div class="shots">
+<figure><img src="img/sense/sc1.webp" alt="SENSE 스플래시 화면"><figcaption>Splash</figcaption></figure>
+<figure><img src="img/sense/sc2.webp" alt="SENSE 시작 화면"><figcaption>Welcome</figcaption></figure>
+<div class="sdesc"><p class="lab">톤 & 무드</p><p>자극을 줄이는 서비스라서, 화면 자체가 또 하나의 자극이 되지 않도록 했어요. 채도 낮은 하늘색에서 보라로 흐르는 그라데이션과 넓은 여백, 하나의 주요 버튼만 두는 구성으로 첫 화면부터 차분하게 시작합니다.</p><p class="note">Hi-fi 화면은 현재 온보딩까지 진행 중이에요.</p></div>
+</div>
+</div>
+<div class="blk">
 <p class="eb">Scope</p><h3>모든 감각이 아니라, 근거가 있는 두 감각에 집중했습니다</h3>
 <div class="scope">
 <div class="core"><span class="tg">핵심</span><b>청각</b><p>주변 소음 부담과 노이즈 캔슬링 사용이 확인됨</p><ul><li>노이즈 캔슬링 강도 조절</li><li>필요한 소리 유지 범위 조정</li><li>개인 설정 저장 · 재사용</li><li>실행 상태 확인 · 즉시 되돌리기</li></ul></div>
@@ -731,6 +744,22 @@ svg .t{font-size:12px;fill:#6E6E73}svg .t.r,svg text.r{text-anchor:end}svg .m{te
 .skg{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.skg a{display:block;border-radius:16px;overflow:hidden;border:1px solid var(--line);transition:transform .3s}.skg a:hover{transform:translateY(-4px)}.skg img{width:100%;display:block}
 .skg a:first-child{grid-column:1/-1}
 .grid2 .q-tl{grid-column:1!important;grid-row:1!important}.grid2 .q-tr{grid-column:2!important;grid-row:1!important}.grid2 .q-bl{grid-column:1!important;grid-row:2!important;text-decoration:none!important}.grid2 .q-br{grid-column:2!important;grid-row:2!important}
+
+.ia{padding:32px;border-radius:24px;background:#F7F5FB}
+.ia-root{display:flex;align-items:center;gap:8px;width:max-content;margin:0 auto 28px;padding:10px 22px;border-radius:999px;background:#fff;border:1.5px solid var(--g);font-weight:800;color:var(--g)}.ia-root img{height:18px}
+.ia-cols{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;position:relative;padding-top:20px;border-top:1.5px solid #CFC3EA}
+.ia-c b{display:block;padding:10px;border-radius:10px;background:#3B3549;color:#fff;text-align:center;font-size:14px}
+.ia-c.on b{background:var(--g)}
+.ia-c ul{margin:10px 0 0;padding:0 0 0 14px;list-style:none;border-left:1.5px solid #CFC3EA}
+.ia-c li{position:relative;margin:8px 0;padding:7px 10px;border-radius:8px;background:#fff;font-size:13px;font-weight:600;box-shadow:inset 0 0 0 1px #E3DCF2}
+.ia-c li::before{content:"";position:absolute;left:-15px;top:50%;width:14px;border-top:1.5px solid #CFC3EA}
+.ia-c li ul{margin:6px 0 2px;padding-left:12px}.ia-c li li{font-weight:500;color:var(--t2);background:#FBFAFD}
+.ia-c.on li{box-shadow:inset 0 0 0 1.5px var(--g);color:var(--gd)}
+.shots{display:grid;grid-template-columns:260px 260px 1fr;gap:28px;align-items:center}
+.shots figure{margin:0}.shots img{width:100%;border-radius:32px;box-shadow:0 0 0 8px #111,0 30px 60px -20px rgba(60,30,120,.45);display:block}
+.shots figcaption{margin-top:20px;text-align:center;font:500 12px var(--mono);color:var(--t2)}
+.sdesc p{font-size:16px;line-height:1.75}
+@media (max-width:900px){.ia-cols{grid-template-columns:1fr 1fr}.shots{grid-template-columns:1fr 1fr}.sdesc{grid-column:1/-1}}
 @media (max-width:900px){.qs,.stim{grid-template-columns:1fr 1fr}.proc{grid-template-columns:1fr 1fr;gap:24px 0}.find7,.th7,.scope,.auto,.obs,.scr{grid-template-columns:1fr}.auto>div+div{border-left:0;border-top:1px solid var(--line)}.blk h3{font-size:22px}}
 @media (max-width:900px){
 .funnel,.nx{grid-template-columns:1fr}.funnel>i,.nx>i{transform:rotate(90deg);justify-self:center}
