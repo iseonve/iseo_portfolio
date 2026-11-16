@@ -977,7 +977,7 @@ addEventListener("pointerdown",()=>c.classList.add("dn"));addEventListener("poin
 .hdr.hs.chap .hnri{transform:translateY(-16px)}
 .hdr .hpg{position:absolute;left:-2px;right:-2px;bottom:-13px;height:2px;border-radius:2px;overflow:hidden;opacity:0;transition:opacity .4s;pointer-events:none}
 .hdr .hpg i{display:block;height:100%;background:var(--hpc,#f0699f);transform-origin:left;transform:scaleX(var(--p,0))}
-.hdr.hs .hpg{opacity:1}
+.hdr .hpg,.hdr.hs .hpg{display:none!important}
 .hdr.hs .hnow i{animation:hdrp 2s ease-in-out infinite}
 @keyframes hdrp{50%{box-shadow:0 0 0 4px transparent,0 0 10px var(--hc,#f0699f);transform:scale(1.25)}}
 @media (max-width:720px){.hdr.hs{left:24px!important;right:24px!important;top:12px!important}.hdr::before{left:-14px!important;right:-14px!important}.hdr .hpg{left:6px;right:6px}}

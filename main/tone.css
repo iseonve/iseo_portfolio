@@ -377,6 +377,6 @@ html:root body header.chrome.hd.hdc::before{left:-26px!important;right:-26px!imp
 html.hscr:root body header.chrome.hd.hdc{top:16px!important;left:max(calc(var(--side) + 26px),calc(50% - 600px))!important;right:max(calc(var(--side) + 26px),calc(50% - 600px))!important}
 html.hscr:root body header.chrome.hd.hdc::before{opacity:1!important;transform:none}
 html:root body header.chrome.hd.hdc::after{content:"";position:absolute;pointer-events:none;left:-2px;right:-2px;bottom:-13px;height:2px;border-radius:2px;background:#f0699f;transform-origin:left;transform:scaleX(var(--hp,0));opacity:0;transition:opacity .4s}
-html.hscr:root body header.chrome.hd.hdc::after{opacity:1}
+html:root body header.chrome.hd.hdc::after,html.hscr:root body header.chrome.hd.hdc::after{display:none!important}
 html.hscr.onlight body header.chrome.hd.hdc .logo,html.hscr.onlight body header.chrome.hd.hdc .seg,html.hscr.onlight body header.chrome.hd.hdc nav a{color:#f2f2f2!important}
 @media (max-width:720px){html.hscr:root body header.chrome.hd.hdc{left:24px!important;right:24px!important;top:12px!important}html:root body header.chrome.hd.hdc::before{left:-14px!important;right:-14px!important}}
