@@ -57,6 +57,21 @@
 @keyframes sping{0%{transform:scale(1);opacity:.9}80%,100%{transform:scale(3.6);opacity:0}}
 @media (max-width:760px){.hpill{margin-bottom:16px!important}}
 @media (prefers-reduced-motion:reduce){.cs-hero .hh .ln>span{transform:none;transition:none}.cs-hero .hbg{transform:none;transition:none}}
+
+/* overview stage: SENSE screens from the prototype cycle through the three steps */
+.sst::before{background:radial-gradient(circle,#EFE6FF 0%,rgba(239,230,255,.6) 45%,rgba(255,255,255,0) 70%)!important}
+.sst .side i{box-shadow:0 8px 24px rgba(139,77,255,.14),0 0 0 1px rgba(139,77,255,.14)}
+.sst .side li{transition:opacity .6s,transform .6s cubic-bezier(.22,.7,.2,1)}
+.sst.run .side li{opacity:.32}
+.sst.run .side li.on{opacity:1}
+.sst.run .side li.on i{background:var(--g);box-shadow:0 10px 26px rgba(139,77,255,.35)}
+.sst.run .side li.on i svg{stroke:#fff}
+.sph{width:270px!important;aspect-ratio:393/852;padding:9px;border-radius:46px;background:#111;box-shadow:0 0 0 1.5px #2a2a2e inset,0 30px 60px -24px rgba(40,20,90,.45)}
+.sph img{position:absolute;inset:9px;width:calc(100% - 18px)!important;height:calc(100% - 18px)!important;border-radius:38px;object-fit:cover;opacity:0;transform:scale(1.02);transition:opacity .9s ease,transform 1.2s cubic-bezier(.22,.7,.2,1)}
+.sph img.on{opacity:1;transform:none}
+.sph .isl{position:absolute;z-index:2;left:50%;top:19px;width:84px;height:24px;margin-left:-42px;border-radius:14px;background:#000}
+.three li{transition:box-shadow .5s,background .5s}
+.three.run li.on{background:#fff;box-shadow:0 0 0 2px var(--g),0 16px 34px -18px rgba(139,77,255,.45)}
 .hcard .hshade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,12,.85) 0%,rgba(10,10,12,.6) 38%,rgba(10,10,12,0) 68%),linear-gradient(180deg,rgba(10,10,12,.55) 0%,rgba(10,10,12,0) 22%)}.cs-hero .hbg{object-position:70% 40%}@media (max-width:860px){.hcard .hshade{background:linear-gradient(180deg,rgba(10,10,12,.55),rgba(10,10,12,.75))}.cs-hero .hbg{object-position:78% 50%}}</style>
 <script>(function(){function on(){var h=document.querySelector('.hdr');if(!h)return;var f=function(){h.classList.toggle('hs',window.scrollY>20)};f();window.addEventListener('scroll',f,{passive:true})}if(document.readyState!=='loading')on();else document.addEventListener('DOMContentLoaded',on)})();</script>
 </head>
@@ -96,6 +111,21 @@
 <h2 class="ovh">자극을 없애기보다,<br><em>지금 할 수 있는 방법</em>을 연결합니다.</h2>
 <p class="ovp">감각 부담은 사람마다 다르고, 같은 사람도 피로와 기분, 주변 환경에 따라 달라집니다. <br>특히 바로 벗어나기 어렵거나 주변을 직접 바꾸기 어려운 순간에는 쓸 수 있는 대응이 줄어듭니다. <br>기존 서비스는 기록, 체크인, 환경 확인처럼 한 단계씩만 도와서 사용자가 먼저 움직여야 합니다.</p>
 <p class="ovc">그래서 현재 상태와 상황을 함께 보고, 그 순간 가능한 대응을 이어 주는 흐름을 설계했습니다.</p>
+<div class="stage sst" id="sst">
+<ul class="side l">
+<li data-k="0"><div><b>구간별 소음</b><span>소음이 높은 정류장을 <br>막대 길이와 색으로 보여줘요</span></div><i><svg viewBox="0 0 24 24"><path d="M3 12h2M7 8v8M11 5v14M15 9v6M19 11v2"/></svg></i></li>
+<li data-k="1"><div><b>노이즈 캔슬링</b><span>0~5단계로 줄이고, <br>이어폰·워치로도 조절해요</span></div><i><svg viewBox="0 0 24 24"><path d="M4 15v-3a8 8 0 0 1 16 0v3"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/></svg></i></li>
+</ul>
+<div class="phone sph"><span class="isl"></span>
+<img class="on" src="img/sense/p11-sense.webp" alt="경로의 구간별 감각 수준 화면" decoding="async">
+<img src="img/sense/p12-hear.webp" alt="청각 모드 실행 화면" decoding="async">
+<img src="img/sense/p15-reco.webp" alt="다음 이동 추천 화면" decoding="async">
+</div>
+<ul class="side r">
+<li data-k="1"><i><svg viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2.5"/><path d="M10 17.5h4"/><circle cx="12" cy="10" r="2.5"/></svg></i><div><b>화면 · 안내</b><span>화면은 차분하게, <br>안내는 음성·진동으로 바꿔요</span></div></li>
+<li data-k="2"><i><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5.3L20 9"/><path d="M20 4v5h-5"/><path d="M20 12a8 8 0 0 1-14 5.3L4 15"/><path d="M4 20v-5h5"/></svg></i><div><b>다음 추천</b><span>나아진 설정을 저장해 <br>같은 길에서 먼저 제안해요</span></div></li>
+</ul>
+</div>
 <ol class="three">
 <li><span class="badge">STEP 01</span><span class="actor ai">AI 상황 해석</span><b>알아차리기</b><p>지금의 상태와 주변 자극을 함께 살펴봅니다.</p></li>
 <li><span class="badge">STEP 02</span><span class="actor">사용자 선택</span><b>대응 고르기</b><p>노이즈 캔슬링처럼 지금 가능한 방법을 제안하고, <br>적용은 사용자가 정합니다.</p></li>
@@ -1327,5 +1357,13 @@ if(h.matches(":hover,:focus-within"))return;acc=(Math.sign(d)===Math.sign(acc))?
 if(acc>40)h.classList.add("hid");else if(acc<-12)h.classList.remove("hid");},{passive:true});})();</script>
 <script>requestAnimationFrame(()=>requestAnimationFrame(()=>setTimeout(()=>{const h=document.querySelector(".hcard");h&&h.classList.add("in");},80)));</script>
 <style>@media (min-width:861px){.cs-hero .hcard .hin.hin{padding-bottom:160px!important}}.cs-hero .hh.hh{letter-spacing:-.015em}</style>
+<script>/* overview: cycle the three SENSE screens + matching step cards */
+(()=>{const st=document.getElementById("sst");if(!st)return;const ims=[...st.querySelectorAll(".sph img")],sides=[...st.querySelectorAll(".side li")],cards=[...document.querySelectorAll("#overview .three li")],three=document.querySelector("#overview .three");
+let i=0,t=null;const show=k=>{i=k;ims.forEach((m,j)=>m.classList.toggle("on",j===k));sides.forEach(l=>l.classList.toggle("on",+l.dataset.k===k));cards.forEach((c,j)=>c.classList.toggle("on",j===k));};
+if(matchMedia("(prefers-reduced-motion:reduce)").matches)return;
+const start=()=>{if(t)return;st.classList.add("run");three&&three.classList.add("run");show(i);t=setInterval(()=>show((i+1)%ims.length),3600);},stop=()=>{clearInterval(t);t=null;};
+new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting?start():stop()),{threshold:.35}).observe(st);
+cards.forEach((c,j)=>c.addEventListener("mouseenter",()=>{stop();st.classList.add("run");three.classList.add("run");show(j);}));
+three&&three.addEventListener("mouseleave",()=>start());})();</script>
 </body>
 </html>
