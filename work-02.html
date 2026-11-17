@@ -507,11 +507,11 @@
 <p class="chap"><b>06</b>Review</p>
 <h2 class="ovh">이해시키는 건 통했고,<br><em>다시 쓰게 만드는 건</em> 다음 과제입니다.</h2>
 <p class="dp">테스트로 확인한 것과 아직 확인하지 못한 것을 나누고, 다음 테스트에서 볼 것을 정했습니다.</p>
-<div class="rvm">
-<div class="ok"><p class="lab">확인한 것</p><ul class="okl"><li><b>경로 · 모드 진입은 5명 모두 성공</b><span>모빌리티 앱과 비슷한 구조 덕분</span></li><li><b>처음 보는 감각 앱이어도 배우기 쉬움</b><span>SUS 평균 81.5 · 기준 평균 68</span></li><li><b>화면 대신 소리 · 진동으로 바꾸는 방식에 긍정적</b><span>멀미 모드에서 확인</span></li></ul></div>
-<div class="no"><p class="lab">아직 확인하지 못한 것</p>
-<div class="g4"><div><b>실제 효과</b><p>소음 차단 · 멀미 완화는 시안으로 검증 불가</p></div><div><b>실제 맥락</b><p>책상 앞 테스트, 흔들리는 버스는 다를 수 있음</p></div><div><b>표본</b><p>5명 모두 20–30대 이어폰 사용자</p></div><div><b>재사용 의향</b><p>“자주 쓰고 싶다”가 가장 낮음</p></div></div>
-</div></div>
+<div class="rv2">
+<div class="rvs"><div><b>2</b><span>확인</span></div><div class="pt"><b>1</b><span>부분 확인</span></div><div class="ng"><b>1</b><span>안 됨</span></div><div class="na"><b>1</b><span>미검증</span></div></div>
+<ul class="rvh"><li class="hd"><span>결과</span><b>세운 가설</b><small>근거</small><div class="mt">지표</div></li><li class="ok"><span class="st">확인</span><b>화면을 보지 않아도 바로 시작할 수 있다</b><small>경로 · 모드 진입 5/5 성공</small><div class="mt"><i style="--v:94%"></i><em>SEQ 6.6</em></div></li><li class="ok"><span class="st">확인</span><b>처음 보는 감각 앱이어도 배우기 쉽다</b><small>SUS 81.5 · 기준 평균 68</small><div class="mt"><i style="--v:82%"></i><em>SUS 81.5</em></div></li><li class="pt"><span class="st">부분 확인</span><b>소리 · 진동 안내가 화면을 대신할 수 있다</b><small>멀미 모드 반응은 긍정 · 실제 이동 중은 미검증</small><div class="mt"><em class="nm">멀미 모드 반응만</em></div></li><li class="ng"><span class="st">안 됨</span><b>저장한 감각이 다음 추천으로 이어진다</b><small>작업 3 SEQ 3.6 · ‘자주 쓰고 싶다’ 2.2</small><div class="mt"><i style="--v:51%"></i><em>SEQ 3.6</em></div></li><li class="na"><span class="st">미검증</span><b>실제로 소음 · 멀미 부담이 줄어든다</b><small>시안 단계라 효과 측정 불가</small><div class="mt"><em class="nm">측정 안 함</em></div></li></ul>
+<p class="rvl"><span>한계</span>책상 앞 테스트 · 5명 모두 20–30대 이어폰 사용자 · 흔들리는 버스에서는 다를 수 있어요.</p>
+</div>
 <div class="blk">
 <p class="eb">Next</p><h3>다음에 할 일</h3>
 <ol class="three nx3">
@@ -2851,6 +2851,43 @@ html body #test .ba .bal li{font-size:14.5px;line-height:1.6;color:#3A3A40}
 @media (max-width:900px){html body #test .ba{grid-template-columns:1fr!important}html body #test .ba .bap figure:first-child,html body #test .ba .bap figure:last-child,html body #test .ba .bal{grid-column:1;grid-row:auto}html body #test .ba::after{display:none}}
 html body .nx3 li+li::before{background:none!important;box-shadow:none!important;color:var(--g)!important;font-size:26px!important;font-weight:700}
 html body #test .ba::after{background:none!important;box-shadow:none!important;color:var(--g)!important;font-size:32px!important}
+
+#review .rv2{margin-top:40px;padding:28px 32px;border-radius:28px;background:#fff}
+#review .rvs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+#review .rvs>div{display:flex;align-items:baseline;gap:8px;padding:16px 20px;border-radius:16px;background:#F1EAFF}
+#review .rvs b{font-size:32px;color:var(--g);letter-spacing:-.03em}
+#review .rvs span{font-size:14px;font-weight:700;color:#3A3A40}
+#review .rvs .pt{background:#F6F1FF}#review .rvs .pt b{color:#B394FF}
+#review .rvs .ng{background:#FDECF0}#review .rvs .ng b{color:#E0466B}
+#review .rvs .na{background:#F4F4F6}#review .rvs .na b{color:#9A9AA2}
+#review .rvh{list-style:none;margin:20px 0 0;padding:0}
+#review .rvh li{display:grid;grid-template-columns:92px minmax(0,1.3fr) minmax(0,1.2fr) 180px;align-items:center;gap:16px;padding:16px 0;border-top:1px solid #F0F0F3}
+#review .rvh li.hd{border-top:0;padding:8px 0;font-size:12.5px;color:#9A9AA2}#review .rvh li.hd b,#review .rvh li.hd small{font-size:12.5px;font-weight:500;color:#9A9AA2}
+#review .rvh .st{justify-self:start;padding:4px 12px;border-radius:999px;font-size:12.5px;font-weight:700}
+#review .rvh .ok .st{background:var(--g);color:#fff}#review .rvh .pt .st{background:#E6DAFF;color:var(--gd)}#review .rvh .ng .st{background:#FDECF0;color:#D2335C}#review .rvh .na .st{background:#F2F2F4;color:#77777F}
+#review .rvh b{font-size:16px;color:#1A1A1A}
+#review .rvh small{font-size:13.5px;color:#6E6E76;line-height:1.5}
+#review .rvh .mt{display:flex;align-items:center;gap:10px;font-size:12.5px}
+#review .rvh .mt i{flex:1;height:6px;border-radius:3px;background:linear-gradient(90deg,var(--g) var(--v),#EFEFF3 var(--v))}
+#review .rvh .pt .mt i{background:linear-gradient(90deg,#B394FF var(--v),#EFEFF3 var(--v))}
+#review .rvh .ng .mt i{background:linear-gradient(90deg,#E0466B var(--v),#EFEFF3 var(--v))}
+#review .rvh .mt em{width:60px;font-style:normal;font-weight:700;text-align:right;color:#3A3A40}
+#review .rvh .na b{color:#77777F}
+#review .rvl{display:flex;gap:12px;align-items:center;margin:16px 0 0!important;padding:14px 18px;border-radius:14px;background:#F6F6F8;font-size:14px;color:#55555C}
+#review .rvl span{flex:none;padding:3px 10px;border-radius:999px;background:#fff;font-size:12px;font-weight:700;color:#77777F}
+@media (max-width:900px){#review .rvs{grid-template-columns:1fr 1fr}#review .rvh li{grid-template-columns:80px 1fr}#review .rvh small,#review .rvh .mt{grid-column:2}}
+/* rules table */
+html body #spec .iox{margin-top:32px;padding:12px 32px 24px;border-radius:28px;background:#fff}
+html body #spec .iox table{width:100%}
+html body #spec .iox thead th{padding:20px 12px!important;font-size:15px!important;font-weight:700!important;color:#1A1A1A!important;text-align:left}
+html body #spec .iox thead .ic{width:36px!important;height:36px!important;margin-right:8px;vertical-align:middle}
+html body #spec .iox tbody th{font-size:16px!important;font-weight:700!important;color:#1A1A1A!important;padding:22px 12px!important}
+html body #spec .iox tbody td{font-size:15px!important;color:#3A3A40!important;padding:22px 12px!important}
+html body #spec .iox tbody tr:last-child th{color:#E0466B!important}
+html body #spec .iox tbody td:last-child{background:#F8F5FF}
+html body #spec .iox .vq{font-size:14px!important}
+html body #spec .iox .lgd{margin-top:16px;padding-top:16px;border-top:1px solid #F0F0F3;font-size:13px!important}
+#review .rvh .mt em.nm{width:auto;flex:1;text-align:left;font-weight:500;color:#9A9AA2}
 </style>
 <script>(()=>{const f=document.querySelector("#define .fhmw");if(!f)return;if(!("IntersectionObserver" in window)){f.classList.add("in");return}const o=new IntersectionObserver(es=>{if(es.some(x=>x.isIntersecting)){f.classList.add("in");o.disconnect()}},{threshold:.35});o.observe(f)})();</script>
 </body>
