@@ -94,6 +94,21 @@ img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
 .ov-txt .ko{margin-top:26px;font-size:14px;line-height:1.8;color:#777;max-width:420px}
 .ov-txt .note{margin-top:20px;font-size:13px;line-height:1.7;color:#333;font-weight:600}
 
+
+/* OVERVIEW — wide card, icon popping out of the top, Lotte props around */
+.ov2{position:relative;padding:clamp(220px,19vw,330px) 0 clamp(60px,6vw,100px);overflow-x:clip}
+.ov-card2{position:relative;z-index:1;margin:0 2.7vw;background:#FAFAFA;border-radius:clamp(28px,3vw,52px);min-height:clamp(420px,31vw,620px);display:grid;grid-template-columns:1fr 1fr;align-items:center}
+.ov-card2 .icon3d{justify-self:center;align-self:start;margin-top:calc(-1 * clamp(70px,6vw,110px));width:clamp(190px,19vw,300px);transform:none}
+.ov-card2 .ov-txt{padding:clamp(40px,5vw,90px) clamp(24px,6vw,120px) clamp(40px,5vw,90px) 0}
+.prop{position:absolute;pointer-events:none;animation:propf 8s ease-in-out infinite}
+@keyframes propf{0%,100%{translate:0 0}50%{translate:0 -14px}}
+.p-balloon{z-index:2;left:1.2vw;top:calc(clamp(220px,19vw,330px) + 52%);width:clamp(90px,8vw,140px);rotate:-10deg;filter:drop-shadow(14px 30px 24px rgba(120,0,20,.22))}
+.p-tower{z-index:2;right:10vw;top:calc(clamp(220px,19vw,330px) - clamp(200px,18vw,320px) + 34px);height:clamp(200px,18vw,320px);rotate:3deg;filter:drop-shadow(-10px 20px 20px rgba(30,40,60,.18));animation-delay:-2s}
+.p-ticket{z-index:2;right:-2vw;bottom:-2vw;width:clamp(240px,24vw,420px);rotate:-14deg;filter:blur(3px) drop-shadow(0 30px 30px rgba(0,0,0,.18));animation-delay:-4s}
+.p-fish{z-index:2;left:5vw;top:clamp(40px,4vw,80px);width:clamp(90px,8.5vw,150px);rotate:-8deg;filter:blur(1.5px) drop-shadow(10px 20px 18px rgba(10,60,100,.22));animation-delay:-6s}
+@media (max-width:900px){.ov-card2{grid-template-columns:1fr;margin:0 16px}.ov-card2 .ov-txt{padding:40px 28px 60px}.p-tower{right:4vw;height:160px}.p-ticket{width:200px}.p-fish{left:4vw}.p-balloon{top:auto;bottom:30px}}
+@media (prefers-reduced-motion:reduce){.prop{animation:none}}
+
 /* TIMELINE */
 .tl{margin-top:90px;display:grid;grid-template-columns:200px 1fr;row-gap:20px;align-items:center}
 .tl .thd{display:grid;grid-template-columns:repeat(9,1fr);font-size:13px;color:#000;padding-bottom:6px}
@@ -330,8 +345,8 @@ html body .hdr.hs .hnow b,html body .hdr.hs.lt .hnow b{color:#141414!important}
 <main class="page">
 
 <!-- OVERVIEW -->
-<section class="w ov">
-  <div class="ov-card" data-r>
+<section class="ov2">
+  <div class="ov-card2" data-r>
     <div class="icon3d"><svg viewBox="0 0 300 500" fill="none" aria-hidden="true"><path d="M132 362 C172 292 198 168 184 96 C174 44 116 30 80 68 C48 104 40 214 56 296 C74 386 128 450 172 446 C210 442 242 410 272 372" stroke="#fff" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/><circle cx="30" cy="440" r="17" fill="#fff"/></svg></div>
     <div class="ov-txt">
       <span class="badge">OVERVIEW</span>
@@ -340,6 +355,15 @@ html body .hdr.hs .hnow b,html body .hdr.hs.lt .hnow b{color:#141414!important}
       <p class="note">* 롯데이노베이트 운영팀 · 2023.08 — 2026.03<br>* 웹 그래픽 디자인 · 사이트 운영 · PC / MO</p>
     </div>
   </div>
+
+  <!-- props: Lotte World balloon / Lotte World Tower (Lotte Corp.) / Seoul Sky ticket / Aquarium fish -->
+  <svg class="prop p-balloon" viewBox="0 0 200 320" aria-hidden="true"><defs><radialGradient id="pbg" cx="34%" cy="28%" r="78%"><stop offset="0" stop-color="#FF9AA2"/><stop offset=".4" stop-color="#F4162A"/><stop offset="1" stop-color="#8E000B"/></radialGradient><linearGradient id="pbk" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#B8000E"/><stop offset="1" stop-color="#7A000A"/></linearGradient></defs><path d="M100 230 C88 260 116 280 98 318" stroke="#C9C9CF" stroke-width="2.4" fill="none"/><path d="M93 214 L107 214 L111 232 L89 232Z" fill="url(#pbk)"/><path d="M100 8 C152 8 190 54 190 108 C190 168 144 210 100 218 C56 210 10 168 10 108 C10 54 48 8 100 8Z" fill="url(#pbg)"/><ellipse cx="66" cy="70" rx="20" ry="36" fill="#fff" opacity=".55" transform="rotate(-28 66 70)"/><ellipse cx="150" cy="150" rx="10" ry="20" fill="#fff" opacity=".12" transform="rotate(30 150 150)"/></svg>
+
+  <svg class="prop p-tower" viewBox="0 0 160 460" aria-hidden="true"><defs><linearGradient id="ptl" x1="0" x2="1"><stop offset="0" stop-color="#E9EEF5"/><stop offset=".5" stop-color="#B7C4D6"/><stop offset="1" stop-color="#8496AE"/></linearGradient><linearGradient id="ptr" x1="0" x2="1"><stop offset="0" stop-color="#6E819B"/><stop offset="1" stop-color="#3F4F66"/></linearGradient><linearGradient id="ptb" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#D9D9DE"/></linearGradient></defs><ellipse cx="80" cy="440" rx="70" ry="12" fill="#000" opacity=".12"/><rect x="14" y="410" width="132" height="26" rx="10" fill="url(#ptb)"/><path d="M78 20 L80 6 L82 20 C86 120 100 280 118 412 L42 412 C60 280 74 120 78 20Z" fill="url(#ptl)"/><path d="M82 20 C86 120 100 280 118 412 L84 412 C84 300 83 140 82 20Z" fill="url(#ptr)"/><path d="M78 20 L80 70 L82 20" stroke="#fff" stroke-width="1.5" opacity=".8"/><g stroke="#fff" opacity=".22"><path d="M48.0 120 H112"/><path d="M48.1 144 H112"/><path d="M48.2 168 H112"/><path d="M48.3 192 H112"/><path d="M48.4 216 H112"/><path d="M48.5 240 H112"/><path d="M48.6 264 H112"/><path d="M48.7 288 H112"/><path d="M48.8 312 H112"/><path d="M48.9 336 H112"/><path d="M49.0 360 H112"/><path d="M49.1 384 H112"/></g></svg>
+
+  <svg class="prop p-ticket" viewBox="0 0 360 200" aria-hidden="true"><defs><linearGradient id="pkt" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E9E9EE"/></linearGradient><mask id="pkm"><rect width="360" height="200" rx="18" fill="#fff"/><circle cx="252" cy="0" r="14" fill="#000"/><circle cx="252" cy="200" r="14" fill="#000"/></mask></defs><g mask="url(#pkm)"><rect width="360" height="200" fill="url(#pkt)"/><rect width="360" height="12" fill="#E60012"/></g><path d="M252 22 V178" stroke="#C8C8CE" stroke-width="2" stroke-dasharray="6 6"/><text x="28" y="74" font-family="Pretendard Variable,Pretendard,sans-serif" font-size="14" font-weight="700" fill="#E60012" letter-spacing="2">LOTTE WORLD TOWER</text><text x="28" y="118" font-family="Pretendard Variable,Pretendard,sans-serif" font-size="38" font-weight="800" fill="#111" letter-spacing="-1">SEOUL SKY</text><text x="28" y="160" font-family="Pretendard Variable,Pretendard,sans-serif" font-size="13" font-weight="600" fill="#888" letter-spacing="1">117F — 123F · OBSERVATORY</text><text x="306" y="110" font-family="Pretendard Variable,Pretendard,sans-serif" font-size="13" font-weight="700" fill="#111" letter-spacing="2" text-anchor="middle" transform="rotate(-90 306 104)">ADMIT ONE</text></svg>
+
+  <svg class="prop p-fish" viewBox="0 0 240 150" aria-hidden="true"><defs><radialGradient id="pfb" cx="38%" cy="32%" r="80%"><stop offset="0" stop-color="#9BEBFF"/><stop offset=".45" stop-color="#29B6E0"/><stop offset="1" stop-color="#0A5E8C"/></radialGradient><linearGradient id="pft" x1="0" x2="1"><stop offset="0" stop-color="#1588B8"/><stop offset="1" stop-color="#0A5E8C"/></linearGradient></defs><path d="M160 75 L232 26 C222 60 222 90 232 124 Z" fill="url(#pft)"/><path d="M96 22 C112 6 136 10 140 30 Z" fill="#1A97C6"/><ellipse cx="95" cy="75" rx="82" ry="52" fill="url(#pfb)"/><ellipse cx="70" cy="50" rx="30" ry="12" fill="#fff" opacity=".5" transform="rotate(-18 70 50)"/><circle cx="48" cy="66" r="10" fill="#fff"/><circle cx="46" cy="66" r="5" fill="#0B1C2A"/><path d="M28 88 C38 96 50 96 58 90" stroke="#0A5E8C" stroke-width="3" fill="none" stroke-linecap="round"/></svg>
 </section>
 
 <!-- TIMELINE (market research style) -->
