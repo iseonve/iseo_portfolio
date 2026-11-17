@@ -358,7 +358,22 @@
 <div class="cviz"><div class="cvhd"><span>감각 부담</span><small>SENSE가 개입하는 지점에서 부담이 내려가요</small></div><svg class="cvc" viewBox="0 0 1200 120" preserveAspectRatio="none"><defs><linearGradient id="cvg" x1="0" x2="1"><stop offset="0" stop-color="#C9B2FF"/><stop offset=".38" stop-color="#E0466B"/><stop offset=".62" stop-color="#8752F0"/><stop offset="1" stop-color="#B394FF"/></linearGradient></defs><path d="M0 92 C150 92 220 80 300 60 S420 8 450 10 C520 12 560 50 650 70 S900 96 1200 96" fill="none" stroke="url(#cvg)" stroke-width="4" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg><div class="cvpk" style="left:37.5%">부담 최고</div><ol class="cvl"><li><div class="cvm"><div class="cvph"><img src="img/sense/p06-dest.webp" alt="" loading="lazy"></div></div><p class="cfs"><em>01</em>이동 전</p><b>감각 자동항법</b><span class="cvd">경로와 내 설정으로 미리 준비</span><div class="cvi"><span><i class="nb p">05</i>이전 설정 재사용</span><span><i class="nb p">18</i>필요한 순간에만 제안</span></div></li><li><div class="cvm"><img class="cvw" src="img/sense/w2t.webp" alt="" loading="lazy"></div><p class="cfs"><em>02</em>부담 발생</p><b>SOS 제스처</b><span class="cvd">폰을 꺼내지 않고 바로 시작</span><div class="cvi"><span><i class="nb p">02</i>이어폰 한 번 누르기</span><span><i class="nb p">03</i>워치 한 번 탭</span></div></li><li><div class="cvm"><div class="cvph"><img src="img/sense/p12-hear.webp" alt="" loading="lazy"></div></div><p class="cfs"><em>03</em>감각별 대응</p><b>감각 버블 · 멀미 비시각 모드</b><span class="cvd">청각은 소리 조절, 멀미는 음성 · 진동 안내</span><div class="cvi"><span><i class="nb p">07</i>청각 알림 → 진동</span><span><i class="nb p">11</i>멀미 때 화면 없이 실행</span></div></li><li><div class="cvm"><div class="cvph"><img src="img/sense/p15-reco.webp" alt="" loading="lazy"></div></div><p class="cfs"><em>04</em>효과 확인</p><b>후속 조절</b><span class="cvd">유지 · 추가 조절 · 되돌리기 · 종료</span><div class="cvi"><span><i class="nb p">06</i>즉시 되돌리기</span><span><i class="nb p">19</i>일정 시간 개입 중지</span></div></li></ol></div>
 <div class="cno2"><p class="cnot2">일부러 만들지 않은 것</p><ul><li><span class="cx"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/></svg></span><b>감각 과부하 자동 판정</b><p>“얼마나 심각한지 제가 먼저 판단하고 싶어요.”</p><em>사용자가 원하지 않음</em></li><li><span class="cx"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/></svg></span><b>감정 · 피로 자동 추정</b><p>심박 · HRV는 판정이 아니라 참고로만 쓰기로 함</p><em>사용자가 원하지 않음</em></li><li><span class="cx"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/></svg></span><b>특정 사람 목소리만 제거</b><p>지금 기술로 정확하다고 말할 수 없음</p><em>기술로 단정 불가</em></li></ul></div>
 </div></div>
-<div class="bnd b-t"><div class="blk">
+<div class="bnd b-t"><div class="blk dcv"><p class="eb">Design Criteria</p><h3>무엇을, 어떤 기기로, 어디까지 맡길지 먼저 정했습니다</h3>
+<div class="dcg">
+<section><p class="dct"><b>01</b>무엇을 · 감각 범위</p><svg viewBox="0 0 300 260" class="dcb"><circle cx="150" cy="130" r="122" class="r3"/><circle cx="150" cy="130" r="86" class="r2"/><circle cx="150" cy="130" r="50" class="r1"/>
+<text x="150" y="123" class="t1">청각</text><text x="150" y="146" class="t1">멀미</text>
+<text x="150" y="66" class="t2">후각</text><text x="150" y="232" class="t3">시각 · 촉각</text>
+</svg><ul class="dlg"><li><i class="c1"></i>핵심 · 청각 · 멀미</li><li><i class="c2"></i>확장 · 후각</li><li><i class="c3"></i>보조 · 시각 · 촉각</li></ul></section>
+<section><p class="dct"><b>02</b>어떤 기기로 · 기기 역할</p><svg viewBox="0 0 300 260" class="dch">
+<path d="M150 120 L62 62 M150 120 L238 62" class="ln"/><path d="M150 120 L62 205 M150 120 L150 222 M150 120 L238 205" class="ln dash"/>
+<g class="nd hub"><circle cx="150" cy="120" r="34"/><text x="150" y="124" class="nl">폰</text></g><g class="nd core"><circle cx="62" cy="56" r="28"/><text x="62" y="60" class="nl">이어폰</text><text x="62" y="100" class="ns">소리 · 음성 · 한 번 입력</text></g><g class="nd core"><circle cx="238" cy="56" r="28"/><text x="238" y="60" class="nl">워치</text><text x="238" y="100" class="ns">탭 · 진동 · 크라운</text></g>
+<g class="nd ext"><circle cx="62" cy="205" r="18"/><text x="62" y="209" class="nl">링</text><text x="62" y="239" class="ns"></text></g><g class="nd ext"><circle cx="150" cy="222" r="18"/><text x="150" y="226" class="nl">글라스</text><text x="150" y="256" class="ns"></text></g><g class="nd ext"><circle cx="238" cy="205" r="18"/><text x="238" y="209" class="nl">마스크</text><text x="238" y="239" class="ns"></text></g></svg><ul class="dlg"><li><i class="c1"></i>핵심 기기</li><li><i class="c4"></i>허브 · 경로 · 설정</li><li><i class="c3 d"></i>검토 · 확장 후보</li></ul></section>
+<section><p class="dct"><b>03</b>어디까지 맡길지 · 자동화</p><div class="dca"><div class="dcbar"><span>시스템이 먼저</span><i></i><span>사용자가 먼저</span></div><ol>
+<li><b>자동 실행</b><p>미리 허용한 개인 기기 기능</p><em>저장한 노이즈 캔슬링 강도</em></li>
+<li><b>빠른 승인</b><p>한 번 확인이 필요한 기능</p><em>“멀미 모드로 바꿀까요?”</em></li>
+<li><b>직접 선택</b><p>개인차 · 사회적 판단이 필요한 행동</p><em>도움 요청</em></li></ol></div></section>
+</div><p class="note">세 단계 모두 <b>잘못 적용되면 바로 되돌릴 수 있어야</b> 하고, 알림과 질문은 필요한 순간에 한 번만 짧게 개입합니다. 코디자인 인터뷰의 “얼마나 심각한지 제가 먼저 판단하고 싶어요”가 이 구조의 근거예요.</p></div>
+<div class="blk">
 <p class="eb">User Flow</p><h3>유저 플로우</h3>
 <p class="lead">이동 전부터 다음 이동까지, 사용자가 판단하는 지점(◇)을 기준으로 흐름을 나눴어요. 보라 선은 사용자가 직접 고르는 길입니다.</p>
 <div class="ufw"><svg class="uf2" viewBox="0 0 1200 520" role="img" aria-label="SENSE 유저 플로우">
@@ -421,24 +436,7 @@
 <li><span class="tg">워치 · SCR W-1 ~ W-4</span><h4>폰 없이 실행 → 저장</h4><p>혼잡해서 폰을 꺼내기 어려울 때, 워치만으로 실행부터 저장까지 끝나요.</p><ol><li>실행 — 탭 한 번</li><li>조절 — 크라운으로 강도</li><li>저장 — 끝날 때 한 번만 묻기</li></ol><img class="wimg" src="img/sense/w3.webp" alt="" loading="lazy"></li>
 </ul>
 </div></div>
-<div class="bnd b-g"><div class="blk"><p class="eb">Design Criteria</p><h3>무엇을, 어떤 기기로, 어디까지 맡길지 먼저 정했습니다</h3>
-<div class="dcx">
-<div><p class="dct">감각 범위</p><ul>
-<li><span class="tg on">핵심</span><b>청각</b><small>소음 부담 · 노이즈 캔슬링 사용 확인</small></li>
-<li><span class="tg on">핵심</span><b>멀미</b><small>버스 이동 중 화면 자극 · 조작 어려움</small></li>
-<li><span class="tg">확장</span><b>후각</b><small>감지 · 제거 기술로 단정할 수 없어 별도 후보</small></li>
-<li><span class="tg">보조</span><b>시각 · 촉각</b><small>정보를 다른 감각으로 옮기는 통로</small></li></ul></div>
-<div><p class="dct">기기 역할</p><ul>
-<li><span class="tg on">핵심</span><b>이어폰</b><small>소음 · 음량, 음성 안내, 한 번 입력</small></li>
-<li><span class="tg on">핵심</span><b>스마트워치</b><small>한 번 입력, 진동 안내, 신체 정보(보조)</small></li>
-<li><span class="tg on">허브</span><b>스마트폰</b><small>경로 · 설정, 음성 안내(보조)</small></li>
-<li><span class="tg">검토 · 확장</span><b>링 · 글라스 · 마스크</b><small>입력 · 안내 · 후각 보조 후보</small></li></ul></div>
-<div><p class="dct">자동화 단계</p><div class="spec"><span>시스템이 먼저</span><div class="sb"><i></i></div><span>사용자가 먼저</span></div><ul>
-<li><b>자동 실행</b><small>미리 허용한 개인 기기 기능 · 예: 저장한 노이즈 캔슬링 강도</small></li>
-<li><b>빠른 승인</b><small>한 번 확인이 필요한 기능 · 예: “멀미 모드로 바꿀까요?”</small></li>
-<li><b>직접 선택</b><small>개인차 · 사회적 판단이 필요한 행동 · 예: 도움 요청</small></li></ul></div>
-</div>
-<p class="note">세 단계 모두 <b>잘못 적용되면 바로 되돌릴 수 있어야</b> 하고, 알림과 질문은 필요한 순간에 한 번만 짧게 개입합니다. 코디자인 인터뷰의 “얼마나 심각한지 제가 먼저 판단하고 싶어요”가 이 구조의 근거예요.</p></div></div>
+<div class="bnd b-g"></div>
 </div>
 </section>
 
@@ -2701,6 +2699,42 @@ html body #develop .msum p b{align-self:center}html body #develop .msum p:first-
 html body #define .fhmw .fo-ph{left:4%;bottom:-30px;width:300px;aspect-ratio:auto;height:auto;border-radius:0;background:none;padding:0;box-shadow:none;filter:drop-shadow(0 30px 40px rgba(0,0,0,.45))}
 html body #define .fhmw .fo-w{right:6%;top:-30px;width:170px}
 @media (max-width:760px){html body #define .fhmw .fo-ph{width:140px;left:-10px;bottom:-20px}html body #define .fhmw .fo-w{width:100px}}
+html body .fcs img:not(.wimg){padding-top:0!important;margin-top:28px!important;box-sizing:border-box;border:7px solid #15151A;border-bottom:0;border-radius:34px 34px 0 0!important;box-shadow:0 -6px 24px -10px rgba(40,20,90,.35)}
+.wf.go .wfl path{stroke-dashoffset:0!important;opacity:1!important;transition:stroke-dashoffset .7s cubic-bezier(.65,0,.35,1) var(--d,0s)}
+
+#develop .dcv{margin-top:96px}
+#develop .dcg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:36px}
+#develop .dcg>section{display:flex;flex-direction:column;padding:28px;border-radius:24px;background:#fff;box-shadow:inset 0 0 0 1px #ECECF0}
+#develop .dct{margin:0 0 8px!important;font-size:16px;font-weight:700;color:#1A1A1A}
+#develop .dct b{margin-right:8px;color:var(--g);font-variant-numeric:tabular-nums}
+#develop .dcb,#develop .dch{width:100%;height:auto;display:block;margin:8px 0 4px}
+#develop .dcb circle{stroke:#fff;stroke-width:3}
+#develop .dcb .r3{fill:#F4F4F7}#develop .dcb .r2{fill:#E6DAFF}#develop .dcb .r1{fill:var(--g)}
+#develop .dcb text{text-anchor:middle;font-family:inherit;font-weight:700}
+#develop .dcb .t1{font-size:17px;fill:#fff}#develop .dcb .t2{font-size:15px;fill:var(--gd)}#develop .dcb .t3{font-size:14px;fill:#77777F}
+#develop .dcb .tg2,#develop .dcb .tg3{font-size:11px;fill:#9A9AA2;font-weight:600}
+#develop .dch .ln{stroke:#CDB8FF;stroke-width:2;fill:none}#develop .dch .ln.dash{stroke:#D6D6DE;stroke-dasharray:4 5}
+#develop .dch text{text-anchor:middle;font-family:inherit}
+#develop .dch .nl{font-size:13px;font-weight:700}
+#develop .dch .ns{font-size:11px;fill:#77777F}
+#develop .dch .hub circle{fill:#2A1F4A}#develop .dch .hub .nl{fill:#fff}
+#develop .dch .core circle{fill:var(--g)}#develop .dch .core .nl{fill:#fff;font-size:12px}
+#develop .dch .ext circle{fill:#fff;stroke:#CFCFD8;stroke-width:1.5;stroke-dasharray:3 3}#develop .dch .ext .nl{font-size:10.5px;fill:#77777F;font-weight:600}
+#develop .dlg{list-style:none;margin:auto 0 0;padding:16px 0 0;border-top:1px solid #EFEFF3;display:flex;flex-wrap:wrap;gap:6px 14px}
+#develop .dlg li{display:flex;align-items:center;gap:6px;font-size:13px;color:#55555C}
+#develop .dlg i{width:10px;height:10px;border-radius:50%}
+#develop .dlg .c1{background:var(--g)}#develop .dlg .c2{background:#E6DAFF}#develop .dlg .c3{background:#F4F4F7;box-shadow:inset 0 0 0 1px #CFCFD8}#develop .dlg .c4{background:#2A1F4A}#develop .dlg .c3.d{background:#fff;box-shadow:inset 0 0 0 1.5px #CFCFD8}
+#develop .dca{display:grid;grid-template-columns:56px 1fr;gap:16px;margin-top:12px;flex:1}
+#develop .dcbar{display:flex;flex-direction:column;align-items:center;gap:8px;font-size:11px;font-weight:700;color:#77777F;text-align:center;line-height:1.3}
+#develop .dcbar i{flex:1;width:10px;border-radius:5px;background:linear-gradient(180deg,var(--g),#E6DAFF)}
+#develop .dca ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+#develop .dca li{padding:14px 16px;border-radius:16px;background:#F8F5FF}
+#develop .dca li:nth-child(2){background:#F4F1FA}#develop .dca li:nth-child(3){background:#F6F6F8}
+#develop .dca b{font-size:16px}
+#develop .dca p{margin:3px 0 0!important;font-size:13px;color:#6E6E76}
+#develop .dca em{display:inline-block;margin-top:8px;padding:3px 9px;border-radius:999px;background:#fff;font-style:normal;font-size:12px;font-weight:600;color:var(--gd)}
+#develop .dcv>.note{margin-top:20px!important}
+@media (max-width:900px){#develop .dcg{grid-template-columns:1fr}}
 </style>
 <script>(()=>{const f=document.querySelector("#define .fhmw");if(!f)return;if(!("IntersectionObserver" in window)){f.classList.add("in");return}const o=new IntersectionObserver(es=>{if(es.some(x=>x.isIntersecting)){f.classList.add("in");o.disconnect()}},{threshold:.35});o.observe(f)})();</script>
 </body>
