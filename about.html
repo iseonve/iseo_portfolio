@@ -507,4 +507,11 @@ addEventListener("scroll",upd,{passive:true});addEventListener("resize",upd);upd
 addEventListener("scroll",()=>{const y=scrollY,d=y-y0;y0=y;if(y<120){h.classList.remove("hid");acc=0;return;}
 if(h.matches(":hover,:focus-within"))return;acc=(Math.sign(d)===Math.sign(acc))?acc+d:d;
 if(acc>40)h.classList.add("hid");else if(acc<-12)h.classList.remove("hid");},{passive:true});})();</script>
+<style id="hdr-white">
+html body .hdr.hs::before{background:rgba(255,255,255,.94)!important;box-shadow:0 0 0 1px rgba(0,0,0,.06),0 16px 36px -18px rgba(20,20,40,.35)!important}
+html body .hdr.hs .hlogo,html body .hdr.hs.lt .hlogo{color:#141414!important}
+html body .hdr.hs :is(.hnv,.hmid)>a,html body .hdr.hs .hdd>a,html body .hdr.hs.lt :is(.hnv,.hmid)>a,html body .hdr.hs.lt .hdd>a{color:#6E6E73!important}
+html body .hdr.hs :is(.hnv,.hmid)>a:hover,html body .hdr.hs :is(.hnv,.hmid)>a.on,html body .hdr.hs .hdd>a.on,html body .hdr.hs .hdd:hover>a,html body .hdr.hs.lt :is(.hnv,.hmid)>a:hover,html body .hdr.hs.lt :is(.hnv,.hmid)>a.on,html body .hdr.hs.lt .hdd>a.on,html body .hdr.hs.lt .hdd:hover>a{color:#141414!important}
+html body .hdr.hs .hnow,html body .hdr.hs.lt .hnow{color:#6E6E73!important}html body .hdr.hs .hnow b,html body .hdr.hs.lt .hnow b{color:#141414!important}
+</style>
 </body></html>
