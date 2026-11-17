@@ -3057,6 +3057,15 @@ html body #test .u2f .fx{background:none!important;padding:0!important}
 html body #test .ut2 .blk.sb2{margin-top:48px!important}
 html body #test .ut2 .sub{margin:28px 0 0!important;font-size:16px;font-weight:700;color:#1A1A1A}
 html body #test .ut2 .sub+*{margin-top:14px!important}
+
+html body #test .ut2>.blk{background:#fff;border-radius:32px;padding:48px 48px 44px;margin-top:40px!important}
+html body #test .ut2>.blk:has(+ .blk.sb2){border-bottom-left-radius:0;border-bottom-right-radius:0;padding-bottom:28px}
+html body #test .ut2>.blk.sb2{margin-top:0!important;border-radius:0;padding-top:4px;box-shadow:inset 0 1px 0 #F0F0F3}
+html body #test .ut2>.blk.sb2:not(:has(+ .blk.sb2)){border-bottom-left-radius:32px;border-bottom-right-radius:32px}
+html body #test .ut2>.blk.sb2:has(+ .blk.sb2){padding-bottom:28px}
+html body #test .ut2>.blk .ba{background:#F8F8FA!important}
+html body #test .ut2>.blk .ba .bap figure:first-child{background:#EFEFF2!important}
+html body #test .ut2 .u3p{background:#fff}
 </style>
 <script>(()=>{const f=document.querySelector("#define .fhmw");if(!f)return;if(!("IntersectionObserver" in window)){f.classList.add("in");return}const o=new IntersectionObserver(es=>{if(es.some(x=>x.isIntersecting)){f.classList.add("in");o.disconnect()}},{threshold:.35});o.observe(f)})();</script>
 </body>
