@@ -503,11 +503,10 @@
 <p class="chap"><b>06</b>Review</p>
 <h2 class="ovh">이해시키는 건 통했고,<br><em>다시 쓰게 만드는 건</em> 다음 과제입니다.</h2>
 <p class="dp">테스트로 확인한 것과 아직 확인하지 못한 것을 나누고, 다음 테스트에서 볼 것을 정했습니다.</p>
-<div class="rvx"><div class="ok"><span>통했다</span><b>이해시키기</b><p>모드 · 경로 진입 5/5 성공<br>SUS 81.5 (기준 68)</p></div><i>→</i><div class="nxx"><span>다음 과제</span><b>다시 쓰게 만들기</b><p>저장 → 추천 SEQ 3.6<br>‘자주 쓰고 싶다’ 2.2 / 5</p></div></div>
-<div class="rv2">
-<div class="rvs"><div><b>2</b><span>확인</span></div><div class="pt"><b>1</b><span>부분 확인</span></div><div class="ng"><b>1</b><span>안 됨</span></div><div class="na"><b>1</b><span>미검증</span></div></div>
-<ul class="rvh"><li class="hd"><span>결과</span><b>세운 가설</b><small>근거</small><div class="mt">지표</div></li><li class="ok"><span class="st">확인</span><b>화면을 보지 않아도 바로 시작할 수 있다</b><small>경로 · 모드 진입 5/5 성공</small><div class="mt"><i style="--v:94%"></i><em>SEQ 6.6</em></div></li><li class="ok"><span class="st">확인</span><b>처음 보는 감각 앱이어도 배우기 쉽다</b><small>SUS 81.5 · 기준 평균 68</small><div class="mt"><i style="--v:82%"></i><em>SUS 81.5</em></div></li><li class="pt"><span class="st">부분 확인</span><b>소리 · 진동 안내가 화면을 대신할 수 있다</b><small>멀미 모드 반응은 긍정 · 실제 이동 중은 미검증</small><div class="mt"><em class="nm">멀미 모드 반응만</em></div></li><li class="ng"><span class="st">안 됨</span><b>저장한 감각이 다음 추천으로 이어진다</b><small>작업 3 SEQ 3.6 · ‘자주 쓰고 싶다’ 2.2</small><div class="mt"><i style="--v:51%"></i><em>SEQ 3.6</em></div></li><li class="na"><span class="st">미검증</span><b>실제로 소음 · 멀미 부담이 줄어든다</b><small>시안 단계라 효과 측정 불가</small><div class="mt"><em class="nm">측정 안 함</em></div></li></ul>
-<p class="rvl"><span>한계</span>책상 앞 테스트 · 5명 모두 20–30대 이어폰 사용자 · 흔들리는 버스에서는 다를 수 있어요.</p>
+<div class="rv3">
+<div class="rv3h"><span class="ok">통했다</span><span class="ng">다음 과제</span></div>
+<ol><li class="ok"><span class="no">01</span><b>이해한다</b><span class="mk">✓</span><p>모드 · 감각 정보를 이해하고 골랐어요</p><small>SUS 81.5 · 기준 평균 68</small></li><li class="ok"><span class="no">02</span><b>써 본다</b><span class="mk">✓</span><p>경로 · 모드 작업 5명 모두 성공</p><small>SEQ 6.6 / 7</small></li><li class="ng"><span class="no">03</span><b>저장한다</b><span class="mk">!</span><p>저장 버튼을 지나쳐 끝낸 사람이 있었어요</p><small>P3 실패 · P2 망설임</small></li><li class="ng"><span class="no">04</span><b>다시 쓴다</b><span class="mk">!</span><p>추천이 왜 나왔는지 몰랐어요</p><small>‘자주 쓰고 싶다’ 2.2 / 5</small></li></ol>
+<p class="rvl"><span>한계</span>실제 소음 · 멀미 감소는 시안이라 재지 못했어요. 책상 앞 테스트 · 5명 모두 20–30대 이어폰 사용자예요.</p>
 </div>
 <div class="blk">
 <p class="eb">Next</p><h3>다음에 할 일</h3>
@@ -3078,6 +3077,22 @@ html body #test .ut2 .u3p{background:#fff}
 #test .t3l li.ez .nd{background:var(--g);box-shadow:none}
 html body #test .ut2>.blk.sb2 .u5p,html body #test .ut2>.blk .u5p,html body #test .ut2 .u2q2,html body #test .ut2 .mpar2{background:#F8F8FA;border-top:0!important;border-radius:20px;padding:20px 24px!important}
 html body #test .ut2 .u5p li:first-child,html body #test .ut2 .mpar2 .mcard:first-child{padding-left:0!important}
+
+#review .rv3{margin-top:40px;padding:32px;border-radius:28px;background:#fff}
+#review .rv3h{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+#review .rv3h span{padding:10px 0;border-top:4px solid;font-size:15px;font-weight:800}
+#review .rv3h .ok{border-color:var(--g);color:var(--g)}#review .rv3h .ng{border-color:#E0466B;color:#E0466B}
+#review .rv3 ol{list-style:none;margin:8px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+#review .rv3 li{position:relative;padding:22px;border-radius:20px;background:#F3EDFF}
+#review .rv3 li.ng{background:#FFF1F4}
+#review .rv3 li+li::before{content:"→";position:absolute;left:-12px;top:26px;transform:translateX(-50%);color:var(--g);font-weight:700;font-size:16px}
+#review .rv3 .no{font-size:13px;font-weight:700;color:#9A9AA2}
+#review .rv3 li b{display:block;margin-top:4px;font-size:24px;letter-spacing:-.03em}
+#review .rv3 .mk{position:absolute;right:20px;top:20px;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font-weight:800;color:#fff;background:var(--g)}
+#review .rv3 li.ng .mk{background:#E0466B}
+#review .rv3 li p{margin:14px 0 0!important;font-size:15px;line-height:1.5;color:#1A1A1A;font-weight:600}
+#review .rv3 li small{display:block;margin-top:6px;font-size:13px;color:#6E6E76}
+@media (max-width:900px){#review .rv3 ol{grid-template-columns:1fr 1fr}#review .rv3 li+li::before{display:none}}
 </style>
 <script>(()=>{const f=document.querySelector("#define .fhmw");if(!f)return;if(!("IntersectionObserver" in window)){f.classList.add("in");return}const o=new IntersectionObserver(es=>{if(es.some(x=>x.isIntersecting)){f.classList.add("in");o.disconnect()}},{threshold:.35});o.observe(f)})();</script>
 </body>
