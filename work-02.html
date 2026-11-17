@@ -289,7 +289,7 @@
 <div class="hmw4"><span class="tg">이후 과제</span><b>HMW4</b><p>심박 · HRV 같은 생체 데이터로 부담을 미리 알아챌 수 있을까?</p><span class="pp">PP05</span></div>
 <p class="hnote">생체 데이터는 판정이 아니라 참고로만 쓰기로 해, 이번에는 HMW1~3에 집중하고 HMW4는 이후 과제로 남겼습니다.</p>
 </div>
-<div class="fhmw"><img class="fo fo-ph" src="img/sense/fo-buds.webp" alt=""><img class="fo fo-w" src="img/sense/fo-watch.webp" alt="">
+<div class="fhmw"><img class="fo fo-ph" src="img/sense/fo-buds.webp" alt=""><img class="fo fo-w" src="img/sense/w2c.webp" alt="">
 <span>Final HMW</span><p><span class="fl">어떻게 하면 피할 수 없는 순간에도</span><span class="fl"><em>최소한의 조작으로 감각 대응을 시작하고</em>,</span><span class="fl">남은 불편까지 이어서 조절할 수 있을까요?</span></p></div>
 </div>
 </section>
@@ -2755,6 +2755,14 @@ html body #define .fhmw .fo-w{right:30px!important;top:-90px!important;margin:0!
 #test .fx b{font-size:16px;color:var(--gd)}
 @media (max-width:900px){#test .u2top,#test .u2w{grid-template-columns:1fr}#test .u2q{grid-template-columns:1fr 1fr}#test .u2p li{grid-template-columns:50px 1fr 90px}#test .u2p .hsp,#test .u2p li.hd>div,#test .u2p .psv{display:none}#test .u2f li{grid-template-columns:1fr}#test .fa2{transform:rotate(90deg)}#test .u2h,#test .u2r{grid-template-columns:1fr 1fr}#test .sq{grid-column:1/-1;text-align:left}}
 html body #test .u2p li.hd>*{font-size:13px!important;font-weight:500!important;color:#8A8A92!important;background:none!important;padding:0!important}
+html body #define .fhmw .fo-ph{left:-70px!important;bottom:-90px!important;width:240px!important;transform:translate(-60px,60px) rotate(40deg)!important}
+html body #define .fhmw.in .fo-ph{transform:rotate(40deg)!important;animation:fofl2 6s ease-in-out 1.2s infinite!important}
+@keyframes fofl2{0%,100%{transform:rotate(40deg) translate(0,0)}50%{transform:rotate(40deg) translate(6px,-8px)}}
+@media (max-width:760px){html body #define .fhmw .fo-ph{width:120px!important;left:-40px!important;bottom:-50px!important}}
+html body #define .fhmw .fo-w{right:-45px!important;top:-70px!important;width:180px!important;transform:translate(60px,-60px) rotate(38deg)!important}
+html body #define .fhmw.in .fo-w{transform:rotate(38deg)!important;animation:fofw2 6s ease-in-out 1.4s infinite!important}
+@keyframes fofw2{0%,100%{transform:rotate(38deg) translate(0,0)}50%{transform:rotate(38deg) translate(6px,6px)}}
+@media (max-width:760px){html body #define .fhmw .fo-w{width:84px!important;right:-24px!important;top:-36px!important}}
 </style>
 <script>(()=>{const f=document.querySelector("#define .fhmw");if(!f)return;if(!("IntersectionObserver" in window)){f.classList.add("in");return}const o=new IntersectionObserver(es=>{if(es.some(x=>x.isIntersecting)){f.classList.add("in");o.disconnect()}},{threshold:.35});o.observe(f)})();</script>
 </body>
