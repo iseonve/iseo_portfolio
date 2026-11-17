@@ -2979,6 +2979,11 @@ html body #spec .rc .rf .pls i{background:#fff!important}
 html body #spec .rc.sos .rf{background:#E0466B!important}
 html body #spec .rc.sos .rf .pls i{background:#fff!important}
 html body #spec .rc.sos .gst i,html body #spec .rc.sos .gst b{background:#E0466B!important;color:#E0466B}
+
+html body #test .t3l::before{display:none!important}
+html body #test .t3l li:not(:last-child)::after{content:"";position:absolute;left:16px;top:7px;width:calc(100% + 16px - 16px);height:2px;background:#E6DAFF}
+html body #test .u2f{grid-template-rows:repeat(2,auto);grid-auto-flow:column}
+@media (max-width:900px){html body #test .u2f{grid-auto-flow:row}}
 </style>
 <script>(()=>{const f=document.querySelector("#define .fhmw");if(!f)return;if(!("IntersectionObserver" in window)){f.classList.add("in");return}const o=new IntersectionObserver(es=>{if(es.some(x=>x.isIntersecting)){f.classList.add("in");o.disconnect()}},{threshold:.35});o.observe(f)})();</script>
 </body>
