@@ -96,14 +96,14 @@ img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
 
 
 /* OVERVIEW — wide card, icon popping out of the top, Lotte props around */
-.ov2{position:relative;padding:clamp(220px,19vw,330px) 0 clamp(60px,6vw,100px);overflow-x:clip}
+.ov2{position:relative;padding:clamp(150px,12vw,200px) 0 clamp(60px,6vw,100px);overflow-x:clip}
 .ov-card2{position:relative;z-index:1;margin:0 2.7vw;background:#FAFAFA;border-radius:clamp(28px,3vw,52px);min-height:clamp(420px,31vw,620px);display:grid;grid-template-columns:1fr 1fr;align-items:center}
 .ov-card2 .icon3d{justify-self:center;align-self:start;margin-top:calc(-1 * clamp(70px,6vw,110px));width:clamp(190px,19vw,300px);transform:none}
 .ov-card2 .ov-txt{padding:clamp(40px,5vw,90px) clamp(24px,6vw,120px) clamp(40px,5vw,90px) 0}
 .prop{position:absolute;pointer-events:none;animation:propf 8s ease-in-out infinite}
 @keyframes propf{0%,100%{translate:0 0}50%{translate:0 -14px}}
-.p-balloon{z-index:2;left:1.2vw;top:calc(clamp(220px,19vw,330px) + 52%);width:clamp(90px,8vw,140px);rotate:-10deg;filter:drop-shadow(14px 30px 24px rgba(120,0,20,.22))}
-.p-tower{z-index:2;right:10vw;top:calc(clamp(220px,19vw,330px) - clamp(200px,18vw,320px) + 34px);height:clamp(200px,18vw,320px);rotate:3deg;filter:drop-shadow(-10px 20px 20px rgba(30,40,60,.18));animation-delay:-2s}
+.p-balloon{z-index:2;left:1.2vw;top:calc(clamp(150px,12vw,200px) + 52%);width:clamp(90px,8vw,140px);rotate:-10deg;filter:drop-shadow(14px 30px 24px rgba(120,0,20,.22))}
+.p-tower{z-index:2;right:10vw;top:calc(clamp(150px,12vw,200px) - clamp(110px,9vw,150px));height:clamp(170px,14vw,240px);rotate:3deg;filter:drop-shadow(-10px 20px 20px rgba(30,40,60,.18));animation-delay:-2s}
 .p-ticket{z-index:2;right:-2vw;bottom:-2vw;width:clamp(240px,24vw,420px);rotate:-14deg;filter:blur(3px) drop-shadow(0 30px 30px rgba(0,0,0,.18));animation-delay:-4s}
 .p-fish{z-index:2;left:5vw;top:clamp(40px,4vw,80px);width:clamp(90px,8.5vw,150px);rotate:-8deg;filter:blur(1.5px) drop-shadow(10px 20px 18px rgba(10,60,100,.22));animation-delay:-6s}
 @media (max-width:900px){.ov-card2{grid-template-columns:1fr;margin:0 16px}.ov-card2 .ov-txt{padding:40px 28px 60px}.p-tower{right:4vw;height:160px}.p-ticket{width:200px}.p-fish{left:4vw}.p-balloon{top:auto;bottom:30px}}
