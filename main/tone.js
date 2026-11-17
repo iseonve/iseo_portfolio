@@ -32,7 +32,7 @@
         '</div></div>' +
       '<div class="g-r"><h2 aria-label="get stuck.">' + line([['get', 'mu']]) + line([['stuck.', 'ac']]) + '</h2>' +
         '<p class="g-lab"><i>!</i>How</p><p class="g-tx">지금은 사용자가 <em>멈춘 순간</em>을 찾아 다시 잇는 UI/UX 디자이너예요. 먼저 듣고, 잘게 나누고, 여러 시안으로 비교한 뒤 직접 코드로 구현해 개발자와 같은 화면을 보며 이야기해요.</p>' +
-        '<a class="g-go" href="https://iseonve.github.io/iseo_portfolio/about.html" target="_blank" rel="noopener">More about me <span>↗</span></a></div>' +
+        '<a class="g-go" href="https://iseonve.github.io/iseo_portfolio/about.html">More about me <span>→</span></a></div>' +
     '</div>';
   (function words() {
     var v = document.querySelector('.abg .wv');
