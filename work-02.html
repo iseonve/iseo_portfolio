@@ -478,7 +478,7 @@
 </div>
 
 <div class="blk"><p class="eb">Findings → Fix</p><h3>발견한 문제와, 이렇게 고쳤어요</h3><p class="sub">문제 6개와 수정 방향</p>
-<ul class="u2f"><li><div class="fq"><span class="sv hi">높음</span><p>‘경로 저장’ 버튼을 지나쳐 저장하지 않고 끝냄</p><small>P3 실패 · P2 망설임</small></div><i class="fa2">→</i><div class="fx"><b>하단 고정 주요 버튼 + 저장 완료 상태 표시</b></div></li><li><div class="fq"><span class="sv hi">높음</span><p>추천이 왜, 무엇을 기준으로 나왔는지 모름</p><small>P1 “추천 기준이 뭐예요?”</small></div><i class="fa2">→</i><div class="fx"><b>추천 카드에 ‘경로 · 시간대 기준’ 근거 한 줄</b></div></li><li><div class="fq"><span class="sv md">중간</span><p>조절 바가 무엇을 조절하는지 모름</p><small>P1 · P4</small></div><i class="fa2">→</i><div class="fx"><b>바 양끝에 단위 · 라벨 (주변 소리 ↔ 음악)</b></div></li><li><div class="fq"><span class="sv md">중간</span><p>모드 이름만으로 기능을 구분하기 어려움</p><small>P2 · P4 · P5</small></div><i class="fa2">→</i><div class="fx"><b>모드마다 언제 쓰는지 한 줄 + 예시 소리</b></div></li><li><div class="fq"><span class="sv lo">낮음</span><p>모드를 여러 개 고를 수 있는지 헷갈림</p><small>P3 다중 선택 시도 3회</small></div><i class="fa2">→</i><div class="fx"><b>단일 / 복수 선택을 UI로 구분</b></div></li><li><div class="fq"><span class="sv lo">낮음</span><p>일반 지도 앱으로 오해</p><small>P5</small></div><i class="fa2">→</i><div class="fx"><b>경로 결과에서 소음 · 혼잡 정보를 먼저</b></div></li></ul>
+<div class="u2g"><div class="fg hi"><span class="sv hi">높음 · 2개</span><ul><li><p>‘경로 저장’ 버튼을 지나쳐 저장하지 않고 끝냄</p><small>P3 실패 · P2 망설임</small><b>→ 하단 고정 주요 버튼 + 저장 완료 상태 표시</b></li><li><p>추천이 왜, 무엇을 기준으로 나왔는지 모름</p><small>P1 “추천 기준이 뭐예요?”</small><b>→ 추천 카드에 ‘경로 · 시간대 기준’ 근거 한 줄</b></li></ul></div><div class="fg md"><span class="sv md">중간 · 2개</span><ul><li><p>조절 바가 무엇을 조절하는지 모름</p><small>P1 · P4</small><b>→ 바 양끝에 단위 · 라벨 (주변 소리 ↔ 음악)</b></li><li><p>모드 이름만으로 기능을 구분하기 어려움</p><small>P2 · P4 · P5</small><b>→ 모드마다 언제 쓰는지 한 줄 + 예시 소리</b></li></ul></div><div class="fg lo"><span class="sv lo">낮음 · 2개</span><ul><li><p>모드를 여러 개 고를 수 있는지 헷갈림</p><small>P3 다중 선택 시도 3회</small><b>→ 단일 / 복수 선택을 UI로 구분</b></li><li><p>일반 지도 앱으로 오해</p><small>P5</small><b>→ 경로 결과에서 소음 · 혼잡 정보를 먼저</b></li></ul></div></div>
 <p class="note">SUS에서도 ‘기능이 잘 통합 · 일관성’ 2.8, ‘자주 사용하고 싶다’ 2.2가 가장 낮았어요. 저장한 정보가 다음 추천으로 이어지지 않는 작업 3과 같은 이야기입니다.</p></div>
 
 <div class="blk sb2">
@@ -3066,6 +3066,18 @@ html body #test .ut2>.blk.sb2:has(+ .blk.sb2){padding-bottom:28px}
 html body #test .ut2>.blk .ba{background:#F8F8FA!important}
 html body #test .ut2>.blk .ba .bap figure:first-child{background:#EFEFF2!important}
 html body #test .ut2 .u3p{background:#fff}
+
+#test .u2g{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+#test .u2g .fg{padding:20px 22px;border-radius:20px;background:#F8F8FA}
+#test .u2g .fg.hi{background:#FFF4F6}
+#test .u2g .sv{font-size:13px!important;padding:4px 12px!important}
+#test .u2g ul{list-style:none;margin:8px 0 0;padding:0}
+#test .u2g li{padding:16px 0;border-top:1px solid rgba(0,0,0,.06)}
+#test .u2g li:first-child{border-top:0}
+#test .u2g li p{margin:0!important;font-size:15.5px;font-weight:700;color:#1A1A1A;line-height:1.45}
+#test .u2g li small{display:block;margin-top:4px;font-size:13px;color:#8A8A92}
+#test .u2g li b{display:block;margin-top:10px;font-size:14.5px;color:var(--gd);line-height:1.5}
+@media (max-width:900px){#test .u2g{grid-template-columns:1fr}}
 </style>
 <script>(()=>{const f=document.querySelector("#define .fhmw");if(!f)return;if(!("IntersectionObserver" in window)){f.classList.add("in");return}const o=new IntersectionObserver(es=>{if(es.some(x=>x.isIntersecting)){f.classList.add("in");o.disconnect()}},{threshold:.35});o.observe(f)})();</script>
 </body>
