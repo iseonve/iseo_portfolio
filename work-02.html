@@ -2763,6 +2763,8 @@ html body #define .fhmw .fo-w{right:-45px!important;top:-70px!important;width:18
 html body #define .fhmw.in .fo-w{transform:rotate(38deg)!important;animation:fofw2 6s ease-in-out 1.4s infinite!important}
 @keyframes fofw2{0%,100%{transform:rotate(38deg) translate(0,0)}50%{transform:rotate(38deg) translate(6px,6px)}}
 @media (max-width:760px){html body #define .fhmw .fo-w{width:84px!important;right:-24px!important;top:-36px!important}}
+html body #define .fhmw .fo-ph{left:-40px!important;bottom:-60px!important}
+html body #define .fhmw .fo-w{right:-5px!important;top:10px!important;width:160px!important}
 </style>
 <script>(()=>{const f=document.querySelector("#define .fhmw");if(!f)return;if(!("IntersectionObserver" in window)){f.classList.add("in");return}const o=new IntersectionObserver(es=>{if(es.some(x=>x.isIntersecting)){f.classList.add("in");o.disconnect()}},{threshold:.35});o.observe(f)})();</script>
 </body>
