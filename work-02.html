@@ -3026,6 +3026,10 @@ html body #spec .rc .rf>div{flex-direction:column!important;align-items:flex-sta
 .end a .endimg em{font:500 15px/1.4 "Pretendard",sans-serif;font-style:normal;color:#9a9a9a}
 .end a .endimg small{grid-column:auto;font:400 12px/1 var(--mono);text-transform:none;color:#666}
 .end a img.endimg{display:block;object-fit:cover;border:0}
+
+html body #test .t3l li{text-align:center}
+html body #test .t3l .nd{margin:0 auto}
+html body #test .t3l li:not(:last-child)::after{left:calc(50% + 8px)!important;width:calc(100% + 16px - 16px)!important}
 </style>
 <script>(()=>{const f=document.querySelector("#define .fhmw");if(!f)return;if(!("IntersectionObserver" in window)){f.classList.add("in");return}const o=new IntersectionObserver(es=>{if(es.some(x=>x.isIntersecting)){f.classList.add("in");o.disconnect()}},{threshold:.35});o.observe(f)})();</script>
 </body>
