@@ -2745,6 +2745,9 @@ html body #define .fhmw .fo-ph{transform:translate(-60px,0) rotate(-10deg)}html 
 html body .fcs>li{display:flex!important;flex-direction:column;padding-bottom:0!important;overflow:hidden}
 html body .fcs>li>ol{margin-bottom:32px!important}
 html body .fcs img:not(.wimg){aspect-ratio:393/580!important;width:54%!important}
+html body #define .fhmw .fo-ph{left:-30px!important;top:auto!important;bottom:-60px!important;margin:0!important;width:250px!important}
+html body #define .fhmw .fo-w{right:30px!important;top:-90px!important;margin:0!important;width:190px!important;filter:none!important}
+@media (max-width:760px){html body #define .fhmw .fo-ph{width:110px!important;bottom:-30px!important}html body #define .fhmw .fo-w{width:84px!important;right:6px!important;top:-40px!important}}
 </style>
 <script>(()=>{const f=document.querySelector("#define .fhmw");if(!f)return;if(!("IntersectionObserver" in window)){f.classList.add("in");return}const o=new IntersectionObserver(es=>{if(es.some(x=>x.isIntersecting)){f.classList.add("in");o.disconnect()}},{threshold:.35});o.observe(f)})();</script>
 </body>
