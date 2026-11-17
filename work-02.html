@@ -2699,7 +2699,7 @@ html body #develop .msum p b{align-self:center}html body #develop .msum p:first-
 html body #define .fhmw .fo-ph{left:4%;bottom:-30px;width:300px;aspect-ratio:auto;height:auto;border-radius:0;background:none;padding:0;box-shadow:none;filter:drop-shadow(0 30px 40px rgba(0,0,0,.45))}
 html body #define .fhmw .fo-w{right:6%;top:-30px;width:170px}
 @media (max-width:760px){html body #define .fhmw .fo-ph{width:140px;left:-10px;bottom:-20px}html body #define .fhmw .fo-w{width:100px}}
-html body .fcs img:not(.wimg){padding-top:0!important;margin-top:28px!important;box-sizing:border-box;border:7px solid #15151A;border-bottom:0;border-radius:34px 34px 0 0!important;box-shadow:0 -6px 24px -10px rgba(40,20,90,.35)}
+html body .fcs img:not(.wimg){padding-top:0!important;margin-top:auto!important;margin-bottom:0!important;box-sizing:border-box;border:7px solid #15151A;border-bottom:0;border-radius:34px 34px 0 0!important;box-shadow:0 -6px 24px -10px rgba(40,20,90,.35)}
 .wf.go .wfl path{stroke-dashoffset:0!important;opacity:1!important;transition:stroke-dashoffset .7s cubic-bezier(.65,0,.35,1) var(--d,0s)}
 
 #develop .dcv{margin-top:96px}
@@ -2742,6 +2742,9 @@ html body #define .fhmw.in .fo-ph{transform:rotate(-10deg)}html body #define .fh
 @keyframes fofw{0%,100%{transform:rotate(10deg) translateY(0)}50%{transform:rotate(10deg) translateY(-10px)}}
 html body #define .fhmw .fo-ph{transform:translate(-60px,0) rotate(-10deg)}html body #define .fhmw .fo-w{transform:translate(60px,0) rotate(10deg)}
 @media (max-width:760px){html body #define .fhmw .fo-ph{width:80px;left:-6px}html body #define .fhmw .fo-w{width:64px;right:-4px;margin-top:-60px}}
+html body .fcs>li{display:flex!important;flex-direction:column;padding-bottom:0!important;overflow:hidden}
+html body .fcs>li>ol{margin-bottom:32px!important}
+html body .fcs img:not(.wimg){aspect-ratio:393/580!important;width:54%!important}
 </style>
 <script>(()=>{const f=document.querySelector("#define .fhmw");if(!f)return;if(!("IntersectionObserver" in window)){f.classList.add("in");return}const o=new IntersectionObserver(es=>{if(es.some(x=>x.isIntersecting)){f.classList.add("in");o.disconnect()}},{threshold:.35});o.observe(f)})();</script>
 </body>
