@@ -138,6 +138,22 @@ img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
 .ov3-right{z-index:9;left:57.6vw;top:1.6vw;width:17vw;filter:drop-shadow(0 24px 24px rgba(0,40,80,.18))}
 @media (max-width:900px){.ov3{height:auto;padding:150px 16px 220px}.ov3-card{position:relative;left:auto;right:auto;top:auto;height:auto;border-radius:24px;padding:180px 24px 40px}.ov3-txt{position:static;width:auto}.ov3-icon{left:50%;top:40px;width:220px;margin-left:-110px}.ov3-left{top:auto;bottom:40px;width:120px}.ov3-right{left:auto;right:0;top:auto;bottom:20px;width:200px}}
 
+
+/* CLIENT NEEDS — reference Client Interview, 1440px values as vw */
+.cin{position:relative;padding-top:clamp(140px,14vw,220px);overflow-x:clip}
+.cin-t{font-size:clamp(22px,1.95vw,28px);font-weight:700;line-height:1.29;letter-spacing:-.04em}
+.cin-s{margin-top:22px;font-size:clamp(12px,.84vw,13px);line-height:1.62;color:#676767}
+.cin-stage{position:relative;height:41.1vw;margin-top:6.6vw}
+.cin-words{position:absolute;left:10.4vw;top:4.2vw;font-size:13.6vw;font-weight:800;letter-spacing:-.045em;line-height:.95;color:#F9DDE1;white-space:nowrap;user-select:none}
+.cin-pill{position:absolute;left:var(--x);top:var(--y);height:4.45vw;min-height:44px;display:flex;align-items:center;filter:drop-shadow(0 1.6vw 1.6vw rgba(80,30,40,.10))}
+.cin-pill .bg{position:absolute;left:50%;top:0;bottom:0;width:4vw;min-width:44px;transform:translateX(-50%);border-radius:999px;background:rgba(255,255,255,.7);transition:width .8s cubic-bezier(.2,.8,.2,1) var(--d),left .8s cubic-bezier(.2,.8,.2,1) var(--d),transform .8s cubic-bezier(.2,.8,.2,1) var(--d)}
+.cin-pill span{position:relative;display:flex;align-items:center;gap:.9vw;padding:0 2.2vw;font-size:clamp(13px,1.3vw,18.72px);font-weight:700;white-space:nowrap;opacity:0;transition:opacity .5s ease calc(var(--d) + .6s)}
+.cin-pill span b{width:.55vw;height:.55vw;min-width:6px;min-height:6px;border-radius:50%;background:var(--red)}
+.cin.in-view .cin-pill .bg{width:100%;left:0;transform:none}
+.cin.in-view .cin-pill span{opacity:1}
+@media (max-width:900px){.cin-stage{height:120vw}.cin-words{left:4vw;font-size:18vw}.cin-pill{left:6vw!important}.cin-pill:nth-of-type(2){top:34vw!important}.cin-pill:nth-of-type(3){top:62vw!important}.cin-pill span{padding:0 18px;gap:8px}}
+@media (prefers-reduced-motion:reduce){.cin-pill .bg{width:100%;left:0;transform:none;transition:none}.cin-pill span{opacity:1;transition:none}}
+
 /* TIMELINE */
 .tl{margin-top:90px;display:grid;grid-template-columns:200px 1fr;row-gap:20px;align-items:center}
 .tl .thd{display:grid;grid-template-columns:repeat(9,1fr);font-size:13px;color:#000;padding-bottom:6px}
@@ -403,6 +419,21 @@ html body .hdr.hs .hnow b,html body .hdr.hs.lt .hnow b{color:#141414!important}
   </div>
 </section>
 
+<!-- CLIENT NEEDS (reference: Client Interview — text block, giant tinted words, three pills) -->
+<section class="cin" id="needs">
+  <div class="w cin-txt">
+    <span class="badge" data-r>CLIENT NEEDS</span>
+    <h2 class="cin-t" data-r>시즌마다 바뀌는 콘텐츠를 빠르게 반영하면서도<br>롯데 브랜드의 일관성을 지키고자 했습니다</h2>
+    <p class="cin-s" data-r>롯데월드·서울스카이·롯데물산은 시즌 페스티벌, 카드사·통신사 제휴 프로모션, 기업 정보처럼 성격이 다른 콘텐츠를<br>꾸준히 업데이트해야 했습니다. 오픈 일정에 맞춘 빠른 반영, PC·MO 동시 대응,<br>그리고 사이트마다 다른 브랜드 톤을 지키는 것이 운영의 핵심이었습니다.</p>
+  </div>
+  <div class="cin-stage">
+    <div class="cin-words" aria-hidden="true">Speed<br>Consistency<br>Multi-device</div>
+    <div class="cin-pill" style="--x:40.1vw;--y:1.7vw;--d:0s"><i class="bg"></i><span><b></b>오픈 일정에 맞춘 빠른 반영</span></div>
+    <div class="cin-pill" style="--x:24vw;--y:16.9vw;--d:.25s"><i class="bg"></i><span><b></b>사이트마다 다른 브랜드 톤 유지</span></div>
+    <div class="cin-pill" style="--x:61.8vw;--y:30.2vw;--d:.5s"><i class="bg"></i><span><b></b>PC · MO 동시 대응</span></div>
+  </div>
+</section>
+
 <!-- DIRECTION (dark, staggered cards) -->
 <section class="dk dir">
   <div class="w">
@@ -545,6 +576,7 @@ addEventListener("scroll",()=>{const y=scrollY,d=y-y0;y0=y;if(y<120){h.classList
 if(h.matches(":hover,:focus-within"))return;acc=(Math.sign(d)===Math.sign(acc))?acc+d:d;
 if(acc>40)h.classList.add("hid");else if(acc<-12)h.classList.remove("hid");},{passive:true});})();</script>
 <script>(function(){var els=[].slice.call(document.querySelectorAll('.ovp[data-px]'));if(!els.length||matchMedia('(prefers-reduced-motion:reduce)').matches)return;var sec=document.querySelector('.ov3');function f(){var r=sec.getBoundingClientRect();var d=(innerHeight/2-(r.top+r.height/2));els.forEach(function(e){e.style.transform='translate3d(0,'+(d*parseFloat(e.dataset.px))+'px,0) scale(.96)';});}addEventListener('scroll',f,{passive:true});addEventListener('resize',f);f();})();</script>
+<script>(function(){var c=document.querySelector('.cin');if(!c)return;var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){c.classList.add('in-view');o.disconnect();}});},{threshold:.35});o.observe(c.querySelector('.cin-stage'));})();</script>
 <style id="hdr-white">
 html body .hdr.hs::before{background:rgba(255,255,255,.94)!important;box-shadow:0 0 0 1px rgba(0,0,0,.06),0 16px 36px -18px rgba(20,20,40,.35)!important}
 html body .hdr.hs .hlogo,html body .hdr.hs.lt .hlogo{color:#141414!important}
