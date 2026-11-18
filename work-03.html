@@ -141,18 +141,50 @@ img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
 
 /* CLIENT NEEDS — reference Client Interview, 1440px values as vw */
 .cin{position:relative;padding-top:clamp(140px,14vw,220px);overflow-x:clip}
+.cin-pill span{max-width:none}
 .cin-t{font-size:clamp(22px,1.95vw,28px);font-weight:700;line-height:1.29;letter-spacing:-.04em}
 .cin-s{margin-top:22px;font-size:clamp(12px,.84vw,13px);line-height:1.62;color:#676767}
 .cin-stage{position:relative;height:41.1vw;margin-top:6.6vw}
-.cin-words{position:absolute;left:10.4vw;top:4.2vw;font-size:13.6vw;font-weight:800;letter-spacing:-.045em;line-height:.95;color:#F9DDE1;white-space:nowrap;user-select:none}
+.cin-words{position:absolute;left:50%;transform:translateX(-50%);width:min(var(--w),calc(100% - 48px));top:4.2vw;font-size:min(12.5vw,180px);font-weight:800;letter-spacing:-.045em;line-height:.95;color:#F9DDE1;user-select:none;overflow:hidden}.cin-words span{display:block;white-space:nowrap}
 .cin-pill{position:absolute;left:var(--x);top:var(--y);height:4.45vw;min-height:44px;display:flex;align-items:center;filter:drop-shadow(0 1.6vw 1.6vw rgba(80,30,40,.10))}
 .cin-pill .bg{position:absolute;left:50%;top:0;bottom:0;width:4vw;min-width:44px;transform:translateX(-50%);border-radius:999px;background:rgba(255,255,255,.7);transition:width .8s cubic-bezier(.2,.8,.2,1) var(--d),left .8s cubic-bezier(.2,.8,.2,1) var(--d),transform .8s cubic-bezier(.2,.8,.2,1) var(--d)}
 .cin-pill span{position:relative;display:flex;align-items:center;gap:.9vw;padding:0 2.2vw;font-size:clamp(13px,1.3vw,18.72px);font-weight:700;white-space:nowrap;opacity:0;transition:opacity .5s ease calc(var(--d) + .6s)}
 .cin-pill span b{width:.55vw;height:.55vw;min-width:6px;min-height:6px;border-radius:50%;background:var(--red)}
 .cin.in-view .cin-pill .bg{width:100%;left:0;transform:none}
 .cin.in-view .cin-pill span{opacity:1}
-@media (max-width:900px){.cin-stage{height:120vw}.cin-words{left:4vw;font-size:18vw}.cin-pill{left:6vw!important}.cin-pill:nth-of-type(2){top:34vw!important}.cin-pill:nth-of-type(3){top:62vw!important}.cin-pill span{padding:0 18px;gap:8px}}
+@media (max-width:900px){.cin-stage{height:120vw}.cin-words{font-size:20vw}.cin-pill{left:6vw!important}.cin-pill:nth-of-type(2){top:34vw!important}.cin-pill:nth-of-type(3){top:62vw!important}.cin-pill span{padding:0 18px;gap:8px}}
 @media (prefers-reduced-motion:reduce){.cin-pill .bg{width:100%;left:0;transform:none;transition:none}.cin-pill span{opacity:1;transition:none}}
+
+
+/* card row — reference con5 (463 | 860 = 387 + 423·423 at 1440) */
+.c5{display:grid;grid-template-columns:32.15vw 59.72vw;gap:1.04vw;margin:2vw 3.54vw 0;justify-content:center}
+.c5-l{position:relative;height:57.3vw;border-radius:2.43vw;overflow:hidden;background:linear-gradient(180deg,#C9364A 0%,#E9848F 48%,#FBE4E6 100%)}
+.c5-ped{position:absolute;left:10%;right:-10%;bottom:0;height:12%;background:linear-gradient(90deg,#F3D9DC 0 42%,#FFF6F7 42%);transform:skewX(-14deg);transform-origin:bottom}
+.c5-phone{position:absolute;left:21%;top:16%;width:52%;transform:rotate(27deg);filter:drop-shadow(-1.6vw 2.4vw 2vw rgba(90,10,25,.35))}
+.c5-r{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:26.875vw 29.375vw;gap:1.04vw}
+.c5-kw,.c5-sq{position:relative;border-radius:1.8vw;background:rgba(255,255,255,.5);overflow:hidden}
+.c5-kw{grid-column:1/3;border-radius:2.43vw}
+.kw-rows{position:absolute;left:20.5vw;top:4.9vw;display:flex;flex-direction:column;gap:1.25vw}
+.kw-rows div{display:flex;gap:1.25vw;white-space:nowrap}
+.kw-rows b,.kw-rows em{height:4.9vw;border-radius:999px;flex:none}
+.kw-rows b{display:flex;align-items:center;padding:0 2.2vw;background:var(--red);color:#fff;font-size:1.95vw;font-weight:600;letter-spacing:-.02em}
+.kw-rows em{width:12vw;background:#ddd center 12%/cover;box-shadow:inset 0 0 0 1px rgba(0,0,0,.05)}
+.c5-ic{position:absolute;left:50%;top:52%;width:15.5vw;transform:translate(-50%,-50%) rotate(-6deg);filter:drop-shadow(1.6vw 2.4vw 2vw rgba(70,20,30,.2))}
+.c5-big{position:absolute;left:9.4vw;top:0;width:34vw;padding:.7vw}
+@media (max-width:900px){.c5{grid-template-columns:1fr;margin:24px 16px 0}.c5-l{height:120vw}.c5-r{grid-template-rows:56vw 46vw}.kw-rows{left:6vw;top:6vw}.kw-rows b,.kw-rows em{height:9vw}.kw-rows b{font-size:4vw;padding:0 4vw}.kw-rows em{width:20vw}.c5-ic{width:30vw}.c5-big{width:60vw;left:14vw}}
+
+
+/* PAIN POINTS — reference User Research (cards 562×271, r30 at 1440) */
+.ur{position:relative;padding-top:clamp(140px,14vw,220px)}
+.ur-cols{position:relative;display:grid;grid-template-columns:39.03vw 39.03vw;gap:1.04vw;justify-content:center;margin-top:1.9vw}
+.ur-cols::after{content:'';position:absolute;left:0;right:0;bottom:0;height:28vw;background:linear-gradient(180deg,rgba(245,245,245,0),var(--bg) 92%);pointer-events:none}
+.ur-col{display:flex;flex-direction:column;gap:1.04vw}
+.ur-col.l{padding-top:8.2vw}.ur-col.r{padding-top:2.85vw}
+.ur-box{position:relative;height:18.82vw;border-radius:2.08vw;background:rgba(255,255,255,.5)}
+.ur-box p{position:absolute;left:2.6vw;bottom:2.6vw;font-size:clamp(14px,1.3vw,18.72px);font-weight:700;line-height:1.45;letter-spacing:-.03em}
+.ur-n{position:absolute;right:2.6vw;top:2.6vw;font-size:clamp(10px,.84vw,12px);font-weight:700;letter-spacing:.02em;color:var(--red)}
+.ur-col.r .ur-box:nth-child(2){transition-delay:.12s}.ur-col.r .ur-box:nth-child(3){transition-delay:.24s}
+@media (max-width:900px){.ur-cols{grid-template-columns:1fr;margin:24px 16px 0}.ur-col.l,.ur-col.r{padding-top:0}.ur-box{height:44vw;border-radius:20px}.ur-box p{left:20px;bottom:20px}.ur-n{right:20px;top:20px}}
 
 /* TIMELINE */
 .tl{margin-top:90px;display:grid;grid-template-columns:200px 1fr;row-gap:20px;align-items:center}
@@ -427,11 +459,39 @@ html body .hdr.hs .hnow b,html body .hdr.hs.lt .hnow b{color:#141414!important}
     <p class="cin-s" data-r>롯데월드·서울스카이·롯데물산은 시즌 페스티벌, 카드사·통신사 제휴 프로모션, 기업 정보처럼 성격이 다른 콘텐츠를<br>꾸준히 업데이트해야 했습니다. 오픈 일정에 맞춘 빠른 반영, PC·MO 동시 대응,<br>그리고 사이트마다 다른 브랜드 톤을 지키는 것이 운영의 핵심이었습니다.</p>
   </div>
   <div class="cin-stage">
-    <div class="cin-words" aria-hidden="true">Speed<br>Consistency<br>Multi-device</div>
+    <div class="cin-words" aria-hidden="true"><span>Speed</span><span>Brand</span><span>Device</span></div>
     <div class="cin-pill" style="--x:40.1vw;--y:1.7vw;--d:0s"><i class="bg"></i><span><b></b>오픈 일정에 맞춘 빠른 반영</span></div>
     <div class="cin-pill" style="--x:24vw;--y:16.9vw;--d:.25s"><i class="bg"></i><span><b></b>사이트마다 다른 브랜드 톤 유지</span></div>
     <div class="cin-pill" style="--x:61.8vw;--y:30.2vw;--d:.5s"><i class="bg"></i><span><b></b>PC · MO 동시 대응</span></div>
   </div>
+
+  <div class="c5">
+    <div class="c5-l" data-r>
+      <i class="c5-ped"></i>
+      <div class="iphone c5-phone"><div class="scr"><div class="sb"><b>9:41</b><i></i></div><div class="feed"><img src="img/pj03/fest-pokemon-mo.webp" alt="롯데월드 포켓몬 페스티벌 모바일 화면"></div></div></div>
+    </div>
+    <div class="c5-r">
+      <div class="c5-kw" data-r>
+        <div class="kw-rows">
+          <div><b>Festival</b><b>Event</b><em style="background-image:url(img/pj03/fest-maple-mo.webp)"></em><b>Season</b></div>
+          <div><em style="background-image:url(img/pj03/promo-kakao-mo.webp)"></em><b>Promotion</b><b>Card</b><b>Telecom</b></div>
+          <div><b>ESG</b><b>Corporate</b><em style="background-image:url(img/pj03/esg-main-mo.webp)"></em></div>
+        </div>
+      </div>
+      <div class="c5-sq" data-r><img class="c5-ic" src="img/pj03/3d-icon-v2.webp" alt=""></div>
+      <div class="c5-sq c5-crop" data-r><div class="iphone c5-big"><div class="scr"><div class="sb"><b>9:41</b><i></i></div><div class="feed"><img src="img/pj03/promo-lottecard-mo.webp" alt="롯데카드 제휴 프로모션 모바일 화면"></div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN POINTS (reference: User Research — two staggered columns of quote cards, fading out) -->
+<section class="ur" id="painpoints">
+  <div class="w">
+    <span class="badge" data-r>PAIN POINTS</span>
+    <h2 class="cin-t" data-r>시즌·제휴·기업 콘텐츠가 한 사이트에 쌓이면서<br>필요한 정보를 찾기 어렵다는<br>문의가 반복되었습니다</h2>
+    <p class="cin-s" data-r>운영하며 받은 수정 요청과 고객 문의를 정리해 보니, 대부분 정보가 어디 있는지 모른다는 데서 시작했습니다.<br>그래서 매 시즌 페이지를 만들 때 찾기 쉬운 구조를 가장 먼저 정했습니다.</p>
+  </div>
+  <div class="ur-cols"><div class="ur-col l"><div class="ur-box" data-r><b class="ur-n">ISSUE 01</b><p>이벤트가<br>어디 있는지 모르겠어요</p></div><div class="ur-box" data-r><b class="ur-n">ISSUE 02</b><p>행사 기간이 끝났는데<br>그대로 보여요</p></div><div class="ur-box" data-r><b class="ur-n">ISSUE 03</b><p>모바일에서는<br>글자가 너무 작아요</p></div></div><div class="ur-col r"><div class="ur-box" data-r><b class="ur-n">ISSUE 04</b><p>제휴 혜택을<br>어떻게 받는지 모르겠어요</p></div><div class="ur-box" data-r><b class="ur-n">ISSUE 05</b><p>카드사별 할인이<br>구분되지 않아요</p></div><div class="ur-box" data-r><b class="ur-n">ISSUE 06</b><p>기업 정보 메뉴가<br>너무 복잡해요</p></div></div></div>
 </section>
 
 <!-- DIRECTION (dark, staggered cards) -->
