@@ -211,7 +211,7 @@ img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
 .cpt-phones{position:relative;z-index:3;height:68vw}
 .ph3{position:absolute;height:46vw}
 .ph3 .frm{position:relative;z-index:2;display:block;width:100%;height:100%;pointer-events:none;filter:drop-shadow(0 3vw 4vw rgba(0,0,0,.5))}
-.ph3 .scrq{position:absolute;left:0;top:0;width:360px;height:760px;transform-origin:0 0;background:#fff;overflow:hidden}
+.ph3 .scrq{position:absolute;left:0;top:0;width:360px;height:760px;transform-origin:0 0;background:#fff;overflow:hidden;border-radius:52px}
 .ph3 .scrq .sb{position:absolute;left:0;right:0;top:0;height:34px;background:#fff;z-index:1;display:flex;align-items:center;justify-content:space-between;padding:6px 26px 0 34px;font-size:14px}
 .ph3 .scrq .sb i{width:24px;height:11px;border:1.5px solid #000;border-radius:3px}
 .ph3 .scrq .feed{position:absolute;left:0;right:0;top:34px;bottom:0;overflow:hidden}
@@ -851,7 +851,7 @@ if(acc>40)h.classList.add("hid");else if(acc<-12)h.classList.remove("hid");},{pa
 <script>(function(){
 function solve(A,b){var n=b.length;for(var i=0;i<n;i++){var m=i;for(var k=i+1;k<n;k++)if(Math.abs(A[k][i])>Math.abs(A[m][i]))m=k;var t=A[i];A[i]=A[m];A[m]=t;t=b[i];b[i]=b[m];b[m]=t;for(k=i+1;k<n;k++){var f=A[k][i]/A[i][i];for(var j=i;j<n;j++)A[k][j]-=f*A[i][j];b[k]-=f*b[i];}}var x=new Array(n);for(i=n-1;i>=0;i--){var s=b[i];for(j=i+1;j<n;j++)s-=A[i][j]*x[j];x[i]=s/A[i][i];}return x;}
 function fit(){document.querySelectorAll('.ph3').forEach(function(el){var q=el.querySelector('.scrq'),c=JSON.parse(el.dataset.c),W=el.clientWidth,H=el.clientHeight,w=360,h=760;if(!W)return;
-var src=[[0,0],[w,0],[w,h],[0,h]],dst=c.map(function(p){return[p[0]*W,p[1]*H]}),A=[],b=[];var cx=(dst[0][0]+dst[1][0]+dst[2][0]+dst[3][0])/4,cy=(dst[0][1]+dst[1][1]+dst[2][1]+dst[3][1])/4;dst=dst.map(function(p){return[cx+(p[0]-cx)*1.025,cy+(p[1]-cy)*1.025]});
+var src=[[0,0],[w,0],[w,h],[0,h]],dst=c.map(function(p){return[p[0]*W,p[1]*H]}),A=[],b=[];var cx=(dst[0][0]+dst[1][0]+dst[2][0]+dst[3][0])/4,cy=(dst[0][1]+dst[1][1]+dst[2][1]+dst[3][1])/4;dst=dst.map(function(p){return[cx+(p[0]-cx)*1.018,cy+(p[1]-cy)*1.018]});
 for(var i=0;i<4;i++){var x=src[i][0],y=src[i][1],u=dst[i][0],v=dst[i][1];A.push([x,y,1,0,0,0,-u*x,-u*y]);b.push(u);A.push([0,0,0,x,y,1,-v*x,-v*y]);b.push(v);}
 var k=solve(A,b);q.style.transform='matrix3d('+[k[0],k[3],0,k[6],k[1],k[4],0,k[7],0,0,1,0,k[2],k[5],0,1].join(',')+')';});}
 addEventListener('resize',fit);addEventListener('load',fit);fit();})();</script>
