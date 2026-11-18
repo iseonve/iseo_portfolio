@@ -122,6 +122,22 @@ img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
 @media (max-width:900px){.ov-card2{grid-template-columns:1fr;margin:0 16px}.ov-card2 .ov-txt{padding:40px 28px 60px}.p-tower{right:4vw;height:160px}.p-friends{width:200px;bottom:10px}.p-ray{display:none}.p-balloon{top:auto;bottom:30px}}
 @media (prefers-reduced-motion:reduce){.prop{animation:none}}
 
+
+/* OVERVIEW (ov3) — 1440px reference converted to vw */
+.ov3{position:relative;height:63.1vw;min-height:560px;overflow-x:clip}
+.ov3-glow{position:absolute;left:-64vw;top:.7vw;width:229vw;height:152vw;border-radius:50%;z-index:0;transform:rotate(-15deg);background:radial-gradient(closest-side,rgba(255,226,230,.55),rgba(255,226,230,0) 98.5%);pointer-events:none}
+.ov3-card{position:absolute;left:3.61vw;right:3.61vw;top:15.28vw;height:30.56vw;border-radius:2.6vw;background:rgba(255,255,255,.5);z-index:2}
+.ov3-txt{position:absolute;left:54.5vw;top:5.3vw;width:26vw}
+.ov3-txt .badge{margin-bottom:1.1vw}
+.ov3-txt .en{font-size:clamp(24px,2.35vw,40px);font-weight:700;letter-spacing:-.04em;line-height:1.18}
+.ov3-txt .ko{margin-top:2vw;font-size:clamp(12px,.95vw,15px);line-height:1.8;color:#777}
+.ov3-txt .note{margin-top:1.3vw;font-size:clamp(11px,.9vw,14px);line-height:1.7;color:#222;font-weight:600}
+.ovp{position:absolute;will-change:transform}
+.ov3-icon{z-index:9;left:19.1vw;top:13vw;width:24.5vw;filter:drop-shadow(30px 50px 50px rgba(120,0,20,.22)) drop-shadow(10px 18px 18px rgba(120,0,20,.18))}
+.ov3-left{z-index:9;left:-1.2vw;top:39.2vw;width:15vw;rotate:-12deg;filter:drop-shadow(16px 30px 26px rgba(20,60,100,.22))}
+.ov3-right{z-index:1;left:66vw;top:46.5vw;width:33vw;filter:blur(2.5px) drop-shadow(0 30px 30px rgba(0,40,80,.18))}
+@media (max-width:900px){.ov3{height:auto;padding:150px 16px 220px}.ov3-card{position:relative;left:auto;right:auto;top:auto;height:auto;border-radius:24px;padding:180px 24px 40px}.ov3-txt{position:static;width:auto}.ov3-icon{left:50%;top:40px;width:220px;margin-left:-110px}.ov3-left{top:auto;bottom:40px;width:120px}.ov3-right{left:auto;right:0;top:auto;bottom:20px;width:200px}}
+
 /* TIMELINE */
 .tl{margin-top:90px;display:grid;grid-template-columns:200px 1fr;row-gap:20px;align-items:center}
 .tl .thd{display:grid;grid-template-columns:repeat(9,1fr);font-size:13px;color:#000;padding-bottom:6px}
@@ -357,23 +373,20 @@ html body .hdr.hs .hnow b,html body .hdr.hs.lt .hnow b{color:#141414!important}
 
 <main class="page">
 
-<!-- OVERVIEW -->
-<section class="ov2">
-  <div class="ov-card2" data-r>
-    <div class="icon3d"><svg viewBox="0 0 300 500" fill="none" aria-hidden="true"><path d="M132 362 C172 292 198 168 184 96 C174 44 116 30 80 68 C48 104 40 214 56 296 C74 386 128 450 172 446 C210 442 242 410 272 372" stroke="#fff" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/><circle cx="30" cy="440" r="17" fill="#fff"/></svg></div>
-    <div class="ov-txt">
+<!-- OVERVIEW — proportions measured from the reference (1440px: card 1336×440 inset 52, icon 400 @ x275, props bottom-left / bottom-right) -->
+<section class="ov3">
+  <span class="ov3-glow" aria-hidden="true"></span>
+  <img class="ovp ov3-icon" data-px="0.10" src="img/pj03/3d-icon.webp" alt="롯데 3D 아이콘">
+  <div class="ov3-card">
+    <div class="ov3-txt" data-r>
       <span class="badge">OVERVIEW</span>
-      <h2 class="en">We kept Lotte's websites<br>running, season after season</h2>
+      <h2 class="en">We kept Lotte's websites running, season after season</h2>
       <p class="ko">롯데월드 어드벤처(잠실·부산)·서울스카이·아쿠아리움·민속박물관과 롯데물산 웹사이트를 운영하며, 메인과 페스티벌·이벤트, 카드사·통신사 제휴 프로모션 페이지를 PC와 모바일로 디자인했습니다.</p>
       <p class="note">* 롯데이노베이트 운영팀 · 2023.08 — 2026.03<br>* 웹 그래픽 디자인 · 사이트 운영 · PC / MO</p>
     </div>
   </div>
-
-  <!-- props: Lotte World balloon / Lotte World Tower (Lotte Corp.) / Seoul Sky Friends / Aquarium Friends -->
-
-  <div class="prop std p-friends"><img src="img/pj03/seoulsky-friends.png" alt="서울스카이 프렌즈"><i class="gloss" style="-webkit-mask-image:url(img/pj03/seoulsky-friends.png);mask-image:url(img/pj03/seoulsky-friends.png)"></i></div>
-  <div class="prop std p-shark"><img src="img/pj03/aq-shark.png" alt="롯데월드 아쿠아리움 캐릭터"><i class="gloss" style="-webkit-mask-image:url(img/pj03/aq-shark.png);mask-image:url(img/pj03/aq-shark.png)"></i></div>
-  <div class="prop std p-ray"><img src="img/pj03/aq-ray.png" alt=""><i class="gloss" style="-webkit-mask-image:url(img/pj03/aq-ray.png);mask-image:url(img/pj03/aq-ray.png)"></i></div>
+  <div class="ovp std ov3-left p-shark2" data-px="0.12"><img src="img/pj03/aq-shark.png" alt="롯데월드 아쿠아리움 캐릭터"><i class="gloss" style="-webkit-mask-image:url(img/pj03/aq-shark.png);mask-image:url(img/pj03/aq-shark.png)"></i></div>
+  <div class="ovp std ov3-right" data-px="0.16"><img src="img/pj03/seoulsky-friends.png" alt="서울스카이 프렌즈"><i class="gloss" style="-webkit-mask-image:url(img/pj03/seoulsky-friends.png);mask-image:url(img/pj03/seoulsky-friends.png)"></i></div>
 </section>
 
 <!-- TIMELINE (market research style) -->
@@ -533,6 +546,7 @@ addEventListener("scroll",upd,{passive:true});addEventListener("resize",upd);upd
 addEventListener("scroll",()=>{const y=scrollY,d=y-y0;y0=y;if(y<120){h.classList.remove("hid");acc=0;return;}
 if(h.matches(":hover,:focus-within"))return;acc=(Math.sign(d)===Math.sign(acc))?acc+d:d;
 if(acc>40)h.classList.add("hid");else if(acc<-12)h.classList.remove("hid");},{passive:true});})();</script>
+<script>(function(){var els=[].slice.call(document.querySelectorAll('.ovp[data-px]'));if(!els.length||matchMedia('(prefers-reduced-motion:reduce)').matches)return;var sec=document.querySelector('.ov3');function f(){var r=sec.getBoundingClientRect();var d=(innerHeight/2-(r.top+r.height/2));els.forEach(function(e){e.style.transform='translate3d(0,'+(d*parseFloat(e.dataset.px))+'px,0) scale(.96)';});}addEventListener('scroll',f,{passive:true});addEventListener('resize',f);f();})();</script>
 <style id="hdr-white">
 html body .hdr.hs::before{background:rgba(255,255,255,.94)!important;box-shadow:0 0 0 1px rgba(0,0,0,.06),0 16px 36px -18px rgba(20,20,40,.35)!important}
 html body .hdr.hs .hlogo,html body .hdr.hs.lt .hlogo{color:#141414!important}
