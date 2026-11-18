@@ -318,7 +318,7 @@ img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
 .pk span{display:block;margin:.3vw 1.4vw 0;font-size:clamp(9px,.7vw,10px);color:#999}
 .pk u{position:absolute;right:1.4vw;bottom:1.4vw;text-decoration:none;font-size:clamp(8px,.62vw,9px);font-weight:700;color:#fff;background:#000;border-radius:99px;padding:.45vw .9vw}
 /* category → corporate */
-.xcat{position:relative;height:161.3vw;overflow:hidden;margin-top:6vw;border-top:1px solid #e3e3e3}
+.xcat{position:relative;padding-top:150vw;padding-bottom:10vw;overflow:hidden;margin-top:6vw;border-top:1px solid #e3e3e3}
 .xcat-chips{position:absolute;left:0;right:0;top:24.5vw;height:10.4vw;display:flex;align-items:center;overflow:hidden;z-index:1}
 .xcat-chips>div{display:flex;gap:1.6vw;width:max-content;animation:belt 36s linear infinite}
 .xcat-chips span{width:7vw;height:7vw;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:clamp(9px,.8vw,12px);font-weight:700;flex:none}
@@ -341,20 +341,24 @@ img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
 .xpd-txt3{position:absolute;left:60.4vw;top:152.1vw}
 .xs.p4{left:31.25vw;top:153.7vw;width:15.6vw;height:32.9vw}
 .xs.p5{left:53.1vw;top:168.4vw;width:15.6vw;height:32.9vw}
+.xcat-all{position:relative;width:75vw;margin:0 auto}
+.xcat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3vw 1.6vw;margin-top:3vw}
+.xcat-grid .safari{border-radius:.8vw}.xcat-grid .view{--h:15vw}
+.xcat-grid figcaption{margin-top:.9vw;font-size:clamp(11px,.9vw,13px);font-weight:600}
 /* my → operation */
 .xmy{position:relative;height:73.5vw}
 .xmy .gw2{left:12.5vw;top:11.3vw;width:72.7vw}
 .xmy-txt{position:absolute;z-index:2;left:12.57vw;top:26.7vw}
 .xmy-ph{position:absolute;z-index:3;left:39.6vw;top:15.1vw;width:20.8vw}
 .xmy-ph .iphone{box-shadow:0 0 0 1px #3A3A3E,0 0 0 2px #B9B9BF,0 0 0 2.6px #6E6E74,0 3vw 5vw rgba(0,0,0,.25)}
-.xben{position:relative;height:84vw;overflow:hidden;padding-top:0}
+.xben{position:relative;height:78vw;overflow:hidden;padding-top:0}
 .xben .gw2{top:1vw;z-index:0}.xben .xw,.xben .xs,.xben-txt,.xben-hint{margin-top:8vw}
 .xben .xw{position:absolute;width:44vw;border-radius:1vw;box-shadow:0 2.4vw 5vw rgba(0,0,0,.14),0 0 0 .5px rgba(0,0,0,.12)}
 .xben .xw .view{--h:25vw}
-.xben .w1{left:5vw;top:15vw}.xben .w2{left:51vw;top:31vw;transition-delay:.2s}
-.xs.b2{left:42.2vw;top:9vw;width:15.6vw;height:57.6vw;z-index:2;transition-delay:.1s;box-shadow:0 2.4vw 5vw rgba(0,0,0,.22)}
-.xben-hint{position:absolute;left:5vw;top:44.5vw;font-style:normal;font-size:clamp(10px,.76vw,11px);color:#999}
-.xben-txt{position:absolute;left:62.2vw;top:1vw}
+.xben .w1{left:14vw;top:15vw}.xben .w2{left:51vw;top:31vw;transition-delay:.2s}
+.xs.b2{left:46vw;top:16vw;width:15.6vw;height:57.6vw;z-index:2;transition-delay:.1s;box-shadow:0 2.4vw 5vw rgba(0,0,0,.22)}
+.xben-hint{position:absolute;left:14vw;top:44.5vw;font-style:normal;font-size:clamp(10px,.76vw,11px);color:#999}
+.xben-txt{position:absolute;left:64vw;top:12vw}
 .xben-fade{position:absolute;left:0;right:0;bottom:0;height:20vw;z-index:3;background:linear-gradient(180deg,rgba(245,245,245,0),var(--bg))}
 /* plus → credits */
 .xcr{position:relative;text-align:center;padding:12.5vw 0 10vw;background:#181818 url("img/pj03/hero-tower.webp") center/cover;background-blend-mode:luminosity;overflow:hidden}
@@ -379,7 +383,7 @@ img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
  .ximp{height:150vw}.ximp-belt{top:40vw;height:30vw}.ximp-belt .bc{width:20vw;height:24vw;background-position:0 calc(var(--h)*-20vw)}.ximp .ximp-pc{left:6vw;right:6vw;width:auto;top:96vw}.ximp .ximp-pc .view{--h:50vw}.ximp-hint{left:6vw;top:92vw}.ximp{height:200vw}#main-banner{height:200vw}.ximp-cards{display:none}.iphone.ximp-ph{width:44vw;top:20vw;left:50%;transform:translateX(-50%)}.ximp-txt{left:20px;right:20px;top:auto;bottom:0}.ximp p br,.xsea p br,.xcat p br,.xpd p br,.xmy p br,.xben p br{display:none}
  .xtile{grid-template-columns:1fr;grid-template-rows:auto;height:auto;padding:60px 16px}.xtile .tall{height:140vw}.xtile .tall img{width:62vw}.xtile .sq{height:92vw}.xtile .sq p{top:12vw;left:8vw}.xtile .lt p{top:46vw}.xtile .bar{top:66vw;left:8vw;right:8vw;height:3vw}.xtile .lt em{top:71vw;left:8vw}.xtile .lt em.m{right:8vw}.xtile-3d{display:none}
  .xsea-top{height:100vw}.xsea-3d{left:6vw;width:40vw}.xsea-txt{left:20px;right:20px;top:58vw}.xsea-pk{height:auto;padding:40px 16px;display:grid;grid-template-columns:1fr 1fr;gap:14px}.xsea-h{position:static;grid-column:1/3;margin-bottom:20px}.pk{position:relative;left:auto!important;top:auto!important;width:auto;height:72vw}.pk i{height:52vw;background-position:0 calc(var(--h)*-44vw)}.pk{height:auto;padding-bottom:16px}
- .xcat,.xpd{height:auto;padding-bottom:60px}.xcat .xs,.xpd .xs{position:relative;left:auto;top:auto;width:62vw;height:120vw;margin:30px auto 0}.xcat-txt,.xcat-txt2,.xpd-txt,.xpd-txt2,.xpd-txt3{position:relative;left:auto;top:auto;padding:0 20px;margin-top:40px}.xcat-txt{margin-top:150vw}.iphone.xcat-ph{width:44vw}.xpd-cards{position:relative;left:0;top:0;width:120vw;margin-top:30vw}.xpd-ph{position:relative;left:auto;top:auto;width:50vw;margin:30px auto 0}.xpd-bg{display:none}
+ .xcat,.xpd{height:auto;padding-bottom:60px}.xcat{padding-top:0}.xcat-all{width:auto;margin:40px 16px 0}.xcat-grid{grid-template-columns:1fr}.xcat-grid .view{--h:52vw}.xcat .xs,.xpd .xs{position:relative;left:auto;top:auto;width:62vw;height:120vw;margin:30px auto 0}.xcat-txt,.xcat-txt2,.xpd-txt,.xpd-txt2,.xpd-txt3{position:relative;left:auto;top:auto;padding:0 20px;margin-top:40px}.xcat-txt{margin-top:150vw}.iphone.xcat-ph{width:44vw}.xpd-cards{position:relative;left:0;top:0;width:120vw;margin-top:30vw}.xpd-ph{position:relative;left:auto;top:auto;width:50vw;margin:30px auto 0}.xpd-bg{display:none}
  .xmy{height:auto;padding:40vw 20px 40px}.xmy-txt{position:relative;left:auto;top:auto}.xmy-ph{position:relative;left:auto;top:auto;width:50vw;margin:30px auto 0}
  .xben{height:auto;padding:20px 16px 60px}.xben-txt{position:relative;left:auto;top:auto;padding:0 4px 30px}.xben .xs,.xben .xw{position:relative;left:auto;top:auto;width:auto;margin:20px 0 0}.xben .xs{width:62vw;height:120vw;margin:20px auto 0}.xben .xw .view{--h:56vw}.xben-hint{position:static;display:block;margin-top:10px}.xben-fade{display:none}
  .xcr dl div{grid-template-columns:80px 1fr;gap:16px}}
@@ -764,7 +768,6 @@ html body .hdr.hs .hnow b,html body .hdr.hs.lt .hnow b{color:#141414!important}
   <div class="xben-txt" data-r><span class="badge">WEBSITE OPERATION</span><h3>Always Up To Date</h3><p>롯데월드 · 서울스카이 · 아쿠아리움 · 민속박물관 사이트를 시즌과 일정에 맞춰<br>꾸준히 업데이트했습니다. 같은 콘텐츠를 PC와 모바일에 동시에 반영하면서도,<br>화면 크기에 맞게 정보의 순서와 크기를 다시 정리했습니다.</p></div>
   <div class="safari xw w1" data-r><div class="tb"><div class="dots"><i></i><i></i><i></i></div><div class="url">adventure.lotteworld.com</div><div></div></div><div class="view"><img src="img/pj03/fest-pokemon-pc.webp" alt="롯데월드 포켓몬 스프링 캠프 PC 화면"></div></div>
   <div class="xs b2" data-r><div class="feed"><img src="img/pj03/fest-pokemon-mo.webp" alt="롯데월드 포켓몬 스프링 캠프 모바일 화면"></div></div>
-  <div class="safari xw w2" data-r><div class="tb"><div class="dots"><i></i><i></i><i></i></div><div class="url">lottepnd.com/esg</div><div></div></div><div class="view"><img src="img/pj03/esg-esg-pc.webp" alt="롯데물산 ESG PC 화면"></div></div>
   <em class="xben-hint">마우스를 올리면 PC 화면이 스크롤됩니다</em>
   <i class="xben-fade"></i>
 </section>
@@ -779,6 +782,7 @@ html body .hdr.hs .hnow b,html body .hdr.hs.lt .hnow b{color:#141414!important}
   <div class="xs c2" data-r><div class="feed"><img src="img/pj03/esg-esg-mo.webp" alt="롯데물산 ESG 모바일 화면"></div></div>
   <div class="xcat-txt2" data-r><span class="badge">ESG REPORT</span><h3>Clear Information</h3><p>긴 보고서형 콘텐츠는 표와 그래프, 요약 카드로 나누어<br>모바일에서도 끝까지 읽기 쉽도록 구성했습니다.</p></div>
   <div class="xs c3" data-r><div class="feed"><img src="img/pj03/esg-social-mo.webp" alt="롯데물산 사회공헌 모바일 화면"></div></div>
+  <div class="xcat-all"><div class="xcat-allh" data-r><span class="badge">ALL PAGES</span><h3>Lotte Corporation · PC</h3><p>운영한 롯데물산 PC 페이지 전체입니다. 마우스를 올리면 페이지가 끝까지 스크롤됩니다.</p></div><div class="xcat-grid"><figure data-r><div class="safari"><div class="tb"><div class="dots"><i></i><i></i><i></i></div><div class="url">lottepnd.com</div><div></div></div><div class="view"><img src="img/pj03/esg-main-pc.webp" alt="롯데물산 메인 PC 화면"></div></div><figcaption>메인</figcaption></figure><figure data-r><div class="safari"><div class="tb"><div class="dots"><i></i><i></i><i></i></div><div class="url">lottepnd.com/esg</div><div></div></div><div class="view"><img src="img/pj03/esg-esg-pc.webp" alt="롯데물산 ESG 경영 PC 화면"></div></div><figcaption>ESG 경영</figcaption></figure><figure data-r><div class="safari"><div class="tb"><div class="dots"><i></i><i></i><i></i></div><div class="url">lottepnd.com/esg/climate</div><div></div></div><div class="view"><img src="img/pj03/esg-climate-pc.webp" alt="롯데물산 기후변화 대응 PC 화면"></div></div><figcaption>기후변화 대응</figcaption></figure><figure data-r><div class="safari"><div class="tb"><div class="dots"><i></i><i></i><i></i></div><div class="url">lottepnd.com/esg/index</div><div></div></div><div class="view"><img src="img/pj03/esg-index-pc.webp" alt="롯데물산 ESG 데이터 PC 화면"></div></div><figcaption>ESG 데이터</figcaption></figure><figure data-r><div class="safari"><div class="tb"><div class="dots"><i></i><i></i><i></i></div><div class="url">lottepnd.com/esg/safety</div><div></div></div><div class="view"><img src="img/pj03/esg-safety-pc.webp" alt="롯데물산 안전보건 PC 화면"></div></div><figcaption>안전보건</figcaption></figure><figure data-r><div class="safari"><div class="tb"><div class="dots"><i></i><i></i><i></i></div><div class="url">lottepnd.com/esg/social</div><div></div></div><div class="view"><img src="img/pj03/esg-social-pc.webp" alt="롯데물산 사회공헌 PC 화면"></div></div><figcaption>사회공헌</figcaption></figure><figure data-r><div class="safari"><div class="tb"><div class="dots"><i></i><i></i><i></i></div><div class="url">lottepnd.com/esg/compliance</div><div></div></div><div class="view"><img src="img/pj03/esg-compliance-pc.webp" alt="롯데물산 윤리 · 준법경영 PC 화면"></div></div><figcaption>윤리 · 준법경영</figcaption></figure></div></div>
 </section>
 
 <!-- CREDITS (ref plus) -->
