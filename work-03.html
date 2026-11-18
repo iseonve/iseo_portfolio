@@ -186,6 +186,38 @@ img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
 .ur-col.r .ur-box:nth-child(2){transition-delay:.12s}.ur-col.r .ur-box:nth-child(3){transition-delay:.24s}
 @media (max-width:900px){.ur-cols{grid-template-columns:1fr;margin:24px 16px 0}.ur-col.l,.ur-col.r{padding-top:0}.ur-box{height:44vw;border-radius:20px}.ur-box p{left:20px;bottom:20px}.ur-n{right:20px;top:20px}}
 
+
+/* CONCEPT — reference con8/con9 (1440: photo 1338×705 r50 inset 51; text @143; giant 1154 wide; phones 521; circles) */
+.cpt{position:relative;padding:3.5vw 0 clamp(120px,12vw,180px);overflow:hidden}
+.cpt-photo{position:relative;margin:0 3.54vw;height:48.96vw;border-radius:3.47vw;overflow:hidden;background:#3a0c12 url("img/pj03/hero-tower.webp") center 55%/cover}
+.cpt-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(120,0,15,.55),rgba(0,0,0,.05) 60%)}
+.cpt-txt{position:absolute;z-index:1;left:6.39vw;top:22.9vw;color:#fff}
+.cpt-txt span{display:block;font-size:clamp(11px,.94vw,13.5px);font-weight:700;margin-bottom:1.6vw}
+.cpt-txt p{font-size:clamp(18px,2.08vw,30px);font-weight:700;line-height:1.25;letter-spacing:-.02em;margin-bottom:1.1vw}
+.cpt-giant{position:relative;z-index:2;margin:-4.7vw 0 0 9.93vw;width:80.14vw;color:#fff;font-weight:800;letter-spacing:-.05em;line-height:.8}
+.cpt-giant span{display:block;font-size:21.6vw;-webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,.25),#000 45%);mask-image:linear-gradient(180deg,rgba(0,0,0,.25),#000 45%)}
+.cpt-giant span:first-child{filter:blur(.12vw)}
+.cpt-giant span+span{margin-top:1.4vw;font-size:19.4vw}
+.cpt-phones{position:relative;height:52vw;margin-top:5vw}
+.cpt-tw{position:absolute;width:21vw}.cpt-tw.l{left:27vw;top:15vw}.cpt-tw.r{left:48vw;top:-2vw;transition-delay:.15s}
+.cpt-ph{width:100%;padding:.55vw;box-shadow:0 0 0 1px #3A3A3E,0 0 0 2px #8d8d93,0 0 0 2.6px #4e4e54,0 3vw 5vw rgba(0,0,0,.55)}
+.cpt-ph.l{transform:perspective(2200px) rotateX(16deg) rotateY(-14deg) rotateZ(-26deg)}
+.cpt-ph.r{transform:perspective(2200px) rotateX(16deg) rotateY(-14deg) rotateZ(-30deg)}
+.cpt-venn{display:flex;align-items:center;justify-content:center;gap:0;margin-top:4vw}
+.cpt-venn .end{font-size:clamp(14px,1.47vw,21px);font-weight:700;letter-spacing:-.02em;width:7vw}
+.cpt-venn .end:first-child{text-align:right;margin-right:2.4vw}.cpt-venn .end:last-child{margin-left:2.4vw}
+.cpt-venn .ln{position:relative;display:block;width:4.5vw;height:1px;background:#fff;margin:0 1.7vw}
+.cpt-venn .ln::before{content:'';position:absolute;top:-2.5px;width:6px;height:6px;border-radius:50%;background:#fff}
+.cpt-venn .ln.l::before{left:-3px}.cpt-venn .ln.r::before{right:-3px}
+.cpt-venn .cir{display:flex}
+.cpt-venn .cir span{display:flex;align-items:center;justify-content:center;width:16.9vw;height:16.9vw;border-radius:50%;background:#fff;color:#000;font-size:clamp(14px,1.47vw,21px);font-weight:700;letter-spacing:-.02em;transition:margin .9s cubic-bezier(.2,.8,.2,1) .2s}
+.cpt-venn .cir span+span{margin-left:-2.8vw}
+.cpt-venn:not(.in) .cir span+span{margin-left:-16.9vw}
+.cpt-venn .cir span:nth-child(2){background:#fff;position:relative}
+.cpt-venn .cir span:nth-child(3){color:var(--red)}
+.cpt-sub{margin-top:5.2vw;text-align:center;font-size:clamp(12px,.84vw,13px);line-height:1.9;color:#A7A7A7}
+@media (max-width:900px){.cpt-photo{height:120vw;margin:0 12px}.cpt-txt{left:24px;top:auto;bottom:24vw}.cpt-giant{margin-left:16px;width:auto}.cpt-phones{height:110vw}.cpt-ph{width:42vw}.cpt-tw{width:42vw}.cpt-tw.l{left:6vw;top:30vw}.cpt-tw.r{left:46vw;top:0}.cpt-venn .end{display:none}.cpt-venn .ln{display:none}.cpt-venn .cir span{width:30vw;height:30vw}.cpt-venn .cir span+span{margin-left:-5vw}.cpt-sub{padding:0 20px}.cpt-sub br{display:none}}
+
 /* TIMELINE */
 .tl{margin-top:90px;display:grid;grid-template-columns:200px 1fr;row-gap:20px;align-items:center}
 .tl .thd{display:grid;grid-template-columns:repeat(9,1fr);font-size:13px;color:#000;padding-bottom:6px}
@@ -507,6 +539,28 @@ html body .hdr.hs .hnow b,html body .hdr.hs.lt .hnow b{color:#141414!important}
       <div class="dcard" style="--o:120px" data-r><h3>OPERATION</h3><div><b>상시 운영</b><p>오픈 일정에 맞춘<br>PC · MO 동시 반영</p></div></div>
     </div>
   </div>
+</section>
+
+<!-- CONCEPT (reference: UX/UI Concept — photo card, giant words, tilted phones, linked circles) -->
+<section class="dk cpt" id="concept">
+  <div class="cpt-photo" data-r>
+    <div class="cpt-txt">
+      <span>OPERATION CONCEPT</span>
+      <p>FROM<br>EVERY SEASON</p>
+      <p>TO<br>EVERY SCREEN</p>
+    </div>
+  </div>
+  <div class="cpt-giant" aria-hidden="true"><span data-r>ALL</span><span data-r>SEASON</span></div>
+  <div class="cpt-phones">
+    <div class="cpt-tw l" data-r><div class="iphone cpt-ph l"><div class="scr"><div class="sb"><b>9:41</b><i></i></div><div class="feed"><img src="img/pj03/fest-doll-mo.webp" alt="롯데월드 페스티벌 모바일 화면"></div></div></div></div>
+    <div class="cpt-tw r" data-r><div class="iphone cpt-ph r"><div class="scr"><div class="sb"><b>9:41</b><i></i></div><div class="feed"><img src="img/pj03/promo-skybc-mo.webp" alt="서울스카이 BC카드 제휴 모바일 화면"></div></div></div></div>
+  </div>
+  <div class="cpt-venn" data-r>
+    <b class="end">Visitor</b><i class="ln l"></i>
+    <div class="cir"><span>Season</span><span>Partner</span><span>Brand</span></div>
+    <i class="ln r"></i><b class="end">Lotte</b>
+  </div>
+  <p class="cpt-sub" data-r>시즌 페스티벌은 방문객이 가장 먼저 만나는 화면에서 자연스럽게 눈에 들어오도록 했습니다.<br>카드사·통신사 제휴 혜택은 방문 계획 흐름 속에서 바로 확인할 수 있게 배치하고,<br>기업 사이트는 롯데의 브랜드 톤을 그대로 이어 신뢰감을 주도록 정리했습니다.<br>이렇게 방문객과 롯데의 여러 사이트가 하나의 경험으로 이어지도록 운영했습니다.</p>
 </section>
 
 <!-- UI ELEMENTS -->
